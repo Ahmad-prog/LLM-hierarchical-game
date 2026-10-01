@@ -2,29 +2,31 @@
 % Do not edit by hand. Defines table macros that the paper places in their sections.
 
 \newcommand{\hgPromiseTable}{%
-\begin{table*}[!htbp]
+\begin{table}[!htbp]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}llcccc@{}}
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{@{}lcccc@{}}
 \toprule
-& & \textbf{Chat only} & \multicolumn{3}{c}{\textbf{Elected manager, sanctions:}} \\ \cmidrule(lr){4-6}
-\textbf{Set} & \textbf{Model} & \textbf{(no manager)} & \textbf{Transparent} & \textbf{Hidden} & \textbf{Anonymous} \\
+& \textbf{Chat} & \multicolumn{3}{c}{\textbf{Manager; sanctions are}} \\ \cmidrule(lr){3-5}
+\textbf{Model} & \textbf{only} & \textbf{visible} & \textbf{hidden} & \textbf{anon.} \\
 \midrule
-API (main) & all six & 2/900 & 1/1379 & 2/941 & 0/869 \\
-API (newer) & GPT-5 & --- & 1/235 & 3/205 & 2/213 \\
-API (newer) & DeepSeek V3.1 & --- & 0/171 & 0/135 & 0/120 \\
-\midrule
-Self-hosted & gpt-oss & 67/240 (28\%) & 34/275 (12\%) & 27/243 (11\%) & 43/280 (15\%) \\
-Self-hosted & Nemotron & 6/51 (12\%) & 4/88 (5\%) & 0/68 (0\%) & 2/81 (2\%) \\
-Self-hosted & Ling & 97/238 (41\%) & 99/234 (42\%) & 111/238 (47\%) & 109/260 (42\%) \\
-Self-hosted & Qwen3.8 & 55/257 (21\%) & 30/240 (13\%) & 43/217 (20\%) & 35/213 (16\%) \\
-Self-hosted & Gemma & 13/171 (8\%) & 13/210 (6\%) & 10/196 (5\%) & 9/216 (4\%) \\
+\multicolumn{5}{@{}l}{\emph{Main API models}} \\
+All six & 2/900 & 1/1379 & 2/941 & 0/869 \\
+\multicolumn{5}{@{}l}{\emph{Newer API models}} \\
+GPT-5 & --- & 1/235 & 3/205 & 2/213 \\
+DeepSeek V3.1 & --- & 0/171 & 0/135 & 0/120 \\
+\multicolumn{5}{@{}l}{\emph{Self-hosted models}} \\
+gpt-oss & 67/240 (28) & 34/275 (12) & 27/243 (11) & 43/280 (15) \\
+Nemotron & 6/51 (12) & 4/88 (5) & 0/68 (0) & 2/81 (2) \\
+Ling & 97/238 (41) & 99/234 (42) & 111/238 (47) & 109/260 (42) \\
+Qwen3.8 & 55/257 (21) & 30/240 (13) & 43/217 (20) & 35/213 (16) \\
+Gemma & 13/171 (8) & 13/210 (6) & 10/196 (5) & 9/216 (4) \\
 \bottomrule
 \end{tabular}
-\caption{Broken stated intentions / stated intentions, summed over games: public messages that name a contribution, followed by a contribution more than 5 tokens lower. Every model is scored with the same regular expression. No main API model breaks more than 2 in any condition, and GPT-5 at most 3 (per model, first-person commitments only, and other thresholds in Table~\ref{tab:robust}). The newer models have no chat-only control.}
+\caption{Broken / stated intentions, summed over games, with the percentage in parentheses for the self-hosted models. A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}. The newer models have no chat-only control.}
 \label{tab:promises}
-\end{table*}
+\end{table}
 }
 
 \newcommand{\hgParseTable}{%
@@ -169,13 +171,13 @@ Gemma & 57\% & 13 / 13 / 13 of 171 & 82 & 1 & 70\% & 13 / 13 / 13 of 210 & 94 & 
 }
 
 \newcommand{\hgOffersTable}{%
-\begin{table*}[!htbp]
+\begin{table}[!htbp]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
-\textbf{Model} & \textbf{Offers} & \textbf{Reply} & \textbf{Targeted} & \textbf{Reciprocal} & \textbf{Pledge} & \textbf{Other} & \textbf{Impossible} \\
+\textbf{Model} & \textbf{Offers} & \textbf{Reply} & \textbf{Targ.} & \textbf{Recip.} & \textbf{Pledge} & \textbf{Other} & \textbf{Imp.} \\
 \midrule
 GPT-4o & 0 & --- & --- & --- & --- & --- & --- \\
 Claude & 76 & 8 & 5 & 17 & 34 & 36 & 8 \\
@@ -194,9 +196,9 @@ Qwen3.8 & 137 & 15 & 14 & 4 & 34 & 34 & 0 \\
 Gemma & 0 & --- & --- & --- & --- & --- & --- \\
 \bottomrule
 \end{tabular}
-\caption{What vote-contingent offers contain (elected, salary and costly setups pooled; automatic and not validated against human labels). Shares (\%) of offers that reply to or refuse another offer, promise the voter a targeted private benefit, offer reciprocal political support (``I'll vote for you next time''), pledge a public contribution, or none of these; and the number of offers naming an amount the rules do not allow (a contribution above 20 or a sanction above the budget of 10). Across all 40,538 messages, 46 mention contributing more than 20 tokens.}
+\caption{What vote-contingent offers contain (elected, salary and costly setups pooled; automatic and not validated against human labels). Shares (\%) of offers that reply to or refuse another offer (Reply), promise the voter a targeted private benefit (Targ.), offer reciprocal political support such as ``I'll vote for you next time'' (Recip.), pledge a public contribution (Pledge), or none of these (Other). Imp.: number of offers naming an amount the rules do not allow (a contribution above 20 or a sanction above the budget of 10). Across all 40,538 messages, 46 mention contributing more than 20 tokens.}
 \label{tab:offers}
-\end{table*}
+\end{table}
 }
 
 \newcommand{\hgResultTables}{%
@@ -402,24 +404,25 @@ Mixed groups & 17/54 & 9 & 3.1 & 74 & 21 & 8 & 7 \\
 \label{tab:elections}
 \end{table*}
 
-\begin{table*}[!htbp]
+\begin{table}[!htbp]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 \textbf{Incumbent's record} & \textbf{Main API} & \textbf{Newer API} & \textbf{Self-hosted} \\
 \midrule
-Group contribution & -0.003 (0.954) & +0.003 (0.981) & +0.029 (0.669) \\
-Incumbent's own contribution & +0.002 (0.979) & +0.015 (0.889) & -0.006 (0.931) \\
-Reward spent per round & +0.006 (0.911) & +0.010 (0.928) & +0.022 (0.740) \\
-Punishment spent per round & +0.024 (0.681) & -0.006 (0.953) & -0.145 (0.030) \\
-Contested elections (re-elected) & 306 (203) & 90 (61) & 225 (181) \\
+Group contribution & -0.00 (0.954) & +0.00 (0.981) & +0.03 (0.669) \\
+Own contribution & +0.00 (0.979) & +0.01 (0.889) & -0.01 (0.931) \\
+Rewards given & +0.01 (0.911) & +0.01 (0.928) & +0.02 (0.740) \\
+Punishments given & +0.02 (0.681) & -0.01 (0.953) & -0.14 (0.030) \\
+\midrule
+Contested (re-elected) & 306 (203) & 90 (61) & 225 (181) \\
 \bottomrule
 \end{tabular}
-\caption{Does the incumbent's record in the five rounds before an election predict its re-election? Point-biserial correlation (two-sided $p$) between re-election and each measure, centred within model so that differences between models do not drive it; elected, salary, costly, hidden and anonymous setups.}
+\caption{Does the incumbent's record in the five rounds before an election predict its re-election? Point-biserial correlation $r$ (two-sided $p$) between re-election and each measure, centred within model so that differences between models do not drive it; elected, salary, costly, hidden and anonymous setups.}
 \label{tab:reelection}
-\end{table*}
+\end{table}
 
 \begin{table*}[!htbp]
 \centering
@@ -439,13 +442,13 @@ Self-hosted, cooperation: all 9 setups & 135 & 0.89 ($<$0.001) & 0.76 ($<$0.001)
 \label{tab:anova}
 \end{table*}
 
-\begin{table*}[!htbp]
+\begin{table}[!htbp]
 \centering
 \scriptsize
-\setlength{\tabcolsep}{3pt}
+\setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{Manager$\to$Workers} & \textbf{Coop.} & \textbf{Contribution} & \textbf{P / R} & \textbf{Welfare} \\
+\textbf{Manager$\to$Workers} & \textbf{Coop.} & \textbf{Contrib.} & \textbf{P / R} & \textbf{Welfare} \\
 \midrule
 Claude$\to$Grok & 99.6 & 19.9$\pm$0.1 & 0.2 / 9.7 & 1571$\pm$47 \\
 Claude$\to$Qwen Plus & 100.0 & 19.5$\pm$0.7 & 0.0 / 9.2 & 1543$\pm$41 \\
@@ -454,15 +457,15 @@ Grok$\to$Claude & 100.0 & 20.0$\pm$0.0 & 0.0 / 7.1 & 1481$\pm$43 \\
 Grok$\to$Qwen Plus & 100.0 & 14.1$\pm$1.4 & 0.0 / 3.1 & 970$\pm$128 \\
 Qwen Plus$\to$Claude & 100.0 & 15.3$\pm$1.7 & 0.0 / 9.9 & 1311$\pm$106 \\
 \midrule
-Claude$\to$Claude (homogeneous) & --- & 19.9$\pm$0.1 & --- & --- \\
-Grok$\to$Grok (homogeneous) & --- & 19.1$\pm$0.1 & --- & --- \\
-Qwen Plus$\to$Qwen Plus (homogeneous) & --- & 14.8$\pm$3.3 & --- & --- \\
-GPT-4o$\to$GPT-4o (homogeneous) & --- & 14.3$\pm$2.3 & --- & --- \\
+Claude (own family) & --- & 19.9$\pm$0.1 & --- & --- \\
+Grok (own family) & --- & 19.1$\pm$0.1 & --- & --- \\
+Qwen Plus (own family) & --- & 14.8$\pm$3.3 & --- & --- \\
+GPT-4o (own family) & --- & 14.3$\pm$2.3 & --- & --- \\
 \bottomrule
 \end{tabular}
 \caption{Cross-Rule (B11): a fixed manager of one family over four workers of another (3 games each). Worker cooperation (\%), worker contribution, manager spending per round (punishment / reward), and group welfare. Bottom rows: worker-only contribution under a fixed manager of the same family (5 games), the comparison used in the text.}
 \label{tab:crossrule}
-\end{table*}
+\end{table}
 
 \begin{table*}[!htbp]
 \centering

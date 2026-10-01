@@ -64,6 +64,15 @@ def frac(b, n):
     return "---" if not n else f"{b}/{n} ({pct(100 * b / n)}\\%)"
 
 
+def short_frac(b, n):
+    """compact cell for one-column tables: 67/240 (28)"""
+    return "---" if not n else f"{b}/{n} ({pct(100 * b / n)})"
+
+
+def group_row(label, ncols):
+    return f"\\multicolumn{{{ncols}}}{{@{{}}l}}{{\\emph{{{label}}}}}"
+
+
 T = []
 
 # ---------------------------------------------------------------- main-text promise table (one rule for all models)
@@ -72,23 +81,26 @@ rows = []
 conds = ("chat_only", "elected", "hidden", "anonymous")
 tot = {s: [sum(I["frontier"][s][m].get("broken_5", 0) for m in FRONT), sum(I["frontier"][s][m].get("stated", 0) for m in FRONT)]
        for s in conds}
-rows.append("API (main) & all six & " + " & ".join(f"{tot[s][0]}/{tot[s][1]}" for s in conds))
+rows.append(group_row("Main API models", 5))
+rows.append("All six & " + " & ".join(f"{tot[s][0]}/{tot[s][1]}" for s in conds))
+rows.append(group_row("Newer API models", 5))
 for m in SAME:
-    rows.append(f"API (newer) & {NAME[m]} & --- & " + " & ".join(
+    rows.append(f"{NAME[m]} & --- & " + " & ".join(
         f"{I['samegen'][s][m].get('broken_5', 0)}/{I['samegen'][s][m].get('stated', 0)}" for s in conds[1:]))
-rows.append("\\midrule")
+rows.append(group_row("Self-hosted models", 5))
 for m in OPEN:
-    rows.append(f"Self-hosted & {NAME[m]} & " + " & ".join(
-        frac(I["open"][s][m].get("broken_5", 0), I["open"][s][m].get("stated", 0)) for s in conds))
+    rows.append(f"{NAME[m]} & " + " & ".join(
+        short_frac(I["open"][s][m].get("broken_5", 0), I["open"][s][m].get("stated", 0)) for s in conds))
 T.append(("hgPromiseTable", table(
-    "Broken stated intentions / stated intentions, summed over games: public messages that name a contribution, followed by "
-    "a contribution more than 5 tokens lower. Every model is scored with the same regular expression. No main API model breaks "
-    "more than 2 in any condition, and GPT-5 at most 3 (per model, first-person commitments only, and other thresholds in "
-    "Table~\\ref{tab:robust}). The newer models have no chat-only control.",
-    "tab:promises", "llcccc",
-    "& & \\textbf{Chat only} & \\multicolumn{3}{c}{\\textbf{Elected manager, sanctions:}} \\\\ \\cmidrule(lr){4-6}\n"
-    "\\textbf{Set} & \\textbf{Model} & \\textbf{(no manager)} & \\textbf{Transparent} & \\textbf{Hidden} & \\textbf{Anonymous}",
-    rows, sep="4pt")))
+    "Broken / stated intentions, summed over games, with the percentage in parentheses for the self-hosted models. A stated "
+    "intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens "
+    "less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at "
+    "most 3; per model, first-person commitments and other thresholds are in Table~\\ref{tab:robust}. The newer models have "
+    "no chat-only control.",
+    "tab:promises", "lcccc",
+    "& \\textbf{Chat} & \\multicolumn{3}{c}{\\textbf{Manager; sanctions are}} \\\\ \\cmidrule(lr){3-5}\n"
+    "\\textbf{Model} & \\textbf{only} & \\textbf{visible} & \\textbf{hidden} & \\textbf{anon.}",
+    rows, sep="2.5pt", wide=False)))
 
 # ---------------------------------------------------------------- appendix C: results
 R = []
@@ -197,20 +209,22 @@ R.append(table(
     "\\textbf{Model} & \\textbf{Turnover} & \\textbf{By tie} & \\textbf{Winner votes} & \\textbf{Majority \\%} & "
     "\\textbf{Tie \\%} & \\textbf{Self-vote \\%} & \\textbf{agent\\_0 \\%}", rows))
 
-LBL = {"group_contrib": "Group contribution", "own_contrib": "Incumbent's own contribution",
-       "reward": "Reward spent per round", "punish": "Punishment spent per round"}
+LBL = {"group_contrib": "Group contribution", "own_contrib": "Own contribution",
+       "reward": "Rewards given", "punish": "Punishments given"}
 rows = []
 for k in ("group_contrib", "own_contrib", "reward", "punish"):
     rows.append(LBL[k] + " & " + " & ".join(
-        f"{y['reelection'][g][k]['r']:+.3f} ({pval(y['reelection'][g][k]['p'])})" for g in ("api_main", "newer", "open")))
-rows.append("Contested elections (re-elected) & " + " & ".join(
+        f"{y['reelection'][g][k]['r']:+.2f} ({pval(y['reelection'][g][k]['p'])})" for g in ("api_main", "newer", "open")))
+rows.append("\\midrule")
+rows.append("Contested (re-elected) & " + " & ".join(
     f"{y['reelection'][g]['contested']} ({y['reelection'][g]['reelected']})" for g in ("api_main", "newer", "open")))
 R.append(table(
     "Does the incumbent's record in the five rounds before an election predict its re-election? Point-biserial "
-    "correlation (two-sided $p$) between re-election and each measure, centred within model so that differences between "
+    "correlation $r$ (two-sided $p$) between re-election and each measure, centred within model so that differences between "
     "models do not drive it; elected, salary, costly, hidden and anonymous setups.",
     "tab:reelection", "lccc",
-    "\\textbf{Incumbent's record} & \\textbf{Main API} & \\textbf{Newer API} & \\textbf{Self-hosted}", rows))
+    "\\textbf{Incumbent's record} & \\textbf{Main API} & \\textbf{Newer API} & \\textbf{Self-hosted}", rows,
+    sep="2.5pt", wide=False))
 
 A = y["anova"]
 ALBL = {"api_contrib_mgr": "Main API, contribution: chat only + 3 manager types",
@@ -235,13 +249,14 @@ for k, v in d["crossrule"].items():
 W = y["workers_fixed"]
 rows.append("\\midrule")
 for m in ("claude", "grok", "qwen", "gpt4o"):
-    rows.append(f"{NAME[m]}$\\to${NAME[m]} (homogeneous) & --- & {W[m]['mean']:.1f}$\\pm${W[m]['sd']:.1f} & --- & ---")
+    rows.append(f"{NAME[m]} (own family) & --- & {W[m]['mean']:.1f}$\\pm${W[m]['sd']:.1f} & --- & ---")
 R.append(table(
     "Cross-Rule (B11): a fixed manager of one family over four workers of another (3 games each). Worker cooperation (\\%), "
     "worker contribution, manager spending per round (punishment / reward), and group welfare. Bottom rows: worker-only "
     "contribution under a fixed manager of the same family (5 games), the comparison used in the text.",
     "tab:crossrule", "lcccc",
-    "\\textbf{Manager$\\to$Workers} & \\textbf{Coop.} & \\textbf{Contribution} & \\textbf{P / R} & \\textbf{Welfare}", rows))
+    "\\textbf{Manager$\\to$Workers} & \\textbf{Coop.} & \\textbf{Contrib.} & \\textbf{P / R} & \\textbf{Welfare}", rows,
+    sep="2.5pt", wide=False))
 
 rows = []
 for k, v in d["mixed"].items():
@@ -351,13 +366,14 @@ over = sum(v["over_20"] for g in OV.values() for v in g.values())
 msgs = sum(v["messages"] for g in OV.values() for v in g.values())
 OFFERS = table(
     "What vote-contingent offers contain (elected, salary and costly setups pooled; automatic and not validated against "
-    "human labels). Shares (\\%) of offers that reply to or refuse another offer, promise the voter a targeted private "
-    "benefit, offer reciprocal political support (``I'll vote for you next time''), pledge a public contribution, or none "
-    "of these; and the number of offers naming an amount the rules do not allow (a contribution above 20 or a sanction "
-    f"above the budget of 10). Across all {msgs:,} messages, {over} mention contributing more than 20 tokens.",
+    "human labels). Shares (\\%) of offers that reply to or refuse another offer (Reply), promise the voter a targeted "
+    "private benefit (Targ.), offer reciprocal political support such as ``I'll vote for you next time'' (Recip.), pledge "
+    "a public contribution (Pledge), or none of these (Other). Imp.: number of offers naming an amount the rules do not "
+    f"allow (a contribution above 20 or a sanction above the budget of 10). Across all {msgs:,} messages, {over} mention "
+    "contributing more than 20 tokens.",
     "tab:offers", "lccccccc",
-    "\\textbf{Model} & \\textbf{Offers} & \\textbf{Reply} & \\textbf{Targeted} & \\textbf{Reciprocal} & \\textbf{Pledge} & "
-    "\\textbf{Other} & \\textbf{Impossible}", rows, sep="3pt")
+    "\\textbf{Model} & \\textbf{Offers} & \\textbf{Reply} & \\textbf{Targ.} & \\textbf{Recip.} & \\textbf{Pledge} & "
+    "\\textbf{Other} & \\textbf{Imp.}", rows, sep="2.5pt", wide=False)
 
 print("% Generated by hg-rerun/analysis/appendix_tables.py from paper_numbers.json, extras.json and revision2.json.")
 print("% Do not edit by hand. Defines table macros that the paper places in their sections.\n")
