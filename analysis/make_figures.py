@@ -91,7 +91,7 @@ grouped(ax, groups, pay, deal_get, "Vote-buying offers\nper 100 agent-rounds", (
 ax.axvline(5.5, color=MUTED, linewidth=0.6, linestyle=":")
 ax.axvline(7.5, color=MUTED, linewidth=0.6, linestyle=":")
 ax.text(2.5, 28.5, "Main frontier set", ha="center", color=MUTED, fontsize=7)
-ax.text(6.5, 28.5, "Same generation", ha="center", color=MUTED, fontsize=7)
+ax.text(6.5, 28.5, "Newer versions", ha="center", color=MUTED, fontsize=7)
 ax.text(8.5, 28.5, "Open models", ha="center", color=MUTED, fontsize=7)
 ax.tick_params(axis="x", labelsize=7)
 ax.legend(ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.22), fontsize=7)
