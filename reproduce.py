@@ -31,15 +31,17 @@ def build(data_dir: Path, fig_dir: Path):
     data_dir.mkdir(parents=True, exist_ok=True)
     fig_dir.mkdir(parents=True, exist_ok=True)
     numbers, extras = data_dir / "paper_numbers.json", data_dir / "extras.json"
-    print("1/5 per-setup metrics            -> paper_numbers.json")
+    print("1/6 per-setup metrics            -> paper_numbers.json")
     run(["analysis/paper_tables.py", RESULTS], numbers)
-    print("2/5 spending, elections, tests   -> extras.json")
+    print("2/6 spending, elections, tests   -> extras.json")
     run(["analysis/revision_extras.py", RESULTS, extras], data_dir / "extras.txt")
-    print("3/5 readable digest              -> digest.txt")
+    print("3/6 intentions, offers, re-election, model vs institution -> revision2.json")
+    run(["analysis/revision2.py", RESULTS, data_dir / "revision2.json"], data_dir / "revision2.txt")
+    print("4/6 readable digest              -> digest.txt")
     run(["analysis/digest.py", numbers], data_dir / "digest.txt")
-    print("4/5 appendix tables (LaTeX)      -> appendix_tables.tex")
-    run(["analysis/appendix_tables.py", numbers, extras], data_dir / "appendix_tables.tex")
-    print("5/5 figures (PDF)                -> figures/")
+    print("5/6 paper tables (LaTeX)         -> appendix_tables.tex")
+    run(["analysis/appendix_tables.py", numbers, extras, data_dir / "revision2.json"], data_dir / "appendix_tables.tex")
+    print("6/6 figures (PDF)                -> figures/")
     run(["analysis/make_figures.py", numbers, fig_dir])
 
 
@@ -55,7 +57,7 @@ def main():
         return
     with tempfile.TemporaryDirectory() as tmp:
         build(Path(tmp) / "paper_data", Path(tmp) / "figures")
-        names = ["paper_numbers.json", "extras.json", "extras.txt", "digest.txt", "appendix_tables.tex"]
+        names = ["paper_numbers.json", "extras.json", "extras.txt", "revision2.json", "revision2.txt", "digest.txt", "appendix_tables.tex"]
         same = [n for n in names if filecmp.cmp(Path(tmp) / "paper_data" / n, ROOT / "paper_data" / n, shallow=False)]
         for n in names:
             print(f"  {'identical' if n in same else 'DIFFERENT'}  paper_data/{n}")

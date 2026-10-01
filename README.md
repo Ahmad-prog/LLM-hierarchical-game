@@ -26,12 +26,13 @@ python reproduce.py            # (re)write paper_data/ and figures/
 |---|---|---|
 | `paper_data/paper_numbers.json` | `analysis/paper_tables.py` | Per-setup metrics: cooperation, contribution, vote-buying offers, promises, welfare, elections, valid replies (mean ± s.d. over games, counts summed) |
 | `paper_data/extras.json`, `extras.txt` | `analysis/revision_extras.py` | Manager spending (punishment and reward), election details (votes, ties, ballot position), promise robustness, welfare split, Welch tests |
+| `paper_data/revision2.json`, `revision2.txt` | `analysis/revision2.py` | Stated intentions scored with one rule for every model (thresholds 3/5/8, first-person commitments), what vote-contingent offers contain, whether the incumbent's record predicts re-election, model × institution analysis of variance, worker-only comparisons, Nemotron over valid replies |
 | `paper_data/digest.txt` | `analysis/digest.py` | A readable listing of `paper_numbers.json`, used to write the text |
-| `paper_data/appendix_tables.tex` | `analysis/appendix_tables.py` | All appendix tables (included in the paper as-is) |
+| `paper_data/appendix_tables.tex` | `analysis/appendix_tables.py` | All generated tables, defined as LaTeX macros and placed in the paper as-is (Table 1 and the appendix tables, with Holm-adjusted p-values) |
 | `figures/rr_frontier_contribution.pdf` | `analysis/make_figures.py` | Figure 1: frontier models, contribution by institution |
 | `figures/rr_open_cooperation.pdf` | `analysis/make_figures.py` | Figure 2: open-weight models, cooperation by institution |
-| `figures/rr_deals_by_pay.pdf` | `analysis/make_figures.py` | Figure 3: vote-buying offers by manager pay |
-| `figures/rr_open_broken_promises.pdf` | `analysis/make_figures.py` | Appendix figure: broken promises, open-weight models |
+| `figures/rr_deals_by_pay.pdf` | `analysis/make_figures.py` | Figure 3: vote-contingent offers by manager pay |
+| `figures/rr_open_broken_promises.pdf` | `analysis/make_figures.py` | Appendix figure: broken stated intentions, self-hosted models |
 
 Table 1 of the main text (broken promises) sums the fields `broken_explicit` / `explicit` of
 `paper_numbers.json` over the six frontier models.
