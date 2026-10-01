@@ -1,0 +1,4406 @@
+{
+ "spend": {
+  "frontier": {
+   "fixed": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.22,
+      "sd": 0.135,
+      "n": 5
+     },
+     "reward": {
+      "mean": 8.1,
+      "sd": 0.722,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 8.0,
+      "sd": 4.472,
+      "n": 5
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.68,
+      "sd": 0.327,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 4.68,
+      "sd": 2.074,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.02,
+      "sd": 0.045,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.73,
+      "sd": 0.349,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 1.0,
+      "sd": 2.236,
+      "n": 5
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.19,
+      "sd": 0.261,
+      "n": 5
+     },
+     "reward": {
+      "mean": 7.37,
+      "sd": 0.696,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 2.0,
+      "sd": 2.739,
+      "n": 5
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.99,
+      "sd": 0.022,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    }
+   },
+   "elected": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.28,
+      "sd": 0.202,
+      "n": 5
+     },
+     "reward": {
+      "mean": 7.43,
+      "sd": 0.756,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 12.0,
+      "sd": 9.083,
+      "n": 5
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.3,
+      "sd": 0.418,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.03,
+      "sd": 0.067,
+      "n": 5
+     },
+     "reward": {
+      "mean": 7.54,
+      "sd": 0.945,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 1.0,
+      "sd": 2.236,
+      "n": 5
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.22,
+      "sd": 0.401,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.09,
+      "sd": 0.201,
+      "n": 5
+     },
+     "reward": {
+      "mean": 6.45,
+      "sd": 0.354,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 1.0,
+      "sd": 2.236,
+      "n": 5
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.03,
+      "sd": 0.067,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.77,
+      "sd": 0.514,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 1.0,
+      "sd": 2.236,
+      "n": 5
+     }
+    }
+   },
+   "rotating": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.25,
+      "sd": 0.278,
+      "n": 5
+     },
+     "reward": {
+      "mean": 7.35,
+      "sd": 0.528,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 10.0,
+      "sd": 10.0,
+      "n": 5
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.05,
+      "sd": 0.871,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 4.08,
+      "sd": 1.69,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.14,
+      "sd": 0.313,
+      "n": 5
+     },
+     "reward": {
+      "mean": 9.12,
+      "sd": 0.626,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 4.0,
+      "sd": 8.944,
+      "n": 5
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.24,
+      "sd": 0.238,
+      "n": 5
+     },
+     "reward": {
+      "mean": 7.49,
+      "sd": 0.431,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 3.0,
+      "sd": 2.739,
+      "n": 5
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "reward": {
+      "mean": 10.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    }
+   },
+   "salary": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.15,
+      "sd": 0.15,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.933,
+      "sd": 0.551,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.033,
+      "sd": 0.58,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 8.066,
+      "sd": 0.85,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.533,
+      "sd": 0.569,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.05,
+      "sd": 0.087,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.85,
+      "sd": 0.737,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 10.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "costly": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.233,
+      "sd": 0.404,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.983,
+      "sd": 0.161,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 8.333,
+      "sd": 14.434,
+      "n": 3
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.133,
+      "sd": 0.551,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.05,
+      "sd": 0.087,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.183,
+      "sd": 2.411,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 8.633,
+      "sd": 0.153,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.1,
+      "sd": 0.087,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.167,
+      "sd": 0.651,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 3.333,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.983,
+      "sd": 0.029,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "hidden": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.217,
+      "sd": 0.225,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.45,
+      "sd": 0.492,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 8.867,
+      "sd": 0.751,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.55,
+      "sd": 0.361,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.483,
+      "sd": 1.37,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 13.333,
+      "sd": 10.408,
+      "n": 3
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.6,
+      "sd": 0.436,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.033,
+      "sd": 0.058,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.983,
+      "sd": 1.227,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.722,
+      "sd": 0.255,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "anonymous": {
+    "gpt4o": {
+     "punish": {
+      "mean": 0.2,
+      "sd": 0.087,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.267,
+      "sd": 0.896,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 10.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "claude": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.133,
+      "sd": 0.643,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "gemini": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 8.1,
+      "sd": 0.458,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.867,
+      "sd": 0.153,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "grok": {
+     "punish": {
+      "mean": 0.133,
+      "sd": 0.231,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.0,
+      "sd": 0.361,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "qwen": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 10.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   }
+  },
+  "samegen": {
+   "fixed": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.533,
+      "sd": 0.115,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.033,
+      "sd": 0.058,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.4,
+      "sd": 0.6,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    }
+   },
+   "elected": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.083,
+      "sd": 0.333,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.833,
+      "sd": 0.751,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "rotating": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.6,
+      "sd": 0.4,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 9.433,
+      "sd": 0.462,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "salary": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 4.033,
+      "sd": 0.569,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.517,
+      "sd": 0.52,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "costly": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.017,
+      "sd": 0.029,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.0,
+      "sd": 0.6,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.433,
+      "sd": 0.777,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "hidden": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.667,
+      "sd": 1.115,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.067,
+      "sd": 0.115,
+      "n": 3
+     },
+     "reward": {
+      "mean": 8.283,
+      "sd": 0.952,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 3.333,
+      "sd": 5.774,
+      "n": 3
+     }
+    }
+   },
+   "anonymous": {
+    "gpt5": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.933,
+      "sd": 0.764,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "punish": {
+      "mean": 0.083,
+      "sd": 0.144,
+      "n": 3
+     },
+     "reward": {
+      "mean": 8.733,
+      "sd": 0.653,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 1.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    }
+   }
+  },
+  "open": {
+   "fixed": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 2.617,
+      "sd": 0.651,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.083,
+      "sd": 0.407,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 55.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.155,
+      "sd": 0.01,
+      "n": 3
+     },
+     "reward": {
+      "mean": 1.627,
+      "sd": 0.798,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 5.054,
+      "sd": 0.096,
+      "n": 3
+     },
+     "reward": {
+      "mean": 5.071,
+      "sd": 0.681,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 55.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 4.5,
+      "sd": 0.866,
+      "n": 3
+     },
+     "reward": {
+      "mean": 1.817,
+      "sd": 0.501,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 45.0,
+      "sd": 8.66,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.355,
+      "sd": 0.171,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.78,
+      "sd": 0.188,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "elected": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 2.033,
+      "sd": 0.225,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.4,
+      "sd": 0.577,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 46.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.155,
+      "sd": 0.15,
+      "n": 3
+     },
+     "reward": {
+      "mean": 1.583,
+      "sd": 0.804,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 5.433,
+      "sd": 1.102,
+      "n": 3
+     },
+     "reward": {
+      "mean": 4.655,
+      "sd": 0.517,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 56.667,
+      "sd": 7.638,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 3.167,
+      "sd": 0.764,
+      "n": 3
+     },
+     "reward": {
+      "mean": 3.617,
+      "sd": 1.751,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 31.667,
+      "sd": 7.638,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.4,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.6,
+      "sd": 0.0,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "rotating": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 2.133,
+      "sd": 0.491,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.917,
+      "sd": 1.185,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 43.333,
+      "sd": 7.638,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.439,
+      "sd": 0.253,
+      "n": 3
+     },
+     "reward": {
+      "mean": 1.394,
+      "sd": 0.558,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 10.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 3.944,
+      "sd": 0.822,
+      "n": 3
+     },
+     "reward": {
+      "mean": 3.5,
+      "sd": 0.928,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 41.667,
+      "sd": 5.774,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 3.667,
+      "sd": 1.443,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.483,
+      "sd": 1.46,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 36.667,
+      "sd": 14.434,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.466,
+      "sd": 0.058,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.689,
+      "sd": 0.084,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "salary": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 2.667,
+      "sd": 1.114,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.767,
+      "sd": 0.252,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 48.333,
+      "sd": 12.583,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.105,
+      "sd": 0.183,
+      "n": 3
+     },
+     "reward": {
+      "mean": 1.439,
+      "sd": 1.093,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 3.333,
+      "sd": 5.774,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 3.344,
+      "sd": 0.651,
+      "n": 3
+     },
+     "reward": {
+      "mean": 1.956,
+      "sd": 0.529,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 35.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 4.467,
+      "sd": 1.665,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.0,
+      "sd": 0.737,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 46.667,
+      "sd": 15.275,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.4,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.6,
+      "sd": 0.0,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "costly": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 2.217,
+      "sd": 0.437,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.35,
+      "sd": 0.747,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 46.667,
+      "sd": 7.638,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.439,
+      "sd": 0.38,
+      "n": 3
+     },
+     "reward": {
+      "mean": 0.95,
+      "sd": 0.397,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 6.667,
+      "sd": 5.774,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 4.438,
+      "sd": 0.092,
+      "n": 3
+     },
+     "reward": {
+      "mean": 3.461,
+      "sd": 1.302,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 46.667,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 2.917,
+      "sd": 0.382,
+      "n": 3
+     },
+     "reward": {
+      "mean": 3.433,
+      "sd": 1.387,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 30.0,
+      "sd": 5.0,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.355,
+      "sd": 0.171,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.892,
+      "sd": 0.26,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "hidden": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 1.583,
+      "sd": 0.551,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.017,
+      "sd": 0.666,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 30.0,
+      "sd": 8.66,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.1,
+      "sd": 0.087,
+      "n": 3
+     },
+     "reward": {
+      "mean": 0.567,
+      "sd": 0.252,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 3.333,
+      "sd": 2.887,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 4.883,
+      "sd": 0.076,
+      "n": 3
+     },
+     "reward": {
+      "mean": 4.25,
+      "sd": 0.683,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 55.0,
+      "sd": 8.66,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 4.983,
+      "sd": 2.264,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.25,
+      "sd": 0.433,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 50.0,
+      "sd": 22.913,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.4,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.6,
+      "sd": 0.0,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "anonymous": {
+    "gpt-oss-120b": {
+     "punish": {
+      "mean": 2.717,
+      "sd": 0.875,
+      "n": 3
+     },
+     "reward": {
+      "mean": 6.7,
+      "sd": 0.05,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 56.667,
+      "sd": 16.073,
+      "n": 3
+     }
+    },
+    "nemotron-3-super-120b": {
+     "punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 0.167,
+      "sd": 0.289,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "ling-3.0-flash": {
+     "punish": {
+      "mean": 5.466,
+      "sd": 1.318,
+      "n": 3
+     },
+     "reward": {
+      "mean": 4.011,
+      "sd": 0.128,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 56.667,
+      "sd": 14.434,
+      "n": 3
+     }
+    },
+    "qwen3.8-27b": {
+     "punish": {
+      "mean": 4.217,
+      "sd": 1.314,
+      "n": 3
+     },
+     "reward": {
+      "mean": 2.3,
+      "sd": 0.737,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 45.0,
+      "sd": 13.229,
+      "n": 3
+     }
+    },
+    "gemma-4-31b": {
+     "punish": {
+      "mean": 0.4,
+      "sd": 0.0,
+      "n": 3
+     },
+     "reward": {
+      "mean": 7.6,
+      "sd": 0.0,
+      "n": 3
+     },
+     "pct_rounds_punish": {
+      "mean": 5.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   }
+  }
+ },
+ "crossrule_spend": {
+  "claude_grok": {
+   "punish": {
+    "mean": 0.167,
+    "sd": 0.289,
+    "n": 3
+   },
+   "reward": {
+    "mean": 9.7,
+    "sd": 0.436,
+    "n": 3
+   }
+  },
+  "claude_qwen": {
+   "punish": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "reward": {
+    "mean": 9.25,
+    "sd": 0.132,
+    "n": 3
+   }
+  },
+  "gpt4o_qwen": {
+   "punish": {
+    "mean": 0.067,
+    "sd": 0.115,
+    "n": 3
+   },
+   "reward": {
+    "mean": 8.833,
+    "sd": 0.306,
+    "n": 3
+   }
+  },
+  "grok_claude": {
+   "punish": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "reward": {
+    "mean": 7.067,
+    "sd": 1.102,
+    "n": 3
+   }
+  },
+  "grok_qwen": {
+   "punish": {
+    "mean": 0.033,
+    "sd": 0.058,
+    "n": 3
+   },
+   "reward": {
+    "mean": 3.1,
+    "sd": 1.04,
+    "n": 3
+   }
+  },
+  "qwen_claude": {
+   "punish": {
+    "mean": 0.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "reward": {
+    "mean": 9.883,
+    "sd": 0.202,
+    "n": 3
+   }
+  }
+ },
+ "elections": {
+  "frontier": {
+   "gpt4o": {
+    "elections": 68,
+    "contested": 51,
+    "turnovers": 15,
+    "turnovers_by_tie": 8,
+    "pct_agent0_wins": 38.2,
+    "mean_winner_votes": 2.72,
+    "pct_majority": 52.9,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 27.9,
+    "pct_self_votes": 7.1,
+    "mean_candidates_with_votes": 2.88
+   },
+   "claude": {
+    "elections": 68,
+    "contested": 51,
+    "turnovers": 25,
+    "turnovers_by_tie": 7,
+    "pct_agent0_wins": 10.3,
+    "mean_winner_votes": 3.15,
+    "pct_majority": 80.9,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 14.7,
+    "pct_self_votes": 0.6,
+    "mean_candidates_with_votes": 2.5
+   },
+   "gemini": {
+    "elections": 68,
+    "contested": 51,
+    "turnovers": 42,
+    "turnovers_by_tie": 15,
+    "pct_agent0_wins": 44.1,
+    "mean_winner_votes": 2.65,
+    "pct_majority": 51.5,
+    "pct_unanimous": 1.5,
+    "pct_tie_at_top": 30.9,
+    "pct_self_votes": 11.5,
+    "mean_candidates_with_votes": 2.93
+   },
+   "deepseek": {
+    "elections": 68,
+    "contested": 51,
+    "turnovers": 4,
+    "turnovers_by_tie": 3,
+    "pct_agent0_wins": 5.9,
+    "mean_winner_votes": 3.76,
+    "pct_majority": 82.4,
+    "pct_unanimous": 35.3,
+    "pct_tie_at_top": 14.7,
+    "pct_self_votes": 19.7,
+    "mean_candidates_with_votes": 2.06
+   },
+   "grok": {
+    "elections": 68,
+    "contested": 51,
+    "turnovers": 12,
+    "turnovers_by_tie": 2,
+    "pct_agent0_wins": 10.3,
+    "mean_winner_votes": 3.34,
+    "pct_majority": 86.8,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 8.8,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.41
+   },
+   "qwen": {
+    "elections": 68,
+    "contested": 51,
+    "turnovers": 5,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 0.0,
+    "mean_winner_votes": 3.96,
+    "pct_majority": 97.1,
+    "pct_unanimous": 22.1,
+    "pct_tie_at_top": 1.5,
+    "pct_self_votes": 10.9,
+    "mean_candidates_with_votes": 1.91
+   }
+  },
+  "frontier_elected_only": {
+   "gpt4o": {
+    "elections": 20,
+    "contested": 15,
+    "turnovers": 5,
+    "turnovers_by_tie": 3,
+    "pct_agent0_wins": 40.0,
+    "mean_winner_votes": 2.65,
+    "pct_majority": 55.0,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 30.0,
+    "pct_self_votes": 2.0,
+    "mean_candidates_with_votes": 2.85
+   },
+   "claude": {
+    "elections": 20,
+    "contested": 15,
+    "turnovers": 8,
+    "turnovers_by_tie": 1,
+    "pct_agent0_wins": 5.0,
+    "mean_winner_votes": 3.3,
+    "pct_majority": 85.0,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 5.0,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.45
+   },
+   "gemini": {
+    "elections": 20,
+    "contested": 15,
+    "turnovers": 13,
+    "turnovers_by_tie": 4,
+    "pct_agent0_wins": 30.0,
+    "mean_winner_votes": 2.7,
+    "pct_majority": 55.0,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 30.0,
+    "pct_self_votes": 18.0,
+    "mean_candidates_with_votes": 2.95
+   },
+   "deepseek": {
+    "elections": 20,
+    "contested": 15,
+    "turnovers": 2,
+    "turnovers_by_tie": 1,
+    "pct_agent0_wins": 5.0,
+    "mean_winner_votes": 3.65,
+    "pct_majority": 75.0,
+    "pct_unanimous": 35.0,
+    "pct_tie_at_top": 20.0,
+    "pct_self_votes": 16.0,
+    "mean_candidates_with_votes": 2.15
+   },
+   "grok": {
+    "elections": 20,
+    "contested": 15,
+    "turnovers": 3,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 5.0,
+    "mean_winner_votes": 3.3,
+    "pct_majority": 90.0,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 10.0,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.35
+   },
+   "qwen": {
+    "elections": 20,
+    "contested": 15,
+    "turnovers": 1,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 0.0,
+    "mean_winner_votes": 4.0,
+    "pct_majority": 95.0,
+    "pct_unanimous": 20.0,
+    "pct_tie_at_top": 0.0,
+    "pct_self_votes": 11.0,
+    "mean_candidates_with_votes": 1.9
+   }
+  },
+  "samegen": {
+   "gpt5": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 28,
+    "turnovers_by_tie": 6,
+    "pct_agent0_wins": 21.7,
+    "mean_winner_votes": 2.72,
+    "pct_majority": 58.3,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 21.7,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.95
+   },
+   "deepseek31": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 1,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 8.3,
+    "mean_winner_votes": 3.13,
+    "pct_majority": 73.3,
+    "pct_unanimous": 5.0,
+    "pct_tie_at_top": 8.3,
+    "pct_self_votes": 22.3,
+    "mean_candidates_with_votes": 2.72
+   }
+  },
+  "samegen_elected_only": {
+   "gpt5": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 6,
+    "turnovers_by_tie": 1,
+    "pct_agent0_wins": 25.0,
+    "mean_winner_votes": 2.58,
+    "pct_majority": 50.0,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 25.0,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 3.17
+   },
+   "deepseek31": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 1,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 41.7,
+    "mean_winner_votes": 2.67,
+    "pct_majority": 58.3,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 25.0,
+    "pct_self_votes": 10.0,
+    "mean_candidates_with_votes": 2.83
+   }
+  },
+  "open": {
+   "gpt-oss-120b": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 2,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 70.0,
+    "mean_winner_votes": 3.17,
+    "pct_majority": 76.7,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 10.0,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.62
+   },
+   "nemotron-3-super-120b": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 9,
+    "turnovers_by_tie": 2,
+    "pct_agent0_wins": 5.0,
+    "mean_winner_votes": 3.2,
+    "pct_majority": 71.7,
+    "pct_unanimous": 15.0,
+    "pct_tie_at_top": 13.3,
+    "pct_self_votes": 20.5,
+    "mean_candidates_with_votes": 2.55
+   },
+   "ling-3.0-flash": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 7,
+    "turnovers_by_tie": 1,
+    "pct_agent0_wins": 31.7,
+    "mean_winner_votes": 3.2,
+    "pct_majority": 75.0,
+    "pct_unanimous": 6.7,
+    "pct_tie_at_top": 10.0,
+    "pct_self_votes": 4.1,
+    "mean_candidates_with_votes": 2.53
+   },
+   "qwen3.8-27b": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 25,
+    "turnovers_by_tie": 3,
+    "pct_agent0_wins": 21.7,
+    "mean_winner_votes": 2.68,
+    "pct_majority": 50.0,
+    "pct_unanimous": 5.0,
+    "pct_tie_at_top": 16.7,
+    "pct_self_votes": 5.0,
+    "mean_candidates_with_votes": 3.05
+   },
+   "gemma-4-31b": {
+    "elections": 60,
+    "contested": 45,
+    "turnovers": 1,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 96.7,
+    "mean_winner_votes": 3.93,
+    "pct_majority": 98.3,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 1.7,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.02
+   }
+  },
+  "open_elected_only": {
+   "gpt-oss-120b": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 0,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 100.0,
+    "mean_winner_votes": 3.33,
+    "pct_majority": 83.3,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 16.7,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.42
+   },
+   "nemotron-3-super-120b": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 1,
+    "turnovers_by_tie": 1,
+    "pct_agent0_wins": 0.0,
+    "mean_winner_votes": 3.5,
+    "pct_majority": 58.3,
+    "pct_unanimous": 41.7,
+    "pct_tie_at_top": 25.0,
+    "pct_self_votes": 20.3,
+    "mean_candidates_with_votes": 2.17
+   },
+   "ling-3.0-flash": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 1,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 33.3,
+    "mean_winner_votes": 3.5,
+    "pct_majority": 83.3,
+    "pct_unanimous": 16.7,
+    "pct_tie_at_top": 8.3,
+    "pct_self_votes": 3.3,
+    "mean_candidates_with_votes": 2.25
+   },
+   "qwen3.8-27b": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 6,
+    "turnovers_by_tie": 1,
+    "pct_agent0_wins": 8.3,
+    "mean_winner_votes": 3.17,
+    "pct_majority": 66.7,
+    "pct_unanimous": 16.7,
+    "pct_tie_at_top": 16.7,
+    "pct_self_votes": 5.0,
+    "mean_candidates_with_votes": 2.42
+   },
+   "gemma-4-31b": {
+    "elections": 12,
+    "contested": 9,
+    "turnovers": 0,
+    "turnovers_by_tie": 0,
+    "pct_agent0_wins": 100.0,
+    "mean_winner_votes": 3.75,
+    "pct_majority": 91.7,
+    "pct_unanimous": 0.0,
+    "pct_tie_at_top": 8.3,
+    "pct_self_votes": 0.0,
+    "mean_candidates_with_votes": 2.08
+   }
+  },
+  "mixed": {
+   "elections": 72,
+   "contested": 54,
+   "turnovers": 17,
+   "turnovers_by_tie": 9,
+   "pct_agent0_wins": 6.9,
+   "mean_winner_votes": 3.12,
+   "pct_majority": 73.6,
+   "pct_unanimous": 8.3,
+   "pct_tie_at_top": 20.8,
+   "pct_self_votes": 8.3,
+   "mean_candidates_with_votes": 2.4
+  }
+ },
+ "promises": {
+  "frontier": {
+   "chat_only": {
+    "gpt4o": {
+     "explicit": 261,
+     "broken": 2,
+     "conditional": 11,
+     "explicit_uncond": 250,
+     "broken_uncond": 1,
+     "logged_explicit": 263,
+     "logged_broken": 2
+    },
+    "claude": {
+     "explicit": 125,
+     "broken": 0,
+     "conditional": 28,
+     "explicit_uncond": 97,
+     "broken_uncond": 0,
+     "logged_explicit": 219,
+     "logged_broken": 0
+    },
+    "gemini": {
+     "explicit": 244,
+     "broken": 0,
+     "conditional": 12,
+     "explicit_uncond": 232,
+     "broken_uncond": 0,
+     "logged_explicit": 260,
+     "logged_broken": 0
+    },
+    "deepseek": {
+     "explicit": 129,
+     "broken": 0,
+     "conditional": 6,
+     "explicit_uncond": 123,
+     "broken_uncond": 0,
+     "logged_explicit": 131,
+     "logged_broken": 0
+    },
+    "grok": {
+     "explicit": 12,
+     "broken": 0,
+     "conditional": 0,
+     "explicit_uncond": 12,
+     "broken_uncond": 0,
+     "logged_explicit": 16,
+     "logged_broken": 0
+    },
+    "qwen": {
+     "explicit": 129,
+     "broken": 0,
+     "conditional": 35,
+     "explicit_uncond": 94,
+     "broken_uncond": 0,
+     "logged_explicit": 247,
+     "logged_broken": 0
+    }
+   },
+   "elected": {
+    "gpt4o": {
+     "explicit": 317,
+     "broken": 0,
+     "conditional": 37,
+     "explicit_uncond": 280,
+     "broken_uncond": 0,
+     "logged_explicit": 311,
+     "logged_broken": 0
+    },
+    "claude": {
+     "explicit": 381,
+     "broken": 0,
+     "conditional": 84,
+     "explicit_uncond": 297,
+     "broken_uncond": 0,
+     "logged_explicit": 437,
+     "logged_broken": 0
+    },
+    "gemini": {
+     "explicit": 121,
+     "broken": 0,
+     "conditional": 1,
+     "explicit_uncond": 120,
+     "broken_uncond": 0,
+     "logged_explicit": 120,
+     "logged_broken": 0
+    },
+    "deepseek": {
+     "explicit": 240,
+     "broken": 0,
+     "conditional": 2,
+     "explicit_uncond": 238,
+     "broken_uncond": 0,
+     "logged_explicit": 244,
+     "logged_broken": 0
+    },
+    "grok": {
+     "explicit": 22,
+     "broken": 0,
+     "conditional": 4,
+     "explicit_uncond": 18,
+     "broken_uncond": 0,
+     "logged_explicit": 31,
+     "logged_broken": 0
+    },
+    "qwen": {
+     "explicit": 298,
+     "broken": 1,
+     "conditional": 97,
+     "explicit_uncond": 201,
+     "broken_uncond": 0,
+     "logged_explicit": 448,
+     "logged_broken": 1
+    }
+   },
+   "hidden": {
+    "gpt4o": {
+     "explicit": 189,
+     "broken": 0,
+     "conditional": 14,
+     "explicit_uncond": 175,
+     "broken_uncond": 0,
+     "logged_explicit": 192,
+     "logged_broken": 0
+    },
+    "claude": {
+     "explicit": 216,
+     "broken": 0,
+     "conditional": 33,
+     "explicit_uncond": 183,
+     "broken_uncond": 0,
+     "logged_explicit": 254,
+     "logged_broken": 0
+    },
+    "gemini": {
+     "explicit": 139,
+     "broken": 2,
+     "conditional": 6,
+     "explicit_uncond": 133,
+     "broken_uncond": 2,
+     "logged_explicit": 149,
+     "logged_broken": 1
+    },
+    "deepseek": {
+     "explicit": 192,
+     "broken": 0,
+     "conditional": 1,
+     "explicit_uncond": 191,
+     "broken_uncond": 0,
+     "logged_explicit": 198,
+     "logged_broken": 0
+    },
+    "grok": {
+     "explicit": 7,
+     "broken": 0,
+     "conditional": 0,
+     "explicit_uncond": 7,
+     "broken_uncond": 0,
+     "logged_explicit": 12,
+     "logged_broken": 0
+    },
+    "qwen": {
+     "explicit": 198,
+     "broken": 0,
+     "conditional": 62,
+     "explicit_uncond": 136,
+     "broken_uncond": 0,
+     "logged_explicit": 276,
+     "logged_broken": 0
+    }
+   },
+   "anonymous": {
+    "gpt4o": {
+     "explicit": 192,
+     "broken": 0,
+     "conditional": 22,
+     "explicit_uncond": 170,
+     "broken_uncond": 0,
+     "logged_explicit": 191,
+     "logged_broken": 0
+    },
+    "claude": {
+     "explicit": 231,
+     "broken": 0,
+     "conditional": 60,
+     "explicit_uncond": 171,
+     "broken_uncond": 0,
+     "logged_explicit": 253,
+     "logged_broken": 0
+    },
+    "gemini": {
+     "explicit": 77,
+     "broken": 0,
+     "conditional": 1,
+     "explicit_uncond": 76,
+     "broken_uncond": 0,
+     "logged_explicit": 82,
+     "logged_broken": 0
+    },
+    "deepseek": {
+     "explicit": 189,
+     "broken": 0,
+     "conditional": 10,
+     "explicit_uncond": 179,
+     "broken_uncond": 0,
+     "logged_explicit": 189,
+     "logged_broken": 0
+    },
+    "grok": {
+     "logged_explicit": 5,
+     "logged_broken": 0,
+     "explicit": 3,
+     "broken": 0,
+     "conditional": 0,
+     "explicit_uncond": 3,
+     "broken_uncond": 0
+    },
+    "qwen": {
+     "explicit": 177,
+     "broken": 0,
+     "conditional": 49,
+     "explicit_uncond": 128,
+     "broken_uncond": 0,
+     "logged_explicit": 263,
+     "logged_broken": 0
+    }
+   }
+  },
+  "samegen": {
+   "chat_only": {
+    "gpt5": {},
+    "deepseek31": {}
+   },
+   "elected": {
+    "gpt5": {
+     "explicit": 235,
+     "broken": 1,
+     "conditional": 232,
+     "explicit_uncond": 3,
+     "broken_uncond": 0,
+     "logged_explicit": 298,
+     "logged_broken": 5
+    },
+    "deepseek31": {
+     "explicit": 171,
+     "broken": 0,
+     "conditional": 6,
+     "explicit_uncond": 165,
+     "broken_uncond": 0,
+     "logged_explicit": 171,
+     "logged_broken": 0
+    }
+   },
+   "hidden": {
+    "gpt5": {
+     "explicit": 205,
+     "broken": 3,
+     "conditional": 197,
+     "explicit_uncond": 8,
+     "broken_uncond": 2,
+     "logged_explicit": 290,
+     "logged_broken": 8
+    },
+    "deepseek31": {
+     "explicit": 135,
+     "broken": 0,
+     "conditional": 4,
+     "explicit_uncond": 131,
+     "broken_uncond": 0,
+     "logged_explicit": 139,
+     "logged_broken": 0
+    }
+   },
+   "anonymous": {
+    "gpt5": {
+     "explicit": 213,
+     "broken": 2,
+     "conditional": 203,
+     "explicit_uncond": 10,
+     "broken_uncond": 1,
+     "logged_explicit": 300,
+     "logged_broken": 5
+    },
+    "deepseek31": {
+     "explicit": 120,
+     "broken": 0,
+     "conditional": 8,
+     "explicit_uncond": 112,
+     "broken_uncond": 0,
+     "logged_explicit": 115,
+     "logged_broken": 0
+    }
+   }
+  },
+  "open": {
+   "chat_only": {
+    "gpt-oss-120b": {
+     "explicit": 240,
+     "broken": 67,
+     "conditional": 51,
+     "explicit_uncond": 189,
+     "broken_uncond": 44,
+     "logged_explicit": 240,
+     "logged_broken": 67
+    },
+    "nemotron-3-super-120b": {
+     "explicit": 51,
+     "broken": 6,
+     "conditional": 18,
+     "explicit_uncond": 33,
+     "broken_uncond": 5,
+     "logged_explicit": 51,
+     "logged_broken": 6
+    },
+    "ling-3.0-flash": {
+     "explicit": 238,
+     "broken": 97,
+     "conditional": 143,
+     "explicit_uncond": 95,
+     "broken_uncond": 39,
+     "logged_explicit": 238,
+     "logged_broken": 97
+    },
+    "qwen3.8-27b": {
+     "explicit": 257,
+     "broken": 55,
+     "conditional": 69,
+     "explicit_uncond": 188,
+     "broken_uncond": 38,
+     "logged_explicit": 257,
+     "logged_broken": 55
+    },
+    "gemma-4-31b": {
+     "explicit": 171,
+     "broken": 13,
+     "conditional": 3,
+     "explicit_uncond": 168,
+     "broken_uncond": 13,
+     "logged_explicit": 171,
+     "logged_broken": 13
+    }
+   },
+   "elected": {
+    "gpt-oss-120b": {
+     "explicit": 275,
+     "broken": 34,
+     "conditional": 40,
+     "explicit_uncond": 235,
+     "broken_uncond": 29,
+     "logged_explicit": 275,
+     "logged_broken": 34
+    },
+    "nemotron-3-super-120b": {
+     "explicit": 88,
+     "broken": 4,
+     "conditional": 13,
+     "explicit_uncond": 75,
+     "broken_uncond": 4,
+     "logged_explicit": 88,
+     "logged_broken": 4
+    },
+    "ling-3.0-flash": {
+     "explicit": 234,
+     "broken": 99,
+     "conditional": 135,
+     "explicit_uncond": 99,
+     "broken_uncond": 26,
+     "logged_explicit": 234,
+     "logged_broken": 99
+    },
+    "qwen3.8-27b": {
+     "explicit": 240,
+     "broken": 30,
+     "conditional": 31,
+     "explicit_uncond": 209,
+     "broken_uncond": 29,
+     "logged_explicit": 240,
+     "logged_broken": 30
+    },
+    "gemma-4-31b": {
+     "explicit": 210,
+     "broken": 13,
+     "conditional": 9,
+     "explicit_uncond": 201,
+     "broken_uncond": 13,
+     "logged_explicit": 210,
+     "logged_broken": 13
+    }
+   },
+   "hidden": {
+    "gpt-oss-120b": {
+     "explicit": 243,
+     "broken": 27,
+     "conditional": 17,
+     "explicit_uncond": 226,
+     "broken_uncond": 23,
+     "logged_explicit": 243,
+     "logged_broken": 27
+    },
+    "nemotron-3-super-120b": {
+     "explicit": 68,
+     "broken": 0,
+     "conditional": 22,
+     "explicit_uncond": 46,
+     "broken_uncond": 0,
+     "logged_explicit": 68,
+     "logged_broken": 0
+    },
+    "ling-3.0-flash": {
+     "explicit": 238,
+     "broken": 111,
+     "conditional": 106,
+     "explicit_uncond": 132,
+     "broken_uncond": 56,
+     "logged_explicit": 238,
+     "logged_broken": 111
+    },
+    "qwen3.8-27b": {
+     "explicit": 217,
+     "broken": 43,
+     "conditional": 47,
+     "explicit_uncond": 170,
+     "broken_uncond": 36,
+     "logged_explicit": 217,
+     "logged_broken": 43
+    },
+    "gemma-4-31b": {
+     "explicit": 196,
+     "broken": 10,
+     "conditional": 6,
+     "explicit_uncond": 190,
+     "broken_uncond": 10,
+     "logged_explicit": 196,
+     "logged_broken": 10
+    }
+   },
+   "anonymous": {
+    "gpt-oss-120b": {
+     "explicit": 280,
+     "broken": 43,
+     "conditional": 27,
+     "explicit_uncond": 253,
+     "broken_uncond": 36,
+     "logged_explicit": 280,
+     "logged_broken": 43
+    },
+    "nemotron-3-super-120b": {
+     "explicit": 81,
+     "broken": 2,
+     "conditional": 13,
+     "explicit_uncond": 68,
+     "broken_uncond": 1,
+     "logged_explicit": 81,
+     "logged_broken": 2
+    },
+    "ling-3.0-flash": {
+     "explicit": 260,
+     "broken": 109,
+     "conditional": 145,
+     "explicit_uncond": 115,
+     "broken_uncond": 50,
+     "logged_explicit": 260,
+     "logged_broken": 109
+    },
+    "qwen3.8-27b": {
+     "explicit": 213,
+     "broken": 35,
+     "conditional": 22,
+     "explicit_uncond": 191,
+     "broken_uncond": 35,
+     "logged_explicit": 213,
+     "logged_broken": 35
+    },
+    "gemma-4-31b": {
+     "explicit": 216,
+     "broken": 9,
+     "conditional": 9,
+     "explicit_uncond": 207,
+     "broken_uncond": 9,
+     "logged_explicit": 216,
+     "logged_broken": 9
+    }
+   }
+  }
+ },
+ "welfare": {
+  "crossrule_claude_grok": {
+   "total": {
+    "mean": 1570.667,
+    "sd": 47.385,
+    "n": 3
+   },
+   "from_contributions": {
+    "mean": 1196.0,
+    "sd": 6.928,
+    "n": 3
+   },
+   "transfers_and_salary": {
+    "mean": 374.667,
+    "sd": 40.464,
+    "n": 3
+   }
+  },
+  "crossrule_claude_qwen": {
+   "total": {
+    "mean": 1542.8,
+    "sd": 40.98,
+    "n": 3
+   },
+   "from_contributions": {
+    "mean": 1172.8,
+    "sd": 36.744,
+    "n": 3
+   },
+   "transfers_and_salary": {
+    "mean": 370.0,
+    "sd": 5.292,
+    "n": 3
+   }
+  },
+  "crossrule_gpt4o_qwen": {
+   "total": {
+    "mean": 1164.8,
+    "sd": 182.06,
+    "n": 3
+   },
+   "from_contributions": {
+    "mean": 816.8,
+    "sd": 161.131,
+    "n": 3
+   },
+   "transfers_and_salary": {
+    "mean": 348.0,
+    "sd": 21.166,
+    "n": 3
+   }
+  },
+  "crossrule_grok_claude": {
+   "total": {
+    "mean": 1481.333,
+    "sd": 43.143,
+    "n": 3
+   },
+   "from_contributions": {
+    "mean": 1200.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "transfers_and_salary": {
+    "mean": 281.333,
+    "sd": 43.143,
+    "n": 3
+   }
+  },
+  "crossrule_grok_qwen": {
+   "total": {
+    "mean": 969.533,
+    "sd": 128.383,
+    "n": 3
+   },
+   "from_contributions": {
+    "mean": 848.2,
+    "sd": 87.081,
+    "n": 3
+   },
+   "transfers_and_salary": {
+    "mean": 121.333,
+    "sd": 46.231,
+    "n": 3
+   }
+  },
+  "crossrule_qwen_claude": {
+   "total": {
+    "mean": 1311.327,
+    "sd": 105.846,
+    "n": 3
+   },
+   "from_contributions": {
+    "mean": 916.0,
+    "sd": 99.371,
+    "n": 3
+   },
+   "transfers_and_salary": {
+    "mean": 395.327,
+    "sd": 8.077,
+    "n": 3
+   }
+  },
+  "frontier": {
+   "fixed": {
+    "gpt4o": {
+     "total": {
+      "mean": 1161.76,
+      "sd": 155.703,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 855.36,
+      "sd": 135.936,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 306.4,
+      "sd": 28.824,
+      "n": 5
+     }
+    },
+    "claude": {
+     "total": {
+      "mean": 1584.56,
+      "sd": 17.64,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 1197.36,
+      "sd": 5.258,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 387.2,
+      "sd": 13.084,
+      "n": 5
+     }
+    },
+    "gemini": {
+     "total": {
+      "mean": 993.6,
+      "sd": 320.491,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 806.4,
+      "sd": 244.471,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 187.2,
+      "sd": 82.965,
+      "n": 5
+     }
+    },
+    "deepseek": {
+     "total": {
+      "mean": 1283.04,
+      "sd": 39.121,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 895.44,
+      "sd": 23.186,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 387.6,
+      "sd": 17.344,
+      "n": 5
+     }
+    },
+    "grok": {
+     "total": {
+      "mean": 1431.6,
+      "sd": 26.397,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 1154.4,
+      "sd": 10.04,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 277.2,
+      "sd": 26.668,
+      "n": 5
+     }
+    },
+    "qwen": {
+     "total": {
+      "mean": 1289.16,
+      "sd": 196.916,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 889.56,
+      "sd": 197.353,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 399.6,
+      "sd": 0.894,
+      "n": 5
+     }
+    }
+   },
+   "elected": {
+    "gpt4o": {
+     "total": {
+      "mean": 1071.48,
+      "sd": 222.149,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 796.68,
+      "sd": 207.728,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 274.8,
+      "sd": 25.908,
+      "n": 5
+     }
+    },
+    "claude": {
+     "total": {
+      "mean": 1306.2,
+      "sd": 93.671,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 934.2,
+      "sd": 81.598,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 372.0,
+      "sd": 16.733,
+      "n": 5
+     }
+    },
+    "gemini": {
+     "total": {
+      "mean": 1478.796,
+      "sd": 49.75,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 1179.6,
+      "sd": 25.314,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 299.196,
+      "sd": 40.438,
+      "n": 5
+     }
+    },
+    "deepseek": {
+     "total": {
+      "mean": 1281.52,
+      "sd": 30.923,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 912.72,
+      "sd": 22.133,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 368.8,
+      "sd": 16.037,
+      "n": 5
+     }
+    },
+    "grok": {
+     "total": {
+      "mean": 1394.32,
+      "sd": 12.606,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 1144.32,
+      "sd": 11.05,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 250.0,
+      "sd": 16.125,
+      "n": 5
+     }
+    },
+    "qwen": {
+     "total": {
+      "mean": 1228.4,
+      "sd": 118.772,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 840.0,
+      "sd": 114.394,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 388.4,
+      "sd": 25.938,
+      "n": 5
+     }
+    }
+   },
+   "rotating": {
+    "gpt4o": {
+     "total": {
+      "mean": 934.84,
+      "sd": 73.166,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 660.84,
+      "sd": 82.686,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 274.0,
+      "sd": 27.166,
+      "n": 5
+     }
+    },
+    "claude": {
+     "total": {
+      "mean": 1497.8,
+      "sd": 98.725,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 1135.8,
+      "sd": 87.673,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 362.0,
+      "sd": 34.843,
+      "n": 5
+     }
+    },
+    "gemini": {
+     "total": {
+      "mean": 946.796,
+      "sd": 307.983,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 783.6,
+      "sd": 241.816,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 163.196,
+      "sd": 67.611,
+      "n": 5
+     }
+    },
+    "deepseek": {
+     "total": {
+      "mean": 1183.88,
+      "sd": 162.289,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 830.28,
+      "sd": 127.184,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 353.6,
+      "sd": 47.8,
+      "n": 5
+     }
+    },
+    "grok": {
+     "total": {
+      "mean": 1429.2,
+      "sd": 19.162,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 1149.6,
+      "sd": 15.646,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 279.6,
+      "sd": 11.696,
+      "n": 5
+     }
+    },
+    "qwen": {
+     "total": {
+      "mean": 1099.476,
+      "sd": 98.204,
+      "n": 5
+     },
+     "from_contributions": {
+      "mean": 699.48,
+      "sd": 98.212,
+      "n": 5
+     },
+     "transfers_and_salary": {
+      "mean": 399.996,
+      "sd": 0.009,
+      "n": 5
+     }
+    }
+   },
+   "salary": {
+    "gpt4o": {
+     "total": {
+      "mean": 1342.733,
+      "sd": 70.16,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 937.4,
+      "sd": 60.163,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 405.333,
+      "sd": 12.22,
+      "n": 3
+     }
+    },
+    "claude": {
+     "total": {
+      "mean": 1355.133,
+      "sd": 85.287,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 893.8,
+      "sd": 91.232,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 461.333,
+      "sd": 23.18,
+      "n": 3
+     }
+    },
+    "gemini": {
+     "total": {
+      "mean": 1622.653,
+      "sd": 34.02,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1200.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 422.653,
+      "sd": 34.02,
+      "n": 3
+     }
+    },
+    "deepseek": {
+     "total": {
+      "mean": 1381.333,
+      "sd": 22.745,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 900.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 481.333,
+      "sd": 22.745,
+      "n": 3
+     }
+    },
+    "grok": {
+     "total": {
+      "mean": 1504.0,
+      "sd": 39.509,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1134.0,
+      "sd": 19.672,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 370.0,
+      "sd": 36.387,
+      "n": 3
+     }
+    },
+    "qwen": {
+     "total": {
+      "mean": 1334.2,
+      "sd": 72.3,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 834.2,
+      "sd": 72.3,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 500.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "costly": {
+    "gpt4o": {
+     "total": {
+      "mean": 1194.867,
+      "sd": 130.754,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 994.2,
+      "sd": 160.568,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 200.667,
+      "sd": 30.616,
+      "n": 3
+     }
+    },
+    "claude": {
+     "total": {
+      "mean": 1444.733,
+      "sd": 108.373,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1139.4,
+      "sd": 104.962,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 305.333,
+      "sd": 22.03,
+      "n": 3
+     }
+    },
+    "gemini": {
+     "total": {
+      "mean": 1274.327,
+      "sd": 248.007,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1091.0,
+      "sd": 155.2,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 183.327,
+      "sd": 92.996,
+      "n": 3
+     }
+    },
+    "deepseek": {
+     "total": {
+      "mean": 1206.333,
+      "sd": 27.465,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 921.0,
+      "sd": 28.931,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 285.333,
+      "sd": 6.11,
+      "n": 3
+     }
+    },
+    "grok": {
+     "total": {
+      "mean": 1316.0,
+      "sd": 42.579,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1140.0,
+      "sd": 10.817,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 176.0,
+      "sd": 32.0,
+      "n": 3
+     }
+    },
+    "qwen": {
+     "total": {
+      "mean": 1222.933,
+      "sd": 5.658,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 883.6,
+      "sd": 6.744,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 339.333,
+      "sd": 1.155,
+      "n": 3
+     }
+    }
+   }
+  },
+  "samegen": {
+   "fixed": {
+    "gpt5": {
+     "total": {
+      "mean": 1277.333,
+      "sd": 39.463,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1176.0,
+      "sd": 41.569,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 101.333,
+      "sd": 4.619,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "total": {
+      "mean": 1545.333,
+      "sd": 72.072,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1172.0,
+      "sd": 45.924,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 373.333,
+      "sd": 28.095,
+      "n": 3
+     }
+    }
+   },
+   "elected": {
+    "gpt5": {
+     "total": {
+      "mean": 1263.333,
+      "sd": 23.861,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1180.0,
+      "sd": 18.33,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 83.333,
+      "sd": 13.317,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "total": {
+      "mean": 1370.533,
+      "sd": 6.294,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1057.2,
+      "sd": 33.691,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 313.333,
+      "sd": 30.022,
+      "n": 3
+     }
+    }
+   },
+   "rotating": {
+    "gpt5": {
+     "total": {
+      "mean": 1296.0,
+      "sd": 17.436,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1192.0,
+      "sd": 6.928,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 104.0,
+      "sd": 16.0,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "total": {
+      "mean": 1575.333,
+      "sd": 17.01,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1198.0,
+      "sd": 3.464,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 377.333,
+      "sd": 18.475,
+      "n": 3
+     }
+    }
+   },
+   "salary": {
+    "gpt5": {
+     "total": {
+      "mean": 1453.333,
+      "sd": 28.095,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1192.0,
+      "sd": 6.928,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 261.333,
+      "sd": 22.745,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "total": {
+      "mean": 1524.867,
+      "sd": 71.389,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1124.2,
+      "sd": 51.118,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 400.667,
+      "sd": 20.817,
+      "n": 3
+     }
+    }
+   },
+   "costly": {
+    "gpt5": {
+     "total": {
+      "mean": 1189.467,
+      "sd": 50.518,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1170.8,
+      "sd": 28.557,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 18.667,
+      "sd": 22.03,
+      "n": 3
+     }
+    },
+    "deepseek31": {
+     "total": {
+      "mean": 1351.533,
+      "sd": 132.768,
+      "n": 3
+     },
+     "from_contributions": {
+      "mean": 1114.2,
+      "sd": 106.586,
+      "n": 3
+     },
+     "transfers_and_salary": {
+      "mean": 237.333,
+      "sd": 31.07,
+      "n": 3
+     }
+    }
+   }
+  }
+ },
+ "tests": [
+  {
+   "model": "gpt4o",
+   "metric": "contrib",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 0.65,
+   "p": 0.4226,
+   "ci": [
+    -2.15,
+    3.45
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "claude",
+   "metric": "contrib",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 7.78,
+   "p": 0.0266,
+   "ci": [
+    1.5,
+    14.05
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gemini",
+   "metric": "contrib",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 2.09,
+   "p": 0.3343,
+   "ci": [
+    -5.03,
+    9.21
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "deepseek",
+   "metric": "contrib",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 6.12,
+   "p": 0.0163,
+   "ci": [
+    2.71,
+    9.53
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "grok",
+   "metric": "contrib",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 13.53,
+   "p": 0.0268,
+   "ci": [
+    3.8,
+    23.26
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen",
+   "metric": "contrib",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 0.67,
+   "p": 0.4226,
+   "ci": [
+    -2.2,
+    3.54
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt4o",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 3.61,
+   "p": 0.0244,
+   "ci": [
+    0.65,
+    6.56
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "gpt4o",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 2.63,
+   "p": 0.176,
+   "ci": [
+    -1.64,
+    6.89
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "gpt4o",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 0.36,
+   "p": 0.7008,
+   "ci": [
+    -1.92,
+    2.65
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "claude",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 1.67,
+   "p": 0.4327,
+   "ci": [
+    -5.71,
+    9.05
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "claude",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -2.71,
+   "p": 0.2497,
+   "ci": [
+    -9.2,
+    3.77
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "claude",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 0.65,
+   "p": 0.7514,
+   "ci": [
+    -5.75,
+    7.04
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "gemini",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 1.78,
+   "p": 0.4979,
+   "ci": [
+    -4.34,
+    7.9
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "gemini",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 8.0,
+   "p": 0.0388,
+   "ci": [
+    1.0,
+    15.01
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "gemini",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 1.4,
+   "p": 0.5887,
+   "ci": [
+    -4.69,
+    7.5
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "deepseek",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": -1.18,
+   "p": 0.2727,
+   "ci": [
+    -4.39,
+    2.03
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "deepseek",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -0.89,
+   "p": 0.3776,
+   "ci": [
+    -4.12,
+    2.34
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "deepseek",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": -2.27,
+   "p": 0.1178,
+   "ci": [
+    -5.31,
+    0.78
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "grok",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 0.17,
+   "p": 0.1371,
+   "ci": [
+    -0.08,
+    0.42
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "grok",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 0.01,
+   "p": 0.9615,
+   "ci": [
+    -0.26,
+    0.27
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "grok",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 0.09,
+   "p": 0.514,
+   "ci": [
+    -0.24,
+    0.42
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "qwen",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 4.16,
+   "p": 0.0466,
+   "ci": [
+    0.09,
+    8.23
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "qwen",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 3.33,
+   "p": 0.0219,
+   "ci": [
+    0.68,
+    5.99
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "qwen",
+   "metric": "contrib",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 0.99,
+   "p": 0.3577,
+   "ci": [
+    -1.47,
+    3.45
+   ],
+   "n": [
+    3,
+    5
+   ]
+  },
+  {
+   "model": "gpt4o",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 0.0,
+   "p": null,
+   "ci": null,
+   "note": "no variance"
+  },
+  {
+   "model": "gpt4o",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": 0.0,
+   "p": null,
+   "ci": null,
+   "note": "no variance"
+  },
+  {
+   "model": "claude",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 13.93,
+   "p": 0.0001,
+   "ci": [
+    11.25,
+    16.62
+   ],
+   "n": [
+    5,
+    3
+   ]
+  },
+  {
+   "model": "claude",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -7.67,
+   "p": 0.0021,
+   "ci": [
+    -10.07,
+    -5.27
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gemini",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 4.07,
+   "p": 0.0771,
+   "ci": [
+    -0.9,
+    9.03
+   ],
+   "n": [
+    5,
+    3
+   ]
+  },
+  {
+   "model": "gemini",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -0.33,
+   "p": 0.8465,
+   "ci": [
+    -5.05,
+    4.39
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "deepseek",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 0.33,
+   "p": 0.766,
+   "ci": [
+    -2.69,
+    3.36
+   ],
+   "n": [
+    5,
+    3
+   ]
+  },
+  {
+   "model": "deepseek",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -2.0,
+   "p": 0.1394,
+   "ci": [
+    -5.31,
+    1.31
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "grok",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 2.67,
+   "p": 0.0153,
+   "ci": [
+    1.23,
+    4.1
+   ],
+   "n": [
+    5,
+    3
+   ]
+  },
+  {
+   "model": "grok",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -2.67,
+   "p": 0.0153,
+   "ci": [
+    -4.1,
+    -1.23
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 0.0,
+   "p": null,
+   "ci": null,
+   "note": "no variance"
+  },
+  {
+   "model": "qwen",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": 0.0,
+   "p": null,
+   "ci": null,
+   "note": "no variance"
+  },
+  {
+   "model": "gpt5",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 6.33,
+   "p": 0.0662,
+   "ci": [
+    -0.75,
+    13.42
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt5",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -9.33,
+   "p": 0.028,
+   "ci": [
+    -16.66,
+    -2.0
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "deepseek31",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 0.0,
+   "p": 1.0,
+   "ci": [
+    -5.29,
+    5.29
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "deepseek31",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -1.67,
+   "p": 0.1332,
+   "ci": [
+    -4.14,
+    0.8
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 10.0,
+   "p": 0.0864,
+   "ci": [
+    -3.48,
+    23.48
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": -2.33,
+   "p": 0.5412,
+   "ci": [
+    -15.45,
+    10.78
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "deals",
+   "from": "elected",
+   "to": "salary",
+   "diff": 1.67,
+   "p": 0.6515,
+   "ci": [
+    -9.74,
+    13.07
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "deals",
+   "from": "salary",
+   "to": "costly",
+   "diff": 1.33,
+   "p": 0.721,
+   "ci": [
+    -9.74,
+    12.4
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "coop",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 53.67,
+   "p": 0.0212,
+   "ci": [
+    17.4,
+    89.93
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 23.67,
+   "p": 0.118,
+   "ci": [
+    -13.1,
+    60.44
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 25.33,
+   "p": 0.0995,
+   "ci": [
+    -9.82,
+    60.49
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 25.67,
+   "p": 0.0971,
+   "ci": [
+    -9.51,
+    60.85
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gpt-oss-120b",
+   "metric": "broken_rate",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -15.19,
+   "p": 0.0332,
+   "ci": [
+    -27.81,
+    -2.58
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "nemotron-3-super-120b",
+   "metric": "coop",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 66.0,
+   "p": 0.014,
+   "ci": [
+    23.05,
+    108.95
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "nemotron-3-super-120b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 13.67,
+   "p": 0.3745,
+   "ci": [
+    -37.98,
+    65.31
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "nemotron-3-super-120b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 15.67,
+   "p": 0.3233,
+   "ci": [
+    -36.15,
+    67.48
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "nemotron-3-super-120b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 10.33,
+   "p": 0.4822,
+   "ci": [
+    -40.52,
+    61.19
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "nemotron-3-super-120b",
+   "metric": "broken_rate",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -5.3,
+   "p": 0.5219,
+   "ci": [
+    -28.46,
+    17.86
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "ling-3.0-flash",
+   "metric": "coop",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": -47.67,
+   "p": 0.0032,
+   "ci": [
+    -67.71,
+    -27.62
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "ling-3.0-flash",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": -2.67,
+   "p": 0.6626,
+   "ci": [
+    -18.44,
+    13.11
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "ling-3.0-flash",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -3.67,
+   "p": 0.5895,
+   "ci": [
+    -21.12,
+    13.79
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "ling-3.0-flash",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": -6.0,
+   "p": 0.3878,
+   "ci": [
+    -23.25,
+    11.25
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "ling-3.0-flash",
+   "metric": "broken_rate",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 2.01,
+   "p": 0.708,
+   "ci": [
+    -11.87,
+    15.88
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "coop",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 28.33,
+   "p": 0.0815,
+   "ci": [
+    -6.56,
+    63.23
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 26.67,
+   "p": 0.0471,
+   "ci": [
+    0.58,
+    52.75
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 36.33,
+   "p": 0.007,
+   "ci": [
+    18.45,
+    54.22
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 36.67,
+   "p": 0.0091,
+   "ci": [
+    18.18,
+    55.16
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "qwen3.8-27b",
+   "metric": "broken_rate",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -9.66,
+   "p": 0.1518,
+   "ci": [
+    -24.95,
+    5.64
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gemma-4-31b",
+   "metric": "coop",
+   "from": "baseline",
+   "to": "chat_only",
+   "diff": 0.0,
+   "p": null,
+   "ci": null,
+   "note": "no variance"
+  },
+  {
+   "model": "gemma-4-31b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "fixed",
+   "diff": 2.33,
+   "p": 0.1181,
+   "ci": [
+    -1.46,
+    6.13
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gemma-4-31b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": 0.67,
+   "p": 0.1835,
+   "ci": [
+    -0.77,
+    2.1
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gemma-4-31b",
+   "metric": "coop",
+   "from": "chat_only",
+   "to": "rotating",
+   "diff": 1.33,
+   "p": 0.2697,
+   "ci": [
+    -2.46,
+    5.13
+   ],
+   "n": [
+    3,
+    3
+   ]
+  },
+  {
+   "model": "gemma-4-31b",
+   "metric": "broken_rate",
+   "from": "chat_only",
+   "to": "elected",
+   "diff": -1.43,
+   "p": 0.2205,
+   "ci": [
+    -4.17,
+    1.31
+   ],
+   "n": [
+    3,
+    3
+   ]
+  }
+ ]
+}

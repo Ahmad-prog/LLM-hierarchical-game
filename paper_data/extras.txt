@@ -1,0 +1,141 @@
+
+== SPEND punish/reward per round, frontier
+   fixed gpt4o P0.2 R8.1 pr%8 | claude P0.0 R9.7 pr%0 | gemini P0.0 R4.7 pr%0 | deepseek P0.0 R9.7 pr%1 | grok P0.2 R7.4 pr%2 | qwen P0.0 R10.0 pr%0
+   elected gpt4o P0.3 R7.4 pr%12 | claude P0.0 R9.3 pr%0 | gemini P0.0 R7.5 pr%1 | deepseek P0.0 R9.2 pr%0 | grok P0.1 R6.5 pr%1 | qwen P0.0 R9.8 pr%1
+   rotating gpt4o P0.2 R7.3 pr%10 | claude P0.0 R9.1 pr%0 | gemini P0.0 R4.1 pr%0 | deepseek P0.1 R9.1 pr%4 | grok P0.2 R7.5 pr%3 | qwen P0.0 R10.0 pr%0
+   salary gpt4o P0.1 R7.9 pr%5 | claude P0.0 R9.0 pr%0 | gemini P0.0 R8.1 pr%0 | deepseek P0.0 R9.5 pr%0 | grok P0.1 R6.8 pr%2 | qwen P0.0 R10.0 pr%0
+   costly gpt4o P0.2 R7.0 pr%8 | claude P0.0 R9.1 pr%0 | gemini P0.1 R6.2 pr%2 | deepseek P0.0 R8.6 pr%0 | grok P0.1 R6.2 pr%3 | qwen P0.0 R10.0 pr%0
+   hidden gpt4o P0.2 R7.5 pr%5 | claude P0.0 R8.9 pr%0 | gemini P0.6 R6.5 pr%13 | deepseek P0.0 R9.6 pr%0 | grok P0.0 R7.0 pr%2 | qwen P0.0 R9.7 pr%0
+   anonymous gpt4o P0.2 R7.3 pr%10 | claude P0.0 R9.1 pr%0 | gemini P0.0 R8.1 pr%0 | deepseek P0.0 R9.9 pr%0 | grok P0.1 R7.0 pr%2 | qwen P0.0 R10.0 pr%0
+
+== SPEND punish/reward per round, samegen
+   fixed gpt5 P0.0 R2.5 pr%0 | deepseek31 P0.0 R9.4 pr%2
+   elected gpt5 P0.0 R2.1 pr%0 | deepseek31 P0.0 R7.8 pr%0
+   rotating gpt5 P0.0 R2.6 pr%0 | deepseek31 P0.0 R9.4 pr%0
+   salary gpt5 P0.0 R4.0 pr%0 | deepseek31 P0.0 R7.5 pr%0
+   costly gpt5 P0.0 R2.0 pr%2 | deepseek31 P0.0 R7.4 pr%0
+   hidden gpt5 P0.0 R2.7 pr%0 | deepseek31 P0.1 R8.3 pr%3
+   anonymous gpt5 P0.0 R2.9 pr%0 | deepseek31 P0.1 R8.7 pr%2
+
+== SPEND punish/reward per round, open
+   fixed gpt-oss-120b P2.6 R6.1 pr%55 | nemotron-3-super-120b P0.2 R1.6 pr%5 | ling-3.0-flash P5.1 R5.1 pr%55 | qwen3.8-27b P4.5 R1.8 pr%45 | gemma-4-31b P0.4 R7.8 pr%5
+   elected gpt-oss-120b P2.0 R6.4 pr%47 | nemotron-3-super-120b P0.2 R1.6 pr%5 | ling-3.0-flash P5.4 R4.7 pr%57 | qwen3.8-27b P3.2 R3.6 pr%32 | gemma-4-31b P0.4 R7.6 pr%5
+   rotating gpt-oss-120b P2.1 R6.9 pr%43 | nemotron-3-super-120b P0.4 R1.4 pr%10 | ling-3.0-flash P3.9 R3.5 pr%42 | qwen3.8-27b P3.7 R2.5 pr%37 | gemma-4-31b P0.5 R7.7 pr%5
+   salary gpt-oss-120b P2.7 R6.8 pr%48 | nemotron-3-super-120b P0.1 R1.4 pr%3 | ling-3.0-flash P3.3 R2.0 pr%35 | qwen3.8-27b P4.5 R2.0 pr%47 | gemma-4-31b P0.4 R7.6 pr%5
+   costly gpt-oss-120b P2.2 R6.3 pr%47 | nemotron-3-super-120b P0.4 R0.9 pr%7 | ling-3.0-flash P4.4 R3.5 pr%47 | qwen3.8-27b P2.9 R3.4 pr%30 | gemma-4-31b P0.4 R7.9 pr%5
+   hidden gpt-oss-120b P1.6 R6.0 pr%30 | nemotron-3-super-120b P0.1 R0.6 pr%3 | ling-3.0-flash P4.9 R4.2 pr%55 | qwen3.8-27b P5.0 R2.2 pr%50 | gemma-4-31b P0.4 R7.6 pr%5
+   anonymous gpt-oss-120b P2.7 R6.7 pr%57 | nemotron-3-super-120b P0.0 R0.2 pr%0 | ling-3.0-flash P5.5 R4.0 pr%57 | qwen3.8-27b P4.2 R2.3 pr%45 | gemma-4-31b P0.4 R7.6 pr%5
+
+== CROSSRULE spend {'claude_grok': (0.167, 9.7), 'claude_qwen': (0.0, 9.25), 'gpt4o_qwen': (0.067, 8.833), 'grok_claude': (0.0, 7.067), 'grok_qwen': (0.033, 3.1), 'qwen_claude': (0.0, 9.883)}
+
+== ELECTIONS
+   frontier {"gpt4o": {"elections": 68, "contested": 51, "turnovers": 15, "turnovers_by_tie": 8, "pct_agent0_wins": 38.2, "mean_winner_votes": 2.72, "pct_majority": 52.9, "pct_unanimous": 0.0, "pct_tie_at_top": 27.9, "pct_self_votes": 7.1, "mean_candidates_with_votes": 2.88}, "claude": {"elections": 68, "contested": 51, "turnovers": 25, "turnovers_by_tie": 7, "pct_agent0_wins": 10.3, "mean_winner_votes": 3.15, "pct_majority": 80.9, "pct_unanimous": 0.0, "pct_tie_at_top": 14.7, "pct_self_votes": 0.6, "mean_candidates_with_votes": 2.5}, "gemini": {"elections": 68, "contested": 51, "turnovers": 42, "turnovers_by_tie": 15, "pct_agent0_wins": 44.1, "mean_winner_votes": 2.65, "pct_majority": 51.5, "pct_unanimous": 1.5, "pct_tie_at_top": 30.9, "pct_self_votes": 11.5, "mean_candidates_with_votes": 2.93}, "deepseek": {"elections": 68, "contested": 51, "turnovers": 4, "turnovers_by_tie": 3, "pct_agent0_wins": 5.9, "mean_winner_votes": 3.76, "pct_majority": 82.4, "pct_unanimous": 35.3, "pct_tie_at_top": 14.7, "pct_self_votes": 19.7, "mean_candidates_with_votes": 2.06}, "grok": {"elections": 68, "contested": 51, "turnovers": 12, "turnovers_by_tie": 2, "pct_agent0_wins": 10.3, "mean_winner_votes": 3.34, "pct_majority": 86.8, "pct_unanimous": 0.0, "pct_tie_at_top": 8.8, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.41}, "qwen": {"elections": 68, "contested": 51, "turnovers": 5, "turnovers_by_tie": 0, "pct_agent0_wins": 0.0, "mean_winner_votes": 3.96, "pct_majority": 97.1, "pct_unanimous": 22.1, "pct_tie_at_top": 1.5, "pct_self_votes": 10.9, "mean_candidates_with_votes": 1.91}}
+   frontier_elected_only {"gpt4o": {"elections": 20, "contested": 15, "turnovers": 5, "turnovers_by_tie": 3, "pct_agent0_wins": 40.0, "mean_winner_votes": 2.65, "pct_majority": 55.0, "pct_unanimous": 0.0, "pct_tie_at_top": 30.0, "pct_self_votes": 2.0, "mean_candidates_with_votes": 2.85}, "claude": {"elections": 20, "contested": 15, "turnovers": 8, "turnovers_by_tie": 1, "pct_agent0_wins": 5.0, "mean_winner_votes": 3.3, "pct_majority": 85.0, "pct_unanimous": 0.0, "pct_tie_at_top": 5.0, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.45}, "gemini": {"elections": 20, "contested": 15, "turnovers": 13, "turnovers_by_tie": 4, "pct_agent0_wins": 30.0, "mean_winner_votes": 2.7, "pct_majority": 55.0, "pct_unanimous": 0.0, "pct_tie_at_top": 30.0, "pct_self_votes": 18.0, "mean_candidates_with_votes": 2.95}, "deepseek": {"elections": 20, "contested": 15, "turnovers": 2, "turnovers_by_tie": 1, "pct_agent0_wins": 5.0, "mean_winner_votes": 3.65, "pct_majority": 75.0, "pct_unanimous": 35.0, "pct_tie_at_top": 20.0, "pct_self_votes": 16.0, "mean_candidates_with_votes": 2.15}, "grok": {"elections": 20, "contested": 15, "turnovers": 3, "turnovers_by_tie": 0, "pct_agent0_wins": 5.0, "mean_winner_votes": 3.3, "pct_majority": 90.0, "pct_unanimous": 0.0, "pct_tie_at_top": 10.0, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.35}, "qwen": {"elections": 20, "contested": 15, "turnovers": 1, "turnovers_by_tie": 0, "pct_agent0_wins": 0.0, "mean_winner_votes": 4.0, "pct_majority": 95.0, "pct_unanimous": 20.0, "pct_tie_at_top": 0.0, "pct_self_votes": 11.0, "mean_candidates_with_votes": 1.9}}
+   samegen {"gpt5": {"elections": 60, "contested": 45, "turnovers": 28, "turnovers_by_tie": 6, "pct_agent0_wins": 21.7, "mean_winner_votes": 2.72, "pct_majority": 58.3, "pct_unanimous": 0.0, "pct_tie_at_top": 21.7, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.95}, "deepseek31": {"elections": 60, "contested": 45, "turnovers": 1, "turnovers_by_tie": 0, "pct_agent0_wins": 8.3, "mean_winner_votes": 3.13, "pct_majority": 73.3, "pct_unanimous": 5.0, "pct_tie_at_top": 8.3, "pct_self_votes": 22.3, "mean_candidates_with_votes": 2.72}}
+   samegen_elected_only {"gpt5": {"elections": 12, "contested": 9, "turnovers": 6, "turnovers_by_tie": 1, "pct_agent0_wins": 25.0, "mean_winner_votes": 2.58, "pct_majority": 50.0, "pct_unanimous": 0.0, "pct_tie_at_top": 25.0, "pct_self_votes": 0.0, "mean_candidates_with_votes": 3.17}, "deepseek31": {"elections": 12, "contested": 9, "turnovers": 1, "turnovers_by_tie": 0, "pct_agent0_wins": 41.7, "mean_winner_votes": 2.67, "pct_majority": 58.3, "pct_unanimous": 0.0, "pct_tie_at_top": 25.0, "pct_self_votes": 10.0, "mean_candidates_with_votes": 2.83}}
+   open {"gpt-oss-120b": {"elections": 60, "contested": 45, "turnovers": 2, "turnovers_by_tie": 0, "pct_agent0_wins": 70.0, "mean_winner_votes": 3.17, "pct_majority": 76.7, "pct_unanimous": 0.0, "pct_tie_at_top": 10.0, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.62}, "nemotron-3-super-120b": {"elections": 60, "contested": 45, "turnovers": 9, "turnovers_by_tie": 2, "pct_agent0_wins": 5.0, "mean_winner_votes": 3.2, "pct_majority": 71.7, "pct_unanimous": 15.0, "pct_tie_at_top": 13.3, "pct_self_votes": 20.5, "mean_candidates_with_votes": 2.55}, "ling-3.0-flash": {"elections": 60, "contested": 45, "turnovers": 7, "turnovers_by_tie": 1, "pct_agent0_wins": 31.7, "mean_winner_votes": 3.2, "pct_majority": 75.0, "pct_unanimous": 6.7, "pct_tie_at_top": 10.0, "pct_self_votes": 4.1, "mean_candidates_with_votes": 2.53}, "qwen3.8-27b": {"elections": 60, "contested": 45, "turnovers": 25, "turnovers_by_tie": 3, "pct_agent0_wins": 21.7, "mean_winner_votes": 2.68, "pct_majority": 50.0, "pct_unanimous": 5.0, "pct_tie_at_top": 16.7, "pct_self_votes": 5.0, "mean_candidates_with_votes": 3.05}, "gemma-4-31b": {"elections": 60, "contested": 45, "turnovers": 1, "turnovers_by_tie": 0, "pct_agent0_wins": 96.7, "mean_winner_votes": 3.93, "pct_majority": 98.3, "pct_unanimous": 0.0, "pct_tie_at_top": 1.7, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.02}}
+   open_elected_only {"gpt-oss-120b": {"elections": 12, "contested": 9, "turnovers": 0, "turnovers_by_tie": 0, "pct_agent0_wins": 100.0, "mean_winner_votes": 3.33, "pct_majority": 83.3, "pct_unanimous": 0.0, "pct_tie_at_top": 16.7, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.42}, "nemotron-3-super-120b": {"elections": 12, "contested": 9, "turnovers": 1, "turnovers_by_tie": 1, "pct_agent0_wins": 0.0, "mean_winner_votes": 3.5, "pct_majority": 58.3, "pct_unanimous": 41.7, "pct_tie_at_top": 25.0, "pct_self_votes": 20.3, "mean_candidates_with_votes": 2.17}, "ling-3.0-flash": {"elections": 12, "contested": 9, "turnovers": 1, "turnovers_by_tie": 0, "pct_agent0_wins": 33.3, "mean_winner_votes": 3.5, "pct_majority": 83.3, "pct_unanimous": 16.7, "pct_tie_at_top": 8.3, "pct_self_votes": 3.3, "mean_candidates_with_votes": 2.25}, "qwen3.8-27b": {"elections": 12, "contested": 9, "turnovers": 6, "turnovers_by_tie": 1, "pct_agent0_wins": 8.3, "mean_winner_votes": 3.17, "pct_majority": 66.7, "pct_unanimous": 16.7, "pct_tie_at_top": 16.7, "pct_self_votes": 5.0, "mean_candidates_with_votes": 2.42}, "gemma-4-31b": {"elections": 12, "contested": 9, "turnovers": 0, "turnovers_by_tie": 0, "pct_agent0_wins": 100.0, "mean_winner_votes": 3.75, "pct_majority": 91.7, "pct_unanimous": 0.0, "pct_tie_at_top": 8.3, "pct_self_votes": 0.0, "mean_candidates_with_votes": 2.08}}
+   mixed {"elections": 72, "contested": 54, "turnovers": 17, "turnovers_by_tie": 9, "pct_agent0_wins": 6.9, "mean_winner_votes": 3.12, "pct_majority": 73.6, "pct_unanimous": 8.3, "pct_tie_at_top": 20.8, "pct_self_votes": 8.3, "mean_candidates_with_votes": 2.4}
+
+== PROMISES (regex re-score) explicit/broken | uncond explicit/broken | logged explicit/broken
+   frontier chat_only gpt4o: 2/261 u1/250 L2/263 | claude: 0/125 u0/97 L0/219 | gemini: 0/244 u0/232 L0/260 | deepseek: 0/129 u0/123 L0/131 | grok: 0/12 u0/12 L0/16 | qwen: 0/129 u0/94 L0/247
+   frontier elected   gpt4o: 0/317 u0/280 L0/311 | claude: 0/381 u0/297 L0/437 | gemini: 0/121 u0/120 L0/120 | deepseek: 0/240 u0/238 L0/244 | grok: 0/22 u0/18 L0/31 | qwen: 1/298 u0/201 L1/448
+   frontier hidden    gpt4o: 0/189 u0/175 L0/192 | claude: 0/216 u0/183 L0/254 | gemini: 2/139 u2/133 L1/149 | deepseek: 0/192 u0/191 L0/198 | grok: 0/7 u0/7 L0/12 | qwen: 0/198 u0/136 L0/276
+   frontier anonymous gpt4o: 0/192 u0/170 L0/191 | claude: 0/231 u0/171 L0/253 | gemini: 0/77 u0/76 L0/82 | deepseek: 0/189 u0/179 L0/189 | grok: 0/3 u0/3 L0/5 | qwen: 0/177 u0/128 L0/263
+   samegen  chat_only gpt5: 0/0 u0/0 L0/0 | deepseek31: 0/0 u0/0 L0/0
+   samegen  elected   gpt5: 1/235 u0/3 L5/298 | deepseek31: 0/171 u0/165 L0/171
+   samegen  hidden    gpt5: 3/205 u2/8 L8/290 | deepseek31: 0/135 u0/131 L0/139
+   samegen  anonymous gpt5: 2/213 u1/10 L5/300 | deepseek31: 0/120 u0/112 L0/115
+   open     chat_only gpt-oss-120b: 67/240 u44/189 L67/240 | nemotron-3-super-120b: 6/51 u5/33 L6/51 | ling-3.0-flash: 97/238 u39/95 L97/238 | qwen3.8-27b: 55/257 u38/188 L55/257 | gemma-4-31b: 13/171 u13/168 L13/171
+   open     elected   gpt-oss-120b: 34/275 u29/235 L34/275 | nemotron-3-super-120b: 4/88 u4/75 L4/88 | ling-3.0-flash: 99/234 u26/99 L99/234 | qwen3.8-27b: 30/240 u29/209 L30/240 | gemma-4-31b: 13/210 u13/201 L13/210
+   open     hidden    gpt-oss-120b: 27/243 u23/226 L27/243 | nemotron-3-super-120b: 0/68 u0/46 L0/68 | ling-3.0-flash: 111/238 u56/132 L111/238 | qwen3.8-27b: 43/217 u36/170 L43/217 | gemma-4-31b: 10/196 u10/190 L10/196
+   open     anonymous gpt-oss-120b: 43/280 u36/253 L43/280 | nemotron-3-super-120b: 2/81 u1/68 L2/81 | ling-3.0-flash: 109/260 u50/115 L109/260 | qwen3.8-27b: 35/213 u35/191 L35/213 | gemma-4-31b: 9/216 u9/207 L9/216
+
+== WELFARE split total = contributions + transfers
+   crossrule_claude_grok {'total': 1570.667, 'from_contributions': 1196.0, 'transfers_and_salary': 374.667}
+   crossrule_claude_qwen {'total': 1542.8, 'from_contributions': 1172.8, 'transfers_and_salary': 370.0}
+   crossrule_gpt4o_qwen {'total': 1164.8, 'from_contributions': 816.8, 'transfers_and_salary': 348.0}
+   crossrule_grok_claude {'total': 1481.333, 'from_contributions': 1200.0, 'transfers_and_salary': 281.333}
+   crossrule_grok_qwen {'total': 969.533, 'from_contributions': 848.2, 'transfers_and_salary': 121.333}
+   crossrule_qwen_claude {'total': 1311.327, 'from_contributions': 916.0, 'transfers_and_salary': 395.327}
+   frontier fixed: gpt4o 1162=855+306 | claude 1585=1197+387 | gemini 994=806+187 | deepseek 1283=895+388 | grok 1432=1154+277 | qwen 1289=890+400
+   frontier elected: gpt4o 1071=797+275 | claude 1306=934+372 | gemini 1479=1180+299 | deepseek 1282=913+369 | grok 1394=1144+250 | qwen 1228=840+388
+   frontier rotating: gpt4o 935=661+274 | claude 1498=1136+362 | gemini 947=784+163 | deepseek 1184=830+354 | grok 1429=1150+280 | qwen 1099=699+400
+   frontier salary: gpt4o 1343=937+405 | claude 1355=894+461 | gemini 1623=1200+423 | deepseek 1381=900+481 | grok 1504=1134+370 | qwen 1334=834+500
+   frontier costly: gpt4o 1195=994+201 | claude 1445=1139+305 | gemini 1274=1091+183 | deepseek 1206=921+285 | grok 1316=1140+176 | qwen 1223=884+339
+   samegen fixed: gpt5 1277=1176+101 | deepseek31 1545=1172+373
+   samegen elected: gpt5 1263=1180+83 | deepseek31 1371=1057+313
+   samegen rotating: gpt5 1296=1192+104 | deepseek31 1575=1198+377
+   samegen salary: gpt5 1453=1192+261 | deepseek31 1525=1124+401
+   samegen costly: gpt5 1189=1171+19 | deepseek31 1352=1114+237
+
+== TESTS (Welch, game = unit)
+   {'model': 'gpt4o', 'metric': 'contrib', 'from': 'baseline', 'to': 'chat_only', 'diff': 0.65, 'p': np.float64(0.4226), 'ci': [np.float64(-2.15), np.float64(3.45)], 'n': [3, 3]}
+   {'model': 'claude', 'metric': 'contrib', 'from': 'baseline', 'to': 'chat_only', 'diff': 7.78, 'p': np.float64(0.0266), 'ci': [np.float64(1.5), np.float64(14.05)], 'n': [3, 3]}
+   {'model': 'gemini', 'metric': 'contrib', 'from': 'baseline', 'to': 'chat_only', 'diff': 2.09, 'p': np.float64(0.3343), 'ci': [np.float64(-5.03), np.float64(9.21)], 'n': [3, 3]}
+   {'model': 'deepseek', 'metric': 'contrib', 'from': 'baseline', 'to': 'chat_only', 'diff': 6.12, 'p': np.float64(0.0163), 'ci': [np.float64(2.71), np.float64(9.53)], 'n': [3, 3]}
+   {'model': 'grok', 'metric': 'contrib', 'from': 'baseline', 'to': 'chat_only', 'diff': 13.53, 'p': np.float64(0.0268), 'ci': [np.float64(3.8), np.float64(23.26)], 'n': [3, 3]}
+   {'model': 'qwen', 'metric': 'contrib', 'from': 'baseline', 'to': 'chat_only', 'diff': 0.67, 'p': np.float64(0.4226), 'ci': [np.float64(-2.2), np.float64(3.54)], 'n': [3, 3]}
+   {'model': 'gpt4o', 'metric': 'contrib', 'from': 'chat_only', 'to': 'fixed', 'diff': 3.61, 'p': np.float64(0.0244), 'ci': [np.float64(0.65), np.float64(6.56)], 'n': [3, 5]}
+   {'model': 'gpt4o', 'metric': 'contrib', 'from': 'chat_only', 'to': 'elected', 'diff': 2.63, 'p': np.float64(0.176), 'ci': [np.float64(-1.64), np.float64(6.89)], 'n': [3, 5]}
+   {'model': 'gpt4o', 'metric': 'contrib', 'from': 'chat_only', 'to': 'rotating', 'diff': 0.36, 'p': np.float64(0.7008), 'ci': [np.float64(-1.92), np.float64(2.65)], 'n': [3, 5]}
+   {'model': 'claude', 'metric': 'contrib', 'from': 'chat_only', 'to': 'fixed', 'diff': 1.67, 'p': np.float64(0.4327), 'ci': [np.float64(-5.71), np.float64(9.05)], 'n': [3, 5]}
+   {'model': 'claude', 'metric': 'contrib', 'from': 'chat_only', 'to': 'elected', 'diff': -2.71, 'p': np.float64(0.2497), 'ci': [np.float64(-9.2), np.float64(3.77)], 'n': [3, 5]}
+   {'model': 'claude', 'metric': 'contrib', 'from': 'chat_only', 'to': 'rotating', 'diff': 0.65, 'p': np.float64(0.7514), 'ci': [np.float64(-5.75), np.float64(7.04)], 'n': [3, 5]}
+   {'model': 'gemini', 'metric': 'contrib', 'from': 'chat_only', 'to': 'fixed', 'diff': 1.78, 'p': np.float64(0.4979), 'ci': [np.float64(-4.34), np.float64(7.9)], 'n': [3, 5]}
+   {'model': 'gemini', 'metric': 'contrib', 'from': 'chat_only', 'to': 'elected', 'diff': 8.0, 'p': np.float64(0.0388), 'ci': [np.float64(1.0), np.float64(15.01)], 'n': [3, 5]}
+   {'model': 'gemini', 'metric': 'contrib', 'from': 'chat_only', 'to': 'rotating', 'diff': 1.4, 'p': np.float64(0.5887), 'ci': [np.float64(-4.69), np.float64(7.5)], 'n': [3, 5]}
+   {'model': 'deepseek', 'metric': 'contrib', 'from': 'chat_only', 'to': 'fixed', 'diff': -1.18, 'p': np.float64(0.2727), 'ci': [np.float64(-4.39), np.float64(2.03)], 'n': [3, 5]}
+   {'model': 'deepseek', 'metric': 'contrib', 'from': 'chat_only', 'to': 'elected', 'diff': -0.89, 'p': np.float64(0.3776), 'ci': [np.float64(-4.12), np.float64(2.34)], 'n': [3, 5]}
+   {'model': 'deepseek', 'metric': 'contrib', 'from': 'chat_only', 'to': 'rotating', 'diff': -2.27, 'p': np.float64(0.1178), 'ci': [np.float64(-5.31), np.float64(0.78)], 'n': [3, 5]}
+   {'model': 'grok', 'metric': 'contrib', 'from': 'chat_only', 'to': 'fixed', 'diff': 0.17, 'p': np.float64(0.1371), 'ci': [np.float64(-0.08), np.float64(0.42)], 'n': [3, 5]}
+   {'model': 'grok', 'metric': 'contrib', 'from': 'chat_only', 'to': 'elected', 'diff': 0.01, 'p': np.float64(0.9615), 'ci': [np.float64(-0.26), np.float64(0.27)], 'n': [3, 5]}
+   {'model': 'grok', 'metric': 'contrib', 'from': 'chat_only', 'to': 'rotating', 'diff': 0.09, 'p': np.float64(0.514), 'ci': [np.float64(-0.24), np.float64(0.42)], 'n': [3, 5]}
+   {'model': 'qwen', 'metric': 'contrib', 'from': 'chat_only', 'to': 'fixed', 'diff': 4.16, 'p': np.float64(0.0466), 'ci': [np.float64(0.09), np.float64(8.23)], 'n': [3, 5]}
+   {'model': 'qwen', 'metric': 'contrib', 'from': 'chat_only', 'to': 'elected', 'diff': 3.33, 'p': np.float64(0.0219), 'ci': [np.float64(0.68), np.float64(5.99)], 'n': [3, 5]}
+   {'model': 'qwen', 'metric': 'contrib', 'from': 'chat_only', 'to': 'rotating', 'diff': 0.99, 'p': np.float64(0.3577), 'ci': [np.float64(-1.47), np.float64(3.45)], 'n': [3, 5]}
+   {'model': 'gpt4o', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 0.0, 'p': None, 'ci': None, 'note': 'no variance'}
+   {'model': 'gpt4o', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': 0.0, 'p': None, 'ci': None, 'note': 'no variance'}
+   {'model': 'claude', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 13.93, 'p': np.float64(0.0001), 'ci': [np.float64(11.25), np.float64(16.62)], 'n': [5, 3]}
+   {'model': 'claude', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -7.67, 'p': np.float64(0.0021), 'ci': [np.float64(-10.07), np.float64(-5.27)], 'n': [3, 3]}
+   {'model': 'gemini', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 4.07, 'p': np.float64(0.0771), 'ci': [np.float64(-0.9), np.float64(9.03)], 'n': [5, 3]}
+   {'model': 'gemini', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -0.33, 'p': np.float64(0.8465), 'ci': [np.float64(-5.05), np.float64(4.39)], 'n': [3, 3]}
+   {'model': 'deepseek', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 0.33, 'p': np.float64(0.766), 'ci': [np.float64(-2.69), np.float64(3.36)], 'n': [5, 3]}
+   {'model': 'deepseek', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -2.0, 'p': np.float64(0.1394), 'ci': [np.float64(-5.31), np.float64(1.31)], 'n': [3, 3]}
+   {'model': 'grok', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 2.67, 'p': np.float64(0.0153), 'ci': [np.float64(1.23), np.float64(4.1)], 'n': [5, 3]}
+   {'model': 'grok', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -2.67, 'p': np.float64(0.0153), 'ci': [np.float64(-4.1), np.float64(-1.23)], 'n': [3, 3]}
+   {'model': 'qwen', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 0.0, 'p': None, 'ci': None, 'note': 'no variance'}
+   {'model': 'qwen', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': 0.0, 'p': None, 'ci': None, 'note': 'no variance'}
+   {'model': 'gpt5', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 6.33, 'p': np.float64(0.0662), 'ci': [np.float64(-0.75), np.float64(13.42)], 'n': [3, 3]}
+   {'model': 'gpt5', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -9.33, 'p': np.float64(0.028), 'ci': [np.float64(-16.66), np.float64(-2.0)], 'n': [3, 3]}
+   {'model': 'deepseek31', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 0.0, 'p': np.float64(1.0), 'ci': [np.float64(-5.29), np.float64(5.29)], 'n': [3, 3]}
+   {'model': 'deepseek31', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -1.67, 'p': np.float64(0.1332), 'ci': [np.float64(-4.14), np.float64(0.8)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 10.0, 'p': np.float64(0.0864), 'ci': [np.float64(-3.48), np.float64(23.48)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': -2.33, 'p': np.float64(0.5412), 'ci': [np.float64(-15.45), np.float64(10.78)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'deals', 'from': 'elected', 'to': 'salary', 'diff': 1.67, 'p': np.float64(0.6515), 'ci': [np.float64(-9.74), np.float64(13.07)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'deals', 'from': 'salary', 'to': 'costly', 'diff': 1.33, 'p': np.float64(0.721), 'ci': [np.float64(-9.74), np.float64(12.4)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'coop', 'from': 'baseline', 'to': 'chat_only', 'diff': 53.67, 'p': np.float64(0.0212), 'ci': [np.float64(17.4), np.float64(89.93)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'coop', 'from': 'chat_only', 'to': 'fixed', 'diff': 23.67, 'p': np.float64(0.118), 'ci': [np.float64(-13.1), np.float64(60.44)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'coop', 'from': 'chat_only', 'to': 'elected', 'diff': 25.33, 'p': np.float64(0.0995), 'ci': [np.float64(-9.82), np.float64(60.49)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'coop', 'from': 'chat_only', 'to': 'rotating', 'diff': 25.67, 'p': np.float64(0.0971), 'ci': [np.float64(-9.51), np.float64(60.85)], 'n': [3, 3]}
+   {'model': 'gpt-oss-120b', 'metric': 'broken_rate', 'from': 'chat_only', 'to': 'elected', 'diff': -15.19, 'p': np.float64(0.0332), 'ci': [np.float64(-27.81), np.float64(-2.58)], 'n': [3, 3]}
+   {'model': 'nemotron-3-super-120b', 'metric': 'coop', 'from': 'baseline', 'to': 'chat_only', 'diff': 66.0, 'p': np.float64(0.014), 'ci': [np.float64(23.05), np.float64(108.95)], 'n': [3, 3]}
+   {'model': 'nemotron-3-super-120b', 'metric': 'coop', 'from': 'chat_only', 'to': 'fixed', 'diff': 13.67, 'p': np.float64(0.3745), 'ci': [np.float64(-37.98), np.float64(65.31)], 'n': [3, 3]}
+   {'model': 'nemotron-3-super-120b', 'metric': 'coop', 'from': 'chat_only', 'to': 'elected', 'diff': 15.67, 'p': np.float64(0.3233), 'ci': [np.float64(-36.15), np.float64(67.48)], 'n': [3, 3]}
+   {'model': 'nemotron-3-super-120b', 'metric': 'coop', 'from': 'chat_only', 'to': 'rotating', 'diff': 10.33, 'p': np.float64(0.4822), 'ci': [np.float64(-40.52), np.float64(61.19)], 'n': [3, 3]}
+   {'model': 'nemotron-3-super-120b', 'metric': 'broken_rate', 'from': 'chat_only', 'to': 'elected', 'diff': -5.3, 'p': np.float64(0.5219), 'ci': [np.float64(-28.46), np.float64(17.86)], 'n': [3, 3]}
+   {'model': 'ling-3.0-flash', 'metric': 'coop', 'from': 'baseline', 'to': 'chat_only', 'diff': -47.67, 'p': np.float64(0.0032), 'ci': [np.float64(-67.71), np.float64(-27.62)], 'n': [3, 3]}
+   {'model': 'ling-3.0-flash', 'metric': 'coop', 'from': 'chat_only', 'to': 'fixed', 'diff': -2.67, 'p': np.float64(0.6626), 'ci': [np.float64(-18.44), np.float64(13.11)], 'n': [3, 3]}
+   {'model': 'ling-3.0-flash', 'metric': 'coop', 'from': 'chat_only', 'to': 'elected', 'diff': -3.67, 'p': np.float64(0.5895), 'ci': [np.float64(-21.12), np.float64(13.79)], 'n': [3, 3]}
+   {'model': 'ling-3.0-flash', 'metric': 'coop', 'from': 'chat_only', 'to': 'rotating', 'diff': -6.0, 'p': np.float64(0.3878), 'ci': [np.float64(-23.25), np.float64(11.25)], 'n': [3, 3]}
+   {'model': 'ling-3.0-flash', 'metric': 'broken_rate', 'from': 'chat_only', 'to': 'elected', 'diff': 2.01, 'p': np.float64(0.708), 'ci': [np.float64(-11.87), np.float64(15.88)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'coop', 'from': 'baseline', 'to': 'chat_only', 'diff': 28.33, 'p': np.float64(0.0815), 'ci': [np.float64(-6.56), np.float64(63.23)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'coop', 'from': 'chat_only', 'to': 'fixed', 'diff': 26.67, 'p': np.float64(0.0471), 'ci': [np.float64(0.58), np.float64(52.75)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'coop', 'from': 'chat_only', 'to': 'elected', 'diff': 36.33, 'p': np.float64(0.007), 'ci': [np.float64(18.45), np.float64(54.22)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'coop', 'from': 'chat_only', 'to': 'rotating', 'diff': 36.67, 'p': np.float64(0.0091), 'ci': [np.float64(18.18), np.float64(55.16)], 'n': [3, 3]}
+   {'model': 'qwen3.8-27b', 'metric': 'broken_rate', 'from': 'chat_only', 'to': 'elected', 'diff': -9.66, 'p': np.float64(0.1518), 'ci': [np.float64(-24.95), np.float64(5.64)], 'n': [3, 3]}
+   {'model': 'gemma-4-31b', 'metric': 'coop', 'from': 'baseline', 'to': 'chat_only', 'diff': 0.0, 'p': None, 'ci': None, 'note': 'no variance'}
+   {'model': 'gemma-4-31b', 'metric': 'coop', 'from': 'chat_only', 'to': 'fixed', 'diff': 2.33, 'p': np.float64(0.1181), 'ci': [np.float64(-1.46), np.float64(6.13)], 'n': [3, 3]}
+   {'model': 'gemma-4-31b', 'metric': 'coop', 'from': 'chat_only', 'to': 'elected', 'diff': 0.67, 'p': np.float64(0.1835), 'ci': [np.float64(-0.77), np.float64(2.1)], 'n': [3, 3]}
+   {'model': 'gemma-4-31b', 'metric': 'coop', 'from': 'chat_only', 'to': 'rotating', 'diff': 1.33, 'p': np.float64(0.2697), 'ci': [np.float64(-2.46), np.float64(5.13)], 'n': [3, 3]}
+   {'model': 'gemma-4-31b', 'metric': 'broken_rate', 'from': 'chat_only', 'to': 'elected', 'diff': -1.43, 'p': np.float64(0.2205), 'ci': [np.float64(-4.17), np.float64(1.31)], 'n': [3, 3]}

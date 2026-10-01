@@ -1,0 +1,10 @@
+# Running games (API models through OpenRouter, open models through a local vLLM server)
+openai>=1.30
+python-dotenv>=1.0
+
+# Reproducing the paper's numbers, tables and figures from results/
+scipy>=1.11
+matplotlib>=3.8
+
+# Tests (optional)
+pytest>=8.0
