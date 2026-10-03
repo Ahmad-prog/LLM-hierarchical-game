@@ -411,4 +411,13 @@ for name, body in (("hgParseTable", PARSE), ("hgTestsTable", TESTS), ("hgTestsOs
 # mixed groups before cross-rule, so that the appendix pages pack well
 _cr = next(k for k, t in enumerate(R) if 'tab:crossrule' in t)
 R.append(R.pop(_cr))
-print("\\newcommand{\\hgResultTables}{%\n" + "\n\n".join(t.rstrip() for t in R) + "\n}")
+print("\\newcommand{\\hgResultTables}{%\n" + "\n\n".join(t.rstrip() for t in R) + "\n}\n")
+
+# Every table again without its float environment, named after its label (tab:frontier_full ->
+# \hgInnerFrontierFull), so that the paper can stack several tables in one float with fixed spacing: on a float page,
+# LaTeX spreads separate floats apart.
+for t in [b for _, b in T] + [PARSE, TESTS, TESTS_OSS, ROBUST, OFFERS] + R:
+    label = t.split("\\label{")[1].split("}")[0]
+    name = "hgInner" + "".join(w.capitalize() for w in label.split(":")[1].split("_"))
+    body = [x for x in t.strip().split("\n") if not x.startswith(("\\begin{table", "\\end{table"))]
+    print(f"\\newcommand{{\\{name}}}{{%\n" + "\n".join(body) + "\n}\n")
