@@ -457,13 +457,19 @@ Respond with:
 
 def _build_speech_prompt(agent: Agent, round_num: int) -> str:
     cost_note = " Tokens you spend come out of your own payoff." if SANCTION_COST_TO_MANAGER else ""
+    if getattr(agent, "no_sanctions", False):
+        powers = ("As manager you have no budget to punish or reward players; after each round's contributions you may "
+                  "send a public message to the group.")
+    else:
+        powers = ("As manager you can punish free-riders (spend 1 token → target loses 3) and/or reward contributors "
+                  "(spend 1 token → target gains 3).\n"
+                  f"You have a budget of 10 tokens for punishment and 10 tokens for reward each round.{cost_note}")
     return f"""ROUND {round_num} — ELECTION: CAMPAIGN SPEECH
 
 An election is taking place. All players are eligible to become manager.
 Give your campaign speech explaining what kind of manager you would be.
 
-As manager you can punish free-riders (spend 1 token → target loses 3) and/or reward contributors (spend 1 token → target gains 3).
-You have a budget of 10 tokens for punishment and 10 tokens for reward each round.{cost_note}
+{powers}
 
 Respond with:
 {{

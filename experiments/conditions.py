@@ -283,6 +283,7 @@ def generate_all_conditions(
         configs.extend(generate_batch12_hetero_no_manager())   # 7
         configs.extend(generate_batch13_mechanism())           # 5 per model
         configs.extend(generate_batch14_revision())            # 7 per model
+        configs.extend(generate_batch15_review())              # 3 per model
 
     return configs
 
@@ -705,6 +706,41 @@ def generate_batch14_revision() -> list[ExperimentConfig]:
     return configs
 
 
+def generate_batch15_review() -> list[ExperimentConfig]:
+    """Controls for the third review, one template per model (the runner swaps in other models):
+
+    batch15_mgr_elected_nobudget   elected manager without a budget (authority, elections and messages, no sanctions)
+    batch15_mgr_badincumbent_rb    bad incumbent, with a ballot shuffled per voter and ties broken at random
+    batch15_mgr_goodincumbent_rb   good incumbent, with a ballot shuffled per voter and ties broken at random
+    """
+    specs = [
+        ("mgr_elected_nobudget", MgrPowerType.MGR_NO_SANCTIONS, {}),
+        ("mgr_badincumbent_rb", MgrPowerType.MGR_FULL, dict(mgr_policy="bad_incumbent", ballot_random=True)),
+        ("mgr_goodincumbent_rb", MgrPowerType.MGR_FULL, dict(mgr_policy="good_incumbent", ballot_random=True)),
+    ]
+    configs = []
+    for ctype, model in HOMOGENEOUS_MODEL_MAP.items():
+        for tag, power, extra in specs:
+            configs.append(ExperimentConfig(
+                name=f"batch15_{tag}_{model.value}",
+                batch=15,
+                belief=BeliefType.BELIEF_ALL_AI,
+                composition=ctype,
+                comm_type=CommType.COMM_FULL,
+                mgr_type=MgrType.MGR_ELECTED,
+                mgr_power=power,
+                info_type=InfoType.INFO_FULL,
+                persona=PersonaType.PERSONA_NONE,
+                temp_type=TempType.TEMP_MEDIUM,
+                hist_type=HistType.HIST_FULL,
+                agent_models=[model] * 5,
+                num_agents=5,
+                election_frequency=5,
+                **extra,
+            ))
+    return configs
+
+
 def generate_batch(batch_num: int, include_reverse_pairs: bool = False) -> list[ExperimentConfig]:
     """Generate configs for a single batch number (1–12)."""
     generators = {
@@ -722,6 +758,7 @@ def generate_batch(batch_num: int, include_reverse_pairs: bool = False) -> list[
         12: generate_batch12_hetero_no_manager,
         13: generate_batch13_mechanism,
         14: generate_batch14_revision,
+        15: generate_batch15_review,
     }
     gen = generators.get(batch_num)
     if gen is None:

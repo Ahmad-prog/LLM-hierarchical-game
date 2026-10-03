@@ -1,5 +1,5 @@
 #!/bin/bash
-# Serve one open-weight model with vLLM and run all of its games in the paper (147 per model).
+# Serve one open-weight model with vLLM and run all of its games in the paper (167 per model; 175 for gpt-oss and Qwen3.8).
 # The tag qwen3.8-27b-nvfp4 runs the quantization check (32 games).
 #
 #   bash scripts/serve_open_model.sh <tag> [gpu] [port]
@@ -40,3 +40,5 @@ $J --only batch1,batch2,batch3,batch5,batch8,batch9 --trials 3 --workers 48     
 $J --only batch2_comm_full,batch3_mgr,batch8_mgr --trials 8 --workers 48       # main contrasts, 8 games
 $J --only batch13_mgr_badincumbent,batch13_ballot_random,batch14_mgr_goodincumbent --trials 10 --workers 16
 $J --only batch13_info_aggregate,batch13_mgr_nosanction,batch13_mgr_autoreward,batch14_aggregate_chat,batch14_system_reward,batch14_neutral,batch14_nostrategic --trials 5 --workers 32
+$J --only batch15_mgr_badincumbent_rb,batch15_mgr_goodincumbent_rb --trials 10 --workers 20
+case "$TAG" in gpt-oss-120b|qwen3.8-27b) $J --only batch15_mgr_elected_nobudget --trials 8 --workers 8 ;; esac

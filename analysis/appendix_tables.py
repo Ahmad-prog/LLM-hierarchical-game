@@ -86,26 +86,24 @@ rows = []
 conds = ("chat_only", "elected", "hidden", "anonymous")
 tot = {s: [sum(I["frontier"][s][m].get("broken_5", 0) for m in FRONT), sum(I["frontier"][s][m].get("stated", 0) for m in FRONT)]
        for s in conds}
-rows.append(group_row("Main API models", 5))
-rows.append("All six & " + " & ".join(f"{tot[s][0]}/{tot[s][1]}" for s in conds))
-rows.append(group_row("Newer API models", 5))
+rows.append("Main API (6) & " + " & ".join(f"{tot[s][0]}/{tot[s][1]}" for s in conds))
+rows.append(r"\midrule")
 for m in SAME:
     rows.append(f"{NAME[m]} & " + " & ".join(
         f"{I['samegen'][s][m].get('broken_5', 0)}/{I['samegen'][s][m].get('stated', 0)}" for s in conds))
-rows.append(group_row("Self-hosted models", 5))
+rows.append(r"\midrule")
 for m in OPEN:
     rows.append(f"{NAME[m]} & " + " & ".join(
-        pct_n(I["open"][s][m].get("broken_5", 0), I["open"][s][m].get("stated", 0)) for s in conds))
+        f"{I['open'][s][m].get('broken_5', 0)}/{I['open'][s][m].get('stated', 0)}" for s in conds))
 T.append(("hgPromiseTable", table(
-    "Broken stated intentions, summed over games: broken / stated for the API models, and for the self-hosted models the "
-    "percentage broken with the number stated in parentheses. A stated "
+    "Broken / stated intentions, summed over games (percentages in the text). A stated "
     "intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens "
     "less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at "
     "most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\\ref{tab:robust}.",
     "tab:promises", "lcccc",
     "& \\textbf{Chat} & \\multicolumn{3}{c}{\\textbf{Manager; sanctions are}} \\\\ \\cmidrule(lr){3-5}\n"
     "\\textbf{Model} & \\textbf{only} & \\textbf{visible} & \\textbf{hidden} & \\textbf{anon.}",
-    rows, sep="2.5pt", wide=False, place="!tb")))   # main text: may also go at the foot of a column
+    rows, sep="2.5pt", wide=False, place="!htb")))   # main text: may also go at the foot of a column
 
 # ---------------------------------------------------------------- appendix C: results
 R = []

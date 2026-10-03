@@ -1,6 +1,6 @@
 # The Hierarchical Game: code, game logs and annotation
 
-This repository contains the code, all 1,409 game logs, and the human annotation behind the paper
+This repository contains the code, all 1,573 game logs, and the human annotation behind the paper
 *The Politician, the Liar, and the Obedient Worker: Strategic Behavior of LLM Agents in Hierarchical Games*.
 
 The **Hierarchical Game (HG)** is a 5-player, 20-round public goods game. On top of the base game it
@@ -42,10 +42,10 @@ cm-super, as in the paper; without LaTeX they are drawn with matplotlib's own fo
 ## The game logs (`results/`)
 
 One JSON file per game: `results/<track>/<setup>__t<k>.json`, where `<k>` is the game index.
-- `results/api/` holds 642 games: the six main API models (GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash,
+- `results/api/` holds 690 games: the six main API models (GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash,
   DeepSeek V3, Grok 4.3, Qwen Plus), the newer versions GPT-5 and DeepSeek V3.1, and GPT-4.1 and GPT-5 with
   reasoning effort "minimal".
-- `results/oss/` holds 767 games: 147 for each of gpt-oss-120B, Nemotron 3 Super 120B, Ling 3.0 flash,
+- `results/oss/` holds 883 games: 167 to 175 for each of gpt-oss-120B, Nemotron 3 Super 120B, Ling 3.0 flash,
   Qwen3.8 27B and Gemma 4 31B, and 32 for the 4-bit NVFP4 build of Qwen3.8 (quantization check).
 
 Each file has the following keys:
@@ -81,6 +81,8 @@ Setup names keep the batch numbering:
 | `batch14_aggregate_chat_*` | Chat only; agents see only the pool total |
 | `batch14_neutral_{elected,salary}_*` | Election message offered without asking for a deal ("ONE private message ... before the vote") |
 | `batch14_nostrategic_{chat,elected}_*` | "Be strategic." removed from the system prompt |
+| `batch15_mgr_elected_nobudget_*` | Elected manager without a budget (authority, elections and messages only) |
+| `batch15_mgr_{bad,good}incumbent_rb_*` | Bad or good incumbent, with a ballot shuffled per voter and ties broken at random |
 
 The suffix is the model: a main API family (`gpt4o`, `claude`, `gemini`, `deepseek`, `grok`, `qwen`), a newer
 model (`gpt5`, `deepseek31`, `gpt41`, `gpt5min`), or a self-hosted tag (`gpt-oss-120b`, `nemotron-3-super-120b`,
@@ -111,11 +113,11 @@ python tests_rerun/test_sanction_cost.py
 python hg_jobs.py --track api --dry-run --out results   # list the jobs
 ```
 
-- **API models** (OpenRouter): `bash scripts/run_api_games.sh` runs all 642 API games of the paper. Our runs
-  cost about US$393. The runner is resumable (finished games are skipped), runs games in parallel
+- **API models** (OpenRouter): `bash scripts/run_api_games.sh` runs all 690 API games of the paper. Our runs
+  cost about US$404. The runner is resumable (finished games are skipped), runs games in parallel
   (`--workers`), and stops starting new games at `--budget-usd`; raising `--trials` adds games to a setup.
 - **Open-weight models** (vLLM, one 96 GB GPU): `bash scripts/serve_open_model.sh <tag> [gpu] [port]` starts
-  vLLM and runs that model's 147 games (32 for `qwen3.8-27b-nvfp4`).
+  vLLM and runs all of that model's games (32 for `qwen3.8-27b-nvfp4`).
 - **LLM judge**: `python tools/judge_offers.py results annotation/offers_human_labels.csv out.jsonl --max-usd 5`
   (about US$1).
 

@@ -2,7 +2,7 @@
 % Do not edit by hand. Defines table macros that the paper places in their sections.
 
 \newcommand{\hgPromiseTable}{%
-\begin{table}[!tb]
+\begin{table}[!htb]
 \centering
 \small
 \setlength{\tabcolsep}{2.5pt}
@@ -11,20 +11,19 @@
 & \textbf{Chat} & \multicolumn{3}{c}{\textbf{Manager; sanctions are}} \\ \cmidrule(lr){3-5}
 \textbf{Model} & \textbf{only} & \textbf{visible} & \textbf{hidden} & \textbf{anon.} \\
 \midrule
-\multicolumn{5}{@{}l}{\emph{Main API models}} \\
-All six & 2/2865 & 1/2470 & 2/941 & 0/869 \\
-\multicolumn{5}{@{}l}{\emph{Newer API models}} \\
+Main API (6) & 2/2865 & 1/2470 & 2/941 & 0/869 \\
+\midrule
 GPT-5 & 11/259 & 1/235 & 3/205 & 2/213 \\
 DeepSeek V3.1 & 0/80 & 0/456 & 0/135 & 0/120 \\
-\multicolumn{5}{@{}l}{\emph{Self-hosted models}} \\
-gpt-oss & 30 (651) & 13 (716) & 11 (243) & 15 (280) \\
-Nemotron & 12 (134) & 4 (189) & 0 (68) & 2 (81) \\
-Ling & 44 (643) & 46 (631) & 47 (238) & 42 (260) \\
-Qwen3.8 & 23 (644) & 12 (566) & 20 (217) & 16 (213) \\
-Gemma & 7 (435) & 5 (555) & 5 (196) & 4 (216) \\
+\midrule
+gpt-oss & 196/651 & 91/716 & 27/243 & 43/280 \\
+Nemotron & 16/134 & 8/189 & 0/68 & 2/81 \\
+Ling & 284/643 & 289/631 & 111/238 & 109/260 \\
+Qwen3.8 & 146/644 & 70/566 & 43/217 & 35/213 \\
+Gemma & 30/435 & 25/555 & 10/196 & 9/216 \\
 \bottomrule
 \end{tabular}
-\caption{Broken stated intentions, summed over games: broken / stated for the API models, and for the self-hosted models the percentage broken with the number stated in parentheses. A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}.}
+\caption{Broken / stated intentions, summed over games (percentages in the text). A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}.}
 \label{tab:promises}
 \end{table}
 }
@@ -502,20 +501,19 @@ GPT-4o (own family) & --- & 14.8$\pm$2.7 & --- & --- \\
 & \textbf{Chat} & \multicolumn{3}{c}{\textbf{Manager; sanctions are}} \\ \cmidrule(lr){3-5}
 \textbf{Model} & \textbf{only} & \textbf{visible} & \textbf{hidden} & \textbf{anon.} \\
 \midrule
-\multicolumn{5}{@{}l}{\emph{Main API models}} \\
-All six & 2/2865 & 1/2470 & 2/941 & 0/869 \\
-\multicolumn{5}{@{}l}{\emph{Newer API models}} \\
+Main API (6) & 2/2865 & 1/2470 & 2/941 & 0/869 \\
+\midrule
 GPT-5 & 11/259 & 1/235 & 3/205 & 2/213 \\
 DeepSeek V3.1 & 0/80 & 0/456 & 0/135 & 0/120 \\
-\multicolumn{5}{@{}l}{\emph{Self-hosted models}} \\
-gpt-oss & 30 (651) & 13 (716) & 11 (243) & 15 (280) \\
-Nemotron & 12 (134) & 4 (189) & 0 (68) & 2 (81) \\
-Ling & 44 (643) & 46 (631) & 47 (238) & 42 (260) \\
-Qwen3.8 & 23 (644) & 12 (566) & 20 (217) & 16 (213) \\
-Gemma & 7 (435) & 5 (555) & 5 (196) & 4 (216) \\
+\midrule
+gpt-oss & 196/651 & 91/716 & 27/243 & 43/280 \\
+Nemotron & 16/134 & 8/189 & 0/68 & 2/81 \\
+Ling & 284/643 & 289/631 & 111/238 & 109/260 \\
+Qwen3.8 & 146/644 & 70/566 & 43/217 & 35/213 \\
+Gemma & 30/435 & 25/555 & 10/196 & 9/216 \\
 \bottomrule
 \end{tabular}
-\caption{Broken stated intentions, summed over games: broken / stated for the API models, and for the self-hosted models the percentage broken with the number stated in parentheses. A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}.}
+\caption{Broken / stated intentions, summed over games (percentages in the text). A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}.}
 \label{tab:promises}
 }
 

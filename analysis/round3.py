@@ -38,6 +38,7 @@ from scipy import stats
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from analysis.manipulation import _classify_message  # noqa: E402
+from analysis.deception import _classify_with_regex  # noqa: E402
 
 R, OUT = sys.argv[1], sys.argv[2]
 HUMAN = sys.argv[3] if len(sys.argv) > 3 else None
@@ -54,7 +55,8 @@ S = {"baseline": "batch1_baseline", "chat": "batch2_comm_full", "fixed": "batch3
      "bad": "batch13_mgr_badincumbent", "ballot": "batch13_ballot_random",
      "neutral": "batch14_neutral_elected", "neutral_salary": "batch14_neutral_salary",
      "nostrat_chat": "batch14_nostrategic_chat", "nostrat_elected": "batch14_nostrategic_elected",
-     "agg_chat": "batch14_aggregate_chat", "good": "batch14_mgr_goodincumbent", "sysreward": "batch14_system_reward"}
+     "agg_chat": "batch14_aggregate_chat", "good": "batch14_mgr_goodincumbent", "sysreward": "batch14_system_reward",
+     "elected_nobudget": "batch15_mgr_elected_nobudget", "bad_rb": "batch15_mgr_badincumbent_rb", "good_rb": "batch15_mgr_goodincumbent_rb"}
 _cache = {}
 
 
@@ -109,17 +111,39 @@ def stated_events(t):
     return [e for e in t["deception"]["events"] if e["promise_type"] == "explicit" and e.get("stated_intention") is not None]
 
 
-def broken_counts(ts, last=None):
+FIRST_PERSON = re.compile(r"\bI(?:'ll| will| am going to|'m going to| plan to| intend to| commit| am contributing|'m contributing| shall)\b", re.I)
+CONDITIONAL = re.compile(r"\b(if|as long as|provided|unless|only when|in return)\b", re.I)
+
+
+def statements(t):
+    """Stated intentions scored exactly as in revision2.py (Table 2): per round, each agent's last public message of
+    the communication phase before the contribution decision; one regular expression for every model.
+    Yields (round, speaker, stated amount, given, previous-round contribution or None, first-person commitment)."""
+    prev = {}
+    for rd in t["rounds"]:
+        con = {a["agent_id"]: a["contribution"] for a in rd["agents"]}
+        pub = {}
+        for msg in rd.get("comm_messages") or []:
+            if msg.get("phase") == "pre_action" and msg.get("recipients") is None and msg.get("content"):
+                pub[msg["sender"]] = msg["content"]
+        for aid, text in pub.items():
+            cl = _classify_with_regex(text)
+            if cl["promise_type"] == "explicit":
+                fp = bool(FIRST_PERSON.search(text)) and not CONDITIONAL.search(text)
+                yield rd["round_num"], aid, cl["extracted_value"], con.get(aid, 0.0), prev.get(aid), fp
+        prev = con
+
+
+def broken_counts(ts, last=None, first_person=False):
     """broken (gave > 5 below the stated amount) and stated; last=True only round 20, False only rounds 1-19"""
     b = n = 0
     for t in ts:
         T = len(t["rounds"])
-        for e in stated_events(t):
-            rnd = e.get("round_num", e.get("round"))
-            if last is True and rnd != T or last is False and rnd == T:
+        for rnd, _, v, given, _, fp in statements(t):
+            if last is True and rnd != T or last is False and rnd == T or first_person and not fp:
                 continue
             n += 1
-            b += e["actual_contribution"] < e["stated_intention"] - 5
+            b += given < v - 5
     return {"broken": b, "stated": n, "share": round(100 * b / n, 1) if n else None}
 
 
@@ -561,6 +585,142 @@ if JUDGE and HUMAN:
                          pay_effect_neutral=test(cell["neutral"], cell["neutral_salary"]))
     nres["offer_share_of_election_opportunities"] = by
     res["N_llm_judge"] = nres
+
+# ---------------------------------------------------------------- O. broken intentions given the speaker's previous contribution
+def bin_prev(x):
+    return "none" if x is None else "0" if x == 0 else "1-9" if x < 10 else "10-14" if x < 15 else "15-20"
+
+
+o = {}
+for grp, models in (("main_api", API_MAIN), ("newer", NEWER), ("self_hosted", OSS)):
+    for s in ("chat", "elected"):
+        cnt = Counter()
+        for m in models:
+            for t in games(m, s):
+                for _, _, v, given, prv, _ in statements(t):
+                    k = bin_prev(prv)
+                    cnt[(k, "n")] += 1
+                    cnt[(k, "b")] += given < v - 5
+        o[f"{grp}_{s}"] = {k: {"stated": cnt[(k, "n")], "broken": cnt[(k, "b")],
+                                "share": round(100 * cnt[(k, "b")] / cnt[(k, "n")], 1) if cnt[(k, "n")] else None}
+                            for k in ("none", "0", "1-9", "10-14", "15-20")}
+res["O_broken_by_previous_contribution"] = o
+res["O_commitment_only_chat"] = {m: broken_counts(games(m, "chat"), first_person=True) for m in API_MAIN + NEWER + OSS}
+
+# ---------------------------------------------------------------- P. incumbents: stratified test, tie-rule survivals
+from statsmodels.stats.contingency_tables import StratifiedTable  # noqa: E402
+
+tabs, tie = [], {}
+for m, v in res["D_accountability"]["per_model"].items():
+    kb, nb = v["bad_replaced_at_6"]
+    kg, ng = v["good_replaced_at_6"]
+    tabs.append(np.array([[kb, nb - kb], [kg, ng - kg]], float) + 0.5)    # 0.5 added to every cell (empty cells)
+    row = {}
+    for pol in ("bad", "good"):
+        surv = by_tie = 0
+        for t in games(m, pol):
+            e6 = [e for e in t["election_history"] if e["round_num"] == 6]
+            if not e6 or e6[0]["winner"] != "agent_0":
+                continue
+            surv += 1
+            v6 = Counter((e6[0].get("votes") or {}).values()).most_common()
+            by_tie += len(v6) > 1 and v6[0][1] == v6[1][1]
+        row[pol] = {"survived": surv, "survived_on_a_tie": by_tie}
+    tie[m] = row
+st_ = StratifiedTable(tabs)
+res["P_incumbents"] = {"cmh": {"pooled_odds_ratio": round(float(st_.oddsratio_pooled), 2),
+                               "p": round(float(st_.test_null_odds(correction=True).pvalue), 4)},
+                       "survivals_decided_by_tie_rule": tie}
+
+# ---------------------------------------------------------------- Q. mixed groups: who sat where on the ballot
+q = Counter()
+for f in sorted(glob.glob(os.path.join(R, "api", "batch4_hetero_all_drop_*__t*.json"))):
+    t = json.load(open(f, encoding="utf-8"))["trials"][0]
+    amap = t["agent_model_map"]
+    for e in t["election_history"]:
+        w = e["winner"]
+        q[("wins_by_position", w)] += 1
+        q[("wins_by_family", amap[w])] += 1
+    for aid, mod in amap.items():
+        q[("seats", mod, aid)] += 1
+res["Q_mixed_positions"] = {"wins_by_position": {a: q[("wins_by_position", a)] for a in sorted({k[1] for k in q if k[0] == "wins_by_position"})},
+                            "wins_by_family": {k[1]: n for k, n in q.items() if k[0] == "wins_by_family"},
+                            "seat_counts": {f"{k[1]}@{k[2]}": n for k, n in q.items() if k[0] == "seats"}}
+
+# ---------------------------------------------------------------- R. cross-rule: the manager's own contribution
+rr = {}
+for f in sorted(glob.glob(os.path.join(R, "api", "batch11_mgr_*__t*.json"))):
+    pair = os.path.basename(f).split("__")[0].replace("batch11_mgr_", "")
+    t = json.load(open(f, encoding="utf-8"))["trials"][0]
+    mg = [a["contribution"] for r in t["rounds"] for a in r["agents"] if a["is_manager"]]
+    wk = [a["contribution"] for r in t["rounds"] for a in r["agents"] if not a["is_manager"]]
+    rr.setdefault(pair, {"manager": [], "workers": []})
+    rr[pair]["manager"].append(st.fmean(mg))
+    rr[pair]["workers"].append(st.fmean(wk))
+res["R_crossrule_manager_contribution"] = {k: {"manager": ms(v["manager"]), "workers": ms(v["workers"])} for k, v in rr.items()}
+
+# ---------------------------------------------------------------- S. were the model IDs constant over the runs?
+ids = {}
+for f in glob.glob(os.path.join(R, "*", "*.json")):
+    t = json.load(open(f, encoding="utf-8"))["trials"][0]
+    for a in recs(t):
+        ids.setdefault(a.get("model_name"), set()).add(os.path.basename(f).split("__")[0].rsplit("_", 1)[-1])
+res["S_model_ids"] = {str(k): sorted(v)[:6] for k, v in ids.items()}
+
+# ---------------------------------------------------------------- T. Claude under an elected manager
+tt = []
+for t in games("claude", "elected"):
+    hist = t["election_history"]
+    turn = sum(hist[i]["winner"] != hist[i - 1]["winner"] for i in range(1, len(hist)))
+    tt.append((contrib(t), turn))
+res["T_claude_elected"] = {"games": [{"contrib": round(c, 2), "turnovers": n} for c, n in tt],
+                           "spearman": [round(float(x), 3) for x in stats.spearmanr([c for c, _ in tt], [n for _, n in tt])]}
+
+# ---------------------------------------------------------------- U. campaign pledges: kept in the following rounds?
+u = {}
+for m in ["gemini", "claude", "gpt4o", "qwen", "gpt-oss-120b", "qwen3.8-27b"]:
+    k_all = k_stated = kept = later = 0
+    for t in games(m, "elected"):
+        rounds = {r["round_num"]: {a["agent_id"]: a["contribution"] for a in r["agents"]} for r in t["rounds"]}
+        for r in t["rounds"]:
+            for msg in r.get("comm_messages") or []:
+                if msg.get("phase") != "election_speech" or not msg.get("content"):
+                    continue
+                k_all += 1
+                cl = _classify_with_regex(msg["content"])
+                if cl["promise_type"] != "explicit":
+                    continue
+                k_stated += 1
+                for rnd in range(r["round_num"], r["round_num"] + 5):
+                    if rnd in rounds:
+                        later += 1
+                        kept += rounds[rnd].get(msg["sender"], 0) >= cl["extracted_value"] - 5
+    u[m] = {"speeches": k_all, "with_amount": k_stated, "agent_rounds_after": later,
+            "kept_share": round(100 * kept / later, 1) if later else None}
+res["U_campaign_pledges"] = u
+
+# ---------------------------------------------------------------- V. third-review controls (batch 15)
+v = {"elected_nobudget": {}, "incumbents_random_ballot": {}}
+for m in ["gemini", "gpt-oss-120b", "qwen3.8-27b"]:
+    if games(m, "elected_nobudget"):
+        v["elected_nobudget"][m] = {s_: ms([contrib(t) for t in games(m, s_)]) for s_ in ("chat", "fixed", "elected_nobudget", "elected")}
+        v["elected_nobudget"][m]["vs_chat"] = metric_test(m, "chat", "elected_nobudget", contrib)
+        v["elected_nobudget"][m]["vs_elected"] = metric_test(m, "elected_nobudget", "elected", contrib)
+tabs_rb, pb, pg = [], [0, 0], [0, 0]
+for m in ["gpt4o", "gemini", "qwen", "deepseek"] + OSS:
+    if not games(m, "bad_rb"):
+        continue
+    kb, nb = replaced_at_6(games(m, "bad_rb"))
+    kg, ng = replaced_at_6(games(m, "good_rb"))
+    v["incumbents_random_ballot"][m] = {"bad": [kb, nb], "good": [kg, ng]}
+    tabs_rb.append(np.array([[kb, nb - kb], [kg, ng - kg]], float) + 0.5)
+    pb = [pb[0] + kb, pb[1] + nb]
+    pg = [pg[0] + kg, pg[1] + ng]
+if tabs_rb:
+    st_rb = StratifiedTable(tabs_rb)
+    v["incumbents_random_ballot_pooled"] = {"bad": pb, "good": pg, "cmh_odds_ratio": round(float(st_rb.oddsratio_pooled), 2),
+                                            "cmh_p": round(float(st_rb.test_null_odds(correction=True).pvalue), 4)}
+res["V_batch15"] = v
 
 json.dump(res, open(OUT, "w", encoding="utf-8"), indent=1, default=float)
 print(json.dumps(res, indent=1, default=float))

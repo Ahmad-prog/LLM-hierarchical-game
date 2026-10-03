@@ -57,9 +57,13 @@ def pc(m, c):
     return f"{num(t['diff'])} [{num(t['ci'][0], '.1f')}, {num(t['ci'][1], '.1f')}] & {p(t['holm'])}"
 
 
+def small(t):
+    return t["a"]["n"] <= 3 and t["b"]["n"] <= 3     # 3 against 3: a permutation test cannot go below 0.10
+
+
 def pshort(m, c):
     t = P.get((m, c))
-    return "--- & ---" if not t else f"{num(t['diff'])} & {p(t['holm'])}"
+    return "--- & ---" if not t else f"{num(t['diff'])} & {p(t['holm_perm'])}{'$^{\\dagger}$' if small(t) else ''}"
 
 
 def pfull(m, c):
@@ -80,8 +84,9 @@ for models in (API_MAIN, NEWER, OSS):
 T.append(table(
     "hgPrimaryTable",
     f"Primary contrasts: communication (no chat $\\to$ chat only) and manager (chat only $\\to$ elected "
-    f"manager), difference in mean contribution (tokens), game as the unit, with Holm-adjusted $p$ (Welch) over all {fam} "
-    f"tests. Confidence intervals and permutation tests: Table~\\ref{{tab:primary_full}}.",
+    f"manager), difference in mean contribution (tokens), game as the unit, with Holm-adjusted $p$ from exact or Monte "
+    f"Carlo permutation tests over all {fam} tests. $^{{\\dagger}}$3 against 3 games: a permutation test cannot go below "
+    f"$p{{=}}0.10$, so these are descriptive. Welch tests and confidence intervals: Table~\\ref{{tab:primary_full}}.",
     "tab:primary", "lcccc",
     "& \\multicolumn{2}{c}{\\textbf{Communication}} & \\multicolumn{2}{c}{\\textbf{Manager}} \\\\ "
     "\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}\n\\textbf{Model} & $\\Delta$ & Holm $p$ & $\\Delta$ & Holm $p$",
@@ -90,7 +95,7 @@ T.append(table(
     "hgPrimaryFullTable",
     f"Primary contrasts in full (Table~\\ref{{tab:primary}}): difference in mean contribution with 95\\% confidence interval "
     f"(Welch), Holm-adjusted $p$ over all {fam} tests, and Holm-adjusted $p$ from exact or Monte Carlo permutation tests "
-    f"(which cannot go below 0.10 for 3 against 3 games). With permutation tests, {surv} stay below 0.05.",
+    f"(which cannot go below 0.10 for 3 against 3 games). With permutation tests, {surv} have Holm-adjusted $p$ at or below 0.05; for the communication effects it is about 0.05.",
     "tab:primary_full", "lcccccc",
     "& \\multicolumn{3}{c}{\\textbf{Communication}} & \\multicolumn{3}{c}{\\textbf{Manager}} \\\\ "
     "\\cmidrule(lr){2-4}\\cmidrule(lr){5-7}\n\\textbf{Model} & $\\Delta$ [95\\% CI] & Holm $p$ & Perm.\\ $p$ & "
@@ -115,7 +120,7 @@ T.append(table(
     "Vote-contingent offers under the original election prompt (``send ONE private deal message \\dots\\ to secure their "
     "vote'') and a neutral one (``send ONE private message \\dots\\ before the vote''): share (\\%) of election-message "
     "opportunities (5 agents $\\times$ 4 elections) used for an offer, as labeled by an LLM judge applying the human "
-    f"codebook (precision {V['precision']:.2f}, recall {V['recall']:.2f} against the hand labels; Table~\\ref{{tab:validation}}). "
+    f"codebook (precision {V['precision'] + 1e-9:.2f}, recall {V['recall'] + 1e-9:.2f} against the hand labels; Table~\\ref{{tab:validation}}). "
     "Elected manager without and with a salary; 8 games per cell under the deal prompt (10 for Gemini without salary), 5 under the neutral prompt.",
     "tab:neutral", "lcccc",
     "& \\multicolumn{2}{c}{\\textbf{Deal prompt}} & \\multicolumn{2}{c}{\\textbf{Neutral prompt}} \\\\ "
@@ -279,6 +284,29 @@ T.append(table(
     "tab:reelect_clustered", "lccccc",
     "\\textbf{Models} & \\textbf{Re-elected} & \\textbf{Group contr.} & \\textbf{Own contr.} & \\textbf{Rewards} & \\textbf{Punishments}",
     rows, wide=True))
+
+# ---------------------------------------------------------------- third-review controls (batch 15)
+V = r.get("V_batch15")
+if V:
+    rows = []
+    for m, x in V["elected_nobudget"].items():
+        rows.append(f"{NAME[m]} & {x['chat']['mean']:.1f} & {x['fixed']['mean']:.1f} & {x['elected_nobudget']['mean']:.1f}$_{{{x['elected_nobudget']['n']}}}$ & "
+                    f"{x['elected']['mean']:.1f} & {p(x['vs_chat']['perm_p'])}")
+    rows.append(r"\midrule")
+    rows.append(r"\multicolumn{6}{@{}l}{\emph{Incumbent voted out at round 6, shuffled ballot and random ties (bad / good)}}")
+    for m, x in V["incumbents_random_ballot"].items():
+        rows.append(f"{NAME[m]} & " + r"\multicolumn{5}{l}{" + f"{x['bad'][0]}/{x['bad'][1]}" + r" \quad " + f"{x['good'][0]}/{x['good'][1]}" + "}")
+    P_ = V.get("incumbents_random_ballot_pooled", {})
+    T.append(table(
+        "hgReviewControlsTable",
+        "Controls for the third review. Top: mean contribution with chat only, a fixed manager, an elected manager without "
+        "a budget (subscript: games), and an elected manager with a budget; permutation $p$ of the no-budget elected manager "
+        "against chat only. Bottom: the scripted incumbents of Table~\\ref{tab:accountability} with a ballot shuffled for "
+        f"each voter and random tie-breaks (pooled: bad {P_.get('bad', [0, 0])[0]}/{P_.get('bad', [0, 0])[1]}, good "
+        f"{P_.get('good', [0, 0])[0]}/{P_.get('good', [0, 0])[1]}; Cochran--Mantel--Haenszel $p{{=}}{P_.get('cmh_p', 1):.2f}$).",
+        "tab:review_controls", "lccccc",
+        "\\textbf{Model} & \\textbf{Chat only} & \\textbf{Fixed} & \\textbf{Elected, no budget} & \\textbf{Elected} & \\textbf{$p$}",
+        rows, wide=True))
 
 print("% generated by analysis/round3_tables.py from paper_data/round3.json; do not edit by hand\n")
 print("\n".join(T))

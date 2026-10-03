@@ -66,6 +66,7 @@ SWAP_GROUPS = [
     ("Chat-only control", ["batch2_comm_full_gpt4o"]),
     ("Mechanism controls", [f"batch13_{t}_gpt4o" for t in ("info_aggregate", "mgr_nosanction", "mgr_autoreward", "mgr_badincumbent", "ballot_random")]),
     ("Revision controls", [f"batch14_{t}_gpt4o" for t in ("neutral_elected", "neutral_salary", "nostrategic_chat", "nostrategic_elected", "aggregate_chat", "mgr_goodincumbent", "system_reward")]),
+    ("Review controls", [f"batch15_{t}_gpt4o" for t in ("mgr_elected_nobudget", "mgr_badincumbent_rb", "mgr_goodincumbent_rb")]),
 ]
 # OSS track: same-model setups (templates use the gpt4o version; models are replaced by LOCAL)
 OSS_GROUPS = [
@@ -76,6 +77,7 @@ OSS_GROUPS = [
     ("5 Belief", [f"batch5_belief_{b}_gpt4o" for b in ("unknown", "all_human", "mixed")]),
     ("6 Mechanism controls", [f"batch13_{t}_gpt4o" for t in ("info_aggregate", "mgr_nosanction", "mgr_autoreward", "mgr_badincumbent", "ballot_random")]),
     ("7 Revision controls", [f"batch14_{t}_gpt4o" for t in ("neutral_elected", "neutral_salary", "nostrategic_chat", "nostrategic_elected", "aggregate_chat", "mgr_goodincumbent", "system_reward")]),
+    ("8 Review controls", [f"batch15_{t}_gpt4o" for t in ("mgr_elected_nobudget", "mgr_badincumbent_rb", "mgr_goodincumbent_rb")]),
 ]
 
 

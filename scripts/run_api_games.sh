@@ -1,8 +1,8 @@
 #!/bin/bash
-# All API games of the paper (642 games). Needs OPENROUTER_API_KEY in .env.
+# All API games of the paper (690 games). Needs OPENROUTER_API_KEY in .env.
 # The runner is resumable: finished games in results/api are skipped, so it is safe to re-run, and raising
 # --trials adds games to a setup. Each game records its exact OpenRouter cost in its log (`api_usage`).
-# The paper's API runs cost about US$393 in total (GPT-5 about $4.6 per game, Claude about $1.8, most others < $0.8).
+# The paper's API runs cost about US$404 in total (GPT-5 about $4.6 per game, Claude about $1.8, most others < $0.8).
 set -e
 cd "$(dirname "$0")/.."
 B="--budget-usd 450 --out results"
@@ -43,3 +43,7 @@ for m in gpt4o claude gemini; do swap $m --only batch14_nostrategic --trials 3 -
 for m in gpt41 gpt5min; do
   swap $m --only batch2_comm_full,batch3_mgr_elected,batch8_mgr_salary,batch8_mgr_costly --trials 3 --workers 6
 done
+
+# 6. Controls for the third review (batch 15): elected manager without a budget; incumbents with a shuffled ballot
+swap gemini --only batch15_mgr_elected_nobudget --trials 8 --workers 8
+for m in gpt4o gemini qwen deepseek; do swap $m --only batch15_mgr_badincumbent_rb,batch15_mgr_goodincumbent_rb --trials 5 --workers 10; done
