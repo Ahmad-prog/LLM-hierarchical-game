@@ -57,6 +57,7 @@ class MgrPowerType(str, Enum):
     MGR_PUNISH_ONLY = "mgr_punish_only"   # can only punish
     MGR_REWARD_ONLY = "mgr_reward_only"   # can only reward
     MGR_FULL = "mgr_full"                 # can both punish and reward
+    MGR_NO_SANCTIONS = "mgr_no_sanctions" # manager role and messages, but no budget at all
 
 
 # ---------------------------------------------------------------------------
@@ -174,6 +175,8 @@ class ModelType(str, Enum):
     MOCK = "mock"
     LOCAL = "local"   
     GPT5 = "gpt5"              # newer version of the GPT family
+    GPT41 = "gpt41"            # non-reasoning successor of GPT-4o (version vs reasoning)
+    GPT5MIN = "gpt5min"        # GPT-5 with reasoning effort "minimal"
     DEEPSEEK31 = "deepseek31"  # newer version of DeepSeek V3   # open model served by a local vLLM server (see game/settings.py)
 
 

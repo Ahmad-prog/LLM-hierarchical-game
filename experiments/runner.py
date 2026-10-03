@@ -238,6 +238,7 @@ class ExperimentRunner:
                 punish_vis_type=self.config.punish_vis_type,
                 co_player_models=co_players,
             )
+            agent.strategic_line = getattr(self.config, "strategic_line", True)
             agents.append(agent)
         return agents
 
@@ -246,12 +247,16 @@ class ExperimentRunner:
     # ------------------------------------------------------------------
 
     def _build_manager(self, agents: list[Agent]) -> Manager:
-        return Manager(
+        m = Manager(
             mgr_type=self.config.mgr_type,
             power_type=self.config.mgr_power,
             agents=agents,
             election_frequency=self.config.election_frequency,
+            mgr_policy=getattr(self.config, "mgr_policy", "llm"),
+            ballot_random=getattr(self.config, "ballot_random", False),
         )
+        m.deal_prompt = getattr(self.config, "deal_prompt", "deal")
+        return m
 
 
 # ---------------------------------------------------------------------------

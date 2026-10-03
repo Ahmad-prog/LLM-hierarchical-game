@@ -3,9 +3,9 @@
   "frontier": {
    "chat_only": {
     "gpt4o": {
-     "messages": 300,
-     "stated": 261,
-     "first_person": 19,
+     "messages": 1000,
+     "stated": 755,
+     "first_person": 65,
      "broken_3": 2,
      "broken_5": 2,
      "broken_8": 2,
@@ -14,9 +14,9 @@
      "fp_broken_8": 0
     },
     "claude": {
-     "messages": 300,
-     "stated": 125,
-     "first_person": 18,
+     "messages": 600,
+     "stated": 255,
+     "first_person": 31,
      "broken_3": 1,
      "broken_5": 0,
      "broken_8": 0,
@@ -25,9 +25,9 @@
      "fp_broken_8": 0
     },
     "gemini": {
-     "messages": 299,
-     "stated": 244,
-     "first_person": 114,
+     "messages": 998,
+     "stated": 778,
+     "first_person": 427,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -36,9 +36,9 @@
      "fp_broken_8": 0
     },
     "deepseek": {
-     "messages": 296,
-     "stated": 129,
-     "first_person": 33,
+     "messages": 792,
+     "stated": 528,
+     "first_person": 105,
      "broken_3": 4,
      "broken_5": 0,
      "broken_8": 0,
@@ -47,17 +47,20 @@
      "fp_broken_8": 0
     },
     "grok": {
-     "messages": 173,
-     "stated": 12,
-     "first_person": 0,
+     "messages": 335,
+     "stated": 26,
+     "first_person": 4,
      "broken_3": 0,
      "broken_5": 0,
-     "broken_8": 0
+     "broken_8": 0,
+     "fp_broken_3": 0,
+     "fp_broken_5": 0,
+     "fp_broken_8": 0
     },
     "qwen": {
-     "messages": 300,
-     "stated": 129,
-     "first_person": 47,
+     "messages": 1000,
+     "stated": 523,
+     "first_person": 175,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -68,9 +71,9 @@
    },
    "elected": {
     "gpt4o": {
-     "messages": 488,
-     "stated": 317,
-     "first_person": 20,
+     "messages": 980,
+     "stated": 617,
+     "first_person": 41,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -79,10 +82,10 @@
      "fp_broken_8": 0
     },
     "claude": {
-     "messages": 500,
-     "stated": 381,
-     "first_person": 81,
-     "broken_3": 2,
+     "messages": 800,
+     "stated": 627,
+     "first_person": 153,
+     "broken_3": 5,
      "broken_5": 0,
      "broken_8": 0,
      "fp_broken_3": 0,
@@ -90,9 +93,9 @@
      "fp_broken_8": 0
     },
     "gemini": {
-     "messages": 499,
-     "stated": 121,
-     "first_person": 68,
+     "messages": 997,
+     "stated": 250,
+     "first_person": 127,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -101,9 +104,9 @@
      "fp_broken_8": 0
     },
     "deepseek": {
-     "messages": 491,
-     "stated": 240,
-     "first_person": 54,
+     "messages": 787,
+     "stated": 359,
+     "first_person": 80,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -112,9 +115,9 @@
      "fp_broken_8": 0
     },
     "grok": {
-     "messages": 213,
-     "stated": 22,
-     "first_person": 1,
+     "messages": 361,
+     "stated": 37,
+     "first_person": 2,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -123,9 +126,9 @@
      "fp_broken_8": 0
     },
     "qwen": {
-     "messages": 500,
-     "stated": 298,
-     "first_person": 68,
+     "messages": 1000,
+     "stated": 580,
+     "first_person": 156,
      "broken_3": 1,
      "broken_5": 1,
      "broken_8": 0,
@@ -270,8 +273,28 @@
   },
   "samegen": {
    "chat_only": {
-    "gpt5": {},
-    "deepseek31": {}
+    "gpt5": {
+     "messages": 300,
+     "stated": 259,
+     "first_person": 4,
+     "broken_3": 11,
+     "broken_5": 11,
+     "broken_8": 11,
+     "fp_broken_3": 0,
+     "fp_broken_5": 0,
+     "fp_broken_8": 0
+    },
+    "deepseek31": {
+     "messages": 300,
+     "stated": 80,
+     "first_person": 25,
+     "broken_3": 0,
+     "broken_5": 0,
+     "broken_8": 0,
+     "fp_broken_3": 0,
+     "fp_broken_5": 0,
+     "fp_broken_8": 0
+    }
    },
    "elected": {
     "gpt5": {
@@ -286,9 +309,9 @@
      "fp_broken_8": 0
     },
     "deepseek31": {
-     "messages": 300,
-     "stated": 171,
-     "first_person": 38,
+     "messages": 799,
+     "stated": 456,
+     "first_person": 120,
      "broken_3": 0,
      "broken_5": 0,
      "broken_8": 0,
@@ -349,116 +372,116 @@
   "open": {
    "chat_only": {
     "gpt-oss-120b": {
-     "messages": 290,
-     "stated": 240,
-     "first_person": 37,
-     "broken_3": 87,
-     "broken_5": 67,
-     "broken_8": 44,
-     "fp_broken_3": 5,
-     "fp_broken_5": 4,
-     "fp_broken_8": 1
+     "messages": 768,
+     "stated": 651,
+     "first_person": 87,
+     "broken_3": 281,
+     "broken_5": 196,
+     "broken_8": 150,
+     "fp_broken_3": 25,
+     "fp_broken_5": 18,
+     "fp_broken_8": 10
     },
     "nemotron-3-super-120b": {
-     "messages": 77,
-     "stated": 51,
-     "first_person": 19,
-     "broken_3": 6,
-     "broken_5": 6,
-     "broken_8": 5,
-     "fp_broken_3": 3,
-     "fp_broken_5": 3,
-     "fp_broken_8": 3
+     "messages": 239,
+     "stated": 134,
+     "first_person": 47,
+     "broken_3": 16,
+     "broken_5": 16,
+     "broken_8": 15,
+     "fp_broken_3": 7,
+     "fp_broken_5": 7,
+     "fp_broken_8": 7
     },
     "ling-3.0-flash": {
-     "messages": 294,
-     "stated": 238,
-     "first_person": 60,
-     "broken_3": 104,
-     "broken_5": 97,
-     "broken_8": 86,
-     "fp_broken_3": 29,
-     "fp_broken_5": 29,
-     "fp_broken_8": 27
+     "messages": 782,
+     "stated": 643,
+     "first_person": 161,
+     "broken_3": 315,
+     "broken_5": 284,
+     "broken_8": 240,
+     "fp_broken_3": 84,
+     "fp_broken_5": 81,
+     "fp_broken_8": 69
     },
     "qwen3.8-27b": {
-     "messages": 300,
-     "stated": 257,
-     "first_person": 140,
-     "broken_3": 56,
-     "broken_5": 55,
-     "broken_8": 50,
-     "fp_broken_3": 28,
-     "fp_broken_5": 27,
-     "fp_broken_8": 25
+     "messages": 800,
+     "stated": 644,
+     "first_person": 327,
+     "broken_3": 153,
+     "broken_5": 146,
+     "broken_8": 117,
+     "fp_broken_3": 68,
+     "fp_broken_5": 65,
+     "fp_broken_8": 51
     },
     "gemma-4-31b": {
-     "messages": 300,
-     "stated": 171,
-     "first_person": 82,
-     "broken_3": 13,
-     "broken_5": 13,
-     "broken_8": 13,
-     "fp_broken_3": 1,
-     "fp_broken_5": 1,
-     "fp_broken_8": 1
+     "messages": 800,
+     "stated": 435,
+     "first_person": 239,
+     "broken_3": 30,
+     "broken_5": 30,
+     "broken_8": 30,
+     "fp_broken_3": 4,
+     "fp_broken_5": 4,
+     "fp_broken_8": 4
     }
    },
    "elected": {
     "gpt-oss-120b": {
-     "messages": 296,
-     "stated": 275,
-     "first_person": 66,
-     "broken_3": 43,
-     "fp_broken_3": 13,
-     "broken_5": 34,
-     "fp_broken_5": 10,
-     "broken_8": 27,
-     "fp_broken_8": 9
+     "messages": 784,
+     "stated": 716,
+     "first_person": 164,
+     "broken_3": 113,
+     "fp_broken_3": 24,
+     "broken_5": 91,
+     "fp_broken_5": 19,
+     "broken_8": 83,
+     "fp_broken_8": 18
     },
     "nemotron-3-super-120b": {
-     "messages": 126,
-     "stated": 88,
-     "first_person": 48,
-     "broken_3": 4,
-     "fp_broken_3": 2,
-     "broken_5": 4,
-     "fp_broken_5": 2,
-     "broken_8": 4,
-     "fp_broken_8": 2
+     "messages": 284,
+     "stated": 189,
+     "first_person": 86,
+     "broken_3": 9,
+     "fp_broken_3": 4,
+     "broken_5": 8,
+     "fp_broken_5": 3,
+     "broken_8": 8,
+     "fp_broken_8": 3
     },
     "ling-3.0-flash": {
-     "messages": 290,
-     "stated": 234,
-     "first_person": 64,
-     "broken_3": 107,
-     "broken_5": 99,
-     "broken_8": 77,
-     "fp_broken_3": 18,
-     "fp_broken_5": 18,
-     "fp_broken_8": 17
+     "messages": 776,
+     "stated": 631,
+     "first_person": 178,
+     "broken_3": 312,
+     "broken_5": 289,
+     "broken_8": 250,
+     "fp_broken_3": 71,
+     "fp_broken_5": 68,
+     "fp_broken_8": 61
     },
     "qwen3.8-27b": {
-     "messages": 299,
-     "stated": 240,
-     "first_person": 164,
-     "broken_3": 31,
-     "broken_5": 30,
-     "broken_8": 30,
-     "fp_broken_3": 22,
-     "fp_broken_5": 21,
-     "fp_broken_8": 21
+     "messages": 797,
+     "stated": 566,
+     "first_person": 403,
+     "broken_3": 75,
+     "broken_5": 70,
+     "broken_8": 67,
+     "fp_broken_3": 54,
+     "fp_broken_5": 53,
+     "fp_broken_8": 51
     },
     "gemma-4-31b": {
-     "messages": 300,
-     "stated": 210,
-     "first_person": 94,
-     "broken_3": 13,
-     "broken_5": 13,
-     "broken_8": 13,
-     "fp_broken_3": 13,
-     "fp_broken_5": 13,
-     "fp_broken_8": 13
+     "messages": 800,
+     "stated": 555,
+     "first_person": 243,
+     "broken_3": 25,
+     "broken_5": 25,
+     "broken_8": 25,
+     "fp_broken_3": 14,
+     "fp_broken_5": 14,
+     "fp_broken_8": 14
     }
    },
    "hidden": {
@@ -582,21 +605,21 @@
    "elected": {
     "gpt4o": {},
     "claude": {
-     "offers": 7,
-     "other": 3,
+     "offers": 11,
+     "other": 4,
      "impossible": 0,
-     "reply": 2,
-     "reciprocal": 1,
+     "reply": 4,
+     "reciprocal": 2,
      "pledge": 1
     },
     "gemini": {
-     "offers": 8,
-     "pledge": 8,
+     "offers": 16,
+     "pledge": 16,
      "impossible": 0
     },
     "deepseek": {
-     "offers": 10,
-     "pledge": 10,
+     "offers": 17,
+     "pledge": 17,
      "impossible": 0
     },
     "grok": {},
@@ -605,18 +628,19 @@
    "salary": {
     "gpt4o": {},
     "claude": {
-     "offers": 46,
-     "other": 19,
-     "impossible": 8,
-     "reciprocal": 5,
-     "targeted": 4,
-     "pledge": 15,
-     "reply": 3
+     "offers": 116,
+     "other": 41,
+     "impossible": 14,
+     "reciprocal": 19,
+     "targeted": 6,
+     "pledge": 44,
+     "reply": 6
     },
     "gemini": {
-     "offers": 17,
-     "pledge": 17,
-     "impossible": 0
+     "offers": 47,
+     "pledge": 46,
+     "impossible": 0,
+     "other": 1
     },
     "deepseek": {
      "offers": 7,
@@ -624,8 +648,8 @@
      "impossible": 0
     },
     "grok": {
-     "offers": 8,
-     "pledge": 8,
+     "offers": 22,
+     "pledge": 22,
      "impossible": 0
     },
     "qwen": {}
@@ -633,16 +657,16 @@
    "costly": {
     "gpt4o": {},
     "claude": {
-     "offers": 23,
-     "other": 5,
+     "offers": 61,
+     "other": 14,
      "impossible": 0,
-     "pledge": 10,
-     "reciprocal": 7,
-     "reply": 1
+     "pledge": 26,
+     "reciprocal": 17,
+     "reply": 4
     },
     "gemini": {
-     "offers": 16,
-     "pledge": 16,
+     "offers": 46,
+     "pledge": 46,
      "impossible": 0
     },
     "deepseek": {
@@ -666,12 +690,12 @@
      "other": 3
     },
     "deepseek31": {
-     "offers": 47,
-     "pledge": 39,
+     "offers": 118,
+     "pledge": 100,
      "impossible": 0,
-     "reply": 6,
-     "other": 1,
-     "reciprocal": 1
+     "reply": 12,
+     "other": 4,
+     "reciprocal": 2
     }
    },
    "salary": {
@@ -685,12 +709,13 @@
      "reply": 4
     },
     "deepseek31": {
-     "offers": 47,
-     "other": 8,
+     "offers": 117,
+     "other": 21,
      "impossible": 0,
-     "pledge": 36,
-     "targeted": 1,
-     "reply": 2
+     "pledge": 84,
+     "targeted": 6,
+     "reply": 5,
+     "reciprocal": 1
     }
    },
    "costly": {
@@ -702,109 +727,122 @@
      "targeted": 2
     },
     "deepseek31": {
-     "offers": 42,
-     "pledge": 32,
+     "offers": 106,
+     "pledge": 85,
      "impossible": 0,
-     "other": 6,
-     "reply": 2,
-     "targeted": 2
+     "other": 11,
+     "reply": 5,
+     "targeted": 5
     }
    }
   },
   "open": {
    "elected": {
     "gpt-oss-120b": {
-     "offers": 22,
-     "pledge": 7,
+     "offers": 65,
+     "pledge": 22,
      "impossible": 0,
-     "other": 7,
-     "reciprocal": 2,
-     "reply": 5,
-     "targeted": 1
+     "other": 13,
+     "reciprocal": 3,
+     "reply": 20,
+     "targeted": 7
     },
     "nemotron-3-super-120b": {
-     "offers": 2,
-     "reciprocal": 2,
-     "impossible": 0
+     "offers": 6,
+     "reciprocal": 3,
+     "impossible": 0,
+     "pledge": 2,
+     "reply": 1
     },
     "ling-3.0-flash": {
-     "offers": 2,
+     "offers": 7,
      "pledge": 1,
      "impossible": 0,
-     "reciprocal": 1
+     "reciprocal": 3,
+     "reply": 2,
+     "other": 1
     },
     "qwen3.8-27b": {
-     "offers": 28,
-     "targeted": 5,
+     "offers": 81,
+     "targeted": 11,
      "impossible": 0,
-     "reply": 4,
-     "pledge": 11,
-     "other": 8
+     "reply": 11,
+     "pledge": 30,
+     "other": 26,
+     "reciprocal": 3
     },
     "gemma-4-31b": {}
    },
    "salary": {
     "gpt-oss-120b": {
-     "offers": 27,
-     "pledge": 7,
+     "offers": 83,
+     "pledge": 17,
      "impossible": 0,
-     "targeted": 6,
-     "reply": 4,
-     "other": 7,
-     "reciprocal": 3
+     "targeted": 16,
+     "reply": 16,
+     "other": 28,
+     "reciprocal": 6
     },
     "nemotron-3-super-120b": {
-     "offers": 2,
-     "pledge": 2,
-     "impossible": 0
+     "offers": 11,
+     "pledge": 5,
+     "impossible": 0,
+     "reciprocal": 4,
+     "reply": 2
     },
     "ling-3.0-flash": {
-     "offers": 1,
+     "offers": 10,
      "other": 1,
-     "impossible": 0
+     "impossible": 0,
+     "pledge": 3,
+     "reciprocal": 3,
+     "reply": 2,
+     "targeted": 1
     },
     "qwen3.8-27b": {
-     "offers": 58,
-     "targeted": 6,
-     "impossible": 0,
-     "pledge": 20,
-     "other": 22,
-     "reply": 8,
-     "reciprocal": 2
+     "offers": 147,
+     "targeted": 19,
+     "impossible": 1,
+     "pledge": 52,
+     "other": 55,
+     "reply": 17,
+     "reciprocal": 4
     },
     "gemma-4-31b": {}
    },
    "costly": {
     "gpt-oss-120b": {
-     "offers": 31,
-     "pledge": 8,
+     "offers": 72,
+     "pledge": 25,
      "impossible": 0,
-     "reply": 7,
-     "targeted": 8,
-     "other": 6,
-     "reciprocal": 2
+     "reply": 17,
+     "targeted": 11,
+     "other": 14,
+     "reciprocal": 5
     },
     "nemotron-3-super-120b": {
-     "offers": 6,
-     "reciprocal": 2,
+     "offers": 23,
+     "reciprocal": 5,
      "impossible": 0,
-     "pledge": 3,
-     "reply": 1
+     "pledge": 14,
+     "reply": 4
     },
     "ling-3.0-flash": {
-     "offers": 3,
-     "reciprocal": 2,
+     "offers": 7,
+     "reciprocal": 3,
      "impossible": 0,
-     "targeted": 1
+     "targeted": 1,
+     "pledge": 2,
+     "other": 1
     },
     "qwen3.8-27b": {
-     "offers": 51,
-     "pledge": 15,
-     "impossible": 0,
-     "other": 16,
-     "reply": 9,
-     "targeted": 8,
-     "reciprocal": 3
+     "offers": 130,
+     "pledge": 45,
+     "impossible": 1,
+     "other": 44,
+     "reply": 18,
+     "targeted": 18,
+     "reciprocal": 5
     },
     "gemma-4-31b": {}
    }
@@ -813,284 +851,296 @@
  "over20": {
   "frontier": {
    "gpt4o": {
-    "messages": 3812,
+    "messages": 5846,
     "over_20": 0
    },
    "claude": {
-    "messages": 3526,
-    "over_20": 18
+    "messages": 5610,
+    "over_20": 33
    },
    "gemini": {
-    "messages": 3455,
+    "messages": 6583,
     "over_20": 0
    },
    "deepseek": {
-    "messages": 3613,
+    "messages": 4836,
     "over_20": 0
    },
    "grok": {
-    "messages": 1837,
-    "over_20": 0
+    "messages": 2943,
+    "over_20": 1
    },
    "qwen": {
-    "messages": 3393,
-    "over_20": 1
+    "messages": 5208,
+    "over_20": 2
    }
   },
   "samegen": {
    "gpt5": {
-    "messages": 3520,
+    "messages": 3892,
     "over_20": 4
    },
    "deepseek31": {
-    "messages": 3004,
+    "messages": 5643,
     "over_20": 0
    }
   },
   "open": {
    "gpt-oss-120b": {
-    "messages": 3519,
-    "over_20": 0
+    "messages": 7717,
+    "over_20": 1
    },
    "nemotron-3-super-120b": {
-    "messages": 1517,
+    "messages": 3190,
     "over_20": 0
    },
    "ling-3.0-flash": {
-    "messages": 3279,
-    "over_20": 20
+    "messages": 7279,
+    "over_20": 49
    },
    "qwen3.8-27b": {
-    "messages": 3318,
-    "over_20": 3
+    "messages": 7262,
+    "over_20": 4
    },
    "gemma-4-31b": {
-    "messages": 2745,
+    "messages": 6090,
     "over_20": 0
    }
   }
  },
  "reelection": {
   "api_main": {
-   "contested": 306,
-   "reelected": 203,
+   "contested": 468,
+   "reelected": 303,
    "group_contrib": {
-    "reelected_mean_c": -0.004,
-    "replaced_mean_c": 0.008,
-    "r": -0.003,
-    "p": 0.9543
+    "reelected_mean_c": 0.031,
+    "replaced_mean_c": -0.056,
+    "r": 0.023,
+    "p": 0.6122
    },
    "own_contrib": {
-    "reelected_mean_c": 0.002,
-    "replaced_mean_c": -0.004,
-    "r": 0.002,
-    "p": 0.9792
+    "reelected_mean_c": 0.042,
+    "replaced_mean_c": -0.078,
+    "r": 0.029,
+    "p": 0.537
    },
    "reward": {
-    "reelected_mean_c": 0.019,
-    "replaced_mean_c": -0.038,
-    "r": 0.006,
-    "p": 0.9114
+    "reelected_mean_c": 0.056,
+    "replaced_mean_c": -0.103,
+    "r": 0.02,
+    "p": 0.6731
    },
    "punish": {
-    "reelected_mean_c": 0.004,
-    "replaced_mean_c": -0.007,
-    "r": 0.024,
-    "p": 0.6811
+    "reelected_mean_c": -0.002,
+    "replaced_mean_c": 0.004,
+    "r": -0.012,
+    "p": 0.8036
    }
   },
   "newer": {
-   "contested": 90,
-   "reelected": 61,
+   "contested": 135,
+   "reelected": 104,
    "group_contrib": {
-    "reelected_mean_c": 0.002,
-    "replaced_mean_c": -0.004,
-    "r": 0.003,
-    "p": 0.9807
+    "reelected_mean_c": 0.007,
+    "replaced_mean_c": -0.024,
+    "r": 0.011,
+    "p": 0.8975
    },
    "own_contrib": {
-    "reelected_mean_c": 0.009,
-    "replaced_mean_c": -0.019,
-    "r": 0.015,
-    "p": 0.8886
+    "reelected_mean_c": 0.012,
+    "replaced_mean_c": -0.041,
+    "r": 0.021,
+    "p": 0.8134
    },
    "reward": {
-    "reelected_mean_c": 0.044,
-    "replaced_mean_c": -0.093,
-    "r": 0.01,
-    "p": 0.9283
+    "reelected_mean_c": 0.101,
+    "replaced_mean_c": -0.339,
+    "r": 0.027,
+    "p": 0.7577
    },
    "punish": {
-    "reelected_mean_c": -0.001,
-    "replaced_mean_c": 0.001,
-    "r": -0.006,
-    "p": 0.9528
+    "reelected_mean_c": -0.003,
+    "replaced_mean_c": 0.011,
+    "r": -0.046,
+    "p": 0.5987
    }
   },
   "open": {
-   "contested": 225,
-   "reelected": 181,
+   "contested": 450,
+   "reelected": 348,
    "group_contrib": {
-    "reelected_mean_c": 0.034,
-    "replaced_mean_c": -0.14,
-    "r": 0.029,
-    "p": 0.6693
+    "reelected_mean_c": 0.036,
+    "replaced_mean_c": -0.122,
+    "r": 0.025,
+    "p": 0.5904
    },
    "own_contrib": {
-    "reelected_mean_c": -0.009,
-    "replaced_mean_c": 0.036,
-    "r": -0.006,
-    "p": 0.9306
+    "reelected_mean_c": 0.014,
+    "replaced_mean_c": -0.047,
+    "r": 0.008,
+    "p": 0.8644
    },
    "reward": {
-    "reelected_mean_c": 0.023,
-    "replaced_mean_c": -0.093,
-    "r": 0.022,
-    "p": 0.74
+    "reelected_mean_c": 0.089,
+    "replaced_mean_c": -0.304,
+    "r": 0.07,
+    "p": 0.1379
    },
    "punish": {
-    "reelected_mean_c": -0.153,
-    "replaced_mean_c": 0.629,
-    "r": -0.145,
-    "p": 0.0301
+    "reelected_mean_c": -0.077,
+    "replaced_mean_c": 0.263,
+    "r": -0.073,
+    "p": 0.1236
    }
   },
   "all": {
-   "contested": 621,
-   "reelected": 445,
+   "contested": 1053,
+   "reelected": 755,
    "group_contrib": {
-    "reelected_mean_c": 0.012,
-    "replaced_mean_c": -0.031,
-    "r": 0.01,
-    "p": 0.8025
+    "reelected_mean_c": 0.03,
+    "replaced_mean_c": -0.075,
+    "r": 0.022,
+    "p": 0.4664
    },
    "own_contrib": {
-    "reelected_mean_c": -0.001,
-    "replaced_mean_c": 0.003,
-    "r": -0.001,
-    "p": 0.9832
+    "reelected_mean_c": 0.025,
+    "replaced_mean_c": -0.064,
+    "r": 0.016,
+    "p": 0.6045
    },
    "reward": {
-    "reelected_mean_c": 0.024,
-    "replaced_mean_c": -0.061,
-    "r": 0.009,
-    "p": 0.8163
+    "reelected_mean_c": 0.078,
+    "replaced_mean_c": -0.196,
+    "r": 0.032,
+    "p": 0.3051
    },
    "punish": {
-    "reelected_mean_c": -0.061,
-    "replaced_mean_c": 0.153,
-    "r": -0.074,
-    "p": 0.0649
+    "reelected_mean_c": -0.037,
+    "replaced_mean_c": 0.093,
+    "r": -0.045,
+    "p": 0.1412
    }
   }
  },
  "anova": {
   "api_contrib_mgr": {
-   "n_games": 108,
-   "df_error": 84,
+   "n_games": 182,
+   "df_error": 158,
    "model": {
-    "ss": 657.19,
+    "ss": 708.11,
     "df": 5,
-    "F": 31.06,
-    "p": 9.13e-18,
-    "partial_eta2": 0.649
+    "F": 24.66,
+    "p": 2.59e-18,
+    "partial_eta2": 0.438,
+    "omega2": 0.318
    },
    "institution": {
-    "ss": 67.61,
+    "ss": 53.36,
     "df": 3,
-    "F": 5.33,
-    "p": 0.00208,
-    "partial_eta2": 0.16
+    "F": 3.1,
+    "p": 0.0285,
+    "partial_eta2": 0.056,
+    "omega2": 0.017
    },
    "interaction": {
-    "ss": 254.48,
+    "ss": 468.31,
     "df": 15,
-    "F": 4.01,
-    "p": 1.99e-05,
-    "partial_eta2": 0.417
+    "F": 5.44,
+    "p": 8.79e-09,
+    "partial_eta2": 0.34,
+    "omega2": 0.179
    }
   },
   "api_contrib_all": {
-   "n_games": 198,
-   "df_error": 144,
+   "n_games": 320,
+   "df_error": 266,
    "model": {
-    "ss": 635.09,
+    "ss": 597.5,
     "df": 5,
-    "F": 36.66,
-    "p": 4.27e-24,
-    "partial_eta2": 0.56
+    "F": 27.53,
+    "p": 1.92e-22,
+    "partial_eta2": 0.341,
+    "omega2": 0.119
    },
    "institution": {
-    "ss": 860.32,
+    "ss": 1733.89,
     "df": 8,
-    "F": 31.04,
-    "p": 8.06e-28,
-    "partial_eta2": 0.633
+    "F": 49.94,
+    "p": 9.63e-49,
+    "partial_eta2": 0.6,
+    "omega2": 0.353
    },
    "interaction": {
-    "ss": 645.47,
+    "ss": 1164.75,
     "df": 40,
-    "F": 4.66,
-    "p": 4.7e-12,
-    "partial_eta2": 0.564
+    "F": 6.71,
+    "p": 8.87e-23,
+    "partial_eta2": 0.502,
+    "omega2": 0.206
    }
   },
   "open_coop_mgr": {
-   "n_games": 60,
-   "df_error": 40,
+   "n_games": 160,
+   "df_error": 140,
    "model": {
-    "ss": 24118.67,
+    "ss": 65390.6,
     "df": 4,
-    "F": 92.17,
-    "p": 1.24e-19,
-    "partial_eta2": 0.902
+    "F": 165.65,
+    "p": 4.82e-52,
+    "partial_eta2": 0.826,
+    "omega2": 0.703
    },
    "institution": {
-    "ss": 2156.33,
+    "ss": 4897.53,
     "df": 3,
-    "F": 10.99,
-    "p": 2.14e-05,
-    "partial_eta2": 0.452
+    "F": 16.54,
+    "p": 2.96e-09,
+    "partial_eta2": 0.262,
+    "omega2": 0.05
    },
    "interaction": {
-    "ss": 2422.67,
+    "ss": 8306.6,
     "df": 12,
-    "F": 3.09,
-    "p": 0.00364,
-    "partial_eta2": 0.481
+    "F": 7.01,
+    "p": 7.1e-10,
+    "partial_eta2": 0.375,
+    "omega2": 0.077
    }
   },
   "open_coop_all": {
-   "n_games": 135,
-   "df_error": 90,
+   "n_games": 285,
+   "df_error": 240,
    "model": {
-    "ss": 41737.29,
+    "ss": 101214.35,
     "df": 4,
-    "F": 190.23,
-    "p": 5.15e-43,
-    "partial_eta2": 0.894
+    "F": 337.43,
+    "p": 3.01e-97,
+    "partial_eta2": 0.849,
+    "omega2": 0.552
    },
    "institution": {
-    "ss": 15706.46,
+    "ss": 19434.77,
     "df": 8,
-    "F": 35.79,
-    "p": 8.52e-25,
-    "partial_eta2": 0.761
+    "F": 32.4,
+    "p": 2.97e-34,
+    "partial_eta2": 0.519,
+    "omega2": 0.103
    },
    "interaction": {
-    "ss": 37087.91,
+    "ss": 43942.42,
     "df": 32,
-    "F": 21.13,
-    "p": 1.2e-29,
-    "partial_eta2": 0.883
+    "F": 18.31,
+    "p": 7.29e-48,
+    "partial_eta2": 0.709,
+    "omega2": 0.227
    }
   }
  },
  "workers_fixed": {
   "qwen": {
-   "mean": 14.81,
-   "sd": 3.28,
-   "n": 5
+   "mean": 14.0,
+   "sd": 3.07,
+   "n": 10
   },
   "claude": {
    "mean": 19.95,
@@ -1103,9 +1153,9 @@
    "n": 5
   },
   "gpt4o": {
-   "mean": 14.26,
-   "sd": 2.27,
-   "n": 5
+   "mean": 14.79,
+   "sd": 2.68,
+   "n": 10
   }
  },
  "nemotron_valid": {
@@ -1125,86 +1175,86 @@
   },
   "chat_only": {
    "valid_pct": {
-    "mean": 94.3,
-    "sd": 3.2
+    "mean": 95.0,
+    "sd": 2.4
    },
    "coop_valid": {
-    "mean": 85.7,
-    "sd": 21.2
+    "mean": 94.2,
+    "sd": 13.4
    },
    "contrib_valid": {
-    "mean": 10.4,
-    "sd": 4.0
+    "mean": 12.1,
+    "sd": 3.0
    }
   },
   "fixed": {
    "valid_pct": {
-    "mean": 96.7,
-    "sd": 0.6
+    "mean": 95.9,
+    "sd": 2.3
    },
    "coop_valid": {
-    "mean": 97.9,
-    "sd": 1.0
+    "mean": 96.6,
+    "sd": 5.4
    },
    "contrib_valid": {
-    "mean": 12.8,
-    "sd": 4.8
+    "mean": 12.1,
+    "sd": 3.7
    }
   },
   "elected": {
    "valid_pct": {
-    "mean": 97.3,
-    "sd": 1.2
+    "mean": 97.5,
+    "sd": 1.8
    },
    "coop_valid": {
-    "mean": 99.3,
-    "sd": 0.6
+    "mean": 99.5,
+    "sd": 0.8
    },
    "contrib_valid": {
-    "mean": 14.0,
-    "sd": 0.8
+    "mean": 13.5,
+    "sd": 1.2
    }
   },
   "rotating": {
    "valid_pct": {
-    "mean": 94.7,
-    "sd": 1.2
+    "mean": 93.8,
+    "sd": 3.3
    },
    "coop_valid": {
-    "mean": 96.5,
-    "sd": 3.7
+    "mean": 81.8,
+    "sd": 32.6
    },
    "contrib_valid": {
-    "mean": 11.9,
-    "sd": 0.4
+    "mean": 10.8,
+    "sd": 5.4
    }
   },
   "salary": {
    "valid_pct": {
-    "mean": 96.7,
-    "sd": 0.6
+    "mean": 96.8,
+    "sd": 0.9
    },
    "coop_valid": {
-    "mean": 95.2,
+    "mean": 96.3,
     "sd": 4.9
    },
    "contrib_valid": {
-    "mean": 14.4,
-    "sd": 2.1
+    "mean": 13.6,
+    "sd": 1.6
    }
   },
   "costly": {
    "valid_pct": {
-    "mean": 97.3,
-    "sd": 2.5
+    "mean": 96.9,
+    "sd": 1.6
    },
    "coop_valid": {
-    "mean": 99.6,
-    "sd": 0.6
+    "mean": 98.7,
+    "sd": 1.6
    },
    "contrib_valid": {
-    "mean": 12.0,
-    "sd": 0.7
+    "mean": 12.2,
+    "sd": 1.4
    }
   },
   "hidden": {

@@ -2,9 +2,13 @@
 openai>=1.30
 python-dotenv>=1.0
 
-# Reproducing the paper's numbers, tables and figures from results/
+# Reproducing the paper's numbers, tables and figures from results/ and annotation/
+numpy>=1.26
 scipy>=1.11
+pandas>=2.0
+statsmodels>=0.14
 matplotlib>=3.8
+# Optional: a LaTeX installation (with helvet, sfmath, type1cm, cm-super) on PATH, to typeset the figures as in the paper
 
 # Tests (optional)
 pytest>=8.0

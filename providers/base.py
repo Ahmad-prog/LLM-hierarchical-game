@@ -4,8 +4,22 @@ Base provider abstraction for all LLM backends.
 
 from __future__ import annotations
 import json
+import threading
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
+
+
+# Per-thread API usage: hg_jobs resets it before each game (one game runs in one thread) and stores it
+# with the result, so every result file carries the exact OpenRouter cost of that game.
+_USAGE = threading.local()
+
+
+def usage_reset() -> None:
+    _USAGE.u = {"calls": 0, "prompt_tokens": 0, "completion_tokens": 0, "cost_usd": 0.0}
+
+
+def usage_get() -> dict:
+    return dict(getattr(_USAGE, "u", None) or {})
 
 
 @dataclass
@@ -67,7 +81,7 @@ class LLMResponse:
 
     def get_private_deal(self) -> dict | None:
         """Extract private deal message from structured_action."""
-        return self.structured_action.get("private_deal")
+        return self.structured_action.get("private_deal") or self.structured_action.get("private_note")
 
     def get_punish(self) -> dict:
         """Extract punishment allocations {agent_id: tokens_spent}."""
@@ -247,6 +261,10 @@ class OpenRouterProvider(BaseProvider):
         # Request reasoning tokens for models that support it
         if self._capture_reasoning:
             kwargs["extra_body"] = {"include_reasoning": True}
+        if "openrouter" in str(self._base_url):
+            kwargs.setdefault("extra_body", {})["usage"] = {"include": True}   # cost per call
+        if getattr(self, "_reasoning", None):
+            kwargs.setdefault("extra_body", {})["reasoning"] = self._reasoning
 
         # Cap output tokens if specified (e.g. DeepSeek V3 for faster JSON responses)
         if self._max_tokens is not None:
@@ -295,6 +313,15 @@ class OpenRouterProvider(BaseProvider):
                 f"OpenRouter returned empty/null choices after {_max_retries} attempts "
                 f"(model={self._model}). This is a transient upstream issue — retry later."
             )
+        u = getattr(_USAGE, "u", None)
+        if u is not None and response.usage:
+            u["calls"] += 1
+            u["prompt_tokens"] += response.usage.prompt_tokens or 0
+            u["completion_tokens"] += response.usage.completion_tokens or 0
+            cost = getattr(response.usage, "cost", None)
+            if cost is None:
+                cost = (getattr(response.usage, "model_extra", None) or {}).get("cost")
+            u["cost_usd"] += float(cost or 0)
         choice = response.choices[0]
         raw_text = choice.message.content or ""
 

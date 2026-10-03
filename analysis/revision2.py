@@ -209,6 +209,7 @@ def anova2(cells):
 
     full, rk_full = rss(design(1, 1, 1))
     df_err = len(y) - rk_full
+    sst = float(((y - y.mean()) ** 2).sum())
     out = {"n_games": len(y), "df_error": int(df_err)}
     for name, reduced, ref in (("model", design(0, 1, 0), design(1, 1, 0)),
                                ("institution", design(1, 0, 0), design(1, 1, 0)),
@@ -218,7 +219,8 @@ def anova2(cells):
         ss, df = r_red - r_ref, k_ref - k_red
         f = (ss / df) / (full / df_err)
         out[name] = {"ss": round(ss, 2), "df": int(df), "F": round(f, 2), "p": float(f"{stats.f.sf(f, df, df_err):.2e}"),
-                     "partial_eta2": round(ss / (ss + full), 3)}
+                     "partial_eta2": round(ss / (ss + full), 3),
+                     "omega2": round((ss - df * full / df_err) / (sst + full / df_err), 3)}
     return out
 
 

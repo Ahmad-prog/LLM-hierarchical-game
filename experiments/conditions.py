@@ -281,6 +281,8 @@ def generate_all_conditions(
         configs.extend(generate_batch10_belief_expanded())     # 4
         configs.extend(generate_batch11_cross_model_mgr())     # 6
         configs.extend(generate_batch12_hetero_no_manager())   # 7
+        configs.extend(generate_batch13_mechanism())           # 5 per model
+        configs.extend(generate_batch14_revision())            # 7 per model
 
     return configs
 
@@ -617,6 +619,92 @@ def generate_batch12_hetero_no_manager() -> list[ExperimentConfig]:
     return configs
 
 
+def generate_batch13_mechanism() -> list[ExperimentConfig]:
+    """Mechanism controls, one template per model (the runner swaps in other models):
+
+    batch13_info_aggregate   elected manager, but agents see only the pool total, not who gave what
+    batch13_mgr_nosanction   fixed manager with no budget (authority and messages only)
+    batch13_mgr_autoreward   fixed manager whose sanctions follow a fixed reward rule
+    batch13_mgr_badincumbent agent_0 starts as elected manager with harmful sanctions; elections at rounds 6, 11, 16
+    batch13_ballot_random    elected manager, ballot order shuffled per voter, ties broken at random
+    """
+    specs = [
+        ("info_aggregate", MgrType.MGR_ELECTED, MgrPowerType.MGR_FULL, dict(info_type=InfoType.INFO_PARTIAL)),
+        ("mgr_nosanction", MgrType.MGR_FIXED, MgrPowerType.MGR_NO_SANCTIONS, {}),
+        ("mgr_autoreward", MgrType.MGR_FIXED, MgrPowerType.MGR_FULL, dict(mgr_policy="auto_reward")),
+        ("mgr_badincumbent", MgrType.MGR_ELECTED, MgrPowerType.MGR_FULL, dict(mgr_policy="bad_incumbent")),
+        ("ballot_random", MgrType.MGR_ELECTED, MgrPowerType.MGR_FULL, dict(ballot_random=True)),
+    ]
+    configs = []
+    for ctype, model in HOMOGENEOUS_MODEL_MAP.items():
+        for tag, mtype, power, extra in specs:
+            kw = dict(info_type=InfoType.INFO_FULL)
+            kw.update(extra)
+            configs.append(ExperimentConfig(
+                name=f"batch13_{tag}_{model.value}",
+                batch=13,
+                belief=BeliefType.BELIEF_ALL_AI,
+                composition=ctype,
+                comm_type=CommType.COMM_FULL,
+                mgr_type=mtype,
+                mgr_power=power,
+                persona=PersonaType.PERSONA_NONE,
+                temp_type=TempType.TEMP_MEDIUM,
+                hist_type=HistType.HIST_FULL,
+                agent_models=[model] * 5,
+                num_agents=5,
+                election_frequency=5,
+                **kw,
+            ))
+    return configs
+
+
+def generate_batch14_revision() -> list[ExperimentConfig]:
+    """Controls for the second round of reviews, one template per model (the runner swaps in other models):
+
+    batch14_neutral_elected      elected manager; the election message prompt does not ask for a deal
+    batch14_neutral_salary       the same with a manager salary of +5
+    batch14_nostrategic_chat     chat only, without "Be strategic." in the system prompt
+    batch14_nostrategic_elected  elected manager, without "Be strategic."
+    batch14_aggregate_chat       chat only; agents see only the pool total, not who gave what
+    batch14_mgr_goodincumbent    agent_0 starts as elected manager and rewards contributors; elections at 6, 11, 16
+    batch14_system_reward        no manager; the game applies the auto_reward rule and no player pays for it
+    """
+    none = (MgrType.MGR_NONE, MgrPowerType.MGR_NONE)
+    elected = (MgrType.MGR_ELECTED, MgrPowerType.MGR_FULL)
+    specs = [
+        ("neutral_elected", elected, dict(deal_prompt="neutral")),
+        ("neutral_salary", elected, dict(deal_prompt="neutral", mgr_salary_type=MgrSalaryType.MGR_SALARY)),
+        ("nostrategic_chat", none, dict(strategic_line=False)),
+        ("nostrategic_elected", elected, dict(strategic_line=False)),
+        ("aggregate_chat", none, dict(info_type=InfoType.INFO_PARTIAL)),
+        ("mgr_goodincumbent", elected, dict(mgr_policy="good_incumbent")),
+        ("system_reward", none, dict(mgr_policy="system_reward")),
+    ]
+    configs = []
+    for ctype, model in HOMOGENEOUS_MODEL_MAP.items():
+        for tag, (mtype, power), extra in specs:
+            kw = dict(info_type=InfoType.INFO_FULL)
+            kw.update(extra)
+            configs.append(ExperimentConfig(
+                name=f"batch14_{tag}_{model.value}",
+                batch=14,
+                belief=BeliefType.BELIEF_ALL_AI,
+                composition=ctype,
+                comm_type=CommType.COMM_FULL,
+                mgr_type=mtype,
+                mgr_power=power,
+                persona=PersonaType.PERSONA_NONE,
+                temp_type=TempType.TEMP_MEDIUM,
+                hist_type=HistType.HIST_FULL,
+                agent_models=[model] * 5,
+                num_agents=5,
+                election_frequency=5,
+                **kw,
+            ))
+    return configs
+
+
 def generate_batch(batch_num: int, include_reverse_pairs: bool = False) -> list[ExperimentConfig]:
     """Generate configs for a single batch number (1–12)."""
     generators = {
@@ -632,6 +720,8 @@ def generate_batch(batch_num: int, include_reverse_pairs: bool = False) -> list[
         10: generate_batch10_belief_expanded,
         11: generate_batch11_cross_model_mgr,
         12: generate_batch12_hetero_no_manager,
+        13: generate_batch13_mechanism,
+        14: generate_batch14_revision,
     }
     gen = generators.get(batch_num)
     if gen is None:

@@ -1,0 +1,11623 @@
+{
+ "A_primary": {
+  "family_size": 26,
+  "tests": [
+   {
+    "model": "gpt4o",
+    "contrast": "communication",
+    "a": {
+     "mean": 10.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "b": {
+     "mean": 14.08,
+     "sd": 3.71,
+     "n": 10
+    },
+    "diff": 4.08,
+    "p": 0.00695,
+    "ci": [
+     1.43,
+     6.74
+    ],
+    "perm_p": 0.02485,
+    "holm": 0.10608,
+    "holm_perm": 0.35595
+   },
+   {
+    "model": "gpt4o",
+    "contrast": "manager",
+    "a": {
+     "mean": 14.08,
+     "sd": 3.71,
+     "n": 10
+    },
+    "b": {
+     "mean": 13.41,
+     "sd": 2.51,
+     "n": 10
+    },
+    "diff": -0.67,
+    "p": 0.64265,
+    "ci": [
+     -3.68,
+     2.34
+    ],
+    "perm_p": 0.64232,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "claude",
+    "contrast": "communication",
+    "a": {
+     "mean": 10.36,
+     "sd": 1.82,
+     "n": 6
+    },
+    "b": {
+     "mean": 18.61,
+     "sd": 2.19,
+     "n": 6
+    },
+    "diff": 8.25,
+    "p": 4e-05,
+    "ci": [
+     5.65,
+     10.85
+    ],
+    "perm_p": 0.00216,
+    "holm": 0.001,
+    "holm_perm": 0.04968
+   },
+   {
+    "model": "claude",
+    "contrast": "manager",
+    "a": {
+     "mean": 18.61,
+     "sd": 2.19,
+     "n": 6
+    },
+    "b": {
+     "mean": 15.06,
+     "sd": 1.45,
+     "n": 8
+    },
+    "diff": -3.55,
+    "p": 0.00839,
+    "ci": [
+     -5.92,
+     -1.19
+    ],
+    "perm_p": 0.005,
+    "holm": 0.11746,
+    "holm_perm": 0.1
+   },
+   {
+    "model": "gemini",
+    "contrast": "communication",
+    "a": {
+     "mean": 9.58,
+     "sd": 0.04,
+     "n": 6
+    },
+    "b": {
+     "mean": 12.48,
+     "sd": 3.52,
+     "n": 10
+    },
+    "diff": 2.9,
+    "p": 0.02856,
+    "ci": [
+     0.38,
+     5.42
+    ],
+    "perm_p": 0.04958,
+    "holm": 0.31416,
+    "holm_perm": 0.54538
+   },
+   {
+    "model": "gemini",
+    "contrast": "manager",
+    "a": {
+     "mean": 12.48,
+     "sd": 3.52,
+     "n": 10
+    },
+    "b": {
+     "mean": 19.79,
+     "sd": 0.32,
+     "n": 10
+    },
+    "diff": 7.3,
+    "p": 0.0001,
+    "ci": [
+     4.78,
+     9.83
+    ],
+    "perm_p": 0.0003,
+    "holm": 0.0023,
+    "holm_perm": 0.0075
+   },
+   {
+    "model": "deepseek",
+    "contrast": "communication",
+    "a": {
+     "mean": 9.89,
+     "sd": 0.22,
+     "n": 6
+    },
+    "b": {
+     "mean": 14.83,
+     "sd": 2.08,
+     "n": 8
+    },
+    "diff": 4.94,
+    "p": 0.00025,
+    "ci": [
+     3.19,
+     6.68
+    ],
+    "perm_p": 0.002,
+    "holm": 0.0055,
+    "holm_perm": 0.048
+   },
+   {
+    "model": "deepseek",
+    "contrast": "manager",
+    "a": {
+     "mean": 14.83,
+     "sd": 2.08,
+     "n": 8
+    },
+    "b": {
+     "mean": 15.14,
+     "sd": 0.32,
+     "n": 8
+    },
+    "diff": 0.31,
+    "p": 0.6924,
+    "ci": [
+     -1.44,
+     2.05
+    ],
+    "perm_p": 0.7568,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "grok",
+    "contrast": "communication",
+    "a": {
+     "mean": 4.51,
+     "sd": 3.97,
+     "n": 6
+    },
+    "b": {
+     "mean": 18.83,
+     "sd": 0.51,
+     "n": 6
+    },
+    "diff": 14.32,
+    "p": 0.00027,
+    "ci": [
+     10.16,
+     18.48
+    ],
+    "perm_p": 0.00216,
+    "holm": 0.00567,
+    "holm_perm": 0.04968
+   },
+   {
+    "model": "grok",
+    "contrast": "manager",
+    "a": {
+     "mean": 18.83,
+     "sd": 0.51,
+     "n": 6
+    },
+    "b": {
+     "mean": 19.22,
+     "sd": 0.3,
+     "n": 8
+    },
+    "diff": 0.39,
+    "p": 0.13963,
+    "ci": [
+     -0.16,
+     0.93
+    ],
+    "perm_p": 0.08658,
+    "holm": 1.0,
+    "holm_perm": 0.8658
+   },
+   {
+    "model": "qwen",
+    "contrast": "communication",
+    "a": {
+     "mean": 10.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "b": {
+     "mean": 14.16,
+     "sd": 3.75,
+     "n": 10
+    },
+    "diff": 4.16,
+    "p": 0.00663,
+    "ci": [
+     1.48,
+     6.84
+    ],
+    "perm_p": 0.02373,
+    "holm": 0.10608,
+    "holm_perm": 0.35595
+   },
+   {
+    "model": "qwen",
+    "contrast": "manager",
+    "a": {
+     "mean": 14.16,
+     "sd": 3.75,
+     "n": 10
+    },
+    "b": {
+     "mean": 13.72,
+     "sd": 2.1,
+     "n": 10
+    },
+    "diff": -0.44,
+    "p": 0.75301,
+    "ci": [
+     -3.35,
+     2.48
+    ],
+    "perm_p": 0.74791,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "gpt5",
+    "contrast": "communication",
+    "a": {
+     "mean": 17.86,
+     "sd": 0.62,
+     "n": 3
+    },
+    "b": {
+     "mean": 18.6,
+     "sd": 0.2,
+     "n": 3
+    },
+    "diff": 0.74,
+    "p": 0.16399,
+    "ci": [
+     -0.63,
+     2.11
+    ],
+    "perm_p": 0.2,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "gpt5",
+    "contrast": "manager",
+    "a": {
+     "mean": 18.6,
+     "sd": 0.2,
+     "n": 3
+    },
+    "b": {
+     "mean": 19.67,
+     "sd": 0.31,
+     "n": 3
+    },
+    "diff": 1.07,
+    "p": 0.01056,
+    "ci": [
+     0.44,
+     1.69
+    ],
+    "perm_p": 0.1,
+    "holm": 0.13728,
+    "holm_perm": 0.9
+   },
+   {
+    "model": "deepseek31",
+    "contrast": "communication",
+    "a": {
+     "mean": 14.38,
+     "sd": 0.06,
+     "n": 3
+    },
+    "b": {
+     "mean": 19.99,
+     "sd": 0.02,
+     "n": 3
+    },
+    "diff": 5.6,
+    "p": 0.0,
+    "ci": [
+     5.48,
+     5.73
+    ],
+    "perm_p": 0.1,
+    "holm": 0.0,
+    "holm_perm": 0.9
+   },
+   {
+    "model": "deepseek31",
+    "contrast": "manager",
+    "a": {
+     "mean": 19.99,
+     "sd": 0.02,
+     "n": 3
+    },
+    "b": {
+     "mean": 17.9,
+     "sd": 1.43,
+     "n": 8
+    },
+    "diff": -2.09,
+    "p": 0.00434,
+    "ci": [
+     -3.28,
+     -0.9
+    ],
+    "perm_p": 0.0303,
+    "holm": 0.07378,
+    "holm_perm": 0.3939
+   },
+   {
+    "model": "gpt-oss-120b",
+    "contrast": "communication",
+    "a": {
+     "mean": 0.63,
+     "sd": 0.45,
+     "n": 3
+    },
+    "b": {
+     "mean": 6.95,
+     "sd": 3.76,
+     "n": 8
+    },
+    "diff": 6.32,
+    "p": 0.00191,
+    "ci": [
+     3.16,
+     9.48
+    ],
+    "perm_p": 0.01212,
+    "holm": 0.03629,
+    "holm_perm": 0.20604
+   },
+   {
+    "model": "gpt-oss-120b",
+    "contrast": "manager",
+    "a": {
+     "mean": 6.95,
+     "sd": 3.76,
+     "n": 8
+    },
+    "b": {
+     "mean": 13.16,
+     "sd": 2.62,
+     "n": 8
+    },
+    "diff": 6.21,
+    "p": 0.00222,
+    "ci": [
+     2.7,
+     9.73
+    ],
+    "perm_p": 0.00373,
+    "holm": 0.03996,
+    "holm_perm": 0.07833
+   },
+   {
+    "model": "nemotron-3-super-120b",
+    "contrast": "communication",
+    "a": {
+     "mean": 1.38,
+     "sd": 1.33,
+     "n": 3
+    },
+    "b": {
+     "mean": 11.49,
+     "sd": 2.93,
+     "n": 8
+    },
+    "diff": 10.11,
+    "p": 4e-05,
+    "ci": [
+     7.15,
+     13.07
+    ],
+    "perm_p": 0.00606,
+    "holm": 0.001,
+    "holm_perm": 0.11514
+   },
+   {
+    "model": "nemotron-3-super-120b",
+    "contrast": "manager",
+    "a": {
+     "mean": 11.49,
+     "sd": 2.93,
+     "n": 8
+    },
+    "b": {
+     "mean": 13.18,
+     "sd": 1.31,
+     "n": 8
+    },
+    "diff": 1.69,
+    "p": 0.16816,
+    "ci": [
+     -0.85,
+     4.23
+    ],
+    "perm_p": 0.15058,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "ling-3.0-flash",
+    "contrast": "communication",
+    "a": {
+     "mean": 9.67,
+     "sd": 1.82,
+     "n": 3
+    },
+    "b": {
+     "mean": 3.44,
+     "sd": 1.19,
+     "n": 8
+    },
+    "diff": -6.22,
+    "p": 0.01604,
+    "ci": [
+     -10.1,
+     -2.35
+    ],
+    "perm_p": 0.00606,
+    "holm": 0.19248,
+    "holm_perm": 0.11514
+   },
+   {
+    "model": "ling-3.0-flash",
+    "contrast": "manager",
+    "a": {
+     "mean": 3.44,
+     "sd": 1.19,
+     "n": 8
+    },
+    "b": {
+     "mean": 3.56,
+     "sd": 1.37,
+     "n": 8
+    },
+    "diff": 0.12,
+    "p": 0.85921,
+    "ci": [
+     -1.27,
+     1.5
+    ],
+    "perm_p": 0.86014,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "qwen3.8-27b",
+    "contrast": "communication",
+    "a": {
+     "mean": 2.33,
+     "sd": 1.84,
+     "n": 3
+    },
+    "b": {
+     "mean": 6.17,
+     "sd": 1.36,
+     "n": 8
+    },
+    "diff": 3.84,
+    "p": 0.04868,
+    "ci": [
+     0.04,
+     7.64
+    ],
+    "perm_p": 0.01818,
+    "holm": 0.4868,
+    "holm_perm": 0.29088
+   },
+   {
+    "model": "qwen3.8-27b",
+    "contrast": "manager",
+    "a": {
+     "mean": 6.17,
+     "sd": 1.36,
+     "n": 8
+    },
+    "b": {
+     "mean": 13.64,
+     "sd": 3.65,
+     "n": 8
+    },
+    "diff": 7.46,
+    "p": 0.00044,
+    "ci": [
+     4.34,
+     10.59
+    ],
+    "perm_p": 0.00016,
+    "holm": 0.0088,
+    "holm_perm": 0.00416
+   },
+   {
+    "model": "gemma-4-31b",
+    "contrast": "communication",
+    "a": {
+     "mean": 19.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "b": {
+     "mean": 19.02,
+     "sd": 0.07,
+     "n": 8
+    },
+    "diff": 0.02,
+    "p": 0.35062,
+    "ci": [
+     -0.03,
+     0.08
+    ],
+    "perm_p": 1.0,
+    "holm": 1.0,
+    "holm_perm": 1.0
+   },
+   {
+    "model": "gemma-4-31b",
+    "contrast": "manager",
+    "a": {
+     "mean": 19.02,
+     "sd": 0.07,
+     "n": 8
+    },
+    "b": {
+     "mean": 19.23,
+     "sd": 0.25,
+     "n": 8
+    },
+    "diff": 0.2,
+    "p": 0.06008,
+    "ci": [
+     -0.01,
+     0.41
+    ],
+    "perm_p": 0.03497,
+    "holm": 0.54072,
+    "holm_perm": 0.41964
+   }
+  ]
+ },
+ "A_oss_cooperation": {
+  "gpt-oss-120b": {
+   "communication": {
+    "a": {
+     "mean": 6.67,
+     "sd": 5.03,
+     "n": 3
+    },
+    "b": {
+     "mean": 54.5,
+     "sd": 12.76,
+     "n": 8
+    },
+    "diff": 47.83,
+    "p": 1e-05,
+    "ci": [
+     35.64,
+     60.03
+    ],
+    "perm_p": 0.00606
+   },
+   "manager": {
+    "a": {
+     "mean": 54.5,
+     "sd": 12.76,
+     "n": 8
+    },
+    "b": {
+     "mean": 85.25,
+     "sd": 5.31,
+     "n": 8
+    },
+    "diff": 30.75,
+    "p": 0.00012,
+    "ci": [
+     19.76,
+     41.74
+    ],
+    "perm_p": 0.00031
+   }
+  },
+  "nemotron-3-super-120b": {
+   "communication": {
+    "a": {
+     "mean": 15.0,
+     "sd": 15.1,
+     "n": 3
+    },
+    "b": {
+     "mean": 89.62,
+     "sd": 13.41,
+     "n": 8
+    },
+    "diff": 74.62,
+    "p": 0.00357,
+    "ci": [
+     44.5,
+     104.75
+    ],
+    "perm_p": 0.00606
+   },
+   "manager": {
+    "a": {
+     "mean": 89.62,
+     "sd": 13.41,
+     "n": 8
+    },
+    "b": {
+     "mean": 97.0,
+     "sd": 2.33,
+     "n": 8
+    },
+    "diff": 7.38,
+    "p": 0.16669,
+    "ci": [
+     -3.87,
+     18.62
+    ],
+    "perm_p": 0.03481
+   }
+  },
+  "ling-3.0-flash": {
+   "communication": {
+    "a": {
+     "mean": 89.67,
+     "sd": 9.71,
+     "n": 3
+    },
+    "b": {
+     "mean": 37.38,
+     "sd": 7.96,
+     "n": 8
+    },
+    "diff": -52.29,
+    "p": 0.00328,
+    "ci": [
+     -71.97,
+     -32.61
+    ],
+    "perm_p": 0.00606
+   },
+   "manager": {
+    "a": {
+     "mean": 37.38,
+     "sd": 7.96,
+     "n": 8
+    },
+    "b": {
+     "mean": 36.38,
+     "sd": 12.47,
+     "n": 8
+    },
+    "diff": -1.0,
+    "p": 0.85159,
+    "ci": [
+     -12.41,
+     10.41
+    ],
+    "perm_p": 0.86682
+   }
+  },
+  "qwen3.8-27b": {
+   "communication": {
+    "a": {
+     "mean": 22.67,
+     "sd": 16.86,
+     "n": 3
+    },
+    "b": {
+     "mean": 53.12,
+     "sd": 5.89,
+     "n": 8
+    },
+    "diff": 30.46,
+    "p": 0.08262,
+    "ci": [
+     -9.07,
+     69.99
+    ],
+    "perm_p": 0.00606
+   },
+   "manager": {
+    "a": {
+     "mean": 53.12,
+     "sd": 5.89,
+     "n": 8
+    },
+    "b": {
+     "mean": 86.75,
+     "sd": 3.11,
+     "n": 8
+    },
+    "diff": 33.62,
+    "p": 0.0,
+    "ci": [
+     28.42,
+     38.83
+    ],
+    "perm_p": 0.00016
+   }
+  },
+  "gemma-4-31b": {
+   "communication": {
+    "a": {
+     "mean": 95.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "b": {
+     "mean": 95.12,
+     "sd": 0.35,
+     "n": 8
+    },
+    "diff": 0.12,
+    "p": 0.35062,
+    "ci": [
+     -0.17,
+     0.42
+    ],
+    "perm_p": 1.0
+   },
+   "manager": {
+    "a": {
+     "mean": 95.12,
+     "sd": 0.35,
+     "n": 8
+    },
+    "b": {
+     "mean": 96.12,
+     "sd": 1.25,
+     "n": 8
+    },
+    "diff": 1.0,
+    "p": 0.06008,
+    "ci": [
+     -0.05,
+     2.05
+    ],
+    "perm_p": 0.03497
+   }
+  }
+ },
+ "A2_pooled_manager": {
+  "main_api": {
+   "games": 182,
+   "managed_coef": 0.29,
+   "ci": [
+    -0.72,
+    1.31
+   ],
+   "p": 0.5702438789749054,
+   "interaction_F_p": 0.05698826822979803,
+   "per_model": {
+    "gpt4o": {
+     "chat": 14.08,
+     "managed": 13.5,
+     "diff": -0.58,
+     "share_of_headroom": -0.1
+    },
+    "claude": {
+     "chat": 18.61,
+     "managed": 17.49,
+     "diff": -1.12,
+     "share_of_headroom": -0.8
+    },
+    "gemini": {
+     "chat": 12.48,
+     "managed": 15.77,
+     "diff": 3.29,
+     "share_of_headroom": 0.44
+    },
+    "deepseek": {
+     "chat": 14.83,
+     "managed": 14.81,
+     "diff": -0.02,
+     "share_of_headroom": -0.0
+    },
+    "grok": {
+     "chat": 18.83,
+     "managed": 19.21,
+     "diff": 0.38,
+     "share_of_headroom": 0.32
+    },
+    "qwen": {
+     "chat": 14.16,
+     "managed": 13.43,
+     "diff": -0.73,
+     "share_of_headroom": -0.13
+    }
+   }
+  },
+  "below_ceiling": {
+   "games": 105,
+   "managed_coef": 0.66,
+   "ci": [
+    -0.94,
+    2.26
+   ],
+   "p": 0.42159771272825075,
+   "interaction_F_p": 0.04480425922506615,
+   "per_model": {
+    "gpt4o": {
+     "chat": 14.08,
+     "managed": 13.5,
+     "diff": -0.58,
+     "share_of_headroom": -0.1
+    },
+    "gemini": {
+     "chat": 12.48,
+     "managed": 15.77,
+     "diff": 3.29,
+     "share_of_headroom": 0.44
+    },
+    "qwen": {
+     "chat": 14.16,
+     "managed": 13.43,
+     "diff": -0.73,
+     "share_of_headroom": -0.13
+    }
+   }
+  },
+  "at_ceiling": {
+   "games": 77,
+   "managed_coef": -0.23,
+   "ci": [
+    -1.15,
+    0.68
+   ],
+   "p": 0.619255114096319,
+   "interaction_F_p": 0.37536754793219895,
+   "per_model": {
+    "claude": {
+     "chat": 18.61,
+     "managed": 17.49,
+     "diff": -1.12,
+     "share_of_headroom": -0.8
+    },
+    "deepseek": {
+     "chat": 14.83,
+     "managed": 14.81,
+     "diff": -0.02,
+     "share_of_headroom": -0.0
+    },
+    "grok": {
+     "chat": 18.83,
+     "managed": 19.21,
+     "diff": 0.38,
+     "share_of_headroom": 0.32
+    }
+   }
+  },
+  "self_hosted": {
+   "games": 160,
+   "managed_coef": 2.37,
+   "ci": [
+    1.32,
+    3.43
+   ],
+   "p": 1.0114000490183637e-05,
+   "interaction_F_p": 4.060758025812859e-06,
+   "per_model": {
+    "gpt-oss-120b": {
+     "chat": 6.95,
+     "managed": 13.0,
+     "diff": 6.05,
+     "share_of_headroom": 0.46
+    },
+    "nemotron-3-super-120b": {
+     "chat": 11.49,
+     "managed": 11.69,
+     "diff": 0.2,
+     "share_of_headroom": 0.02
+    },
+    "ling-3.0-flash": {
+     "chat": 3.44,
+     "managed": 3.85,
+     "diff": 0.4,
+     "share_of_headroom": 0.02
+    },
+    "qwen3.8-27b": {
+     "chat": 6.17,
+     "managed": 11.17,
+     "diff": 5.0,
+     "share_of_headroom": 0.36
+    },
+    "gemma-4-31b": {
+     "chat": 19.02,
+     "managed": 19.23,
+     "diff": 0.21,
+     "share_of_headroom": 0.21
+    }
+   }
+  }
+ },
+ "A3_anova": {
+  "main_api_contrib": {
+   "games": 182,
+   "model": {
+    "partial_eta2": 0.438,
+    "omega2": 0.318,
+    "p": 2.594471789182626e-18
+   },
+   "institution": {
+    "partial_eta2": 0.056,
+    "omega2": 0.017,
+    "p": 0.028534151040615206
+   },
+   "interaction": {
+    "partial_eta2": 0.34,
+    "omega2": 0.179,
+    "p": 8.78939371717585e-09
+   }
+  },
+  "self_hosted_coop": {
+   "games": 160,
+   "model": {
+    "partial_eta2": 0.826,
+    "omega2": 0.703,
+    "p": 4.821945415410373e-52
+   },
+   "institution": {
+    "partial_eta2": 0.262,
+    "omega2": 0.05,
+    "p": 2.9554816103633454e-09
+   },
+   "interaction": {
+    "partial_eta2": 0.375,
+    "omega2": 0.077,
+    "p": 7.095194636627535e-10
+   }
+  },
+  "self_hosted_contrib": {
+   "games": 160,
+   "model": {
+    "partial_eta2": 0.831,
+    "omega2": 0.747,
+    "p": 4.724180592130493e-53
+   },
+   "institution": {
+    "partial_eta2": 0.206,
+    "omega2": 0.036,
+    "p": 4.182032402210008e-07
+   },
+   "interaction": {
+    "partial_eta2": 0.267,
+    "omega2": 0.043,
+    "p": 1.0177191330904116e-05
+   }
+  }
+ },
+ "B_neutral_prompt": {
+  "claude": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 1.38,
+      "sd": 1.77,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.4,
+      "sd": 0.89,
+      "n": 5
+     },
+     "diff": -0.97,
+     "p": 0.21621,
+     "ci": [
+      -2.61,
+      0.66
+     ],
+     "perm_p": 0.42347
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 14.5,
+      "sd": 1.6,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.4,
+      "sd": 1.14,
+      "n": 5
+     },
+     "diff": -13.1,
+     "p": 0.0,
+     "ci": [
+      -14.78,
+      -11.42
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 1.38,
+      "sd": 1.77,
+      "n": 8
+     },
+     "b": {
+      "mean": 14.5,
+      "sd": 1.6,
+      "n": 8
+     },
+     "diff": 13.12,
+     "p": 0.0,
+     "ci": [
+      11.31,
+      14.94
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.4,
+      "sd": 0.89,
+      "n": 5
+     },
+     "b": {
+      "mean": 1.4,
+      "sd": 1.14,
+      "n": 5
+     },
+     "diff": 1.0,
+     "p": 0.16352,
+     "ci": [
+      -0.51,
+      2.51
+     ],
+     "perm_p": 0.24603
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 1.62,
+      "sd": 1.6,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.8,
+      "sd": 2.49,
+      "n": 5
+     },
+     "diff": 0.18,
+     "p": 0.89306,
+     "ci": [
+      -2.87,
+      3.22
+     ],
+     "perm_p": 0.87102
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 15.5,
+      "sd": 2.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.0,
+      "sd": 3.08,
+      "n": 5
+     },
+     "diff": -3.5,
+     "p": 0.06362,
+     "ci": [
+      -7.27,
+      0.27
+     ],
+     "perm_p": 0.0373
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 1.62,
+      "sd": 1.6,
+      "n": 8
+     },
+     "b": {
+      "mean": 15.5,
+      "sd": 2.0,
+      "n": 8
+     },
+     "diff": 13.88,
+     "p": 0.0,
+     "ci": [
+      11.92,
+      15.83
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 1.8,
+      "sd": 2.49,
+      "n": 5
+     },
+     "b": {
+      "mean": 12.0,
+      "sd": 3.08,
+      "n": 5
+     },
+     "diff": 10.2,
+     "p": 0.0005,
+     "ci": [
+      6.08,
+      14.32
+     ],
+     "perm_p": 0.00794
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 8.12,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 6.0,
+      "sd": 8.94,
+      "n": 5
+     },
+     "diff": -2.12,
+     "p": 0.67598,
+     "ci": [
+      -13.45,
+      9.2
+     ],
+     "perm_p": 0.7366
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 56.0,
+      "sd": 11.94,
+      "n": 5
+     },
+     "diff": -15.88,
+     "p": 0.03756,
+     "ci": [
+      -30.5,
+      -1.25
+     ],
+     "perm_p": 0.02176
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 8.12,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "diff": 63.75,
+     "p": 0.0,
+     "ci": [
+      55.18,
+      72.32
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 6.0,
+      "sd": 8.94,
+      "n": 5
+     },
+     "b": {
+      "mean": 56.0,
+      "sd": 11.94,
+      "n": 5
+     },
+     "diff": 50.0,
+     "p": 0.0001,
+     "ci": [
+      34.4,
+      65.6
+     ],
+     "perm_p": 0.00794
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 5.0,
+      "sd": 7.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.0,
+      "sd": 4.47,
+      "n": 5
+     },
+     "diff": -3.0,
+     "p": 0.36891,
+     "ci": [
+      -10.05,
+      4.05
+     ],
+     "perm_p": 0.554
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 68.12,
+      "sd": 7.53,
+      "n": 8
+     },
+     "b": {
+      "mean": 7.0,
+      "sd": 5.7,
+      "n": 5
+     },
+     "diff": -61.12,
+     "p": 0.0,
+     "ci": [
+      -69.29,
+      -52.96
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 5.0,
+      "sd": 7.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 68.12,
+      "sd": 7.53,
+      "n": 8
+     },
+     "diff": 63.12,
+     "p": 0.0,
+     "ci": [
+      55.29,
+      70.96
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 2.0,
+      "sd": 4.47,
+      "n": 5
+     },
+     "b": {
+      "mean": 7.0,
+      "sd": 5.7,
+      "n": 5
+     },
+     "diff": 5.0,
+     "p": 0.16352,
+     "ci": [
+      -2.55,
+      12.55
+     ],
+     "perm_p": 0.24603
+    }
+   }
+  },
+  "grok": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 2.75,
+      "sd": 1.04,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -2.75,
+     "p": 0.00014,
+     "ci": [
+      -3.62,
+      -1.88
+     ],
+     "perm_p": 0.00155
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.75,
+      "sd": 1.04,
+      "n": 8
+     },
+     "diff": 2.75,
+     "p": 0.00014,
+     "ci": [
+      1.88,
+      3.62
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.2,
+      "sd": 0.45,
+      "n": 5
+     },
+     "diff": 0.2,
+     "p": 0.3739,
+     "ci": [
+      -0.36,
+      0.76
+     ],
+     "perm_p": 0.38462
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 3.38,
+      "sd": 1.51,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -3.38,
+     "p": 0.00039,
+     "ci": [
+      -4.63,
+      -2.12
+     ],
+     "perm_p": 0.00311
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.38,
+      "sd": 1.51,
+      "n": 8
+     },
+     "diff": 3.38,
+     "p": 0.00039,
+     "ci": [
+      2.12,
+      4.63
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.2,
+      "sd": 0.45,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.2,
+     "p": 0.3739,
+     "ci": [
+      -0.76,
+      0.36
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.0,
+      "sd": 2.24,
+      "n": 5
+     },
+     "diff": 1.0,
+     "p": 0.3739,
+     "ci": [
+      -1.78,
+      3.78
+     ],
+     "perm_p": 0.38462
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -15.0,
+     "p": 0.00034,
+     "ci": [
+      -20.47,
+      -9.53
+     ],
+     "perm_p": 0.00155
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "diff": 15.0,
+     "p": 0.00034,
+     "ci": [
+      9.53,
+      20.47
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 1.0,
+      "sd": 2.24,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -1.0,
+     "p": 0.3739,
+     "ci": [
+      -3.78,
+      1.78
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 13.75,
+      "sd": 5.18,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -13.75,
+     "p": 0.00014,
+     "ci": [
+      -18.08,
+      -9.42
+     ],
+     "perm_p": 0.00155
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 13.75,
+      "sd": 5.18,
+      "n": 8
+     },
+     "diff": 13.75,
+     "p": 0.00014,
+     "ci": [
+      9.42,
+      18.08
+     ],
+     "perm_p": 0.00016
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   }
+  },
+  "gemini": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 1.6,
+      "sd": 0.84,
+      "n": 10
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -1.6,
+     "p": 0.0002,
+     "ci": [
+      -2.2,
+      -1.0
+     ],
+     "perm_p": 0.00366
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 5.88,
+      "sd": 1.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -5.88,
+     "p": 1e-05,
+     "ci": [
+      -7.17,
+      -4.58
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 1.6,
+      "sd": 0.84,
+      "n": 10
+     },
+     "b": {
+      "mean": 5.88,
+      "sd": 1.55,
+      "n": 8
+     },
+     "diff": 4.28,
+     "p": 3e-05,
+     "ci": [
+      2.92,
+      5.63
+     ],
+     "perm_p": 0.0001
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 2.4,
+      "sd": 1.26,
+      "n": 10
+     },
+     "b": {
+      "mean": 1.4,
+      "sd": 0.55,
+      "n": 5
+     },
+     "diff": -1.0,
+     "p": 0.05277,
+     "ci": [
+      -2.01,
+      0.01
+     ],
+     "perm_p": 0.16217
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 6.12,
+      "sd": 1.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.2,
+      "sd": 0.45,
+      "n": 5
+     },
+     "diff": -5.92,
+     "p": 0.0,
+     "ci": [
+      -7.25,
+      -4.6
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 2.4,
+      "sd": 1.26,
+      "n": 10
+     },
+     "b": {
+      "mean": 6.12,
+      "sd": 1.55,
+      "n": 8
+     },
+     "diff": 3.73,
+     "p": 9e-05,
+     "ci": [
+      2.26,
+      5.19
+     ],
+     "perm_p": 0.00025
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 1.4,
+      "sd": 0.55,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.2,
+      "sd": 0.45,
+      "n": 5
+     },
+     "diff": -1.2,
+     "p": 0.00567,
+     "ci": [
+      -1.93,
+      -0.47
+     ],
+     "perm_p": 0.03175
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 11.5,
+      "sd": 5.3,
+      "n": 10
+     },
+     "b": {
+      "mean": 7.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": -4.5,
+     "p": 0.0494,
+     "ci": [
+      -8.99,
+      -0.01
+     ],
+     "perm_p": 0.17216
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.0,
+      "sd": 2.24,
+      "n": 5
+     },
+     "diff": -29.62,
+     "p": 0.0,
+     "ci": [
+      -36.27,
+      -22.98
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 11.5,
+      "sd": 5.3,
+      "n": 10
+     },
+     "b": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "diff": 19.12,
+     "p": 7e-05,
+     "ci": [
+      12.11,
+      26.14
+     ],
+     "perm_p": 0.0001
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 7.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "b": {
+      "mean": 1.0,
+      "sd": 2.24,
+      "n": 5
+     },
+     "diff": -6.0,
+     "p": 0.00567,
+     "ci": [
+      -9.67,
+      -2.33
+     ],
+     "perm_p": 0.03175
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 8.0,
+      "sd": 4.22,
+      "n": 10
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -8.0,
+     "p": 0.0002,
+     "ci": [
+      -11.02,
+      -4.98
+     ],
+     "perm_p": 0.00366
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 29.38,
+      "sd": 7.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -29.38,
+     "p": 1e-05,
+     "ci": [
+      -35.87,
+      -22.88
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 8.0,
+      "sd": 4.22,
+      "n": 10
+     },
+     "b": {
+      "mean": 29.38,
+      "sd": 7.76,
+      "n": 8
+     },
+     "diff": 21.38,
+     "p": 3e-05,
+     "ci": [
+      14.6,
+      28.15
+     ],
+     "perm_p": 0.0001
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   }
+  },
+  "deepseek31": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 14.75,
+      "sd": 2.25,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -14.75,
+     "p": 0.0,
+     "ci": [
+      -16.63,
+      -12.87
+     ],
+     "perm_p": 0.00078
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 14.62,
+      "sd": 1.77,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -14.62,
+     "p": 0.0,
+     "ci": [
+      -16.1,
+      -13.15
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 14.75,
+      "sd": 2.25,
+      "n": 8
+     },
+     "b": {
+      "mean": 14.62,
+      "sd": 1.77,
+      "n": 8
+     },
+     "diff": -0.12,
+     "p": 0.90357,
+     "ci": [
+      -2.31,
+      2.06
+     ],
+     "perm_p": 1.0
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 17.5,
+      "sd": 2.45,
+      "n": 8
+     },
+     "b": {
+      "mean": 17.8,
+      "sd": 3.11,
+      "n": 5
+     },
+     "diff": 0.3,
+     "p": 0.85999,
+     "ci": [
+      -3.57,
+      4.17
+     ],
+     "perm_p": 0.91608
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 17.5,
+      "sd": 1.51,
+      "n": 8
+     },
+     "b": {
+      "mean": 18.4,
+      "sd": 1.52,
+      "n": 5
+     },
+     "diff": 0.9,
+     "p": 0.32568,
+     "ci": [
+      -1.07,
+      2.87
+     ],
+     "perm_p": 0.36286
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 17.5,
+      "sd": 2.45,
+      "n": 8
+     },
+     "b": {
+      "mean": 17.5,
+      "sd": 1.51,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": 1.0,
+     "ci": [
+      -2.22,
+      2.22
+     ],
+     "perm_p": 1.0
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 17.8,
+      "sd": 3.11,
+      "n": 5
+     },
+     "b": {
+      "mean": 18.4,
+      "sd": 1.52,
+      "n": 5
+     },
+     "diff": 0.6,
+     "p": 0.71236,
+     "ci": [
+      -3.22,
+      4.42
+     ],
+     "perm_p": 0.81746
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 81.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 88.0,
+      "sd": 14.4,
+      "n": 5
+     },
+     "diff": 6.12,
+     "p": 0.43421,
+     "ci": [
+      -11.56,
+      23.81
+     ],
+     "perm_p": 0.4087
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "b": {
+      "mean": 92.0,
+      "sd": 7.58,
+      "n": 5
+     },
+     "diff": 6.38,
+     "p": 0.17122,
+     "ci": [
+      -3.37,
+      16.12
+     ],
+     "perm_p": 0.20591
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 81.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "diff": 3.75,
+     "p": 0.40644,
+     "ci": [
+      -5.7,
+      13.2
+     ],
+     "perm_p": 0.48765
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 88.0,
+      "sd": 14.4,
+      "n": 5
+     },
+     "b": {
+      "mean": 92.0,
+      "sd": 7.58,
+      "n": 5
+     },
+     "diff": 4.0,
+     "p": 0.60235,
+     "ci": [
+      -13.77,
+      21.77
+     ],
+     "perm_p": 0.73016
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 65.0,
+      "sd": 9.26,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -65.0,
+     "p": 0.0,
+     "ci": [
+      -72.74,
+      -57.26
+     ],
+     "perm_p": 0.00078
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 70.0,
+      "sd": 10.35,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -70.0,
+     "p": 0.0,
+     "ci": [
+      -78.65,
+      -61.35
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 65.0,
+      "sd": 9.26,
+      "n": 8
+     },
+     "b": {
+      "mean": 70.0,
+      "sd": 10.35,
+      "n": 8
+     },
+     "diff": 5.0,
+     "p": 0.326,
+     "ci": [
+      -5.54,
+      15.54
+     ],
+     "perm_p": 0.38244
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   }
+  },
+  "gpt-oss-120b": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 8.12,
+      "sd": 2.42,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.0,
+      "sd": 2.0,
+      "n": 5
+     },
+     "diff": -6.12,
+     "p": 0.00059,
+     "ci": [
+      -8.88,
+      -3.37
+     ],
+     "perm_p": 0.00155
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 10.38,
+      "sd": 3.78,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.0,
+      "sd": 1.41,
+      "n": 5
+     },
+     "diff": -8.38,
+     "p": 0.00024,
+     "ci": [
+      -11.68,
+      -5.07
+     ],
+     "perm_p": 0.00389
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 8.12,
+      "sd": 2.42,
+      "n": 8
+     },
+     "b": {
+      "mean": 10.38,
+      "sd": 3.78,
+      "n": 8
+     },
+     "diff": 2.25,
+     "p": 0.18148,
+     "ci": [
+      -1.21,
+      5.71
+     ],
+     "perm_p": 0.20233
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 2.0,
+      "sd": 2.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 2.0,
+      "sd": 1.41,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": 1.0,
+     "ci": [
+      -2.58,
+      2.58
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 19.12,
+      "sd": 3.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 21.0,
+      "sd": 0.71,
+      "n": 5
+     },
+     "diff": 1.88,
+     "p": 0.23117,
+     "ci": [
+      -1.47,
+      5.22
+     ],
+     "perm_p": 0.36674
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 19.62,
+      "sd": 3.02,
+      "n": 8
+     },
+     "b": {
+      "mean": 23.2,
+      "sd": 2.77,
+      "n": 5
+     },
+     "diff": 3.57,
+     "p": 0.05613,
+     "ci": [
+      -0.11,
+      7.26
+     ],
+     "perm_p": 0.06682
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 19.12,
+      "sd": 3.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.62,
+      "sd": 3.02,
+      "n": 8
+     },
+     "diff": 0.5,
+     "p": 0.78158,
+     "ci": [
+      -3.31,
+      4.31
+     ],
+     "perm_p": 0.83574
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 21.0,
+      "sd": 0.71,
+      "n": 5
+     },
+     "b": {
+      "mean": 23.2,
+      "sd": 2.77,
+      "n": 5
+     },
+     "diff": 2.2,
+     "p": 0.15269,
+     "ci": [
+      -1.2,
+      5.6
+     ],
+     "perm_p": 0.20635
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 68.75,
+      "sd": 9.91,
+      "n": 8
+     },
+     "b": {
+      "mean": 93.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": 24.25,
+     "p": 0.00013,
+     "ci": [
+      15.79,
+      32.71
+     ],
+     "perm_p": 0.00155
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "b": {
+      "mean": 94.0,
+      "sd": 6.52,
+      "n": 5
+     },
+     "diff": 27.75,
+     "p": 0.00029,
+     "ci": [
+      16.1,
+      39.4
+     ],
+     "perm_p": 0.00311
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 68.75,
+      "sd": 9.91,
+      "n": 8
+     },
+     "b": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "diff": -2.5,
+     "p": 0.66413,
+     "ci": [
+      -14.63,
+      9.63
+     ],
+     "perm_p": 0.74235
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 93.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "b": {
+      "mean": 94.0,
+      "sd": 6.52,
+      "n": 5
+     },
+     "diff": 1.0,
+     "p": 0.76376,
+     "ci": [
+      -6.96,
+      8.96
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 25.62,
+      "sd": 6.23,
+      "n": 8
+     },
+     "b": {
+      "mean": 6.0,
+      "sd": 4.18,
+      "n": 5
+     },
+     "diff": -19.62,
+     "p": 3e-05,
+     "ci": [
+      -26.0,
+      -13.25
+     ],
+     "perm_p": 0.00078
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 33.12,
+      "sd": 14.13,
+      "n": 8
+     },
+     "b": {
+      "mean": 7.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": -26.12,
+     "p": 0.00102,
+     "ci": [
+      -38.03,
+      -14.22
+     ],
+     "perm_p": 0.00855
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 25.62,
+      "sd": 6.23,
+      "n": 8
+     },
+     "b": {
+      "mean": 33.12,
+      "sd": 14.13,
+      "n": 8
+     },
+     "diff": 7.5,
+     "p": 0.20061,
+     "ci": [
+      -4.73,
+      19.73
+     ],
+     "perm_p": 0.2331
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 6.0,
+      "sd": 4.18,
+      "n": 5
+     },
+     "b": {
+      "mean": 7.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": 1.0,
+     "p": 0.66843,
+     "ci": [
+      -4.3,
+      6.3
+     ],
+     "perm_p": 1.0
+    }
+   }
+  },
+  "nemotron-3-super-120b": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.75,
+      "sd": 0.71,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.75,
+     "p": 0.01994,
+     "ci": [
+      -1.34,
+      -0.16
+     ],
+     "perm_p": 0.06915
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 1.38,
+      "sd": 1.3,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -1.38,
+     "p": 0.02034,
+     "ci": [
+      -2.46,
+      -0.29
+     ],
+     "perm_p": 0.06294
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.75,
+      "sd": 0.71,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.38,
+      "sd": 1.3,
+      "n": 8
+     },
+     "diff": 0.62,
+     "p": 0.2585,
+     "ci": [
+      -0.53,
+      1.78
+     ],
+     "perm_p": 0.35369
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 13.75,
+      "sd": 2.66,
+      "n": 8
+     },
+     "b": {
+      "mean": 14.6,
+      "sd": 1.95,
+      "n": 5
+     },
+     "diff": 0.85,
+     "p": 0.52158,
+     "ci": [
+      -1.99,
+      3.69
+     ],
+     "perm_p": 0.57576
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 17.88,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 18.0,
+      "sd": 1.41,
+      "n": 5
+     },
+     "diff": 0.12,
+     "p": 0.8786,
+     "ci": [
+      -1.69,
+      1.94
+     ],
+     "perm_p": 1.0
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 13.75,
+      "sd": 2.66,
+      "n": 8
+     },
+     "b": {
+      "mean": 17.88,
+      "sd": 1.36,
+      "n": 8
+     },
+     "diff": 4.12,
+     "p": 0.00271,
+     "ci": [
+      1.79,
+      6.46
+     ],
+     "perm_p": 0.00249
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 14.6,
+      "sd": 1.95,
+      "n": 5
+     },
+     "b": {
+      "mean": 18.0,
+      "sd": 1.41,
+      "n": 5
+     },
+     "diff": 3.4,
+     "p": 0.01515,
+     "ci": [
+      0.87,
+      5.93
+     ],
+     "perm_p": 0.03175
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 57.5,
+      "sd": 9.64,
+      "n": 8
+     },
+     "b": {
+      "mean": 67.0,
+      "sd": 10.37,
+      "n": 5
+     },
+     "diff": 9.5,
+     "p": 0.13672,
+     "ci": [
+      -3.73,
+      22.73
+     ],
+     "perm_p": 0.14685
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 82.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": 9.5,
+     "p": 0.00457,
+     "ci": [
+      3.67,
+      15.33
+     ],
+     "perm_p": 0.0303
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 57.5,
+      "sd": 9.64,
+      "n": 8
+     },
+     "b": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "diff": 15.0,
+     "p": 0.00324,
+     "ci": [
+      6.05,
+      23.95
+     ],
+     "perm_p": 0.00715
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 67.0,
+      "sd": 10.37,
+      "n": 5
+     },
+     "b": {
+      "mean": 82.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": 15.0,
+     "p": 0.02953,
+     "ci": [
+      2.3,
+      27.7
+     ],
+     "perm_p": 0.04762
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 3.12,
+      "sd": 2.59,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -3.12,
+     "p": 0.0112,
+     "ci": [
+      -5.29,
+      -0.96
+     ],
+     "perm_p": 0.07537
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 5.0,
+      "sd": 4.63,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -5.0,
+     "p": 0.01845,
+     "ci": [
+      -8.87,
+      -1.13
+     ],
+     "perm_p": 0.05672
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 3.12,
+      "sd": 2.59,
+      "n": 8
+     },
+     "b": {
+      "mean": 5.0,
+      "sd": 4.63,
+      "n": 8
+     },
+     "diff": 1.88,
+     "p": 0.33883,
+     "ci": [
+      -2.25,
+      6.0
+     ],
+     "perm_p": 0.50956
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   }
+  },
+  "ling-3.0-flash": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.88,
+      "sd": 1.73,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.2,
+      "sd": 0.45,
+      "n": 5
+     },
+     "diff": -0.68,
+     "p": 0.32267,
+     "ci": [
+      -2.14,
+      0.79
+     ],
+     "perm_p": 0.67832
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 1.25,
+      "sd": 1.28,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -1.25,
+     "p": 0.02816,
+     "ci": [
+      -2.32,
+      -0.18
+     ],
+     "perm_p": 0.08469
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.88,
+      "sd": 1.73,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.25,
+      "sd": 1.28,
+      "n": 8
+     },
+     "diff": 0.38,
+     "p": 0.63015,
+     "ci": [
+      -1.27,
+      2.02
+     ],
+     "perm_p": 0.76939
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.2,
+      "sd": 0.45,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.2,
+     "p": 0.3739,
+     "ci": [
+      -0.76,
+      0.36
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 5.12,
+      "sd": 2.59,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.2,
+      "sd": 1.1,
+      "n": 5
+     },
+     "diff": -1.92,
+     "p": 0.09291,
+     "ci": [
+      -4.23,
+      0.38
+     ],
+     "perm_p": 0.16783
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 4.88,
+      "sd": 1.64,
+      "n": 8
+     },
+     "b": {
+      "mean": 4.2,
+      "sd": 0.84,
+      "n": 5
+     },
+     "diff": -0.67,
+     "p": 0.34987,
+     "ci": [
+      -2.2,
+      0.85
+     ],
+     "perm_p": 0.4662
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 5.12,
+      "sd": 2.59,
+      "n": 8
+     },
+     "b": {
+      "mean": 4.88,
+      "sd": 1.64,
+      "n": 8
+     },
+     "diff": -0.25,
+     "p": 0.82147,
+     "ci": [
+      -2.61,
+      2.11
+     ],
+     "perm_p": 0.91671
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 3.2,
+      "sd": 1.1,
+      "n": 5
+     },
+     "b": {
+      "mean": 4.2,
+      "sd": 0.84,
+      "n": 5
+     },
+     "diff": 1.0,
+     "p": 0.14602,
+     "ci": [
+      -0.44,
+      2.44
+     ],
+     "perm_p": 0.23016
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 15.0,
+      "sd": 7.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 9.0,
+      "sd": 6.52,
+      "n": 5
+     },
+     "diff": -6.0,
+     "p": 0.15192,
+     "ci": [
+      -14.66,
+      2.66
+     ],
+     "perm_p": 0.17405
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 19.38,
+      "sd": 5.63,
+      "n": 8
+     },
+     "b": {
+      "mean": 14.0,
+      "sd": 4.18,
+      "n": 5
+     },
+     "diff": -5.38,
+     "p": 0.07609,
+     "ci": [
+      -11.42,
+      0.67
+     ],
+     "perm_p": 0.13287
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 15.0,
+      "sd": 7.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.38,
+      "sd": 5.63,
+      "n": 8
+     },
+     "diff": 4.38,
+     "p": 0.19361,
+     "ci": [
+      -2.51,
+      11.26
+     ],
+     "perm_p": 0.26294
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 9.0,
+      "sd": 6.52,
+      "n": 5
+     },
+     "b": {
+      "mean": 14.0,
+      "sd": 4.18,
+      "n": 5
+     },
+     "diff": 5.0,
+     "p": 0.19325,
+     "ci": [
+      -3.24,
+      13.24
+     ],
+     "perm_p": 0.29365
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 2.5,
+      "sd": 3.78,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.0,
+      "sd": 2.24,
+      "n": 5
+     },
+     "diff": -1.5,
+     "p": 0.38805,
+     "ci": [
+      -5.17,
+      2.17
+     ],
+     "perm_p": 0.70629
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 5.62,
+      "sd": 5.63,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -5.62,
+     "p": 0.02555,
+     "ci": [
+      -10.33,
+      -0.92
+     ],
+     "perm_p": 0.09091
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 2.5,
+      "sd": 3.78,
+      "n": 8
+     },
+     "b": {
+      "mean": 5.62,
+      "sd": 5.63,
+      "n": 8
+     },
+     "diff": 3.12,
+     "p": 0.21639,
+     "ci": [
+      -2.09,
+      8.34
+     ],
+     "perm_p": 0.32121
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 1.0,
+      "sd": 2.24,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -1.0,
+     "p": 0.3739,
+     "ci": [
+      -3.78,
+      1.78
+     ],
+     "perm_p": 1.0
+    }
+   }
+  },
+  "qwen3.8-27b": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 10.12,
+      "sd": 2.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 7.4,
+      "sd": 0.89,
+      "n": 5
+     },
+     "diff": -2.72,
+     "p": 0.01504,
+     "ci": [
+      -4.79,
+      -0.66
+     ],
+     "perm_p": 0.04196
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 18.38,
+      "sd": 3.7,
+      "n": 8
+     },
+     "b": {
+      "mean": 8.4,
+      "sd": 1.52,
+      "n": 5
+     },
+     "diff": -9.97,
+     "p": 5e-05,
+     "ci": [
+      -13.26,
+      -6.69
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 10.12,
+      "sd": 2.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 18.38,
+      "sd": 3.7,
+      "n": 8
+     },
+     "diff": 8.25,
+     "p": 0.00019,
+     "ci": [
+      4.87,
+      11.63
+     ],
+     "perm_p": 0.00031
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 7.4,
+      "sd": 0.89,
+      "n": 5
+     },
+     "b": {
+      "mean": 8.4,
+      "sd": 1.52,
+      "n": 5
+     },
+     "diff": 1.0,
+     "p": 0.24777,
+     "ci": [
+      -0.89,
+      2.89
+     ],
+     "perm_p": 0.33333
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 16.38,
+      "sd": 2.97,
+      "n": 8
+     },
+     "b": {
+      "mean": 16.6,
+      "sd": 1.95,
+      "n": 5
+     },
+     "diff": 0.23,
+     "p": 0.87215,
+     "ci": [
+      -2.78,
+      3.23
+     ],
+     "perm_p": 0.91298
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 19.25,
+      "sd": 1.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 17.2,
+      "sd": 1.92,
+      "n": 5
+     },
+     "diff": -2.05,
+     "p": 0.0983,
+     "ci": [
+      -4.57,
+      0.47
+     ],
+     "perm_p": 0.11344
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 16.38,
+      "sd": 2.97,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.25,
+      "sd": 1.98,
+      "n": 8
+     },
+     "diff": 2.88,
+     "p": 0.04167,
+     "ci": [
+      0.13,
+      5.62
+     ],
+     "perm_p": 0.05532
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 16.6,
+      "sd": 1.95,
+      "n": 5
+     },
+     "b": {
+      "mean": 17.2,
+      "sd": 1.92,
+      "n": 5
+     },
+     "diff": 0.6,
+     "p": 0.63736,
+     "ci": [
+      -2.22,
+      3.42
+     ],
+     "perm_p": 0.74603
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 63.75,
+      "sd": 10.61,
+      "n": 8
+     },
+     "b": {
+      "mean": 75.0,
+      "sd": 7.91,
+      "n": 5
+     },
+     "diff": 11.25,
+     "p": 0.05278,
+     "ci": [
+      -0.16,
+      22.66
+     ],
+     "perm_p": 0.09013
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "b": {
+      "mean": 77.0,
+      "sd": 8.37,
+      "n": 5
+     },
+     "diff": -6.12,
+     "p": 0.27523,
+     "ci": [
+      -17.93,
+      5.68
+     ],
+     "perm_p": 0.33722
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 63.75,
+      "sd": 10.61,
+      "n": 8
+     },
+     "b": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "diff": 19.38,
+     "p": 0.00266,
+     "ci": [
+      7.97,
+      30.78
+     ],
+     "perm_p": 0.00559
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 75.0,
+      "sd": 7.91,
+      "n": 5
+     },
+     "b": {
+      "mean": 77.0,
+      "sd": 8.37,
+      "n": 5
+     },
+     "diff": 2.0,
+     "p": 0.7078,
+     "ci": [
+      -9.88,
+      13.88
+     ],
+     "perm_p": 0.84127
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 45.0,
+      "sd": 9.26,
+      "n": 8
+     },
+     "b": {
+      "mean": 31.0,
+      "sd": 8.22,
+      "n": 5
+     },
+     "diff": -14.0,
+     "p": 0.01833,
+     "ci": [
+      -25.05,
+      -2.95
+     ],
+     "perm_p": 0.02253
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 73.75,
+      "sd": 12.17,
+      "n": 8
+     },
+     "b": {
+      "mean": 30.0,
+      "sd": 3.54,
+      "n": 5
+     },
+     "diff": -43.75,
+     "p": 1e-05,
+     "ci": [
+      -54.17,
+      -33.33
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 45.0,
+      "sd": 9.26,
+      "n": 8
+     },
+     "b": {
+      "mean": 73.75,
+      "sd": 12.17,
+      "n": 8
+     },
+     "diff": 28.75,
+     "p": 0.00014,
+     "ci": [
+      17.07,
+      40.43
+     ],
+     "perm_p": 0.00047
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 31.0,
+      "sd": 8.22,
+      "n": 5
+     },
+     "b": {
+      "mean": 30.0,
+      "sd": 3.54,
+      "n": 5
+     },
+     "diff": -1.0,
+     "p": 0.81177,
+     "ci": [
+      -11.04,
+      9.04
+     ],
+     "perm_p": 1.0
+    }
+   }
+  },
+  "gemma-4-31b": {
+   "offers": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "offers_keyword": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "election_dm_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "offer_share": {
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_salary_vs_neutral_salary": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   }
+  }
+ },
+ "C_mechanism": {
+  "gpt4o": {
+   "chat": {
+    "contrib": {
+     "mean": 14.08,
+     "sd": 3.71,
+     "n": 10
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 845.04,
+     "sd": 222.74,
+     "n": 10
+    },
+    "welfare_from_contrib": {
+     "mean": 845.04,
+     "sd": 222.74,
+     "n": 10
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 14.83,
+     "sd": 2.72,
+     "n": 10
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 1188.94,
+     "sd": 181.9,
+     "n": 10
+    },
+    "welfare_from_contrib": {
+     "mean": 889.74,
+     "sd": 162.95,
+     "n": 10
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 12.47,
+     "sd": 2.57,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 748.08,
+     "sd": 154.06,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 748.08,
+     "sd": 154.06,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 14.78,
+     "sd": 1.83,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1286.8,
+     "sd": 110.02,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 886.8,
+     "sd": 110.02,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 14.38,
+     "sd": 2.5,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1463.04,
+     "sd": 149.85,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 863.04,
+     "sd": 149.85,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 14.08,
+      "sd": 3.71,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.83,
+      "sd": 2.72,
+      "n": 10
+     },
+     "diff": 0.74,
+     "p": 0.61531,
+     "ci": [
+      -2.33,
+      3.82
+     ],
+     "perm_p": 0.60847
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 14.08,
+      "sd": 3.71,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.47,
+      "sd": 2.57,
+      "n": 5
+     },
+     "diff": -1.62,
+     "p": 0.34575,
+     "ci": [
+      -5.22,
+      1.99
+     ],
+     "perm_p": 0.40992
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 14.83,
+      "sd": 2.72,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.47,
+      "sd": 2.57,
+      "n": 5
+     },
+     "diff": -2.36,
+     "p": 0.13588,
+     "ci": [
+      -5.63,
+      0.91
+     ],
+     "perm_p": 0.12421
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 14.08,
+      "sd": 3.71,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.78,
+      "sd": 1.83,
+      "n": 5
+     },
+     "diff": 0.7,
+     "p": 0.63505,
+     "ci": [
+      -2.4,
+      3.79
+     ],
+     "perm_p": 0.69197
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 14.83,
+      "sd": 2.72,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.78,
+      "sd": 1.83,
+      "n": 5
+     },
+     "diff": -0.05,
+     "p": 0.9678,
+     "ci": [
+      -2.65,
+      2.55
+     ],
+     "perm_p": 0.9677
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 14.08,
+      "sd": 3.71,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.38,
+      "sd": 2.5,
+      "n": 5
+     },
+     "diff": 0.3,
+     "p": 0.85635,
+     "ci": [
+      -3.25,
+      3.85
+     ],
+     "perm_p": 0.87379
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 14.78,
+      "sd": 1.83,
+      "n": 5
+     },
+     "b": {
+      "mean": 14.38,
+      "sd": 2.5,
+      "n": 5
+     },
+     "diff": -0.4,
+     "p": 0.78294,
+     "ci": [
+      -3.64,
+      2.85
+     ],
+     "perm_p": 0.72222
+    }
+   }
+  },
+  "gemini": {
+   "chat": {
+    "contrib": {
+     "mean": 12.48,
+     "sd": 3.52,
+     "n": 10
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 749.1,
+     "sd": 211.44,
+     "n": 10
+    },
+    "welfare_from_contrib": {
+     "mean": 749.1,
+     "sd": 211.44,
+     "n": 10
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 13.11,
+     "sd": 3.56,
+     "n": 10
+    },
+    "coop": {
+     "mean": 99.9,
+     "sd": 0.32,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 986.08,
+     "sd": 275.63,
+     "n": 10
+    },
+    "welfare_from_contrib": {
+     "mean": 786.48,
+     "sd": 213.32,
+     "n": 10
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 11.98,
+     "sd": 2.1,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 718.92,
+     "sd": 125.81,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 718.92,
+     "sd": 125.81,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 17.05,
+     "sd": 3.86,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1423.24,
+     "sd": 231.89,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 1023.24,
+     "sd": 231.89,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 15.44,
+     "sd": 0.51,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1526.28,
+     "sd": 30.9,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 926.28,
+     "sd": 30.9,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 12.48,
+      "sd": 3.52,
+      "n": 10
+     },
+     "b": {
+      "mean": 13.11,
+      "sd": 3.56,
+      "n": 10
+     },
+     "diff": 0.62,
+     "p": 0.69853,
+     "ci": [
+      -2.7,
+      3.95
+     ],
+     "perm_p": 0.70991
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 12.48,
+      "sd": 3.52,
+      "n": 10
+     },
+     "b": {
+      "mean": 11.98,
+      "sd": 2.1,
+      "n": 5
+     },
+     "diff": -0.5,
+     "p": 0.73563,
+     "ci": [
+      -3.67,
+      2.66
+     ],
+     "perm_p": 0.76224
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 13.11,
+      "sd": 3.56,
+      "n": 10
+     },
+     "b": {
+      "mean": 11.98,
+      "sd": 2.1,
+      "n": 5
+     },
+     "diff": -1.13,
+     "p": 0.45624,
+     "ci": [
+      -4.3,
+      2.05
+     ],
+     "perm_p": 0.53813
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 12.48,
+      "sd": 3.52,
+      "n": 10
+     },
+     "b": {
+      "mean": 17.05,
+      "sd": 3.86,
+      "n": 5
+     },
+     "diff": 4.57,
+     "p": 0.05947,
+     "ci": [
+      -0.24,
+      9.37
+     ],
+     "perm_p": 0.02897
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 13.11,
+      "sd": 3.56,
+      "n": 10
+     },
+     "b": {
+      "mean": 17.05,
+      "sd": 3.86,
+      "n": 5
+     },
+     "diff": 3.95,
+     "p": 0.09441,
+     "ci": [
+      -0.86,
+      8.76
+     ],
+     "perm_p": 0.07326
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 12.48,
+      "sd": 3.52,
+      "n": 10
+     },
+     "b": {
+      "mean": 15.44,
+      "sd": 0.51,
+      "n": 5
+     },
+     "diff": 2.95,
+     "p": 0.02724,
+     "ci": [
+      0.41,
+      5.5
+     ],
+     "perm_p": 0.06893
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 17.05,
+      "sd": 3.86,
+      "n": 5
+     },
+     "b": {
+      "mean": 15.44,
+      "sd": 0.51,
+      "n": 5
+     },
+     "diff": -1.62,
+     "p": 0.40482,
+     "ci": [
+      -6.39,
+      3.16
+     ],
+     "perm_p": 0.38095
+    }
+   }
+  },
+  "qwen": {
+   "chat": {
+    "contrib": {
+     "mean": 14.16,
+     "sd": 3.75,
+     "n": 10
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 849.66,
+     "sd": 225.01,
+     "n": 10
+    },
+    "welfare_from_contrib": {
+     "mean": 849.66,
+     "sd": 225.01,
+     "n": 10
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 14.02,
+     "sd": 3.07,
+     "n": 10
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 1240.76,
+     "sd": 183.83,
+     "n": 10
+    },
+    "welfare_from_contrib": {
+     "mean": 840.96,
+     "sd": 184.1,
+     "n": 10
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 10.4,
+     "sd": 0.89,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 623.76,
+     "sd": 53.13,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 623.76,
+     "sd": 53.13,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 11.69,
+     "sd": 1.77,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1101.16,
+     "sd": 106.44,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 701.16,
+     "sd": 106.44,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 12.59,
+     "sd": 2.8,
+     "n": 5
+    },
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1355.52,
+     "sd": 167.7,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 755.52,
+     "sd": 167.7,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 14.16,
+      "sd": 3.75,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.02,
+      "sd": 3.07,
+      "n": 10
+     },
+     "diff": -0.15,
+     "p": 0.92569,
+     "ci": [
+      -3.37,
+      3.08
+     ],
+     "perm_p": 0.91515
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 14.16,
+      "sd": 3.75,
+      "n": 10
+     },
+     "b": {
+      "mean": 10.4,
+      "sd": 0.89,
+      "n": 5
+     },
+     "diff": -3.77,
+     "p": 0.01205,
+     "ci": [
+      -6.52,
+      -1.01
+     ],
+     "perm_p": 0.05128
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 14.02,
+      "sd": 3.07,
+      "n": 10
+     },
+     "b": {
+      "mean": 10.4,
+      "sd": 0.89,
+      "n": 5
+     },
+     "diff": -3.62,
+     "p": 0.00504,
+     "ci": [
+      -5.91,
+      -1.33
+     ],
+     "perm_p": 0.0313
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 14.16,
+      "sd": 3.75,
+      "n": 10
+     },
+     "b": {
+      "mean": 11.69,
+      "sd": 1.77,
+      "n": 5
+     },
+     "diff": -2.48,
+     "p": 0.10643,
+     "ci": [
+      -5.56,
+      0.61
+     ],
+     "perm_p": 0.19048
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 14.02,
+      "sd": 3.07,
+      "n": 10
+     },
+     "b": {
+      "mean": 11.69,
+      "sd": 1.77,
+      "n": 5
+     },
+     "diff": -2.33,
+     "p": 0.08672,
+     "ci": [
+      -5.05,
+      0.39
+     ],
+     "perm_p": 0.14053
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 14.16,
+      "sd": 3.75,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.59,
+      "sd": 2.8,
+      "n": 5
+     },
+     "diff": -1.57,
+     "p": 0.38271,
+     "ci": [
+      -5.38,
+      2.24
+     ],
+     "perm_p": 0.42125
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 11.69,
+      "sd": 1.77,
+      "n": 5
+     },
+     "b": {
+      "mean": 12.59,
+      "sd": 2.8,
+      "n": 5
+     },
+     "diff": 0.91,
+     "p": 0.56054,
+     "ci": [
+      -2.62,
+      4.43
+     ],
+     "perm_p": 0.5873
+    }
+   }
+  },
+  "gpt-oss-120b": {
+   "chat": {
+    "contrib": {
+     "mean": 6.95,
+     "sd": 3.76,
+     "n": 8
+    },
+    "coop": {
+     "mean": 54.5,
+     "sd": 12.76,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 417.08,
+     "sd": 225.63,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 417.07,
+     "sd": 225.63,
+     "n": 8
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 12.83,
+     "sd": 2.21,
+     "n": 8
+    },
+    "coop": {
+     "mean": 85.0,
+     "sd": 4.47,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 824.38,
+     "sd": 109.27,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 769.88,
+     "sd": 132.39,
+     "n": 8
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 7.53,
+     "sd": 4.3,
+     "n": 5
+    },
+    "coop": {
+     "mean": 58.0,
+     "sd": 10.07,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 451.68,
+     "sd": 257.99,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 451.68,
+     "sd": 257.99,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 6.88,
+     "sd": 1.27,
+     "n": 5
+    },
+    "coop": {
+     "mean": 62.6,
+     "sd": 12.93,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 760.95,
+     "sd": 114.03,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 413.04,
+     "sd": 76.42,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 9.16,
+     "sd": 0.69,
+     "n": 5
+    },
+    "coop": {
+     "mean": 77.0,
+     "sd": 6.04,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1149.28,
+     "sd": 41.1,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 549.36,
+     "sd": 41.1,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 6.95,
+      "sd": 3.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.83,
+      "sd": 2.21,
+      "n": 8
+     },
+     "diff": 5.88,
+     "p": 0.00273,
+     "ci": [
+      2.5,
+      9.26
+     ],
+     "perm_p": 0.00373
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 6.95,
+      "sd": 3.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 7.53,
+      "sd": 4.3,
+      "n": 5
+     },
+     "diff": 0.58,
+     "p": 0.81156,
+     "ci": [
+      -4.85,
+      6.0
+     ],
+     "perm_p": 0.79487
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 12.83,
+      "sd": 2.21,
+      "n": 8
+     },
+     "b": {
+      "mean": 7.53,
+      "sd": 4.3,
+      "n": 5
+     },
+     "diff": -5.3,
+     "p": 0.04791,
+     "ci": [
+      -10.54,
+      -0.07
+     ],
+     "perm_p": 0.01399
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 6.95,
+      "sd": 3.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 6.88,
+      "sd": 1.27,
+      "n": 5
+     },
+     "diff": -0.07,
+     "p": 0.9639,
+     "ci": [
+      -3.33,
+      3.19
+     ],
+     "perm_p": 0.98446
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 12.83,
+      "sd": 2.21,
+      "n": 8
+     },
+     "b": {
+      "mean": 6.88,
+      "sd": 1.27,
+      "n": 5
+     },
+     "diff": -5.95,
+     "p": 7e-05,
+     "ci": [
+      -8.07,
+      -3.82
+     ],
+     "perm_p": 0.00155
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 6.95,
+      "sd": 3.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 9.16,
+      "sd": 0.69,
+      "n": 5
+     },
+     "diff": 2.2,
+     "p": 0.14611,
+     "ci": [
+      -0.96,
+      5.37
+     ],
+     "perm_p": 0.24476
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 6.88,
+      "sd": 1.27,
+      "n": 5
+     },
+     "b": {
+      "mean": 9.16,
+      "sd": 0.69,
+      "n": 5
+     },
+     "diff": 2.27,
+     "p": 0.01217,
+     "ci": [
+      0.7,
+      3.85
+     ],
+     "perm_p": 0.00794
+    }
+   }
+  },
+  "nemotron-3-super-120b": {
+   "chat": {
+    "contrib": {
+     "mean": 11.49,
+     "sd": 2.93,
+     "n": 8
+    },
+    "coop": {
+     "mean": 89.62,
+     "sd": 13.41,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 689.48,
+     "sd": 175.95,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 689.48,
+     "sd": 175.95,
+     "n": 8
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 11.68,
+     "sd": 3.68,
+     "n": 8
+    },
+    "coop": {
+     "mean": 92.75,
+     "sd": 7.03,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 742.7,
+     "sd": 238.74,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 700.88,
+     "sd": 221.08,
+     "n": 8
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 13.01,
+     "sd": 1.84,
+     "n": 5
+    },
+    "coop": {
+     "mean": 86.2,
+     "sd": 11.76,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 780.72,
+     "sd": 110.4,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 780.72,
+     "sd": 110.4,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 12.66,
+     "sd": 2.47,
+     "n": 5
+    },
+    "coop": {
+     "mean": 96.0,
+     "sd": 5.83,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1159.34,
+     "sd": 148.34,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 759.36,
+     "sd": 148.29,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 12.99,
+     "sd": 1.86,
+     "n": 5
+    },
+    "coop": {
+     "mean": 95.0,
+     "sd": 3.94,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1373.63,
+     "sd": 105.57,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 779.64,
+     "sd": 111.35,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 11.49,
+      "sd": 2.93,
+      "n": 8
+     },
+     "b": {
+      "mean": 11.68,
+      "sd": 3.68,
+      "n": 8
+     },
+     "diff": 0.19,
+     "p": 0.91084,
+     "ci": [
+      -3.4,
+      3.78
+     ],
+     "perm_p": 0.90862
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 11.49,
+      "sd": 2.93,
+      "n": 8
+     },
+     "b": {
+      "mean": 13.01,
+      "sd": 1.84,
+      "n": 5
+     },
+     "diff": 1.52,
+     "p": 0.27501,
+     "ci": [
+      -1.39,
+      4.43
+     ],
+     "perm_p": 0.3512
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 11.68,
+      "sd": 3.68,
+      "n": 8
+     },
+     "b": {
+      "mean": 13.01,
+      "sd": 1.84,
+      "n": 5
+     },
+     "diff": 1.33,
+     "p": 0.40669,
+     "ci": [
+      -2.07,
+      4.73
+     ],
+     "perm_p": 0.47086
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 11.49,
+      "sd": 2.93,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.66,
+      "sd": 2.47,
+      "n": 5
+     },
+     "diff": 1.16,
+     "p": 0.46027,
+     "ci": [
+      -2.22,
+      4.55
+     ],
+     "perm_p": 0.50194
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 11.68,
+      "sd": 3.68,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.66,
+      "sd": 2.47,
+      "n": 5
+     },
+     "diff": 0.97,
+     "p": 0.57992,
+     "ci": [
+      -2.79,
+      4.74
+     ],
+     "perm_p": 0.60761
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 11.49,
+      "sd": 2.93,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.99,
+      "sd": 1.86,
+      "n": 5
+     },
+     "diff": 1.5,
+     "p": 0.28197,
+     "ci": [
+      -1.42,
+      4.43
+     ],
+     "perm_p": 0.35431
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 12.66,
+      "sd": 2.47,
+      "n": 5
+     },
+     "b": {
+      "mean": 12.99,
+      "sd": 1.86,
+      "n": 5
+     },
+     "diff": 0.34,
+     "p": 0.81344,
+     "ci": [
+      -2.89,
+      3.57
+     ],
+     "perm_p": 0.7619
+    }
+   }
+  },
+  "ling-3.0-flash": {
+   "chat": {
+    "contrib": {
+     "mean": 3.44,
+     "sd": 1.19,
+     "n": 8
+    },
+    "coop": {
+     "mean": 37.38,
+     "sd": 7.96,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 206.7,
+     "sd": 71.49,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 206.7,
+     "sd": 71.49,
+     "n": 8
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 3.49,
+     "sd": 1.24,
+     "n": 8
+    },
+    "coop": {
+     "mean": 36.62,
+     "sd": 11.01,
+     "n": 8
+    },
+    "welfare": {
+     "mean": -19.24,
+     "sd": 111.14,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 209.55,
+     "sd": 74.25,
+     "n": 8
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 2.7,
+     "sd": 0.7,
+     "n": 5
+    },
+    "coop": {
+     "mean": 28.4,
+     "sd": 4.22,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 162.12,
+     "sd": 42.06,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 162.12,
+     "sd": 42.06,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 3.35,
+     "sd": 2.12,
+     "n": 5
+    },
+    "coop": {
+     "mean": 27.8,
+     "sd": 14.48,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 392.85,
+     "sd": 220.52,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 200.88,
+     "sd": 127.09,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 4.17,
+     "sd": 1.14,
+     "n": 5
+    },
+    "coop": {
+     "mean": 39.0,
+     "sd": 11.18,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 598.27,
+     "sd": 148.71,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 250.32,
+     "sd": 68.25,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 3.44,
+      "sd": 1.19,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.49,
+      "sd": 1.24,
+      "n": 8
+     },
+     "diff": 0.05,
+     "p": 0.93877,
+     "ci": [
+      -1.26,
+      1.35
+     ],
+     "perm_p": 0.93862
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 3.44,
+      "sd": 1.19,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.7,
+      "sd": 0.7,
+      "n": 5
+     },
+     "diff": -0.74,
+     "p": 0.18475,
+     "ci": [
+      -1.9,
+      0.41
+     ],
+     "perm_p": 0.23543
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 3.49,
+      "sd": 1.24,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.7,
+      "sd": 0.7,
+      "n": 5
+     },
+     "diff": -0.79,
+     "p": 0.16998,
+     "ci": [
+      -1.98,
+      0.39
+     ],
+     "perm_p": 0.22533
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 3.44,
+      "sd": 1.19,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.35,
+      "sd": 2.12,
+      "n": 5
+     },
+     "diff": -0.1,
+     "p": 0.9287,
+     "ci": [
+      -2.68,
+      2.48
+     ],
+     "perm_p": 0.92385
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 3.49,
+      "sd": 1.24,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.35,
+      "sd": 2.12,
+      "n": 5
+     },
+     "diff": -0.14,
+     "p": 0.89459,
+     "ci": [
+      -2.73,
+      2.44
+     ],
+     "perm_p": 0.87801
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 3.44,
+      "sd": 1.19,
+      "n": 8
+     },
+     "b": {
+      "mean": 4.17,
+      "sd": 1.14,
+      "n": 5
+     },
+     "diff": 0.73,
+     "p": 0.2997,
+     "ci": [
+      -0.77,
+      2.22
+     ],
+     "perm_p": 0.29138
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 3.35,
+      "sd": 2.12,
+      "n": 5
+     },
+     "b": {
+      "mean": 4.17,
+      "sd": 1.14,
+      "n": 5
+     },
+     "diff": 0.82,
+     "p": 0.47193,
+     "ci": [
+      -1.79,
+      3.44
+     ],
+     "perm_p": 0.49206
+    }
+   }
+  },
+  "qwen3.8-27b": {
+   "chat": {
+    "contrib": {
+     "mean": 6.17,
+     "sd": 1.36,
+     "n": 8
+    },
+    "coop": {
+     "mean": 53.12,
+     "sd": 5.89,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 370.35,
+     "sd": 81.73,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 370.35,
+     "sd": 81.73,
+     "n": 8
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 9.31,
+     "sd": 2.06,
+     "n": 8
+    },
+    "coop": {
+     "mean": 80.0,
+     "sd": 7.69,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 303.95,
+     "sd": 184.11,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 558.45,
+     "sd": 123.75,
+     "n": 8
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 4.04,
+     "sd": 1.44,
+     "n": 5
+    },
+    "coop": {
+     "mean": 35.8,
+     "sd": 11.52,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 242.64,
+     "sd": 86.3,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 242.64,
+     "sd": 86.3,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 10.34,
+     "sd": 1.28,
+     "n": 5
+    },
+    "coop": {
+     "mean": 81.2,
+     "sd": 8.7,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 996.32,
+     "sd": 89.42,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 620.4,
+     "sd": 76.97,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 10.51,
+     "sd": 2.73,
+     "n": 5
+    },
+    "coop": {
+     "mean": 82.8,
+     "sd": 3.56,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1224.52,
+     "sd": 166.1,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 630.6,
+     "sd": 163.59,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 6.17,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 9.31,
+      "sd": 2.06,
+      "n": 8
+     },
+     "diff": 3.13,
+     "p": 0.00367,
+     "ci": [
+      1.23,
+      5.04
+     ],
+     "perm_p": 0.00218
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 6.17,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 4.04,
+      "sd": 1.44,
+      "n": 5
+     },
+     "diff": -2.13,
+     "p": 0.02851,
+     "ci": [
+      -3.97,
+      -0.29
+     ],
+     "perm_p": 0.02642
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 9.31,
+      "sd": 2.06,
+      "n": 8
+     },
+     "b": {
+      "mean": 4.04,
+      "sd": 1.44,
+      "n": 5
+     },
+     "diff": -5.26,
+     "p": 0.00023,
+     "ci": [
+      -7.41,
+      -3.12
+     ],
+     "perm_p": 0.00078
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 6.17,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 10.34,
+      "sd": 1.28,
+      "n": 5
+     },
+     "diff": 4.17,
+     "p": 0.00034,
+     "ci": [
+      2.47,
+      5.86
+     ],
+     "perm_p": 0.00078
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 9.31,
+      "sd": 2.06,
+      "n": 8
+     },
+     "b": {
+      "mean": 10.34,
+      "sd": 1.28,
+      "n": 5
+     },
+     "diff": 1.03,
+     "p": 0.28957,
+     "ci": [
+      -1.01,
+      3.08
+     ],
+     "perm_p": 0.34421
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 6.17,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 10.51,
+      "sd": 2.73,
+      "n": 5
+     },
+     "diff": 4.34,
+     "p": 0.01966,
+     "ci": [
+      1.02,
+      7.66
+     ],
+     "perm_p": 0.00078
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 10.34,
+      "sd": 1.28,
+      "n": 5
+     },
+     "b": {
+      "mean": 10.51,
+      "sd": 2.73,
+      "n": 5
+     },
+     "diff": 0.17,
+     "p": 0.90395,
+     "ci": [
+      -3.17,
+      3.51
+     ],
+     "perm_p": 0.92063
+    }
+   }
+  },
+  "gemma-4-31b": {
+   "chat": {
+    "contrib": {
+     "mean": 19.02,
+     "sd": 0.07,
+     "n": 8
+    },
+    "coop": {
+     "mean": 95.12,
+     "sd": 0.35,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 1141.5,
+     "sd": 4.24,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 1141.5,
+     "sd": 4.24,
+     "n": 8
+    }
+   },
+   "fixed": {
+    "contrib": {
+     "mean": 19.3,
+     "sd": 0.24,
+     "n": 8
+    },
+    "coop": {
+     "mean": 96.5,
+     "sd": 1.2,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 1433.88,
+     "sd": 25.2,
+     "n": 8
+    },
+    "welfare_from_contrib": {
+     "mean": 1158.0,
+     "sd": 14.34,
+     "n": 8
+    }
+   },
+   "nosanction": {
+    "contrib": {
+     "mean": 19.2,
+     "sd": 0.0,
+     "n": 5
+    },
+    "coop": {
+     "mean": 96.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1152.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 1152.0,
+     "sd": 0.0,
+     "n": 5
+    }
+   },
+   "autoreward": {
+    "contrib": {
+     "mean": 19.48,
+     "sd": 0.33,
+     "n": 5
+    },
+    "coop": {
+     "mean": 97.4,
+     "sd": 1.67,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1560.8,
+     "sd": 29.31,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 1168.8,
+     "sd": 20.08,
+     "n": 5
+    }
+   },
+   "sysreward": {
+    "contrib": {
+     "mean": 19.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "coop": {
+     "mean": 95.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare": {
+     "mean": 1710.0,
+     "sd": 0.0,
+     "n": 5
+    },
+    "welfare_from_contrib": {
+     "mean": 1140.0,
+     "sd": 0.0,
+     "n": 5
+    }
+   },
+   "tests_contrib": {
+    "chat_vs_fixed": {
+     "a": {
+      "mean": 19.02,
+      "sd": 0.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.3,
+      "sd": 0.24,
+      "n": 8
+     },
+     "diff": 0.28,
+     "p": 0.01376,
+     "ci": [
+      0.07,
+      0.48
+     ],
+     "perm_p": 0.00637
+    },
+    "chat_vs_nosanction": {
+     "a": {
+      "mean": 19.02,
+      "sd": 0.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.2,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.18,
+     "p": 0.00021,
+     "ci": [
+      0.12,
+      0.23
+     ],
+     "perm_p": 0.00466
+    },
+    "fixed_vs_nosanction": {
+     "a": {
+      "mean": 19.3,
+      "sd": 0.24,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.2,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.1,
+     "p": 0.27535,
+     "ci": [
+      -0.3,
+      0.1
+     ],
+     "perm_p": 0.49184
+    },
+    "chat_vs_autoreward": {
+     "a": {
+      "mean": 19.02,
+      "sd": 0.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.48,
+      "sd": 0.33,
+      "n": 5
+     },
+     "diff": 0.46,
+     "p": 0.03731,
+     "ci": [
+      0.04,
+      0.87
+     ],
+     "perm_p": 0.00233
+    },
+    "fixed_vs_autoreward": {
+     "a": {
+      "mean": 19.3,
+      "sd": 0.24,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.48,
+      "sd": 0.33,
+      "n": 5
+     },
+     "diff": 0.18,
+     "p": 0.33195,
+     "ci": [
+      -0.23,
+      0.59
+     ],
+     "perm_p": 0.33644
+    },
+    "chat_vs_sysreward": {
+     "a": {
+      "mean": 19.02,
+      "sd": 0.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.02,
+     "p": 0.35062,
+     "ci": [
+      -0.08,
+      0.03
+     ],
+     "perm_p": 1.0
+    },
+    "autoreward_vs_sysreward": {
+     "a": {
+      "mean": 19.48,
+      "sd": 0.33,
+      "n": 5
+     },
+     "b": {
+      "mean": 19.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.48,
+     "p": 0.03268,
+     "ci": [
+      -0.9,
+      -0.06
+     ],
+     "perm_p": 0.00794
+    }
+   }
+  }
+ },
+ "D_accountability": {
+  "per_model": {
+   "gpt4o": {
+    "bad_replaced_at_6": [
+     3,
+     5
+    ],
+    "good_replaced_at_6": [
+     0,
+     5
+    ],
+    "fisher_p": 0.16666666666666666,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 9.0,
+      "sd": 6.52,
+      "n": 5
+     },
+     "good": {
+      "mean": 16.0,
+      "sd": 5.48,
+      "n": 5
+     }
+    },
+    "fixed_ballot": {
+     "elections": 40,
+     "agent0_wins": 18,
+     "tie_top": 12,
+     "contested": 30,
+     "turnovers": 8
+    },
+    "random_ballot": {
+     "elections": 20,
+     "agent0_wins": 5,
+     "tie_top": 7,
+     "contested": 15,
+     "turnovers": 8
+    },
+    "agent0_wins_fisher_p": 0.16615276831203926
+   },
+   "gemini": {
+    "bad_replaced_at_6": [
+     5,
+     5
+    ],
+    "good_replaced_at_6": [
+     5,
+     5
+    ],
+    "fisher_p": 1.0,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 8.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "good": {
+      "mean": 10.0,
+      "sd": 3.54,
+      "n": 5
+     }
+    },
+    "fixed_ballot": {
+     "elections": 40,
+     "agent0_wins": 14,
+     "tie_top": 10,
+     "contested": 30,
+     "turnovers": 24
+    },
+    "random_ballot": {
+     "elections": 20,
+     "agent0_wins": 9,
+     "tie_top": 4,
+     "contested": 15,
+     "turnovers": 10
+    },
+    "agent0_wins_fisher_p": 0.5749694099818516
+   },
+   "qwen": {
+    "bad_replaced_at_6": [
+     4,
+     5
+    ],
+    "good_replaced_at_6": [
+     1,
+     5
+    ],
+    "fisher_p": 0.2063492063492064,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 7.0,
+      "sd": 4.47,
+      "n": 5
+     },
+     "good": {
+      "mean": 12.0,
+      "sd": 5.7,
+      "n": 5
+     }
+    },
+    "fixed_ballot": {
+     "elections": 40,
+     "agent0_wins": 0,
+     "tie_top": 1,
+     "contested": 30,
+     "turnovers": 1
+    },
+    "random_ballot": {
+     "elections": 20,
+     "agent0_wins": 0,
+     "tie_top": 4,
+     "contested": 15,
+     "turnovers": 1
+    },
+    "agent0_wins_fisher_p": 1.0
+   },
+   "deepseek": {
+    "bad_replaced_at_6": [
+     0,
+     5
+    ],
+    "good_replaced_at_6": [
+     1,
+     5
+    ],
+    "fisher_p": 1.0,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 18.0,
+      "sd": 4.47,
+      "n": 5
+     },
+     "good": {
+      "mean": 15.0,
+      "sd": 7.07,
+      "n": 5
+     }
+    },
+    "fixed_ballot": {
+     "elections": 32,
+     "agent0_wins": 2,
+     "tie_top": 5,
+     "contested": 24,
+     "turnovers": 3
+    },
+    "random_ballot": {
+     "elections": 20,
+     "agent0_wins": 0,
+     "tie_top": 2,
+     "contested": 15,
+     "turnovers": 0
+    },
+    "agent0_wins_fisher_p": 0.5173453996983408
+   },
+   "gpt-oss-120b": {
+    "bad_replaced_at_6": [
+     4,
+     10
+    ],
+    "good_replaced_at_6": [
+     1,
+     10
+    ],
+    "fisher_p": 0.30340557275541796,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 13.0,
+      "sd": 7.53,
+      "n": 10
+     },
+     "good": {
+      "mean": 17.5,
+      "sd": 5.4,
+      "n": 10
+     }
+    },
+    "fixed_ballot": {
+     "elections": 32,
+     "agent0_wins": 26,
+     "tie_top": 5,
+     "contested": 24,
+     "turnovers": 2
+    },
+    "random_ballot": {
+     "elections": 40,
+     "agent0_wins": 11,
+     "tie_top": 7,
+     "contested": 30,
+     "turnovers": 3
+    },
+    "agent0_wins_fisher_p": 5.898981851521254e-06
+   },
+   "nemotron-3-super-120b": {
+    "bad_replaced_at_6": [
+     5,
+     10
+    ],
+    "good_replaced_at_6": [
+     2,
+     10
+    ],
+    "fisher_p": 0.34984520123839014,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 10.0,
+      "sd": 6.24,
+      "n": 10
+     },
+     "good": {
+      "mean": 13.0,
+      "sd": 5.87,
+      "n": 10
+     }
+    },
+    "fixed_ballot": {
+     "elections": 32,
+     "agent0_wins": 3,
+     "tie_top": 6,
+     "contested": 24,
+     "turnovers": 7
+    },
+    "random_ballot": {
+     "elections": 40,
+     "agent0_wins": 1,
+     "tie_top": 4,
+     "contested": 30,
+     "turnovers": 6
+    },
+    "agent0_wins_fisher_p": 0.31663410414175874
+   },
+   "ling-3.0-flash": {
+    "bad_replaced_at_6": [
+     1,
+     10
+    ],
+    "good_replaced_at_6": [
+     0,
+     10
+    ],
+    "fisher_p": 1.0,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 16.0,
+      "sd": 5.16,
+      "n": 10
+     },
+     "good": {
+      "mean": 18.0,
+      "sd": 4.22,
+      "n": 10
+     }
+    },
+    "fixed_ballot": {
+     "elections": 32,
+     "agent0_wins": 12,
+     "tie_top": 1,
+     "contested": 24,
+     "turnovers": 4
+    },
+    "random_ballot": {
+     "elections": 40,
+     "agent0_wins": 7,
+     "tie_top": 4,
+     "contested": 30,
+     "turnovers": 4
+    },
+    "agent0_wins_fisher_p": 0.06553696776120901
+   },
+   "qwen3.8-27b": {
+    "bad_replaced_at_6": [
+     8,
+     10
+    ],
+    "good_replaced_at_6": [
+     8,
+     10
+    ],
+    "fisher_p": 1.0,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 10.0,
+      "sd": 5.27,
+      "n": 10
+     },
+     "good": {
+      "mean": 7.5,
+      "sd": 2.64,
+      "n": 10
+     }
+    },
+    "fixed_ballot": {
+     "elections": 32,
+     "agent0_wins": 2,
+     "tie_top": 6,
+     "contested": 24,
+     "turnovers": 16
+    },
+    "random_ballot": {
+     "elections": 40,
+     "agent0_wins": 9,
+     "tie_top": 9,
+     "contested": 30,
+     "turnovers": 21
+    },
+    "agent0_wins_fisher_p": 0.09713543312783522
+   },
+   "gemma-4-31b": {
+    "bad_replaced_at_6": [
+     1,
+     10
+    ],
+    "good_replaced_at_6": [
+     0,
+     10
+    ],
+    "fisher_p": 1.0,
+    "agent0_rounds_in_office": {
+     "bad": {
+      "mean": 17.5,
+      "sd": 5.4,
+      "n": 10
+     },
+     "good": {
+      "mean": 20.0,
+      "sd": 0.0,
+      "n": 10
+     }
+    },
+    "fixed_ballot": {
+     "elections": 32,
+     "agent0_wins": 31,
+     "tie_top": 1,
+     "contested": 24,
+     "turnovers": 1
+    },
+    "random_ballot": {
+     "elections": 40,
+     "agent0_wins": 23,
+     "tie_top": 2,
+     "contested": 30,
+     "turnovers": 4
+    },
+    "agent0_wins_fisher_p": 8.314230470849848e-05
+   }
+  },
+  "pooled": {
+   "bad_replaced": [
+    31,
+    70
+   ],
+   "good_replaced": [
+    18,
+    70
+   ],
+   "fisher_p": 0.032960377883320444
+  }
+ },
+ "E_visibility_contributions": {
+  "gpt4o": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 14.08,
+      "sd": 3.71,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.51,
+      "sd": 4.45,
+      "n": 5
+     },
+     "diff": 0.42,
+     "p": 0.85968,
+     "ci": [
+      -5.06,
+      5.9
+     ],
+     "perm_p": 0.84382
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": {
+     "individual": {
+      "broken": 2,
+      "stated": 754,
+      "share": 0.3
+     },
+     "aggregate": {
+      "broken": 0,
+      "stated": 371,
+      "share": 0.0
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 13.41,
+      "sd": 2.51,
+      "n": 10
+     },
+     "b": {
+      "mean": 13.97,
+      "sd": 2.22,
+      "n": 5
+     },
+     "diff": 0.55,
+     "p": 0.67403,
+     "ci": [
+      -2.32,
+      3.42
+     ],
+     "perm_p": 0.68698
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": {
+     "individual": {
+      "broken": 0,
+      "stated": 612,
+      "share": 0.0
+     },
+     "aggregate": {
+      "broken": 0,
+      "stated": 324,
+      "share": 0.0
+     }
+    }
+   }
+  },
+  "gemini": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 12.48,
+      "sd": 3.52,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.28,
+      "sd": 4.12,
+      "n": 5
+     },
+     "diff": -0.21,
+     "p": 0.92679,
+     "ci": [
+      -5.29,
+      4.88
+     ],
+     "perm_p": 0.93606
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": {
+     "individual": {
+      "broken": 0,
+      "stated": 803,
+      "share": 0.0
+     },
+     "aggregate": {
+      "broken": 0,
+      "stated": 382,
+      "share": 0.0
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 19.79,
+      "sd": 0.32,
+      "n": 10
+     },
+     "b": {
+      "mean": 17.69,
+      "sd": 4.33,
+      "n": 5
+     },
+     "diff": -2.1,
+     "p": 0.3399,
+     "ci": [
+      -7.48,
+      3.28
+     ],
+     "perm_p": 0.09224
+    },
+    "coop": {
+     "a": {
+      "mean": 99.4,
+      "sd": 1.58,
+      "n": 10
+     },
+     "b": {
+      "mean": 99.8,
+      "sd": 0.45,
+      "n": 5
+     },
+     "diff": 0.4,
+     "p": 0.47174,
+     "ci": [
+      -0.78,
+      1.58
+     ],
+     "perm_p": 0.92674
+    },
+    "broken": {
+     "individual": {
+      "broken": 0,
+      "stated": 265,
+      "share": 0.0
+     },
+     "aggregate": {
+      "broken": 0,
+      "stated": 189,
+      "share": 0.0
+     }
+    }
+   }
+  },
+  "qwen": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 14.16,
+      "sd": 3.75,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.96,
+      "sd": 3.08,
+      "n": 5
+     },
+     "diff": -1.2,
+     "p": 0.52449,
+     "ci": [
+      -5.26,
+      2.86
+     ],
+     "perm_p": 0.52847
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": {
+     "individual": {
+      "broken": 0,
+      "stated": 884,
+      "share": 0.0
+     },
+     "aggregate": {
+      "broken": 0,
+      "stated": 446,
+      "share": 0.0
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 13.72,
+      "sd": 2.1,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.91,
+      "sd": 0.85,
+      "n": 5
+     },
+     "diff": -0.81,
+     "p": 0.30724,
+     "ci": [
+      -2.47,
+      0.84
+     ],
+     "perm_p": 0.42058
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": {
+     "individual": {
+      "broken": 1,
+      "stated": 886,
+      "share": 0.1
+     },
+     "aggregate": {
+      "broken": 0,
+      "stated": 443,
+      "share": 0.0
+     }
+    }
+   }
+  },
+  "gpt-oss-120b": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 6.95,
+      "sd": 3.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 8.61,
+      "sd": 2.77,
+      "n": 5
+     },
+     "diff": 1.66,
+     "p": 0.38178,
+     "ci": [
+      -2.36,
+      5.68
+     ],
+     "perm_p": 0.43279
+    },
+    "coop": {
+     "a": {
+      "mean": 54.5,
+      "sd": 12.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 63.0,
+      "sd": 13.73,
+      "n": 5
+     },
+     "diff": 8.5,
+     "p": 0.29649,
+     "ci": [
+      -9.02,
+      26.02
+     ],
+     "perm_p": 0.27972
+    },
+    "broken": {
+     "individual": {
+      "broken": 196,
+      "stated": 651,
+      "share": 30.1
+     },
+     "aggregate": {
+      "broken": 121,
+      "stated": 422,
+      "share": 28.7
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 13.16,
+      "sd": 2.62,
+      "n": 8
+     },
+     "b": {
+      "mean": 15.78,
+      "sd": 1.77,
+      "n": 5
+     },
+     "diff": 2.62,
+     "p": 0.05514,
+     "ci": [
+      -0.07,
+      5.31
+     ],
+     "perm_p": 0.07692
+    },
+    "coop": {
+     "a": {
+      "mean": 85.25,
+      "sd": 5.31,
+      "n": 8
+     },
+     "b": {
+      "mean": 87.6,
+      "sd": 3.13,
+      "n": 5
+     },
+     "diff": 2.35,
+     "p": 0.3373,
+     "ci": [
+      -2.81,
+      7.51
+     ],
+     "perm_p": 0.4087
+    },
+    "broken": {
+     "individual": {
+      "broken": 91,
+      "stated": 716,
+      "share": 12.7
+     },
+     "aggregate": {
+      "broken": 51,
+      "stated": 426,
+      "share": 12.0
+     }
+    }
+   }
+  },
+  "nemotron-3-super-120b": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 11.49,
+      "sd": 2.93,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.16,
+      "sd": 2.62,
+      "n": 5
+     },
+     "diff": 0.67,
+     "p": 0.67928,
+     "ci": [
+      -2.84,
+      4.18
+     ],
+     "perm_p": 0.68765
+    },
+    "coop": {
+     "a": {
+      "mean": 89.62,
+      "sd": 13.41,
+      "n": 8
+     },
+     "b": {
+      "mean": 87.6,
+      "sd": 10.26,
+      "n": 5
+     },
+     "diff": -2.03,
+     "p": 0.76497,
+     "ci": [
+      -16.66,
+      12.61
+     ],
+     "perm_p": 0.78866
+    },
+    "broken": {
+     "individual": {
+      "broken": 16,
+      "stated": 134,
+      "share": 11.9
+     },
+     "aggregate": {
+      "broken": 7,
+      "stated": 75,
+      "share": 9.3
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 13.18,
+      "sd": 1.31,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.77,
+      "sd": 1.63,
+      "n": 5
+     },
+     "diff": -0.42,
+     "p": 0.64435,
+     "ci": [
+      -2.45,
+      1.62
+     ],
+     "perm_p": 0.60295
+    },
+    "coop": {
+     "a": {
+      "mean": 97.0,
+      "sd": 2.33,
+      "n": 8
+     },
+     "b": {
+      "mean": 95.8,
+      "sd": 2.17,
+      "n": 5
+     },
+     "diff": -1.2,
+     "p": 0.36983,
+     "ci": [
+      -4.07,
+      1.67
+     ],
+     "perm_p": 0.39938
+    },
+    "broken": {
+     "individual": {
+      "broken": 8,
+      "stated": 189,
+      "share": 4.2
+     },
+     "aggregate": {
+      "broken": 3,
+      "stated": 101,
+      "share": 3.0
+     }
+    }
+   }
+  },
+  "ling-3.0-flash": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 3.44,
+      "sd": 1.19,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.15,
+      "sd": 1.08,
+      "n": 5
+     },
+     "diff": -0.29,
+     "p": 0.65754,
+     "ci": [
+      -1.73,
+      1.15
+     ],
+     "perm_p": 0.65967
+    },
+    "coop": {
+     "a": {
+      "mean": 37.38,
+      "sd": 7.96,
+      "n": 8
+     },
+     "b": {
+      "mean": 32.4,
+      "sd": 7.54,
+      "n": 5
+     },
+     "diff": -4.98,
+     "p": 0.2865,
+     "ci": [
+      -14.91,
+      4.96
+     ],
+     "perm_p": 0.2906
+    },
+    "broken": {
+     "individual": {
+      "broken": 284,
+      "stated": 643,
+      "share": 44.2
+     },
+     "aggregate": {
+      "broken": 183,
+      "stated": 372,
+      "share": 49.2
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 3.56,
+      "sd": 1.37,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.41,
+      "sd": 0.72,
+      "n": 5
+     },
+     "diff": -0.15,
+     "p": 0.79779,
+     "ci": [
+      -1.44,
+      1.13
+     ],
+     "perm_p": 0.82984
+    },
+    "coop": {
+     "a": {
+      "mean": 36.38,
+      "sd": 12.47,
+      "n": 8
+     },
+     "b": {
+      "mean": 34.0,
+      "sd": 4.53,
+      "n": 5
+     },
+     "diff": -2.38,
+     "p": 0.63546,
+     "ci": [
+      -13.26,
+      8.51
+     ],
+     "perm_p": 0.70474
+    },
+    "broken": {
+     "individual": {
+      "broken": 289,
+      "stated": 631,
+      "share": 45.8
+     },
+     "aggregate": {
+      "broken": 180,
+      "stated": 385,
+      "share": 46.8
+     }
+    }
+   }
+  },
+  "qwen3.8-27b": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 6.17,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 5.59,
+      "sd": 3.31,
+      "n": 5
+     },
+     "diff": -0.58,
+     "p": 0.72377,
+     "ci": [
+      -4.61,
+      3.45
+     ],
+     "perm_p": 0.68143
+    },
+    "coop": {
+     "a": {
+      "mean": 53.12,
+      "sd": 5.89,
+      "n": 8
+     },
+     "b": {
+      "mean": 49.0,
+      "sd": 25.94,
+      "n": 5
+     },
+     "diff": -4.12,
+     "p": 0.743,
+     "ci": [
+      -36.08,
+      27.83
+     ],
+     "perm_p": 0.72339
+    },
+    "broken": {
+     "individual": {
+      "broken": 146,
+      "stated": 644,
+      "share": 22.7
+     },
+     "aggregate": {
+      "broken": 87,
+      "stated": 396,
+      "share": 22.0
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 13.64,
+      "sd": 3.65,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.55,
+      "sd": 1.95,
+      "n": 5
+     },
+     "diff": -1.09,
+     "p": 0.50083,
+     "ci": [
+      -4.52,
+      2.35
+     ],
+     "perm_p": 0.55167
+    },
+    "coop": {
+     "a": {
+      "mean": 86.75,
+      "sd": 3.11,
+      "n": 8
+     },
+     "b": {
+      "mean": 89.4,
+      "sd": 6.43,
+      "n": 5
+     },
+     "diff": 2.65,
+     "p": 0.42705,
+     "ci": [
+      -5.17,
+      10.47
+     ],
+     "perm_p": 0.32712
+    },
+    "broken": {
+     "individual": {
+      "broken": 70,
+      "stated": 566,
+      "share": 12.4
+     },
+     "aggregate": {
+      "broken": 29,
+      "stated": 371,
+      "share": 7.8
+     }
+    }
+   }
+  },
+  "gemma-4-31b": {
+   "chat_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 19.02,
+      "sd": 0.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.02,
+     "p": 0.35062,
+     "ci": [
+      -0.08,
+      0.03
+     ],
+     "perm_p": 1.0
+    },
+    "coop": {
+     "a": {
+      "mean": 95.12,
+      "sd": 0.35,
+      "n": 8
+     },
+     "b": {
+      "mean": 95.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -0.12,
+     "p": 0.35062,
+     "ci": [
+      -0.42,
+      0.17
+     ],
+     "perm_p": 1.0
+    },
+    "broken": {
+     "individual": {
+      "broken": 30,
+      "stated": 435,
+      "share": 6.9
+     },
+     "aggregate": {
+      "broken": 20,
+      "stated": 280,
+      "share": 7.1
+     }
+    }
+   },
+   "elected_vs_aggregate": {
+    "contrib": {
+     "a": {
+      "mean": 19.23,
+      "sd": 0.25,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.08,
+      "sd": 0.11,
+      "n": 5
+     },
+     "diff": -0.14,
+     "p": 0.18019,
+     "ci": [
+      -0.37,
+      0.08
+     ],
+     "perm_p": 0.35431
+    },
+    "coop": {
+     "a": {
+      "mean": 96.12,
+      "sd": 1.25,
+      "n": 8
+     },
+     "b": {
+      "mean": 95.4,
+      "sd": 0.55,
+      "n": 5
+     },
+     "diff": -0.72,
+     "p": 0.18019,
+     "ci": [
+      -1.84,
+      0.39
+     ],
+     "perm_p": 0.35431
+    },
+    "broken": {
+     "individual": {
+      "broken": 25,
+      "stated": 555,
+      "share": 4.5
+     },
+     "aggregate": {
+      "broken": 17,
+      "stated": 334,
+      "share": 5.1
+     }
+    }
+   }
+  }
+ },
+ "F_version": {
+  "gpt4o": {
+   "chat_contrib": {
+    "mean": 14.08,
+    "sd": 3.71,
+    "n": 10
+   },
+   "elected_contrib": {
+    "mean": 13.41,
+    "sd": 2.51,
+    "n": 10
+   },
+   "offers": {
+    "elected": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "salary": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "costly": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    }
+   },
+   "election_dm_share": {
+    "elected": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "salary": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "costly": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    }
+   },
+   "broken_chat": {
+    "broken": 2,
+    "stated": 754,
+    "share": 0.3
+   }
+  },
+  "gpt41": {
+   "chat_contrib": {
+    "mean": 15.33,
+    "sd": 5.03,
+    "n": 3
+   },
+   "elected_contrib": {
+    "mean": 15.39,
+    "sd": 1.6,
+    "n": 3
+   },
+   "offers": {
+    "elected": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "salary": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "costly": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    }
+   },
+   "election_dm_share": {
+    "elected": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "salary": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "costly": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    }
+   },
+   "broken_chat": {
+    "broken": 0,
+    "stated": 202,
+    "share": 0.0
+   }
+  },
+  "gpt5": {
+   "chat_contrib": {
+    "mean": 18.6,
+    "sd": 0.2,
+    "n": 3
+   },
+   "elected_contrib": {
+    "mean": 19.67,
+    "sd": 0.31,
+    "n": 3
+   },
+   "offers": {
+    "elected": {
+     "mean": 12.67,
+     "sd": 2.08,
+     "n": 3
+    },
+    "salary": {
+     "mean": 19.0,
+     "sd": 3.46,
+     "n": 3
+    },
+    "costly": {
+     "mean": 9.67,
+     "sd": 1.53,
+     "n": 3
+    }
+   },
+   "election_dm_share": {
+    "elected": {
+     "mean": 98.33,
+     "sd": 2.89,
+     "n": 3
+    },
+    "salary": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "costly": {
+     "mean": 68.33,
+     "sd": 16.07,
+     "n": 3
+    }
+   },
+   "broken_chat": {
+    "broken": 21,
+    "stated": 290,
+    "share": 7.2
+   }
+  },
+  "gpt5min": {
+   "chat_contrib": {
+    "mean": 20.0,
+    "sd": 0.0,
+    "n": 3
+   },
+   "elected_contrib": {
+    "mean": 18.51,
+    "sd": 2.52,
+    "n": 3
+   },
+   "offers": {
+    "elected": {
+     "mean": 4.33,
+     "sd": 2.08,
+     "n": 3
+    },
+    "salary": {
+     "mean": 6.0,
+     "sd": 2.65,
+     "n": 3
+    },
+    "costly": {
+     "mean": 8.33,
+     "sd": 0.58,
+     "n": 3
+    }
+   },
+   "election_dm_share": {
+    "elected": {
+     "mean": 50.0,
+     "sd": 15.0,
+     "n": 3
+    },
+    "salary": {
+     "mean": 38.33,
+     "sd": 7.64,
+     "n": 3
+    },
+    "costly": {
+     "mean": 65.0,
+     "sd": 10.0,
+     "n": 3
+    }
+   },
+   "broken_chat": {
+    "broken": 0,
+    "stated": 287,
+    "share": 0.0
+   }
+  }
+ },
+ "G_no_strategic": {
+  "gpt4o": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 14.08,
+      "sd": 3.71,
+      "n": 10
+     },
+     "b": {
+      "mean": 12.75,
+      "sd": 4.76,
+      "n": 3
+     },
+     "diff": -1.34,
+     "p": 0.68696,
+     "ci": [
+      -11.29,
+      8.62
+     ],
+     "perm_p": 0.66783
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": [
+     {
+      "broken": 2,
+      "stated": 754,
+      "share": 0.3
+     },
+     {
+      "broken": 0,
+      "stated": 236,
+      "share": 0.0
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 13.41,
+      "sd": 2.51,
+      "n": 10
+     },
+     "b": {
+      "mean": 14.33,
+      "sd": 0.98,
+      "n": 3
+     },
+     "diff": 0.92,
+     "p": 0.37097,
+     "ci": [
+      -1.27,
+      3.11
+     ],
+     "perm_p": 0.59441
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "offers": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": [
+     {
+      "broken": 0,
+      "stated": 612,
+      "share": 0.0
+     },
+     {
+      "broken": 0,
+      "stated": 203,
+      "share": 0.0
+     }
+    ]
+   }
+  },
+  "claude": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 18.61,
+      "sd": 2.19,
+      "n": 6
+     },
+     "b": {
+      "mean": 20.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 1.39,
+     "p": 0.18001,
+     "ci": [
+      -0.9,
+      3.69
+     ],
+     "perm_p": 0.32143
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 6
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": [
+     {
+      "broken": 0,
+      "stated": 446,
+      "share": 0.0
+     },
+     {
+      "broken": 0,
+      "stated": 225,
+      "share": 0.0
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 15.06,
+      "sd": 1.45,
+      "n": 8
+     },
+     "b": {
+      "mean": 17.61,
+      "sd": 2.51,
+      "n": 3
+     },
+     "diff": 2.55,
+     "p": 0.21182,
+     "ci": [
+      -2.9,
+      8.01
+     ],
+     "perm_p": 0.08485
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "offers": {
+     "a": {
+      "mean": 1.38,
+      "sd": 1.77,
+      "n": 8
+     },
+     "b": {
+      "mean": 2.33,
+      "sd": 1.15,
+      "n": 3
+     },
+     "diff": 0.96,
+     "p": 0.33614,
+     "ci": [
+      -1.3,
+      3.21
+     ],
+     "perm_p": 0.44242
+    },
+    "broken": [
+     {
+      "broken": 0,
+      "stated": 693,
+      "share": 0.0
+     },
+     {
+      "broken": 0,
+      "stated": 233,
+      "share": 0.0
+     }
+    ]
+   }
+  },
+  "gemini": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 12.48,
+      "sd": 3.52,
+      "n": 10
+     },
+     "b": {
+      "mean": 13.33,
+      "sd": 5.77,
+      "n": 3
+     },
+     "diff": 0.85,
+     "p": 0.82791,
+     "ci": [
+      -11.84,
+      13.54
+     ],
+     "perm_p": 0.91608
+    },
+    "coop": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": [
+     {
+      "broken": 0,
+      "stated": 803,
+      "share": 0.0
+     },
+     {
+      "broken": 0,
+      "stated": 193,
+      "share": 0.0
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 19.79,
+      "sd": 0.32,
+      "n": 10
+     },
+     "b": {
+      "mean": 19.97,
+      "sd": 0.06,
+      "n": 3
+     },
+     "diff": 0.18,
+     "p": 0.12024,
+     "ci": [
+      -0.06,
+      0.41
+     ],
+     "perm_p": 0.40559
+    },
+    "coop": {
+     "a": {
+      "mean": 99.4,
+      "sd": 1.58,
+      "n": 10
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.6,
+     "p": 0.25979,
+     "ci": [
+      -0.53,
+      1.73
+     ],
+     "perm_p": 0.80769
+    },
+    "offers": {
+     "a": {
+      "mean": 1.6,
+      "sd": 0.84,
+      "n": 10
+     },
+     "b": {
+      "mean": 1.67,
+      "sd": 1.15,
+      "n": 3
+     },
+     "diff": 0.07,
+     "p": 0.93253,
+     "ci": [
+      -2.38,
+      2.52
+     ],
+     "perm_p": 1.0
+    },
+    "broken": [
+     {
+      "broken": 0,
+      "stated": 265,
+      "share": 0.0
+     },
+     {
+      "broken": 0,
+      "stated": 77,
+      "share": 0.0
+     }
+    ]
+   }
+  },
+  "gpt-oss-120b": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 6.95,
+      "sd": 3.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 9.42,
+      "sd": 5.67,
+      "n": 5
+     },
+     "diff": 2.46,
+     "p": 0.42112,
+     "ci": [
+      -4.48,
+      9.41
+     ],
+     "perm_p": 0.39472
+    },
+    "coop": {
+     "a": {
+      "mean": 54.5,
+      "sd": 12.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 56.4,
+      "sd": 20.22,
+      "n": 5
+     },
+     "diff": 1.9,
+     "p": 0.85703,
+     "ci": [
+      -22.8,
+      26.6
+     ],
+     "perm_p": 0.84848
+    },
+    "broken": [
+     {
+      "broken": 196,
+      "stated": 651,
+      "share": 30.1
+     },
+     {
+      "broken": 135,
+      "stated": 427,
+      "share": 31.6
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 13.16,
+      "sd": 2.62,
+      "n": 8
+     },
+     "b": {
+      "mean": 13.17,
+      "sd": 2.49,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": 0.99772,
+     "ci": [
+      -3.27,
+      3.28
+     ],
+     "perm_p": 0.99767
+    },
+    "coop": {
+     "a": {
+      "mean": 85.25,
+      "sd": 5.31,
+      "n": 8
+     },
+     "b": {
+      "mean": 84.6,
+      "sd": 3.05,
+      "n": 5
+     },
+     "diff": -0.65,
+     "p": 0.78464,
+     "ci": [
+      -5.76,
+      4.46
+     ],
+     "perm_p": 0.85159
+    },
+    "offers": {
+     "a": {
+      "mean": 8.12,
+      "sd": 2.42,
+      "n": 8
+     },
+     "b": {
+      "mean": 8.0,
+      "sd": 3.16,
+      "n": 5
+     },
+     "diff": -0.12,
+     "p": 0.94183,
+     "ci": [
+      -4.04,
+      3.79
+     ],
+     "perm_p": 1.0
+    },
+    "broken": [
+     {
+      "broken": 91,
+      "stated": 716,
+      "share": 12.7
+     },
+     {
+      "broken": 56,
+      "stated": 439,
+      "share": 12.8
+     }
+    ]
+   }
+  },
+  "nemotron-3-super-120b": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 11.49,
+      "sd": 2.93,
+      "n": 8
+     },
+     "b": {
+      "mean": 9.45,
+      "sd": 2.29,
+      "n": 5
+     },
+     "diff": -2.04,
+     "p": 0.1913,
+     "ci": [
+      -5.28,
+      1.2
+     ],
+     "perm_p": 0.21834
+    },
+    "coop": {
+     "a": {
+      "mean": 89.62,
+      "sd": 13.41,
+      "n": 8
+     },
+     "b": {
+      "mean": 82.2,
+      "sd": 12.56,
+      "n": 5
+     },
+     "diff": -7.42,
+     "p": 0.33844,
+     "ci": [
+      -24.02,
+      9.17
+     ],
+     "perm_p": 0.36674
+    },
+    "broken": [
+     {
+      "broken": 16,
+      "stated": 134,
+      "share": 11.9
+     },
+     {
+      "broken": 11,
+      "stated": 81,
+      "share": 13.6
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 13.18,
+      "sd": 1.31,
+      "n": 8
+     },
+     "b": {
+      "mean": 12.28,
+      "sd": 1.53,
+      "n": 5
+     },
+     "diff": -0.91,
+     "p": 0.30613,
+     "ci": [
+      -2.83,
+      1.02
+     ],
+     "perm_p": 0.27584
+    },
+    "coop": {
+     "a": {
+      "mean": 97.0,
+      "sd": 2.33,
+      "n": 8
+     },
+     "b": {
+      "mean": 92.0,
+      "sd": 4.06,
+      "n": 5
+     },
+     "diff": -5.0,
+     "p": 0.04834,
+     "ci": [
+      -9.95,
+      -0.05
+     ],
+     "perm_p": 0.01554
+    },
+    "offers": {
+     "a": {
+      "mean": 0.75,
+      "sd": 0.71,
+      "n": 8
+     },
+     "b": {
+      "mean": 1.4,
+      "sd": 1.52,
+      "n": 5
+     },
+     "diff": 0.65,
+     "p": 0.40893,
+     "ci": [
+      -1.2,
+      2.5
+     ],
+     "perm_p": 0.51748
+    },
+    "broken": [
+     {
+      "broken": 8,
+      "stated": 189,
+      "share": 4.2
+     },
+     {
+      "broken": 8,
+      "stated": 142,
+      "share": 5.6
+     }
+    ]
+   }
+  },
+  "ling-3.0-flash": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 3.44,
+      "sd": 1.19,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.39,
+      "sd": 1.36,
+      "n": 5
+     },
+     "diff": -0.06,
+     "p": 0.94273,
+     "ci": [
+      -1.77,
+      1.66
+     ],
+     "perm_p": 0.94639
+    },
+    "coop": {
+     "a": {
+      "mean": 37.38,
+      "sd": 7.96,
+      "n": 8
+     },
+     "b": {
+      "mean": 34.6,
+      "sd": 9.81,
+      "n": 5
+     },
+     "diff": -2.77,
+     "p": 0.61046,
+     "ci": [
+      -15.01,
+      9.46
+     ],
+     "perm_p": 0.57032
+    },
+    "broken": [
+     {
+      "broken": 284,
+      "stated": 643,
+      "share": 44.2
+     },
+     {
+      "broken": 223,
+      "stated": 415,
+      "share": 53.7
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 3.56,
+      "sd": 1.37,
+      "n": 8
+     },
+     "b": {
+      "mean": 4.69,
+      "sd": 0.82,
+      "n": 5
+     },
+     "diff": 1.13,
+     "p": 0.09129,
+     "ci": [
+      -0.21,
+      2.47
+     ],
+     "perm_p": 0.12587
+    },
+    "coop": {
+     "a": {
+      "mean": 36.38,
+      "sd": 12.47,
+      "n": 8
+     },
+     "b": {
+      "mean": 44.8,
+      "sd": 8.17,
+      "n": 5
+     },
+     "diff": 8.42,
+     "p": 0.16932,
+     "ci": [
+      -4.19,
+      21.04
+     ],
+     "perm_p": 0.21445
+    },
+    "offers": {
+     "a": {
+      "mean": 0.88,
+      "sd": 1.73,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.8,
+      "sd": 0.45,
+      "n": 5
+     },
+     "diff": -0.07,
+     "p": 0.90981,
+     "ci": [
+      -1.54,
+      1.39
+     ],
+     "perm_p": 1.0
+    },
+    "broken": [
+     {
+      "broken": 289,
+      "stated": 631,
+      "share": 45.8
+     },
+     {
+      "broken": 190,
+      "stated": 434,
+      "share": 43.8
+     }
+    ]
+   }
+  },
+  "qwen3.8-27b": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 6.17,
+      "sd": 1.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 7.44,
+      "sd": 1.77,
+      "n": 5
+     },
+     "diff": 1.27,
+     "p": 0.21349,
+     "ci": [
+      -0.92,
+      3.46
+     ],
+     "perm_p": 0.17871
+    },
+    "coop": {
+     "a": {
+      "mean": 53.12,
+      "sd": 5.89,
+      "n": 8
+     },
+     "b": {
+      "mean": 57.2,
+      "sd": 9.34,
+      "n": 5
+     },
+     "diff": 4.08,
+     "p": 0.41599,
+     "ci": [
+      -7.33,
+      15.48
+     ],
+     "perm_p": 0.34732
+    },
+    "broken": [
+     {
+      "broken": 146,
+      "stated": 644,
+      "share": 22.7
+     },
+     {
+      "broken": 88,
+      "stated": 409,
+      "share": 21.5
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 13.64,
+      "sd": 3.65,
+      "n": 8
+     },
+     "b": {
+      "mean": 15.46,
+      "sd": 4.0,
+      "n": 5
+     },
+     "diff": 1.82,
+     "p": 0.43372,
+     "ci": [
+      -3.27,
+      6.91
+     ],
+     "perm_p": 0.40559
+    },
+    "coop": {
+     "a": {
+      "mean": 86.75,
+      "sd": 3.11,
+      "n": 8
+     },
+     "b": {
+      "mean": 87.6,
+      "sd": 7.16,
+      "n": 5
+     },
+     "diff": 0.85,
+     "p": 0.81187,
+     "ci": [
+      -7.88,
+      9.58
+     ],
+     "perm_p": 0.777
+    },
+    "offers": {
+     "a": {
+      "mean": 10.12,
+      "sd": 2.36,
+      "n": 8
+     },
+     "b": {
+      "mean": 11.6,
+      "sd": 2.41,
+      "n": 5
+     },
+     "diff": 1.47,
+     "p": 0.30854,
+     "ci": [
+      -1.63,
+      4.58
+     ],
+     "perm_p": 0.30847
+    },
+    "broken": [
+     {
+      "broken": 70,
+      "stated": 566,
+      "share": 12.4
+     },
+     {
+      "broken": 41,
+      "stated": 362,
+      "share": 11.3
+     }
+    ]
+   }
+  },
+  "gemma-4-31b": {
+   "chat": {
+    "contrib": {
+     "a": {
+      "mean": 19.02,
+      "sd": 0.07,
+      "n": 8
+     },
+     "b": {
+      "mean": 19.84,
+      "sd": 0.36,
+      "n": 5
+     },
+     "diff": 0.82,
+     "p": 0.00645,
+     "ci": [
+      0.37,
+      1.26
+     ],
+     "perm_p": 0.00155
+    },
+    "coop": {
+     "a": {
+      "mean": 95.12,
+      "sd": 0.35,
+      "n": 8
+     },
+     "b": {
+      "mean": 99.2,
+      "sd": 1.79,
+      "n": 5
+     },
+     "diff": 4.08,
+     "p": 0.00645,
+     "ci": [
+      1.87,
+      6.28
+     ],
+     "perm_p": 0.00155
+    },
+    "broken": [
+     {
+      "broken": 30,
+      "stated": 435,
+      "share": 6.9
+     },
+     {
+      "broken": 4,
+      "stated": 299,
+      "share": 1.3
+     }
+    ]
+   },
+   "elected": {
+    "contrib": {
+     "a": {
+      "mean": 19.23,
+      "sd": 0.25,
+      "n": 8
+     },
+     "b": {
+      "mean": 20.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.77,
+     "p": 5e-05,
+     "ci": [
+      0.57,
+      0.98
+     ],
+     "perm_p": 0.00078
+    },
+    "coop": {
+     "a": {
+      "mean": 96.12,
+      "sd": 1.25,
+      "n": 8
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 3.88,
+     "p": 5e-05,
+     "ci": [
+      2.83,
+      4.92
+     ],
+     "perm_p": 0.00078
+    },
+    "offers": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "broken": [
+     {
+      "broken": 25,
+      "stated": 555,
+      "share": 4.5
+     },
+     {
+      "broken": 0,
+      "stated": 393,
+      "share": 0.0
+     }
+    ]
+   }
+  }
+ },
+ "H_quantisation": {
+  "baseline": {
+   "coop": {
+    "a": {
+     "mean": 22.67,
+     "sd": 16.86,
+     "n": 3
+    },
+    "b": {
+     "mean": 28.38,
+     "sd": 35.31,
+     "n": 8
+    },
+    "diff": 5.71,
+    "p": 0.72788,
+    "ci": [
+     -30.89,
+     42.3
+    ],
+    "perm_p": 0.92121
+   },
+   "contrib": {
+    "a": {
+     "mean": 2.33,
+     "sd": 1.84,
+     "n": 3
+    },
+    "b": {
+     "mean": 2.97,
+     "sd": 3.54,
+     "n": 8
+    },
+    "diff": 0.64,
+    "p": 0.70957,
+    "ci": [
+     -3.21,
+     4.48
+    ],
+    "perm_p": 0.88485
+   },
+   "offers": null,
+   "broken": {
+    "bf16": {
+     "broken": 0,
+     "stated": 0,
+     "share": null
+    },
+    "nvfp4": {
+     "broken": 0,
+     "stated": 0,
+     "share": null
+    }
+   }
+  },
+  "chat": {
+   "coop": {
+    "a": {
+     "mean": 53.12,
+     "sd": 5.89,
+     "n": 8
+    },
+    "b": {
+     "mean": 66.62,
+     "sd": 13.49,
+     "n": 8
+    },
+    "diff": 13.5,
+    "p": 0.02766,
+    "ci": [
+     1.83,
+     25.17
+    ],
+    "perm_p": 0.02564
+   },
+   "contrib": {
+    "a": {
+     "mean": 6.17,
+     "sd": 1.36,
+     "n": 8
+    },
+    "b": {
+     "mean": 7.39,
+     "sd": 2.17,
+     "n": 8
+    },
+    "diff": 1.22,
+    "p": 0.20364,
+    "ci": [
+     -0.76,
+     3.2
+    ],
+    "perm_p": 0.19643
+   },
+   "offers": {
+    "a": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "b": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "diff": 0.0,
+    "p": null,
+    "ci": null,
+    "perm_p": null,
+    "note": "no variance"
+   },
+   "broken": {
+    "bf16": {
+     "broken": 146,
+     "stated": 644,
+     "share": 22.7
+    },
+    "nvfp4": {
+     "broken": 113,
+     "stated": 623,
+     "share": 18.1
+    }
+   }
+  },
+  "elected": {
+   "coop": {
+    "a": {
+     "mean": 86.75,
+     "sd": 3.11,
+     "n": 8
+    },
+    "b": {
+     "mean": 90.88,
+     "sd": 5.74,
+     "n": 8
+    },
+    "diff": 4.12,
+    "p": 0.10207,
+    "ci": [
+     -0.97,
+     9.22
+    ],
+    "perm_p": 0.10645
+   },
+   "contrib": {
+    "a": {
+     "mean": 13.64,
+     "sd": 3.65,
+     "n": 8
+    },
+    "b": {
+     "mean": 10.11,
+     "sd": 1.64,
+     "n": 8
+    },
+    "diff": -3.53,
+    "p": 0.03255,
+    "ci": [
+     -6.69,
+     -0.36
+    ],
+    "perm_p": 0.02797
+   },
+   "offers": {
+    "a": {
+     "mean": 10.12,
+     "sd": 2.36,
+     "n": 8
+    },
+    "b": {
+     "mean": 9.62,
+     "sd": 2.45,
+     "n": 8
+    },
+    "diff": -0.5,
+    "p": 0.68345,
+    "ci": [
+     -3.08,
+     2.08
+    ],
+    "perm_p": 0.75944
+   },
+   "broken": {
+    "bf16": {
+     "broken": 70,
+     "stated": 566,
+     "share": 12.4
+    },
+    "nvfp4": {
+     "broken": 42,
+     "stated": 573,
+     "share": 7.3
+    }
+   }
+  },
+  "salary": {
+   "coop": {
+    "a": {
+     "mean": 82.62,
+     "sd": 6.55,
+     "n": 8
+    },
+    "b": {
+     "mean": 93.38,
+     "sd": 3.93,
+     "n": 8
+    },
+    "diff": 10.75,
+    "p": 0.00198,
+    "ci": [
+     4.84,
+     16.66
+    ],
+    "perm_p": 0.0014
+   },
+   "contrib": {
+    "a": {
+     "mean": 13.75,
+     "sd": 3.1,
+     "n": 8
+    },
+    "b": {
+     "mean": 10.5,
+     "sd": 0.81,
+     "n": 8
+    },
+    "diff": -3.24,
+    "p": 0.02135,
+    "ci": [
+     -5.86,
+     -0.62
+    ],
+    "perm_p": 0.01492
+   },
+   "offers": {
+    "a": {
+     "mean": 18.38,
+     "sd": 3.7,
+     "n": 8
+    },
+    "b": {
+     "mean": 17.75,
+     "sd": 2.71,
+     "n": 8
+    },
+    "diff": -0.62,
+    "p": 0.70635,
+    "ci": [
+     -4.13,
+     2.88
+    ],
+    "perm_p": 0.76239
+   },
+   "broken": {
+    "bf16": {
+     "broken": 74,
+     "stated": 528,
+     "share": 14.0
+    },
+    "nvfp4": {
+     "broken": 27,
+     "stated": 518,
+     "share": 5.2
+    }
+   }
+  }
+ },
+ "I_endgame": {
+  "gpt4o": {
+   "chat": {
+    "contrib_r1_19": 14.01,
+    "contrib_r20": 15.5,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 45,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 2,
+     "stated": 709,
+     "share": 0.3
+    },
+    "share_of_broken_in_r20": 0.0
+   },
+   "elected": {
+    "contrib_r1_19": 13.32,
+    "contrib_r20": 15.24,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 29,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 583,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "claude": {
+   "chat": {
+    "contrib_r1_19": 18.61,
+    "contrib_r20": 18.67,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 26,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 420,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 15.05,
+    "contrib_r20": 15.12,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 35,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 658,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "gemini": {
+   "chat": {
+    "contrib_r1_19": 12.48,
+    "contrib_r20": 12.5,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 50,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 753,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 19.78,
+    "contrib_r20": 20.0,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 39,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 226,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "deepseek": {
+   "chat": {
+    "contrib_r1_19": 14.75,
+    "contrib_r20": 16.38,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 5,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 524,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 15.04,
+    "contrib_r20": 16.88,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 31,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 330,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "grok": {
+   "chat": {
+    "contrib_r1_19": 19.79,
+    "contrib_r20": 0.67,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 0,
+     "share": null
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 30,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 19.99,
+    "contrib_r20": 4.5,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 0,
+     "share": null
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 50,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "qwen": {
+   "chat": {
+    "contrib_r1_19": 14.13,
+    "contrib_r20": 14.7,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 49,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 835,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 13.61,
+    "contrib_r20": 15.9,
+    "broken_r20": {
+     "broken": 1,
+     "stated": 47,
+     "share": 2.1
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 839,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": 100.0
+   }
+  },
+  "gpt5": {
+   "chat": {
+    "contrib_r1_19": 19.58,
+    "contrib_r20": 0.0,
+    "broken_r20": {
+     "broken": 15,
+     "stated": 15,
+     "share": 100.0
+    },
+    "broken_r1_19": {
+     "broken": 6,
+     "stated": 275,
+     "share": 2.2
+    },
+    "share_of_broken_in_r20": 71.4
+   },
+   "elected": {
+    "contrib_r1_19": 20.0,
+    "contrib_r20": 13.33,
+    "broken_r20": {
+     "broken": 5,
+     "stated": 14,
+     "share": 35.7
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 284,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": 100.0
+   }
+  },
+  "deepseek31": {
+   "chat": {
+    "contrib_r1_19": 19.99,
+    "contrib_r20": 20.0,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 6,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 70,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 17.81,
+    "contrib_r20": 19.5,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 34,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 430,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "gpt-oss-120b": {
+   "chat": {
+    "contrib_r1_19": 7.32,
+    "contrib_r20": 0.0,
+    "broken_r20": {
+     "broken": 7,
+     "stated": 26,
+     "share": 26.9
+    },
+    "broken_r1_19": {
+     "broken": 189,
+     "stated": 625,
+     "share": 30.2
+    },
+    "share_of_broken_in_r20": 3.6
+   },
+   "elected": {
+    "contrib_r1_19": 13.44,
+    "contrib_r20": 8.0,
+    "broken_r20": {
+     "broken": 10,
+     "stated": 28,
+     "share": 35.7
+    },
+    "broken_r1_19": {
+     "broken": 81,
+     "stated": 688,
+     "share": 11.8
+    },
+    "share_of_broken_in_r20": 11.0
+   }
+  },
+  "nemotron-3-super-120b": {
+   "chat": {
+    "contrib_r1_19": 11.54,
+    "contrib_r20": 10.5,
+    "broken_r20": {
+     "broken": 3,
+     "stated": 11,
+     "share": 27.3
+    },
+    "broken_r1_19": {
+     "broken": 13,
+     "stated": 123,
+     "share": 10.6
+    },
+    "share_of_broken_in_r20": 18.8
+   },
+   "elected": {
+    "contrib_r1_19": 13.22,
+    "contrib_r20": 12.45,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 4,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 8,
+     "stated": 185,
+     "share": 4.3
+    },
+    "share_of_broken_in_r20": 0.0
+   }
+  },
+  "ling-3.0-flash": {
+   "chat": {
+    "contrib_r1_19": 3.63,
+    "contrib_r20": 0.0,
+    "broken_r20": {
+     "broken": 15,
+     "stated": 39,
+     "share": 38.5
+    },
+    "broken_r1_19": {
+     "broken": 269,
+     "stated": 604,
+     "share": 44.5
+    },
+    "share_of_broken_in_r20": 5.3
+   },
+   "elected": {
+    "contrib_r1_19": 3.63,
+    "contrib_r20": 2.25,
+    "broken_r20": {
+     "broken": 14,
+     "stated": 35,
+     "share": 40.0
+    },
+    "broken_r1_19": {
+     "broken": 275,
+     "stated": 596,
+     "share": 46.1
+    },
+    "share_of_broken_in_r20": 4.8
+   }
+  },
+  "qwen3.8-27b": {
+   "chat": {
+    "contrib_r1_19": 6.5,
+    "contrib_r20": 0.0,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 29,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 146,
+     "stated": 615,
+     "share": 23.7
+    },
+    "share_of_broken_in_r20": 0.0
+   },
+   "elected": {
+    "contrib_r1_19": 14.03,
+    "contrib_r20": 6.12,
+    "broken_r20": {
+     "broken": 10,
+     "stated": 27,
+     "share": 37.0
+    },
+    "broken_r1_19": {
+     "broken": 60,
+     "stated": 539,
+     "share": 11.1
+    },
+    "share_of_broken_in_r20": 14.3
+   }
+  },
+  "gemma-4-31b": {
+   "chat": {
+    "contrib_r1_19": 20.0,
+    "contrib_r20": 0.5,
+    "broken_r20": {
+     "broken": 30,
+     "stated": 30,
+     "share": 100.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 405,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": 100.0
+   },
+   "elected": {
+    "contrib_r1_19": 20.0,
+    "contrib_r20": 4.5,
+    "broken_r20": {
+     "broken": 25,
+     "stated": 31,
+     "share": 80.6
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 524,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": 100.0
+   }
+  },
+  "gpt41": {
+   "chat": {
+    "contrib_r1_19": 15.33,
+    "contrib_r20": 15.33,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 13,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 189,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 15.22,
+    "contrib_r20": 18.67,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 9,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 214,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   }
+  },
+  "gpt5min": {
+   "chat": {
+    "contrib_r1_19": 20.0,
+    "contrib_r20": 20.0,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 14,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 0,
+     "stated": 273,
+     "share": 0.0
+    },
+    "share_of_broken_in_r20": null
+   },
+   "elected": {
+    "contrib_r1_19": 18.5,
+    "contrib_r20": 18.67,
+    "broken_r20": {
+     "broken": 0,
+     "stated": 15,
+     "share": 0.0
+    },
+    "broken_r1_19": {
+     "broken": 4,
+     "stated": 273,
+     "share": 1.5
+    },
+    "share_of_broken_in_r20": 0.0
+   }
+  }
+ },
+ "J_offer_measure": {
+  "population_round1": {
+   "rule_matches": 749,
+   "non_matches": 595
+  },
+  "sample": {
+   "rule_matches": 150,
+   "non_matches": 50,
+   "offers_among_non_matches": 28,
+   "offers_among_matches": 139
+  },
+  "strict_rule_population_weighted": {
+   "precision": 0.927,
+   "recall": 0.676
+  },
+  "keyword_population_weighted": {
+   "precision": 0.764,
+   "recall": 1.0
+  },
+  "strict_or_keyword_population_weighted": {
+   "precision": 0.764,
+   "recall": 1.0
+  },
+  "population_share_of_election_messages_that_are_offers": 0.764,
+  "per_model": {
+   "gpt4o": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "offers_keyword": {
+      "mean": 0.1,
+      "sd": 0.32,
+      "n": 10
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 0.67,
+      "sd": 0.58,
+      "n": 3
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "claude": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 8.12,
+      "sd": 7.99,
+      "n": 8
+     },
+     "offers": {
+      "mean": 1.38,
+      "sd": 1.77,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 1.62,
+      "sd": 1.6,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "offers": {
+      "mean": 14.5,
+      "sd": 1.6,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 15.5,
+      "sd": 2.0,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 41.88,
+      "sd": 8.84,
+      "n": 8
+     },
+     "offers": {
+      "mean": 7.62,
+      "sd": 1.6,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 9.5,
+      "sd": 2.45,
+      "n": 8
+     }
+    }
+   },
+   "gemini": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 11.5,
+      "sd": 5.3,
+      "n": 10
+     },
+     "offers": {
+      "mean": 1.6,
+      "sd": 0.84,
+      "n": 10
+     },
+     "offers_keyword": {
+      "mean": 2.4,
+      "sd": 1.26,
+      "n": 10
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "offers": {
+      "mean": 5.88,
+      "sd": 1.55,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 6.12,
+      "sd": 1.55,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 31.25,
+      "sd": 8.35,
+      "n": 8
+     },
+     "offers": {
+      "mean": 5.75,
+      "sd": 1.67,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 6.25,
+      "sd": 1.67,
+      "n": 8
+     }
+    }
+   },
+   "deepseek": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 12.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "offers": {
+      "mean": 2.12,
+      "sd": 0.99,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 2.62,
+      "sd": 1.19,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 13.33,
+      "sd": 10.41,
+      "n": 3
+     },
+     "offers": {
+      "mean": 2.33,
+      "sd": 1.53,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 2.67,
+      "sd": 2.08,
+      "n": 3
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 5.0,
+      "sd": 8.66,
+      "n": 3
+     },
+     "offers": {
+      "mean": 0.33,
+      "sd": 0.58,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 1.67,
+      "sd": 2.08,
+      "n": 3
+     }
+    }
+   },
+   "grok": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "offers": {
+      "mean": 2.75,
+      "sd": 1.04,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 3.38,
+      "sd": 1.51,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     }
+    }
+   },
+   "qwen": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    }
+   },
+   "gpt5": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 98.33,
+      "sd": 2.89,
+      "n": 3
+     },
+     "offers": {
+      "mean": 12.67,
+      "sd": 2.08,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 23.33,
+      "sd": 0.58,
+      "n": 3
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "offers": {
+      "mean": 19.0,
+      "sd": 3.46,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 26.33,
+      "sd": 2.08,
+      "n": 3
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 68.33,
+      "sd": 16.07,
+      "n": 3
+     },
+     "offers": {
+      "mean": 9.67,
+      "sd": 1.53,
+      "n": 3
+     },
+     "offers_keyword": {
+      "mean": 16.0,
+      "sd": 4.58,
+      "n": 3
+     }
+    }
+   },
+   "deepseek31": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 81.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "offers": {
+      "mean": 14.75,
+      "sd": 2.25,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 17.5,
+      "sd": 2.45,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "offers": {
+      "mean": 14.62,
+      "sd": 1.77,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 17.5,
+      "sd": 1.51,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 87.5,
+      "sd": 8.02,
+      "n": 8
+     },
+     "offers": {
+      "mean": 13.25,
+      "sd": 1.75,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 18.12,
+      "sd": 2.17,
+      "n": 8
+     }
+    }
+   },
+   "gpt-oss-120b": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 68.75,
+      "sd": 9.91,
+      "n": 8
+     },
+     "offers": {
+      "mean": 8.12,
+      "sd": 2.42,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 19.12,
+      "sd": 3.98,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "offers": {
+      "mean": 10.38,
+      "sd": 3.78,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 19.62,
+      "sd": 3.02,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 41.88,
+      "sd": 6.51,
+      "n": 8
+     },
+     "offers": {
+      "mean": 9.0,
+      "sd": 3.07,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 11.75,
+      "sd": 2.71,
+      "n": 8
+     }
+    }
+   },
+   "nemotron-3-super-120b": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 57.5,
+      "sd": 9.64,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.75,
+      "sd": 0.71,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 13.75,
+      "sd": 2.66,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "offers": {
+      "mean": 1.38,
+      "sd": 1.3,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 17.88,
+      "sd": 1.36,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 75.0,
+      "sd": 10.35,
+      "n": 8
+     },
+     "offers": {
+      "mean": 2.88,
+      "sd": 1.81,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 17.62,
+      "sd": 2.92,
+      "n": 8
+     }
+    }
+   },
+   "ling-3.0-flash": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 15.0,
+      "sd": 7.07,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.88,
+      "sd": 1.73,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 5.12,
+      "sd": 2.59,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 19.38,
+      "sd": 5.63,
+      "n": 8
+     },
+     "offers": {
+      "mean": 1.25,
+      "sd": 1.28,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 4.88,
+      "sd": 1.64,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 15.0,
+      "sd": 5.35,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.88,
+      "sd": 0.35,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 3.75,
+      "sd": 1.58,
+      "n": 8
+     }
+    }
+   },
+   "qwen3.8-27b": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 63.75,
+      "sd": 10.61,
+      "n": 8
+     },
+     "offers": {
+      "mean": 10.12,
+      "sd": 2.36,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 16.38,
+      "sd": 2.97,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "offers": {
+      "mean": 18.38,
+      "sd": 3.7,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 19.25,
+      "sd": 1.98,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 78.12,
+      "sd": 7.53,
+      "n": 8
+     },
+     "offers": {
+      "mean": 16.25,
+      "sd": 1.49,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 18.5,
+      "sd": 2.62,
+      "n": 8
+     }
+    }
+   },
+   "gemma-4-31b": {
+    "elected": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     }
+    },
+    "salary": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     }
+    },
+    "costly": {
+     "election_dm_share": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "offers_keyword": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     }
+    }
+   }
+  },
+  "pay_effect_keyword": {
+   "gpt4o": {
+    "a": {
+     "mean": 0.1,
+     "sd": 0.32,
+     "n": 10
+    },
+    "b": {
+     "mean": 0.67,
+     "sd": 0.58,
+     "n": 3
+    },
+    "diff": 0.57,
+    "p": 0.22529,
+    "ci": [
+     -0.73,
+     1.86
+    ],
+    "perm_p": 0.10839
+   },
+   "claude": {
+    "a": {
+     "mean": 1.62,
+     "sd": 1.6,
+     "n": 8
+    },
+    "b": {
+     "mean": 15.5,
+     "sd": 2.0,
+     "n": 8
+    },
+    "diff": 13.88,
+    "p": 0.0,
+    "ci": [
+     11.92,
+     15.83
+    ],
+    "perm_p": 0.00016
+   },
+   "gemini": {
+    "a": {
+     "mean": 2.4,
+     "sd": 1.26,
+     "n": 10
+    },
+    "b": {
+     "mean": 6.12,
+     "sd": 1.55,
+     "n": 8
+    },
+    "diff": 3.73,
+    "p": 9e-05,
+    "ci": [
+     2.26,
+     5.19
+    ],
+    "perm_p": 0.00025
+   },
+   "deepseek": {
+    "a": {
+     "mean": 2.62,
+     "sd": 1.19,
+     "n": 8
+    },
+    "b": {
+     "mean": 2.67,
+     "sd": 2.08,
+     "n": 3
+    },
+    "diff": 0.04,
+    "p": 0.97632,
+    "ci": [
+     -4.5,
+     4.58
+    ],
+    "perm_p": 1.0
+   },
+   "grok": {
+    "a": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "b": {
+     "mean": 3.38,
+     "sd": 1.51,
+     "n": 8
+    },
+    "diff": 3.38,
+    "p": 0.00039,
+    "ci": [
+     2.12,
+     4.63
+    ],
+    "perm_p": 0.00016
+   },
+   "qwen": {
+    "a": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "b": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "diff": 0.0,
+    "p": null,
+    "ci": null,
+    "perm_p": null,
+    "note": "no variance"
+   },
+   "gpt5": {
+    "a": {
+     "mean": 23.33,
+     "sd": 0.58,
+     "n": 3
+    },
+    "b": {
+     "mean": 26.33,
+     "sd": 2.08,
+     "n": 3
+    },
+    "diff": 3.0,
+    "p": 0.1212,
+    "ci": [
+     -1.74,
+     7.74
+    ],
+    "perm_p": 0.2
+   },
+   "deepseek31": {
+    "a": {
+     "mean": 17.5,
+     "sd": 2.45,
+     "n": 8
+    },
+    "b": {
+     "mean": 17.5,
+     "sd": 1.51,
+     "n": 8
+    },
+    "diff": 0.0,
+    "p": 1.0,
+    "ci": [
+     -2.22,
+     2.22
+    ],
+    "perm_p": 1.0
+   },
+   "gpt-oss-120b": {
+    "a": {
+     "mean": 19.12,
+     "sd": 3.98,
+     "n": 8
+    },
+    "b": {
+     "mean": 19.62,
+     "sd": 3.02,
+     "n": 8
+    },
+    "diff": 0.5,
+    "p": 0.78158,
+    "ci": [
+     -3.31,
+     4.31
+    ],
+    "perm_p": 0.83574
+   },
+   "nemotron-3-super-120b": {
+    "a": {
+     "mean": 13.75,
+     "sd": 2.66,
+     "n": 8
+    },
+    "b": {
+     "mean": 17.88,
+     "sd": 1.36,
+     "n": 8
+    },
+    "diff": 4.12,
+    "p": 0.00271,
+    "ci": [
+     1.79,
+     6.46
+    ],
+    "perm_p": 0.00249
+   },
+   "ling-3.0-flash": {
+    "a": {
+     "mean": 5.12,
+     "sd": 2.59,
+     "n": 8
+    },
+    "b": {
+     "mean": 4.88,
+     "sd": 1.64,
+     "n": 8
+    },
+    "diff": -0.25,
+    "p": 0.82147,
+    "ci": [
+     -2.61,
+     2.11
+    ],
+    "perm_p": 0.91671
+   },
+   "qwen3.8-27b": {
+    "a": {
+     "mean": 16.38,
+     "sd": 2.97,
+     "n": 8
+    },
+    "b": {
+     "mean": 19.25,
+     "sd": 1.98,
+     "n": 8
+    },
+    "diff": 2.88,
+    "p": 0.04167,
+    "ci": [
+     0.13,
+     5.62
+    ],
+    "perm_p": 0.05532
+   },
+   "gemma-4-31b": {
+    "a": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "b": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "diff": 0.0,
+    "p": null,
+    "ci": null,
+    "perm_p": null,
+    "note": "no variance"
+   }
+  }
+ },
+ "K_reelection_clustered": {
+  "main_api": {
+   "elections": 468,
+   "games": 156,
+   "reelected": 303,
+   "group_contrib": {
+    "log_odds_per_sd": 0.1,
+    "p": 0.5578,
+    "ci": [
+     -0.234,
+     0.433
+    ]
+   },
+   "own_contrib": {
+    "log_odds_per_sd": 0.117,
+    "p": 0.4367,
+    "ci": [
+     -0.178,
+     0.412
+    ]
+   },
+   "reward": {
+    "log_odds_per_sd": 0.204,
+    "p": 0.4865,
+    "ci": [
+     -0.37,
+     0.778
+    ]
+   },
+   "punish": {
+    "log_odds_per_sd": -0.031,
+    "p": 0.7782,
+    "ci": [
+     -0.247,
+     0.185
+    ]
+   },
+   "record_spread_sd": {
+    "group_contrib": 3.04,
+    "own_contrib": 3.15,
+    "reward": 7.3,
+    "punish": 0.24
+   }
+  },
+  "newer": {
+   "elections": 135,
+   "games": 45,
+   "reelected": 104,
+   "group_contrib": {
+    "log_odds_per_sd": 0.154,
+    "p": 0.719,
+    "ci": [
+     -0.683,
+     0.99
+    ]
+   },
+   "own_contrib": {
+    "log_odds_per_sd": 0.25,
+    "p": 0.4776,
+    "ci": [
+     -0.439,
+     0.938
+    ]
+   },
+   "reward": {
+    "log_odds_per_sd": 0.495,
+    "p": 0.4625,
+    "ci": [
+     -0.825,
+     1.814
+    ]
+   },
+   "punish": {
+    "log_odds_per_sd": -0.287,
+    "p": 0.1375,
+    "ci": [
+     -0.665,
+     0.092
+    ]
+   },
+   "record_spread_sd": {
+    "group_contrib": 1.3,
+    "own_contrib": 1.2,
+    "reward": 9.52,
+    "punish": 0.14
+   }
+  },
+  "self_hosted": {
+   "elections": 450,
+   "games": 150,
+   "reelected": 348,
+   "group_contrib": {
+    "log_odds_per_sd": 0.141,
+    "p": 0.5603,
+    "ci": [
+     -0.333,
+     0.614
+    ]
+   },
+   "own_contrib": {
+    "log_odds_per_sd": 0.042,
+    "p": 0.8485,
+    "ci": [
+     -0.387,
+     0.47
+    ]
+   },
+   "reward": {
+    "log_odds_per_sd": 0.223,
+    "p": 0.1364,
+    "ci": [
+     -0.071,
+     0.517
+    ]
+   },
+   "punish": {
+    "log_odds_per_sd": -0.224,
+    "p": 0.1613,
+    "ci": [
+     -0.539,
+     0.09
+    ]
+   },
+   "record_spread_sd": {
+    "group_contrib": 5.64,
+    "own_contrib": 6.02,
+    "reward": 3.34,
+    "punish": 2.73
+   }
+  }
+ },
+ "L_sanction_mentions_pct_of_public_messages": {
+  "gpt4o": {
+   "elected": 1.6,
+   "hidden": 0.6,
+   "anonymous": 0.9
+  },
+  "claude": {
+   "elected": 10.8,
+   "hidden": 6.6,
+   "anonymous": 8.8
+  },
+  "gemini": {
+   "elected": 3.2,
+   "hidden": 1.0,
+   "anonymous": 2.7
+  },
+  "deepseek": {
+   "elected": 0.0,
+   "hidden": 0.3,
+   "anonymous": 0.3
+  },
+  "grok": {
+   "elected": 3.6,
+   "hidden": 3.7,
+   "anonymous": 2.4
+  },
+  "qwen": {
+   "elected": 6.6,
+   "hidden": 4.0,
+   "anonymous": 7.3
+  },
+  "gpt5": {
+   "elected": 47.5,
+   "hidden": 46.7,
+   "anonymous": 44.4
+  },
+  "deepseek31": {
+   "elected": 10.1,
+   "hidden": 5.4,
+   "anonymous": 6.8
+  },
+  "gpt-oss-120b": {
+   "elected": 21.9,
+   "hidden": 23.8,
+   "anonymous": 19.1
+  },
+  "nemotron-3-super-120b": {
+   "elected": 4.8,
+   "hidden": 2.1,
+   "anonymous": 0.0
+  },
+  "ling-3.0-flash": {
+   "elected": 18.7,
+   "hidden": 21.1,
+   "anonymous": 18.5
+  },
+  "qwen3.8-27b": {
+   "elected": 5.7,
+   "hidden": 5.7,
+   "anonymous": 6.7
+  },
+  "gemma-4-31b": {
+   "elected": 0.0,
+   "hidden": 0.0,
+   "anonymous": 0.0
+  }
+ },
+ "M_valid_replies": {
+  "gpt-oss-120b": {
+   "baseline": {
+    "valid_share": 100.0,
+    "contrib_all": 0.63,
+    "contrib_valid": 0.63,
+    "coop_valid": 6.7
+   },
+   "chat": {
+    "valid_share": 100.0,
+    "contrib_all": 6.95,
+    "contrib_valid": 6.95,
+    "coop_valid": 54.5
+   },
+   "elected": {
+    "valid_share": 100.0,
+    "contrib_all": 13.16,
+    "contrib_valid": 13.16,
+    "coop_valid": 85.2
+   }
+  },
+  "nemotron-3-super-120b": {
+   "baseline": {
+    "valid_share": 88.3,
+    "contrib_all": 1.38,
+    "contrib_valid": 1.57,
+    "coop_valid": 17.0
+   },
+   "chat": {
+    "valid_share": 95.0,
+    "contrib_all": 11.49,
+    "contrib_valid": 12.1,
+    "coop_valid": 94.3
+   },
+   "elected": {
+    "valid_share": 97.5,
+    "contrib_all": 13.18,
+    "contrib_valid": 13.52,
+    "coop_valid": 99.5
+   }
+  },
+  "ling-3.0-flash": {
+   "baseline": {
+    "valid_share": 100.0,
+    "contrib_all": 9.67,
+    "contrib_valid": 9.67,
+    "coop_valid": 89.7
+   },
+   "chat": {
+    "valid_share": 99.6,
+    "contrib_all": 3.44,
+    "contrib_valid": 3.46,
+    "coop_valid": 37.5
+   },
+   "elected": {
+    "valid_share": 100.0,
+    "contrib_all": 3.56,
+    "contrib_valid": 3.56,
+    "coop_valid": 36.4
+   }
+  },
+  "qwen3.8-27b": {
+   "baseline": {
+    "valid_share": 100.0,
+    "contrib_all": 2.33,
+    "contrib_valid": 2.33,
+    "coop_valid": 22.7
+   },
+   "chat": {
+    "valid_share": 100.0,
+    "contrib_all": 6.17,
+    "contrib_valid": 6.17,
+    "coop_valid": 53.1
+   },
+   "elected": {
+    "valid_share": 99.9,
+    "contrib_all": 13.64,
+    "contrib_valid": 13.65,
+    "coop_valid": 86.9
+   }
+  },
+  "gemma-4-31b": {
+   "baseline": {
+    "valid_share": 100.0,
+    "contrib_all": 19.0,
+    "contrib_valid": 19.0,
+    "coop_valid": 95.0
+   },
+   "chat": {
+    "valid_share": 100.0,
+    "contrib_all": 19.02,
+    "contrib_valid": 19.02,
+    "coop_valid": 95.1
+   },
+   "elected": {
+    "valid_share": 100.0,
+    "contrib_all": 19.23,
+    "contrib_valid": 19.23,
+    "coop_valid": 96.1
+   }
+  }
+ },
+ "N_llm_judge": {
+  "model": "openai/gpt-4.1-mini",
+  "validation": {
+   "n": 200,
+   "precision": 0.845,
+   "recall": 0.982,
+   "is_offer": {
+    "n": 200,
+    "agreement": 0.835,
+    "kappa": 0.109
+   },
+   "category": {
+    "n": 200,
+    "agreement": 0.725,
+    "kappa": 0.524
+   },
+   "population_weighted": {
+    "precision": 0.776,
+    "recall": 0.972
+   }
+  },
+  "offer_share_of_election_opportunities": {
+   "gpt4o": {
+    "share": {
+     "elected": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "costly": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "claude": {
+    "share": {
+     "elected": {
+      "mean": 8.12,
+      "sd": 7.99,
+      "n": 8
+     },
+     "salary": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "costly": {
+      "mean": 38.75,
+      "sd": 7.91,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 27.0,
+      "sd": 8.37,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 8.12,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "diff": 63.75,
+     "p": 0.0,
+     "ci": [
+      55.18,
+      72.32
+     ],
+     "perm_p": 0.00016
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 38.75,
+      "sd": 7.91,
+      "n": 8
+     },
+     "diff": -33.12,
+     "p": 0.0,
+     "ci": [
+      -41.65,
+      -24.6
+     ],
+     "perm_p": 0.00016
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 8.12,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -8.12,
+     "p": 0.02378,
+     "ci": [
+      -14.8,
+      -1.45
+     ],
+     "perm_p": 0.05828
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 71.88,
+      "sd": 7.99,
+      "n": 8
+     },
+     "b": {
+      "mean": 27.0,
+      "sd": 8.37,
+      "n": 5
+     },
+     "diff": -44.88,
+     "p": 1e-05,
+     "ci": [
+      -55.62,
+      -34.13
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 27.0,
+      "sd": 8.37,
+      "n": 5
+     },
+     "diff": 27.0,
+     "p": 0.00196,
+     "ci": [
+      16.61,
+      37.39
+     ],
+     "perm_p": 0.00794
+    }
+   },
+   "gemini": {
+    "share": {
+     "elected": {
+      "mean": 11.0,
+      "sd": 5.16,
+      "n": 10
+     },
+     "salary": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "costly": {
+      "mean": 30.62,
+      "sd": 8.21,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 11.0,
+      "sd": 5.16,
+      "n": 10
+     },
+     "b": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "diff": 19.62,
+     "p": 6e-05,
+     "ci": [
+      12.65,
+      26.6
+     ],
+     "perm_p": 0.0001
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 30.62,
+      "sd": 8.21,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": 1.0,
+     "ci": [
+      -8.57,
+      8.57
+     ],
+     "perm_p": 1.0
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 11.0,
+      "sd": 5.16,
+      "n": 10
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -11.0,
+     "p": 8e-05,
+     "ci": [
+      -14.69,
+      -7.31
+     ],
+     "perm_p": 0.00133
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 30.62,
+      "sd": 7.76,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -30.62,
+     "p": 1e-05,
+     "ci": [
+      -37.12,
+      -24.13
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "deepseek": {
+    "share": {
+     "elected": {
+      "mean": 12.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "salary": {
+      "mean": 13.33,
+      "sd": 10.41,
+      "n": 3
+     },
+     "costly": {
+      "mean": 5.0,
+      "sd": 8.66,
+      "n": 3
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 12.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 13.33,
+      "sd": 10.41,
+      "n": 3
+     },
+     "diff": 0.83,
+     "p": 0.90566,
+     "ci": [
+      -21.85,
+      23.51
+     ],
+     "perm_p": 1.0
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 13.33,
+      "sd": 10.41,
+      "n": 3
+     },
+     "b": {
+      "mean": 5.0,
+      "sd": 8.66,
+      "n": 3
+     },
+     "diff": -8.33,
+     "p": 0.34833,
+     "ci": [
+      -30.32,
+      13.66
+     ],
+     "perm_p": 0.5
+    }
+   },
+   "grok": {
+    "share": {
+     "elected": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "salary": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "costly": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "diff": 15.0,
+     "p": 0.00034,
+     "ci": [
+      9.53,
+      20.47
+     ],
+     "perm_p": 0.00016
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": -15.0,
+     "p": 0.00034,
+     "ci": [
+      -20.47,
+      -9.53
+     ],
+     "perm_p": 0.00016
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 15.0,
+      "sd": 6.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": -15.0,
+     "p": 0.00034,
+     "ci": [
+      -20.47,
+      -9.53
+     ],
+     "perm_p": 0.00155
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "qwen": {
+    "share": {
+     "elected": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "costly": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 10
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "gpt5": {
+    "share": {
+     "elected": {
+      "mean": 98.33,
+      "sd": 2.89,
+      "n": 3
+     },
+     "salary": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "costly": {
+      "mean": 68.33,
+      "sd": 16.07,
+      "n": 3
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 98.33,
+      "sd": 2.89,
+      "n": 3
+     },
+     "b": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 1.67,
+     "p": 0.42265,
+     "ci": [
+      -5.5,
+      8.84
+     ],
+     "perm_p": 1.0
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 100.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "b": {
+      "mean": 68.33,
+      "sd": 16.07,
+      "n": 3
+     },
+     "diff": -31.67,
+     "p": 0.07619,
+     "ci": [
+      -71.59,
+      8.26
+     ],
+     "perm_p": 0.1
+    }
+   },
+   "deepseek31": {
+    "share": {
+     "elected": {
+      "mean": 81.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "salary": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "costly": {
+      "mean": 87.5,
+      "sd": 8.02,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 35.0,
+      "sd": 9.35,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 34.0,
+      "sd": 4.18,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 81.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "diff": 3.75,
+     "p": 0.40644,
+     "ci": [
+      -5.7,
+      13.2
+     ],
+     "perm_p": 0.48765
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "b": {
+      "mean": 87.5,
+      "sd": 8.02,
+      "n": 8
+     },
+     "diff": 1.88,
+     "p": 0.63218,
+     "ci": [
+      -6.35,
+      10.1
+     ],
+     "perm_p": 0.74048
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 81.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 35.0,
+      "sd": 9.35,
+      "n": 5
+     },
+     "diff": -46.88,
+     "p": 1e-05,
+     "ci": [
+      -59.24,
+      -34.51
+     ],
+     "perm_p": 0.00078
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 85.62,
+      "sd": 7.29,
+      "n": 8
+     },
+     "b": {
+      "mean": 34.0,
+      "sd": 4.18,
+      "n": 5
+     },
+     "diff": -51.62,
+     "p": 0.0,
+     "ci": [
+      -58.64,
+      -44.61
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 35.0,
+      "sd": 9.35,
+      "n": 5
+     },
+     "b": {
+      "mean": 34.0,
+      "sd": 4.18,
+      "n": 5
+     },
+     "diff": -1.0,
+     "p": 0.83508,
+     "ci": [
+      -12.44,
+      10.44
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "gpt41": {
+    "share": {
+     "elected": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "costly": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 3
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   },
+   "gpt5min": {
+    "share": {
+     "elected": {
+      "mean": 50.0,
+      "sd": 15.0,
+      "n": 3
+     },
+     "salary": {
+      "mean": 38.33,
+      "sd": 7.64,
+      "n": 3
+     },
+     "costly": {
+      "mean": 65.0,
+      "sd": 10.0,
+      "n": 3
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 50.0,
+      "sd": 15.0,
+      "n": 3
+     },
+     "b": {
+      "mean": 38.33,
+      "sd": 7.64,
+      "n": 3
+     },
+     "diff": -11.67,
+     "p": 0.31683,
+     "ci": [
+      -42.76,
+      19.43
+     ],
+     "perm_p": 0.4
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 38.33,
+      "sd": 7.64,
+      "n": 3
+     },
+     "b": {
+      "mean": 65.0,
+      "sd": 10.0,
+      "n": 3
+     },
+     "diff": 26.67,
+     "p": 0.02402,
+     "ci": [
+      5.93,
+      47.4
+     ],
+     "perm_p": 0.1
+    }
+   },
+   "gpt-oss-120b": {
+    "share": {
+     "elected": {
+      "mean": 68.75,
+      "sd": 9.91,
+      "n": 8
+     },
+     "salary": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "costly": {
+      "mean": 41.88,
+      "sd": 6.51,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 48.0,
+      "sd": 12.04,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 59.0,
+      "sd": 10.84,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 68.75,
+      "sd": 9.91,
+      "n": 8
+     },
+     "b": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "diff": -2.5,
+     "p": 0.66413,
+     "ci": [
+      -14.63,
+      9.63
+     ],
+     "perm_p": 0.74235
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "b": {
+      "mean": 41.88,
+      "sd": 6.51,
+      "n": 8
+     },
+     "diff": -24.38,
+     "p": 0.00053,
+     "ci": [
+      -35.37,
+      -13.38
+     ],
+     "perm_p": 0.00047
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 68.75,
+      "sd": 9.91,
+      "n": 8
+     },
+     "b": {
+      "mean": 48.0,
+      "sd": 12.04,
+      "n": 5
+     },
+     "diff": -20.75,
+     "p": 0.01352,
+     "ci": [
+      -35.8,
+      -5.7
+     ],
+     "perm_p": 0.00855
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 66.25,
+      "sd": 12.46,
+      "n": 8
+     },
+     "b": {
+      "mean": 59.0,
+      "sd": 10.84,
+      "n": 5
+     },
+     "diff": -7.25,
+     "p": 0.29541,
+     "ci": [
+      -21.93,
+      7.43
+     ],
+     "perm_p": 0.36674
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 48.0,
+      "sd": 12.04,
+      "n": 5
+     },
+     "b": {
+      "mean": 59.0,
+      "sd": 10.84,
+      "n": 5
+     },
+     "diff": 11.0,
+     "p": 0.16787,
+     "ci": [
+      -5.74,
+      27.74
+     ],
+     "perm_p": 0.20635
+    }
+   },
+   "nemotron-3-super-120b": {
+    "share": {
+     "elected": {
+      "mean": 56.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "salary": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "costly": {
+      "mean": 75.0,
+      "sd": 10.35,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 14.0,
+      "sd": 8.22,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 18.0,
+      "sd": 5.7,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 56.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "diff": 15.62,
+     "p": 0.00298,
+     "ci": [
+      6.44,
+      24.81
+     ],
+     "perm_p": 0.00715
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 75.0,
+      "sd": 10.35,
+      "n": 8
+     },
+     "diff": 2.5,
+     "p": 0.57453,
+     "ci": [
+      -6.95,
+      11.95
+     ],
+     "perm_p": 0.68267
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 56.88,
+      "sd": 9.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 14.0,
+      "sd": 8.22,
+      "n": 5
+     },
+     "diff": -42.88,
+     "p": 1e-05,
+     "ci": [
+      -54.23,
+      -31.52
+     ],
+     "perm_p": 0.00078
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 72.5,
+      "sd": 6.55,
+      "n": 8
+     },
+     "b": {
+      "mean": 18.0,
+      "sd": 5.7,
+      "n": 5
+     },
+     "diff": -54.5,
+     "p": 0.0,
+     "ci": [
+      -62.22,
+      -46.78
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 14.0,
+      "sd": 8.22,
+      "n": 5
+     },
+     "b": {
+      "mean": 18.0,
+      "sd": 5.7,
+      "n": 5
+     },
+     "diff": 4.0,
+     "p": 0.40029,
+     "ci": [
+      -6.54,
+      14.54
+     ],
+     "perm_p": 0.57937
+    }
+   },
+   "ling-3.0-flash": {
+    "share": {
+     "elected": {
+      "mean": 13.75,
+      "sd": 5.82,
+      "n": 8
+     },
+     "salary": {
+      "mean": 17.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "costly": {
+      "mean": 15.0,
+      "sd": 5.35,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 3.0,
+      "sd": 6.71,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 3.0,
+      "sd": 2.74,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 13.75,
+      "sd": 5.82,
+      "n": 8
+     },
+     "b": {
+      "mean": 17.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "diff": 3.75,
+     "p": 0.22446,
+     "ci": [
+      -2.58,
+      10.08
+     ],
+     "perm_p": 0.30909
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 17.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 15.0,
+      "sd": 5.35,
+      "n": 8
+     },
+     "diff": -2.5,
+     "p": 0.39289,
+     "ci": [
+      -8.59,
+      3.59
+     ],
+     "perm_p": 0.51422
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 13.75,
+      "sd": 5.82,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.0,
+      "sd": 6.71,
+      "n": 5
+     },
+     "diff": -10.75,
+     "p": 0.01915,
+     "ci": [
+      -19.2,
+      -2.3
+     ],
+     "perm_p": 0.01632
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 17.5,
+      "sd": 5.98,
+      "n": 8
+     },
+     "b": {
+      "mean": 3.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": -14.5,
+     "p": 0.00012,
+     "ci": [
+      -19.91,
+      -9.09
+     ],
+     "perm_p": 0.00233
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 3.0,
+      "sd": 6.71,
+      "n": 5
+     },
+     "b": {
+      "mean": 3.0,
+      "sd": 2.74,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": 1.0,
+     "ci": [
+      -8.19,
+      8.19
+     ],
+     "perm_p": 1.0
+    }
+   },
+   "qwen3.8-27b": {
+    "share": {
+     "elected": {
+      "mean": 63.75,
+      "sd": 10.61,
+      "n": 8
+     },
+     "salary": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "costly": {
+      "mean": 75.62,
+      "sd": 9.43,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 42.0,
+      "sd": 15.25,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 37.0,
+      "sd": 14.83,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 63.75,
+      "sd": 10.61,
+      "n": 8
+     },
+     "b": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "diff": 19.38,
+     "p": 0.00266,
+     "ci": [
+      7.97,
+      30.78
+     ],
+     "perm_p": 0.00559
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "b": {
+      "mean": 75.62,
+      "sd": 9.43,
+      "n": 8
+     },
+     "diff": -7.5,
+     "p": 0.15872,
+     "ci": [
+      -18.31,
+      3.31
+     ],
+     "perm_p": 0.19876
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 63.75,
+      "sd": 10.61,
+      "n": 8
+     },
+     "b": {
+      "mean": 42.0,
+      "sd": 15.25,
+      "n": 5
+     },
+     "diff": -21.75,
+     "p": 0.02908,
+     "ci": [
+      -40.48,
+      -3.02
+     ],
+     "perm_p": 0.01632
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 83.12,
+      "sd": 10.67,
+      "n": 8
+     },
+     "b": {
+      "mean": 37.0,
+      "sd": 14.83,
+      "n": 5
+     },
+     "diff": -46.12,
+     "p": 0.00065,
+     "ci": [
+      -64.39,
+      -27.86
+     ],
+     "perm_p": 0.00078
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 42.0,
+      "sd": 15.25,
+      "n": 5
+     },
+     "b": {
+      "mean": 37.0,
+      "sd": 14.83,
+      "n": 5
+     },
+     "diff": -5.0,
+     "p": 0.61344,
+     "ci": [
+      -26.94,
+      16.94
+     ],
+     "perm_p": 0.69048
+    }
+   },
+   "gemma-4-31b": {
+    "share": {
+     "elected": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "costly": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "neutral": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "neutral_salary": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     }
+    },
+    "pay_effect_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "cost_vs_salary_deal": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_vs_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "deal_vs_neutral_salary": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 8
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    },
+    "pay_effect_neutral": {
+     "a": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "b": {
+      "mean": 0.0,
+      "sd": 0.0,
+      "n": 5
+     },
+     "diff": 0.0,
+     "p": null,
+     "ci": null,
+     "perm_p": null,
+     "note": "no variance"
+    }
+   }
+  }
+ }
+}

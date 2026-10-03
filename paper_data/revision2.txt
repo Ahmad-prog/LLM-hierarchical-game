@@ -1,248 +1,260 @@
 == A. stated intentions (regex for all): stated/messages | broken at 3/5/8 | first-person: n, broken at 5
-   frontier chat_only gpt4o: 261/300 b2/2/2 fp19 b0 | claude: 125/300 b1/0/0 fp18 b0 | gemini: 244/299 b0/0/0 fp114 b0 | deepseek: 129/296 b4/0/0 fp33 b0 | grok: 12/173 b0/0/0 fp0 b0 | qwen: 129/300 b0/0/0 fp47 b0
-   frontier elected   gpt4o: 317/488 b0/0/0 fp20 b0 | claude: 381/500 b2/0/0 fp81 b0 | gemini: 121/499 b0/0/0 fp68 b0 | deepseek: 240/491 b0/0/0 fp54 b0 | grok: 22/213 b0/0/0 fp1 b0 | qwen: 298/500 b1/1/0 fp68 b0
+   frontier chat_only gpt4o: 755/1000 b2/2/2 fp65 b0 | claude: 255/600 b1/0/0 fp31 b0 | gemini: 778/998 b0/0/0 fp427 b0 | deepseek: 528/792 b4/0/0 fp105 b0 | grok: 26/335 b0/0/0 fp4 b0 | qwen: 523/1000 b0/0/0 fp175 b0
+   frontier elected   gpt4o: 617/980 b0/0/0 fp41 b0 | claude: 627/800 b5/0/0 fp153 b0 | gemini: 250/997 b0/0/0 fp127 b0 | deepseek: 359/787 b0/0/0 fp80 b0 | grok: 37/361 b0/0/0 fp2 b0 | qwen: 580/1000 b1/1/0 fp156 b0
    frontier hidden    gpt4o: 189/282 b0/0/0 fp22 b0 | claude: 216/300 b0/0/0 fp22 b0 | gemini: 139/299 b2/2/2 fp83 b1 | deepseek: 192/299 b0/0/0 fp48 b0 | grok: 7/135 b0/0/0 fp1 b0 | qwen: 198/300 b0/0/0 fp45 b0
    frontier anonymous gpt4o: 192/291 b0/0/0 fp11 b0 | claude: 231/300 b3/0/0 fp26 b0 | gemini: 77/299 b0/0/0 fp33 b0 | deepseek: 189/295 b0/0/0 fp44 b0 | grok: 3/123 b0/0/0 fp0 b0 | qwen: 177/300 b0/0/0 fp53 b0
-   samegen  chat_only gpt5: 0/0 b0/0/0 fp0 b0 | deepseek31: 0/0 b0/0/0 fp0 b0
-   samegen  elected   gpt5: 235/299 b1/1/1 fp1 b0 | deepseek31: 171/300 b0/0/0 fp38 b0
+   samegen  chat_only gpt5: 259/300 b11/11/11 fp4 b0 | deepseek31: 80/300 b0/0/0 fp25 b0
+   samegen  elected   gpt5: 235/299 b1/1/1 fp1 b0 | deepseek31: 456/799 b0/0/0 fp120 b0
    samegen  hidden    gpt5: 205/300 b3/3/3 fp5 b0 | deepseek31: 135/299 b0/0/0 fp37 b0
    samegen  anonymous gpt5: 213/300 b2/2/2 fp4 b0 | deepseek31: 120/300 b0/0/0 fp38 b0
-   open     chat_only gpt-oss-120b: 240/290 b87/67/44 fp37 b4 | nemotron-3-super-120b: 51/77 b6/6/5 fp19 b3 | ling-3.0-flash: 238/294 b104/97/86 fp60 b29 | qwen3.8-27b: 257/300 b56/55/50 fp140 b27 | gemma-4-31b: 171/300 b13/13/13 fp82 b1
-   open     elected   gpt-oss-120b: 275/296 b43/34/27 fp66 b10 | nemotron-3-super-120b: 88/126 b4/4/4 fp48 b2 | ling-3.0-flash: 234/290 b107/99/77 fp64 b18 | qwen3.8-27b: 240/299 b31/30/30 fp164 b21 | gemma-4-31b: 210/300 b13/13/13 fp94 b13
+   open     chat_only gpt-oss-120b: 651/768 b281/196/150 fp87 b18 | nemotron-3-super-120b: 134/239 b16/16/15 fp47 b7 | ling-3.0-flash: 643/782 b315/284/240 fp161 b81 | qwen3.8-27b: 644/800 b153/146/117 fp327 b65 | gemma-4-31b: 435/800 b30/30/30 fp239 b4
+   open     elected   gpt-oss-120b: 716/784 b113/91/83 fp164 b19 | nemotron-3-super-120b: 189/284 b9/8/8 fp86 b3 | ling-3.0-flash: 631/776 b312/289/250 fp178 b68 | qwen3.8-27b: 566/797 b75/70/67 fp403 b53 | gemma-4-31b: 555/800 b25/25/25 fp243 b14
    open     hidden    gpt-oss-120b: 243/294 b31/27/21 fp59 b9 | nemotron-3-super-120b: 68/106 b0/0/0 fp20 b0 | ling-3.0-flash: 238/295 b114/111/97 fp95 b42 | qwen3.8-27b: 217/300 b45/43/42 fp125 b25 | gemma-4-31b: 196/300 b10/10/10 fp67 b4
    open     anonymous gpt-oss-120b: 280/296 b52/43/35 fp56 b8 | nemotron-3-super-120b: 81/110 b3/2/2 fp41 b1 | ling-3.0-flash: 260/296 b117/109/106 fp80 b42 | qwen3.8-27b: 213/299 b35/35/34 fp141 b25 | gemma-4-31b: 216/300 b9/9/9 fp92 b9
 
 == B. offers by category (reply, targeted, reciprocal, pledge, other; impossible)
-   frontier elected gpt4o: 0 [0,0,0,0,0; imp 0] | claude: 7 [2,0,1,1,3; imp 0] | gemini: 8 [0,0,0,8,0; imp 0] | deepseek: 10 [0,0,0,10,0; imp 0] | grok: 0 [0,0,0,0,0; imp 0] | qwen: 0 [0,0,0,0,0; imp 0]
-   frontier salary  gpt4o: 0 [0,0,0,0,0; imp 0] | claude: 46 [3,4,5,15,19; imp 8] | gemini: 17 [0,0,0,17,0; imp 0] | deepseek: 7 [0,0,0,7,0; imp 0] | grok: 8 [0,0,0,8,0; imp 0] | qwen: 0 [0,0,0,0,0; imp 0]
-   frontier costly  gpt4o: 0 [0,0,0,0,0; imp 0] | claude: 23 [1,0,7,10,5; imp 0] | gemini: 16 [0,0,0,16,0; imp 0] | deepseek: 1 [0,0,0,1,0; imp 0] | grok: 0 [0,0,0,0,0; imp 0] | qwen: 0 [0,0,0,0,0; imp 0]
-   samegen  elected gpt5: 38 [4,1,17,13,3; imp 1] | deepseek31: 47 [6,0,1,39,1; imp 0]
-   samegen  salary  gpt5: 57 [4,2,24,21,6; imp 2] | deepseek31: 47 [2,1,0,36,8; imp 0]
-   samegen  costly  gpt5: 29 [0,2,13,14,0; imp 1] | deepseek31: 42 [2,2,0,32,6; imp 0]
-   open     elected gpt-oss-120b: 22 [5,1,2,7,7; imp 0] | nemotron-3-super-120b: 2 [0,0,2,0,0; imp 0] | ling-3.0-flash: 2 [0,0,1,1,0; imp 0] | qwen3.8-27b: 28 [4,5,0,11,8; imp 0] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
-   open     salary  gpt-oss-120b: 27 [4,6,3,7,7; imp 0] | nemotron-3-super-120b: 2 [0,0,0,2,0; imp 0] | ling-3.0-flash: 1 [0,0,0,0,1; imp 0] | qwen3.8-27b: 58 [8,6,2,20,22; imp 0] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
-   open     costly  gpt-oss-120b: 31 [7,8,2,8,6; imp 0] | nemotron-3-super-120b: 6 [1,0,2,3,0; imp 0] | ling-3.0-flash: 3 [0,1,2,0,0; imp 0] | qwen3.8-27b: 51 [9,8,3,15,16; imp 0] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
+   frontier elected gpt4o: 0 [0,0,0,0,0; imp 0] | claude: 11 [4,0,2,1,4; imp 0] | gemini: 16 [0,0,0,16,0; imp 0] | deepseek: 17 [0,0,0,17,0; imp 0] | grok: 0 [0,0,0,0,0; imp 0] | qwen: 0 [0,0,0,0,0; imp 0]
+   frontier salary  gpt4o: 0 [0,0,0,0,0; imp 0] | claude: 116 [6,6,19,44,41; imp 14] | gemini: 47 [0,0,0,46,1; imp 0] | deepseek: 7 [0,0,0,7,0; imp 0] | grok: 22 [0,0,0,22,0; imp 0] | qwen: 0 [0,0,0,0,0; imp 0]
+   frontier costly  gpt4o: 0 [0,0,0,0,0; imp 0] | claude: 61 [4,0,17,26,14; imp 0] | gemini: 46 [0,0,0,46,0; imp 0] | deepseek: 1 [0,0,0,1,0; imp 0] | grok: 0 [0,0,0,0,0; imp 0] | qwen: 0 [0,0,0,0,0; imp 0]
+   samegen  elected gpt5: 38 [4,1,17,13,3; imp 1] | deepseek31: 118 [12,0,2,100,4; imp 0]
+   samegen  salary  gpt5: 57 [4,2,24,21,6; imp 2] | deepseek31: 117 [5,6,1,84,21; imp 0]
+   samegen  costly  gpt5: 29 [0,2,13,14,0; imp 1] | deepseek31: 106 [5,5,0,85,11; imp 0]
+   open     elected gpt-oss-120b: 65 [20,7,3,22,13; imp 0] | nemotron-3-super-120b: 6 [1,0,3,2,0; imp 0] | ling-3.0-flash: 7 [2,0,3,1,1; imp 0] | qwen3.8-27b: 81 [11,11,3,30,26; imp 0] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
+   open     salary  gpt-oss-120b: 83 [16,16,6,17,28; imp 0] | nemotron-3-super-120b: 11 [2,0,4,5,0; imp 0] | ling-3.0-flash: 10 [2,1,3,3,1; imp 0] | qwen3.8-27b: 147 [17,19,4,52,55; imp 1] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
+   open     costly  gpt-oss-120b: 72 [17,11,5,25,14; imp 0] | nemotron-3-super-120b: 23 [4,0,5,14,0; imp 0] | ling-3.0-flash: 7 [0,1,3,2,1; imp 0] | qwen3.8-27b: 130 [18,18,5,45,44; imp 1] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
 
-== over-20 contribution mentions {"frontier": {"gpt4o": {"messages": 3812, "over_20": 0}, "claude": {"messages": 3526, "over_20": 18}, "gemini": {"messages": 3455, "over_20": 0}, "deepseek": {"messages": 3613, "over_20": 0}, "grok": {"messages": 1837, "over_20": 0}, "qwen": {"messages": 3393, "over_20": 1}}, "samegen": {"gpt5": {"messages": 3520, "over_20": 4}, "deepseek31": {"messages": 3004, "over_20": 0}}, "open": {"gpt-oss-120b": {"messages": 3519, "over_20": 0}, "nemotron-3-super-120b": {"messages": 1517, "over_20": 0}, "ling-3.0-flash": {"messages": 3279, "over_20": 20}, "qwen3.8-27b": {"messages": 3318, "over_20": 3}, "gemma-4-31b": {"messages": 2745, "over_20": 0}}}
+== over-20 contribution mentions {"frontier": {"gpt4o": {"messages": 5846, "over_20": 0}, "claude": {"messages": 5610, "over_20": 33}, "gemini": {"messages": 6583, "over_20": 0}, "deepseek": {"messages": 4836, "over_20": 0}, "grok": {"messages": 2943, "over_20": 1}, "qwen": {"messages": 5208, "over_20": 2}}, "samegen": {"gpt5": {"messages": 3892, "over_20": 4}, "deepseek31": {"messages": 5643, "over_20": 0}}, "open": {"gpt-oss-120b": {"messages": 7717, "over_20": 1}, "nemotron-3-super-120b": {"messages": 3190, "over_20": 0}, "ling-3.0-flash": {"messages": 7279, "over_20": 49}, "qwen3.8-27b": {"messages": 7262, "over_20": 4}, "gemma-4-31b": {"messages": 6090, "over_20": 0}}}
 
 == C. re-election {
  "api_main": {
-  "contested": 306,
-  "reelected": 203,
+  "contested": 468,
+  "reelected": 303,
   "group_contrib": {
-   "reelected_mean_c": -0.004,
-   "replaced_mean_c": 0.008,
-   "r": -0.003,
-   "p": 0.9543
+   "reelected_mean_c": 0.031,
+   "replaced_mean_c": -0.056,
+   "r": 0.023,
+   "p": 0.6122
   },
   "own_contrib": {
-   "reelected_mean_c": 0.002,
-   "replaced_mean_c": -0.004,
-   "r": 0.002,
-   "p": 0.9792
+   "reelected_mean_c": 0.042,
+   "replaced_mean_c": -0.078,
+   "r": 0.029,
+   "p": 0.537
   },
   "reward": {
-   "reelected_mean_c": 0.019,
-   "replaced_mean_c": -0.038,
-   "r": 0.006,
-   "p": 0.9114
+   "reelected_mean_c": 0.056,
+   "replaced_mean_c": -0.103,
+   "r": 0.02,
+   "p": 0.6731
   },
   "punish": {
-   "reelected_mean_c": 0.004,
-   "replaced_mean_c": -0.007,
-   "r": 0.024,
-   "p": 0.6811
+   "reelected_mean_c": -0.002,
+   "replaced_mean_c": 0.004,
+   "r": -0.012,
+   "p": 0.8036
   }
  },
  "newer": {
-  "contested": 90,
-  "reelected": 61,
+  "contested": 135,
+  "reelected": 104,
   "group_contrib": {
-   "reelected_mean_c": 0.002,
-   "replaced_mean_c": -0.004,
-   "r": 0.003,
-   "p": 0.9807
+   "reelected_mean_c": 0.007,
+   "replaced_mean_c": -0.024,
+   "r": 0.011,
+   "p": 0.8975
   },
   "own_contrib": {
-   "reelected_mean_c": 0.009,
-   "replaced_mean_c": -0.019,
-   "r": 0.015,
-   "p": 0.8886
+   "reelected_mean_c": 0.012,
+   "replaced_mean_c": -0.041,
+   "r": 0.021,
+   "p": 0.8134
   },
   "reward": {
-   "reelected_mean_c": 0.044,
-   "replaced_mean_c": -0.093,
-   "r": 0.01,
-   "p": 0.9283
+   "reelected_mean_c": 0.101,
+   "replaced_mean_c": -0.339,
+   "r": 0.027,
+   "p": 0.7577
   },
   "punish": {
-   "reelected_mean_c": -0.001,
-   "replaced_mean_c": 0.001,
-   "r": -0.006,
-   "p": 0.9528
+   "reelected_mean_c": -0.003,
+   "replaced_mean_c": 0.011,
+   "r": -0.046,
+   "p": 0.5987
   }
  },
  "open": {
-  "contested": 225,
-  "reelected": 181,
+  "contested": 450,
+  "reelected": 348,
   "group_contrib": {
-   "reelected_mean_c": 0.034,
-   "replaced_mean_c": -0.14,
-   "r": 0.029,
-   "p": 0.6693
+   "reelected_mean_c": 0.036,
+   "replaced_mean_c": -0.122,
+   "r": 0.025,
+   "p": 0.5904
   },
   "own_contrib": {
-   "reelected_mean_c": -0.009,
-   "replaced_mean_c": 0.036,
-   "r": -0.006,
-   "p": 0.9306
+   "reelected_mean_c": 0.014,
+   "replaced_mean_c": -0.047,
+   "r": 0.008,
+   "p": 0.8644
   },
   "reward": {
-   "reelected_mean_c": 0.023,
-   "replaced_mean_c": -0.093,
-   "r": 0.022,
-   "p": 0.74
+   "reelected_mean_c": 0.089,
+   "replaced_mean_c": -0.304,
+   "r": 0.07,
+   "p": 0.1379
   },
   "punish": {
-   "reelected_mean_c": -0.153,
-   "replaced_mean_c": 0.629,
-   "r": -0.145,
-   "p": 0.0301
+   "reelected_mean_c": -0.077,
+   "replaced_mean_c": 0.263,
+   "r": -0.073,
+   "p": 0.1236
   }
  },
  "all": {
-  "contested": 621,
-  "reelected": 445,
+  "contested": 1053,
+  "reelected": 755,
   "group_contrib": {
-   "reelected_mean_c": 0.012,
-   "replaced_mean_c": -0.031,
-   "r": 0.01,
-   "p": 0.8025
+   "reelected_mean_c": 0.03,
+   "replaced_mean_c": -0.075,
+   "r": 0.022,
+   "p": 0.4664
   },
   "own_contrib": {
-   "reelected_mean_c": -0.001,
-   "replaced_mean_c": 0.003,
-   "r": -0.001,
-   "p": 0.9832
+   "reelected_mean_c": 0.025,
+   "replaced_mean_c": -0.064,
+   "r": 0.016,
+   "p": 0.6045
   },
   "reward": {
-   "reelected_mean_c": 0.024,
-   "replaced_mean_c": -0.061,
-   "r": 0.009,
-   "p": 0.8163
+   "reelected_mean_c": 0.078,
+   "replaced_mean_c": -0.196,
+   "r": 0.032,
+   "p": 0.3051
   },
   "punish": {
-   "reelected_mean_c": -0.061,
-   "replaced_mean_c": 0.153,
-   "r": -0.074,
-   "p": 0.0649
+   "reelected_mean_c": -0.037,
+   "replaced_mean_c": 0.093,
+   "r": -0.045,
+   "p": 0.1412
   }
  }
 }
 
 == D. ANOVA {
  "api_contrib_mgr": {
-  "n_games": 108,
-  "df_error": 84,
+  "n_games": 182,
+  "df_error": 158,
   "model": {
-   "ss": 657.19,
+   "ss": 708.11,
    "df": 5,
-   "F": 31.06,
-   "p": 9.13e-18,
-   "partial_eta2": 0.649
+   "F": 24.66,
+   "p": 2.59e-18,
+   "partial_eta2": 0.438,
+   "omega2": 0.318
   },
   "institution": {
-   "ss": 67.61,
+   "ss": 53.36,
    "df": 3,
-   "F": 5.33,
-   "p": 0.00208,
-   "partial_eta2": 0.16
+   "F": 3.1,
+   "p": 0.0285,
+   "partial_eta2": 0.056,
+   "omega2": 0.017
   },
   "interaction": {
-   "ss": 254.48,
+   "ss": 468.31,
    "df": 15,
-   "F": 4.01,
-   "p": 1.99e-05,
-   "partial_eta2": 0.417
+   "F": 5.44,
+   "p": 8.79e-09,
+   "partial_eta2": 0.34,
+   "omega2": 0.179
   }
  },
  "api_contrib_all": {
-  "n_games": 198,
-  "df_error": 144,
+  "n_games": 320,
+  "df_error": 266,
   "model": {
-   "ss": 635.09,
+   "ss": 597.5,
    "df": 5,
-   "F": 36.66,
-   "p": 4.27e-24,
-   "partial_eta2": 0.56
+   "F": 27.53,
+   "p": 1.92e-22,
+   "partial_eta2": 0.341,
+   "omega2": 0.119
   },
   "institution": {
-   "ss": 860.32,
+   "ss": 1733.89,
    "df": 8,
-   "F": 31.04,
-   "p": 8.06e-28,
-   "partial_eta2": 0.633
+   "F": 49.94,
+   "p": 9.63e-49,
+   "partial_eta2": 0.6,
+   "omega2": 0.353
   },
   "interaction": {
-   "ss": 645.47,
+   "ss": 1164.75,
    "df": 40,
-   "F": 4.66,
-   "p": 4.7e-12,
-   "partial_eta2": 0.564
+   "F": 6.71,
+   "p": 8.87e-23,
+   "partial_eta2": 0.502,
+   "omega2": 0.206
   }
  },
  "open_coop_mgr": {
-  "n_games": 60,
-  "df_error": 40,
+  "n_games": 160,
+  "df_error": 140,
   "model": {
-   "ss": 24118.67,
+   "ss": 65390.6,
    "df": 4,
-   "F": 92.17,
-   "p": 1.24e-19,
-   "partial_eta2": 0.902
+   "F": 165.65,
+   "p": 4.82e-52,
+   "partial_eta2": 0.826,
+   "omega2": 0.703
   },
   "institution": {
-   "ss": 2156.33,
+   "ss": 4897.53,
    "df": 3,
-   "F": 10.99,
-   "p": 2.14e-05,
-   "partial_eta2": 0.452
+   "F": 16.54,
+   "p": 2.96e-09,
+   "partial_eta2": 0.262,
+   "omega2": 0.05
   },
   "interaction": {
-   "ss": 2422.67,
+   "ss": 8306.6,
    "df": 12,
-   "F": 3.09,
-   "p": 0.00364,
-   "partial_eta2": 0.481
+   "F": 7.01,
+   "p": 7.1e-10,
+   "partial_eta2": 0.375,
+   "omega2": 0.077
   }
  },
  "open_coop_all": {
-  "n_games": 135,
-  "df_error": 90,
+  "n_games": 285,
+  "df_error": 240,
   "model": {
-   "ss": 41737.29,
+   "ss": 101214.35,
    "df": 4,
-   "F": 190.23,
-   "p": 5.15e-43,
-   "partial_eta2": 0.894
+   "F": 337.43,
+   "p": 3.01e-97,
+   "partial_eta2": 0.849,
+   "omega2": 0.552
   },
   "institution": {
-   "ss": 15706.46,
+   "ss": 19434.77,
    "df": 8,
-   "F": 35.79,
-   "p": 8.52e-25,
-   "partial_eta2": 0.761
+   "F": 32.4,
+   "p": 2.97e-34,
+   "partial_eta2": 0.519,
+   "omega2": 0.103
   },
   "interaction": {
-   "ss": 37087.91,
+   "ss": 43942.42,
    "df": 32,
-   "F": 21.13,
-   "p": 1.2e-29,
-   "partial_eta2": 0.883
+   "F": 18.31,
+   "p": 7.29e-48,
+   "partial_eta2": 0.709,
+   "omega2": 0.227
   }
  }
 }
 
-== E. worker-only fixed {'qwen': {'mean': 14.81, 'sd': 3.28, 'n': 5}, 'claude': {'mean': 19.95, 'sd': 0.11, 'n': 5}, 'grok': {'mean': 19.15, 'sd': 0.14, 'n': 5}, 'gpt4o': {'mean': 14.26, 'sd': 2.27, 'n': 5}}
+== E. worker-only fixed {'qwen': {'mean': 14.0, 'sd': 3.07, 'n': 10}, 'claude': {'mean': 19.95, 'sd': 0.11, 'n': 5}, 'grok': {'mean': 19.15, 'sd': 0.14, 'n': 5}, 'gpt4o': {'mean': 14.79, 'sd': 2.68, 'n': 10}}
 
-== F. nemotron valid only {"baseline": {"valid_pct": {"mean": 88.3, "sd": 6.5}, "coop_valid": {"mean": 16.7, "sd": 17.2}, "contrib_valid": {"mean": 1.5, "sd": 1.5}}, "chat_only": {"valid_pct": {"mean": 94.3, "sd": 3.2}, "coop_valid": {"mean": 85.7, "sd": 21.2}, "contrib_valid": {"mean": 10.4, "sd": 4.0}}, "fixed": {"valid_pct": {"mean": 96.7, "sd": 0.6}, "coop_valid": {"mean": 97.9, "sd": 1.0}, "contrib_valid": {"mean": 12.8, "sd": 4.8}}, "elected": {"valid_pct": {"mean": 97.3, "sd": 1.2}, "coop_valid": {"mean": 99.3, "sd": 0.6}, "contrib_valid": {"mean": 14.0, "sd": 0.8}}, "rotating": {"valid_pct": {"mean": 94.7, "sd": 1.2}, "coop_valid": {"mean": 96.5, "sd": 3.7}, "contrib_valid": {"mean": 11.9, "sd": 0.4}}, "salary": {"valid_pct": {"mean": 96.7, "sd": 0.6}, "coop_valid": {"mean": 95.2, "sd": 4.9}, "contrib_valid": {"mean": 14.4, "sd": 2.1}}, "costly": {"valid_pct": {"mean": 97.3, "sd": 2.5}, "coop_valid": {"mean": 99.6, "sd": 0.6}, "contrib_valid": {"mean": 12.0, "sd": 0.7}}, "hidden": {"valid_pct": {"mean": 97.0, "sd": 1.0}, "coop_valid": {"mean": 98.3, "sd": 0.6}, "contrib_valid": {"mean": 12.4, "sd": 2.8}}, "anonymous": {"valid_pct": {"mean": 98.0, "sd": 2.6}, "coop_valid": {"mean": 100.0, "sd": 0.0}, "contrib_valid": {"mean": 13.7, "sd": 0.4}}}
+== F. nemotron valid only {"baseline": {"valid_pct": {"mean": 88.3, "sd": 6.5}, "coop_valid": {"mean": 16.7, "sd": 17.2}, "contrib_valid": {"mean": 1.5, "sd": 1.5}}, "chat_only": {"valid_pct": {"mean": 95.0, "sd": 2.4}, "coop_valid": {"mean": 94.2, "sd": 13.4}, "contrib_valid": {"mean": 12.1, "sd": 3.0}}, "fixed": {"valid_pct": {"mean": 95.9, "sd": 2.3}, "coop_valid": {"mean": 96.6, "sd": 5.4}, "contrib_valid": {"mean": 12.1, "sd": 3.7}}, "elected": {"valid_pct": {"mean": 97.5, "sd": 1.8}, "coop_valid": {"mean": 99.5, "sd": 0.8}, "contrib_valid": {"mean": 13.5, "sd": 1.2}}, "rotating": {"valid_pct": {"mean": 93.8, "sd": 3.3}, "coop_valid": {"mean": 81.8, "sd": 32.6}, "contrib_valid": {"mean": 10.8, "sd": 5.4}}, "salary": {"valid_pct": {"mean": 96.8, "sd": 0.9}, "coop_valid": {"mean": 96.3, "sd": 4.9}, "contrib_valid": {"mean": 13.6, "sd": 1.6}}, "costly": {"valid_pct": {"mean": 96.9, "sd": 1.6}, "coop_valid": {"mean": 98.7, "sd": 1.6}, "contrib_valid": {"mean": 12.2, "sd": 1.4}}, "hidden": {"valid_pct": {"mean": 97.0, "sd": 1.0}, "coop_valid": {"mean": 98.3, "sd": 0.6}, "contrib_valid": {"mean": 12.4, "sd": 2.8}}, "anonymous": {"valid_pct": {"mean": 98.0, "sd": 2.6}, "coop_valid": {"mean": 100.0, "sd": 0.0}, "contrib_valid": {"mean": 13.7, "sd": 0.4}}}

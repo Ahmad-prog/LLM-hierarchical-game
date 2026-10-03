@@ -227,7 +227,7 @@ COMMUNICATION:
 RESPONSE FORMAT:
 Always respond with a single valid JSON object. Keys depend on the current phase.{persona_text}
 
-Be strategic. Your decisions affect both your own payoff and the collective outcome."""
+{'Be strategic. ' if getattr(self, 'strategic_line', True) else ''}Your decisions affect both your own payoff and the collective outcome."""
 
     def _get_history_text(self) -> str:
         """Return formatted history according to hist_type."""
@@ -302,12 +302,18 @@ If you choose not to communicate, respond with: {{"public_message": ""}}"""
         visible_text = _format_visible_messages(visible_messages)
         history_text = self._get_history_text()
 
-        manager_note = (
-            "\nNOTE: You are the current manager. After all contributions are "
-            "revealed, you will also have a chance to punish/reward players.\n"
-            if is_manager
-            else ""
-        )
+        if is_manager and getattr(self, "no_sanctions", False):
+            manager_note = (
+                "\nNOTE: You are the current manager. After all contributions are revealed, you may send "
+                "a public message to the group. You have no budget to punish or reward players.\n"
+            )
+        elif is_manager:
+            manager_note = (
+                "\nNOTE: You are the current manager. After all contributions are "
+                "revealed, you will also have a chance to punish/reward players.\n"
+            )
+        else:
+            manager_note = ""
 
         return f"""ROUND {round_num} — ACTION PHASE
 {manager_note}
@@ -354,6 +360,21 @@ Respond with:
                 f'"reward": {{"<agent_id>": <tokens_to_spend>, ...}}  '
                 f'// Spending X tokens adds {reward_ratio:.0f}X to target. Budget: {mgr_budget_reward:.0f}'
             )
+
+        if not can_punish and not can_reward:
+            return f"""ROUND {round_num} — MANAGER PHASE
+
+You are the manager. You have seen all contributions:
+{contrib_lines}
+
+Your own contribution this round is already recorded.
+
+You have no budget to punish or reward players. You may send a public message to the group.
+
+Respond with:
+{{
+  "public_message": "<your message to the group>"
+}}"""
 
         actions_text = "\n  ".join(actions)
         cost_note = (

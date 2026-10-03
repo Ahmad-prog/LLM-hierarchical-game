@@ -5,32 +5,32 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 6
     },
     "contrib": {
      "mean": 10.0,
      "sd": 0.0,
-     "n": 3
+     "n": 6
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 6
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 6
     },
     "welfare": {
      "mean": 600.0,
      "sd": 0.0,
-     "n": 3
+     "n": 6
     },
     "minutes": {
-     "mean": 2.987,
-     "sd": 0.006,
-     "n": 3
+     "mean": 2.766,
+     "sd": 0.242,
+     "n": 6
     },
     "broken_explicit": 0,
     "explicit": 0,
@@ -38,617 +38,8 @@
     "promises_any": 0,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "openai/gpt-4o"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "360103f"
-    ]
-   },
-   "claude": {
-    "coop": {
-     "mean": 94.333,
-     "sd": 5.033,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 10.507,
-     "sd": 2.459,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 630.4,
-     "sd": 147.559,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 15.692,
-     "sd": 0.539,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 0,
-    "flag_code_rule": 0,
-    "promises_any": 0,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "anthropic/claude-sonnet-4.5"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "360103f"
-    ]
-   },
-   "gemini": {
-    "coop": {
-     "mean": 95.667,
-     "sd": 0.577,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 9.567,
-     "sd": 0.058,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 574.0,
-     "sd": 3.464,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 2.411,
-     "sd": 0.034,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 0,
-    "flag_code_rule": 0,
-    "promises_any": 0,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "google/gemini-2.5-flash"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "360103f"
-    ]
-   },
-   "deepseek": {
-    "coop": {
-     "mean": 99.667,
-     "sd": 0.577,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 9.983,
-     "sd": 0.029,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 599.0,
-     "sd": 1.732,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 5.7,
-     "sd": 0.142,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 0,
-    "flag_code_rule": 0,
-    "promises_any": 0,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "deepseek/deepseek-chat"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "360103f"
-    ]
-   },
-   "grok": {
-    "coop": {
-     "mean": 57.333,
-     "sd": 36.501,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 5.537,
-     "sd": 3.921,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 332.2,
-     "sd": 235.274,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 7.231,
-     "sd": 0.671,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 0,
-    "flag_code_rule": 0,
-    "promises_any": 0,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "x-ai/grok-4.3"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "360103f"
-    ]
-   },
-   "qwen": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 10.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 600.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 2.425,
-     "sd": 0.013,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 0,
-    "flag_code_rule": 0,
-    "promises_any": 0,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "qwen/qwen-plus"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "360103f"
-    ]
-   }
-  },
-  "chat_only": {
-   "gpt4o": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 10.65,
-     "sd": 1.126,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.333,
-     "sd": 0.577,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 639.0,
-     "sd": 67.55,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 8.039,
-     "sd": 0.16,
-     "n": 3
-    },
-    "broken_explicit": 2,
-    "explicit": 263,
-    "flag_code_rule": 2,
-    "promises_any": 263,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "openai/gpt-4o"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "cea52bb"
-    ]
-   },
-   "claude": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 18.283,
-     "sd": 2.973,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 1097.0,
-     "sd": 178.401,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 23.328,
-     "sd": 0.413,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 219,
-    "flag_code_rule": 9,
-    "promises_any": 265,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "anthropic/claude-sonnet-4.5"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "cea52bb"
-    ]
-   },
-   "gemini": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 11.657,
-     "sd": 2.869,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 699.4,
-     "sd": 172.166,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 7.728,
-     "sd": 0.421,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 260,
-    "flag_code_rule": 0,
-    "promises_any": 261,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "google/gemini-2.5-flash"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "cea52bb"
-    ]
-   },
-   "deepseek": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 16.103,
-     "sd": 1.372,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 966.2,
-     "sd": 82.339,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 11.75,
-     "sd": 0.203,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 131,
-    "flag_code_rule": 11,
-    "promises_any": 198,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "deepseek/deepseek-chat"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "cea52bb"
-    ]
-   },
-   "grok": {
-    "coop": {
-     "mean": 95.333,
-     "sd": 0.577,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 19.067,
-     "sd": 0.115,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 1144.0,
-     "sd": 6.928,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 13.839,
-     "sd": 0.056,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 16,
-    "flag_code_rule": 7,
-    "promises_any": 148,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "x-ai/grok-4.3"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "cea52bb"
-    ]
-   },
-   "qwen": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "contrib": {
-     "mean": 10.667,
-     "sd": 1.155,
-     "n": 3
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
-    },
-    "welfare": {
-     "mean": 640.0,
-     "sd": 69.282,
-     "n": 3
-    },
-    "minutes": {
-     "mean": 9.797,
-     "sd": 0.055,
-     "n": 3
-    },
-    "broken_explicit": 0,
-    "explicit": 247,
-    "flag_code_rule": 6,
-    "promises_any": 264,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
-    "models_called": [
-     "qwen/qwen-plus"
-    ],
-    "sanction_cost": [
-     "True"
-    ],
-    "code_commits": [
-     "cea52bb"
-    ]
-   }
-  },
-  "fixed": {
-   "gpt4o": {
-    "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 5
-    },
-    "contrib": {
-     "mean": 14.256,
-     "sd": 2.266,
-     "n": 5
-    },
-    "deals_strict": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 5
-    },
-    "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 5
-    },
-    "welfare": {
-     "mean": 1161.76,
-     "sd": 155.703,
-     "n": 5
-    },
-    "minutes": {
-     "mean": 9.201,
-     "sd": 0.463,
-     "n": 5
-    },
-    "spend_applied": {
-     "mean": 8.32,
-     "sd": 0.76,
-     "n": 5
-    },
-    "broken_explicit": 0,
-    "explicit": 302,
-    "flag_code_rule": 16,
-    "promises_any": 336,
-    "turnovers": 0,
-    "contested": 0,
-    "parse_ok": 500,
-    "replies": 500,
+    "parse_ok": 600,
+    "replies": 600,
     "threats": 0,
     "models_called": [
      "openai/gpt-4o"
@@ -658,6 +49,628 @@
     ],
     "code_commits": [
      "360103f",
+     "e9b212b"
+    ]
+   },
+   "claude": {
+    "coop": {
+     "mean": 95.333,
+     "sd": 3.882,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 10.358,
+     "sd": 1.823,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 621.5,
+     "sd": 109.381,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 15.386,
+     "sd": 0.557,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 0,
+    "flag_code_rule": 0,
+    "promises_any": 0,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "anthropic/claude-sonnet-4.5"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "360103f",
+     "e9b212b"
+    ]
+   },
+   "gemini": {
+    "coop": {
+     "mean": 95.833,
+     "sd": 0.408,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 9.583,
+     "sd": 0.041,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 575.0,
+     "sd": 2.449,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 2.438,
+     "sd": 0.038,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 0,
+    "flag_code_rule": 0,
+    "promises_any": 0,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "google/gemini-2.5-flash"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "360103f",
+     "e9b212b"
+    ]
+   },
+   "deepseek": {
+    "coop": {
+     "mean": 98.667,
+     "sd": 2.338,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 9.895,
+     "sd": 0.219,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 593.7,
+     "sd": 13.138,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 4.571,
+     "sd": 1.246,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 0,
+    "flag_code_rule": 0,
+    "promises_any": 0,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "deepseek/deepseek-chat"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "360103f",
+     "e9b212b"
+    ]
+   },
+   "grok": {
+    "coop": {
+     "mean": 46.833,
+     "sd": 38.311,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 4.51,
+     "sd": 3.97,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 270.6,
+     "sd": 238.205,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 7.095,
+     "sd": 0.896,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 0,
+    "flag_code_rule": 0,
+    "promises_any": 0,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "x-ai/grok-4.3"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "360103f",
+     "e9b212b"
+    ]
+   },
+   "qwen": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 10.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 600.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 2.441,
+     "sd": 0.023,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 0,
+    "flag_code_rule": 0,
+    "promises_any": 0,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "qwen/qwen-plus"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "360103f",
+     "e9b212b"
+    ]
+   }
+  },
+  "chat_only": {
+   "gpt4o": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "contrib": {
+     "mean": 14.084,
+     "sd": 3.712,
+     "n": 10
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "deals_keyword": {
+     "mean": 0.1,
+     "sd": 0.316,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 845.04,
+     "sd": 222.74,
+     "n": 10
+    },
+    "minutes": {
+     "mean": 7.993,
+     "sd": 0.116,
+     "n": 10
+    },
+    "broken_explicit": 2,
+    "explicit": 754,
+    "flag_code_rule": 15,
+    "promises_any": 829,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 1000,
+    "replies": 1000,
+    "threats": 0,
+    "models_called": [
+     "openai/gpt-4o"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "cea52bb",
+     "e9b212b"
+    ]
+   },
+   "claude": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 18.608,
+     "sd": 2.188,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 1116.5,
+     "sd": 131.295,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 23.406,
+     "sd": 0.792,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 446,
+    "flag_code_rule": 12,
+    "promises_any": 537,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "anthropic/claude-sonnet-4.5"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "cea52bb",
+     "e9b212b"
+    ]
+   },
+   "gemini": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "contrib": {
+     "mean": 12.485,
+     "sd": 3.524,
+     "n": 10
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 749.1,
+     "sd": 211.436,
+     "n": 10
+    },
+    "minutes": {
+     "mean": 7.505,
+     "sd": 0.259,
+     "n": 10
+    },
+    "broken_explicit": 0,
+    "explicit": 803,
+    "flag_code_rule": 2,
+    "promises_any": 880,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 1000,
+    "replies": 1000,
+    "threats": 0,
+    "models_called": [
+     "google/gemini-2.5-flash"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "cea52bb",
+     "e9b212b"
+    ]
+   },
+   "deepseek": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "contrib": {
+     "mean": 14.83,
+     "sd": 2.08,
+     "n": 8
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 8
+    },
+    "welfare": {
+     "mean": 889.8,
+     "sd": 124.774,
+     "n": 8
+    },
+    "minutes": {
+     "mean": 12.123,
+     "sd": 0.354,
+     "n": 8
+    },
+    "broken_explicit": 0,
+    "explicit": 529,
+    "flag_code_rule": 16,
+    "promises_any": 624,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 800,
+    "replies": 800,
+    "threats": 0,
+    "models_called": [
+     "deepseek/deepseek-chat"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "cea52bb",
+     "e9b212b"
+    ]
+   },
+   "grok": {
+    "coop": {
+     "mean": 94.167,
+     "sd": 2.563,
+     "n": 6
+    },
+    "contrib": {
+     "mean": 18.833,
+     "sd": 0.513,
+     "n": 6
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 6
+    },
+    "welfare": {
+     "mean": 1130.0,
+     "sd": 30.751,
+     "n": 6
+    },
+    "minutes": {
+     "mean": 13.936,
+     "sd": 0.181,
+     "n": 6
+    },
+    "broken_explicit": 0,
+    "explicit": 30,
+    "flag_code_rule": 17,
+    "promises_any": 286,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 600,
+    "replies": 600,
+    "threats": 0,
+    "models_called": [
+     "x-ai/grok-4.3"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "cea52bb",
+     "e9b212b"
+    ]
+   },
+   "qwen": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "contrib": {
+     "mean": 14.161,
+     "sd": 3.75,
+     "n": 10
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 849.66,
+     "sd": 225.011,
+     "n": 10
+    },
+    "minutes": {
+     "mean": 10.216,
+     "sd": 0.408,
+     "n": 10
+    },
+    "broken_explicit": 0,
+    "explicit": 884,
+    "flag_code_rule": 9,
+    "promises_any": 927,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 1000,
+    "replies": 1000,
+    "threats": 0,
+    "models_called": [
+     "qwen/qwen-plus"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "cea52bb",
+     "e9b212b"
+    ]
+   }
+  },
+  "fixed": {
+   "gpt4o": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "contrib": {
+     "mean": 14.829,
+     "sd": 2.716,
+     "n": 10
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 10
+    },
+    "welfare": {
+     "mean": 1188.94,
+     "sd": 181.905,
+     "n": 10
+    },
+    "minutes": {
+     "mean": 9.137,
+     "sd": 0.323,
+     "n": 10
+    },
+    "spend_applied": {
+     "mean": 8.245,
+     "sd": 0.95,
+     "n": 10
+    },
+    "broken_explicit": 0,
+    "explicit": 599,
+    "flag_code_rule": 31,
+    "promises_any": 674,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 1000,
+    "replies": 1000,
+    "threats": 0,
+    "models_called": [
+     "openai/gpt-4o"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "360103f",
+     "e9b212b",
      "fd84385"
     ]
    },
@@ -719,48 +732,48 @@
    },
    "gemini": {
     "coop": {
-     "mean": 100.0,
-     "sd": 0.0,
-     "n": 5
+     "mean": 99.9,
+     "sd": 0.316,
+     "n": 10
     },
     "contrib": {
-     "mean": 13.44,
-     "sd": 4.075,
-     "n": 5
+     "mean": 13.108,
+     "sd": 3.555,
+     "n": 10
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "welfare": {
-     "mean": 993.6,
-     "sd": 320.491,
-     "n": 5
+     "mean": 986.08,
+     "sd": 275.628,
+     "n": 10
     },
     "minutes": {
-     "mean": 7.904,
-     "sd": 0.158,
-     "n": 5
+     "mean": 7.836,
+     "sd": 0.16,
+     "n": 10
     },
     "spend_applied": {
-     "mean": 4.68,
-     "sd": 2.074,
-     "n": 5
+     "mean": 5.035,
+     "sd": 1.703,
+     "n": 10
     },
-    "broken_explicit": 0,
-    "explicit": 334,
-    "flag_code_rule": 8,
-    "promises_any": 442,
+    "broken_explicit": 1,
+    "explicit": 706,
+    "flag_code_rule": 16,
+    "promises_any": 892,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 500,
-    "replies": 500,
+    "parse_ok": 999,
+    "replies": 1000,
     "threats": 0,
     "models_called": [
      "google/gemini-2.5-flash"
@@ -770,6 +783,7 @@
     ],
     "code_commits": [
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    },
@@ -777,46 +791,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 5
+     "n": 8
     },
     "contrib": {
-     "mean": 14.924,
-     "sd": 0.386,
-     "n": 5
+     "mean": 15.095,
+     "sd": 0.413,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.4,
-     "sd": 0.548,
-     "n": 5
+     "mean": 0.25,
+     "sd": 0.463,
+     "n": 8
     },
     "welfare": {
-     "mean": 1283.04,
-     "sd": 39.121,
-     "n": 5
+     "mean": 1290.7,
+     "sd": 32.533,
+     "n": 8
     },
     "minutes": {
-     "mean": 23.664,
-     "sd": 7.468,
-     "n": 5
+     "mean": 19.926,
+     "sd": 7.648,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.75,
-     "sd": 0.308,
-     "n": 5
+     "mean": 9.662,
+     "sd": 0.301,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 321,
-    "flag_code_rule": 1,
-    "promises_any": 359,
+    "explicit": 444,
+    "flag_code_rule": 10,
+    "promises_any": 552,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 500,
-    "replies": 500,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "deepseek/deepseek-chat"
@@ -826,6 +840,7 @@
     ],
     "code_commits": [
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    },
@@ -889,46 +904,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "contrib": {
-     "mean": 14.826,
-     "sd": 3.289,
-     "n": 5
+     "mean": 14.016,
+     "sd": 3.068,
+     "n": 10
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "welfare": {
-     "mean": 1289.16,
-     "sd": 196.916,
-     "n": 5
+     "mean": 1240.76,
+     "sd": 183.828,
+     "n": 10
     },
     "minutes": {
-     "mean": 11.61,
-     "sd": 0.514,
-     "n": 5
+     "mean": 11.686,
+     "sd": 0.446,
+     "n": 10
     },
     "spend_applied": {
-     "mean": 9.99,
-     "sd": 0.022,
-     "n": 5
+     "mean": 9.995,
+     "sd": 0.016,
+     "n": 10
     },
     "broken_explicit": 1,
-    "explicit": 446,
-    "flag_code_rule": 9,
-    "promises_any": 463,
+    "explicit": 887,
+    "flag_code_rule": 11,
+    "promises_any": 916,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 500,
-    "replies": 500,
+    "parse_ok": 1000,
+    "replies": 1000,
     "threats": 0,
     "models_called": [
      "qwen/qwen-plus"
@@ -938,6 +953,7 @@
     ],
     "code_commits": [
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    }
@@ -947,46 +963,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "contrib": {
-     "mean": 13.278,
-     "sd": 3.462,
-     "n": 5
+     "mean": 13.414,
+     "sd": 2.506,
+     "n": 10
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 5
+     "mean": 0.1,
+     "sd": 0.316,
+     "n": 10
     },
     "welfare": {
-     "mean": 1071.48,
-     "sd": 222.149,
-     "n": 5
+     "mean": 1089.04,
+     "sd": 160.475,
+     "n": 10
     },
     "minutes": {
-     "mean": 12.473,
-     "sd": 2.597,
-     "n": 5
+     "mean": 11.593,
+     "sd": 1.975,
+     "n": 10
     },
     "spend_applied": {
-     "mean": 7.71,
-     "sd": 0.878,
-     "n": 5
+     "mean": 7.84,
+     "sd": 0.761,
+     "n": 10
     },
     "broken_explicit": 0,
-    "explicit": 311,
-    "flag_code_rule": 8,
-    "promises_any": 336,
-    "turnovers": 5,
-    "contested": 15,
-    "parse_ok": 500,
-    "replies": 500,
+    "explicit": 612,
+    "flag_code_rule": 13,
+    "promises_any": 657,
+    "turnovers": 8,
+    "contested": 30,
+    "parse_ok": 1000,
+    "replies": 1000,
     "threats": 0,
     "models_called": [
      "openai/gpt-4o"
@@ -997,6 +1013,7 @@
     "code_commits": [
      "0c21637",
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    },
@@ -1004,46 +1021,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 5
+     "n": 8
     },
     "contrib": {
-     "mean": 15.57,
-     "sd": 1.36,
-     "n": 5
+     "mean": 15.056,
+     "sd": 1.452,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 1.4,
-     "sd": 2.191,
-     "n": 5
+     "mean": 1.375,
+     "sd": 1.768,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 1.6,
-     "sd": 2.074,
-     "n": 5
+     "mean": 1.625,
+     "sd": 1.598,
+     "n": 8
     },
     "welfare": {
-     "mean": 1306.2,
-     "sd": 93.671,
-     "n": 5
+     "mean": 1263.875,
+     "sd": 111.663,
+     "n": 8
     },
     "minutes": {
-     "mean": 34.85,
-     "sd": 1.89,
-     "n": 5
+     "mean": 34.508,
+     "sd": 1.549,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.3,
-     "sd": 0.418,
-     "n": 5
+     "mean": 9.012,
+     "sd": 0.698,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 437,
-    "flag_code_rule": 2,
-    "promises_any": 444,
-    "turnovers": 8,
-    "contested": 15,
-    "parse_ok": 500,
-    "replies": 500,
+    "explicit": 693,
+    "flag_code_rule": 3,
+    "promises_any": 706,
+    "turnovers": 15,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "anthropic/claude-sonnet-4.5"
@@ -1054,53 +1071,54 @@
     "code_commits": [
      "0c21637",
      "360103f",
+     "3c86362",
      "fd84385"
     ]
    },
    "gemini": {
     "coop": {
-     "mean": 98.8,
-     "sd": 2.168,
-     "n": 5
+     "mean": 99.4,
+     "sd": 1.578,
+     "n": 10
     },
     "contrib": {
-     "mean": 19.66,
-     "sd": 0.422,
-     "n": 5
+     "mean": 19.788,
+     "sd": 0.317,
+     "n": 10
     },
     "deals_strict": {
      "mean": 1.6,
-     "sd": 1.14,
-     "n": 5
+     "sd": 0.843,
+     "n": 10
     },
     "deals_keyword": {
-     "mean": 2.6,
-     "sd": 1.673,
-     "n": 5
+     "mean": 2.4,
+     "sd": 1.265,
+     "n": 10
     },
     "welfare": {
-     "mean": 1478.796,
-     "sd": 49.75,
-     "n": 5
+     "mean": 1499.142,
+     "sd": 41.609,
+     "n": 10
     },
     "minutes": {
-     "mean": 11.095,
-     "sd": 1.384,
-     "n": 5
+     "mean": 10.283,
+     "sd": 1.261,
+     "n": 10
     },
     "spend_applied": {
-     "mean": 7.57,
-     "sd": 0.918,
-     "n": 5
+     "mean": 8.042,
+     "sd": 0.821,
+     "n": 10
     },
     "broken_explicit": 0,
-    "explicit": 120,
-    "flag_code_rule": 20,
-    "promises_any": 443,
-    "turnovers": 13,
-    "contested": 15,
-    "parse_ok": 498,
-    "replies": 500,
+    "explicit": 265,
+    "flag_code_rule": 31,
+    "promises_any": 869,
+    "turnovers": 24,
+    "contested": 30,
+    "parse_ok": 998,
+    "replies": 1000,
     "threats": 0,
     "models_called": [
      "google/gemini-2.5-flash"
@@ -1111,6 +1129,7 @@
     "code_commits": [
      "0c21637",
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    },
@@ -1118,46 +1137,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 5
+     "n": 8
     },
     "contrib": {
-     "mean": 15.212,
-     "sd": 0.369,
-     "n": 5
+     "mean": 15.136,
+     "sd": 0.323,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 2.0,
-     "sd": 1.225,
-     "n": 5
+     "mean": 2.125,
+     "sd": 0.991,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 2.8,
-     "sd": 1.483,
-     "n": 5
+     "mean": 2.625,
+     "sd": 1.188,
+     "n": 8
     },
     "welfare": {
-     "mean": 1281.52,
-     "sd": 30.923,
-     "n": 5
+     "mean": 1276.925,
+     "sd": 27.364,
+     "n": 8
     },
     "minutes": {
-     "mean": 19.948,
-     "sd": 5.366,
-     "n": 5
+     "mean": 18.555,
+     "sd": 4.497,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.22,
-     "sd": 0.401,
-     "n": 5
+     "mean": 9.219,
+     "sd": 0.337,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 244,
-    "flag_code_rule": 1,
-    "promises_any": 295,
-    "turnovers": 2,
-    "contested": 15,
-    "parse_ok": 500,
-    "replies": 500,
+    "explicit": 361,
+    "flag_code_rule": 2,
+    "promises_any": 456,
+    "turnovers": 3,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "deepseek/deepseek-chat"
@@ -1168,53 +1187,54 @@
     "code_commits": [
      "0c21637",
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    },
    "grok": {
     "coop": {
-     "mean": 95.4,
-     "sd": 0.894,
-     "n": 5
+     "mean": 96.125,
+     "sd": 1.458,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.072,
-     "sd": 0.184,
-     "n": 5
+     "mean": 19.22,
+     "sd": 0.296,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 8
     },
     "welfare": {
-     "mean": 1394.32,
-     "sd": 12.606,
-     "n": 5
+     "mean": 1413.45,
+     "sd": 30.439,
+     "n": 8
     },
     "minutes": {
-     "mean": 22.25,
-     "sd": 2.079,
-     "n": 5
+     "mean": 22.06,
+     "sd": 1.608,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.52,
-     "sd": 0.507,
-     "n": 5
+     "mean": 6.862,
+     "sd": 0.68,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 31,
-    "flag_code_rule": 9,
-    "promises_any": 184,
-    "turnovers": 3,
-    "contested": 15,
-    "parse_ok": 500,
-    "replies": 500,
+    "explicit": 50,
+    "flag_code_rule": 14,
+    "promises_any": 312,
+    "turnovers": 4,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "x-ai/grok-4.3"
@@ -1225,6 +1245,7 @@
     "code_commits": [
      "0c21637",
      "360103f",
+     "3c86362",
      "fd84385"
     ]
    },
@@ -1232,46 +1253,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "contrib": {
-     "mean": 14.0,
-     "sd": 1.907,
-     "n": 5
+     "mean": 13.725,
+     "sd": 2.098,
+     "n": 10
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 5
+     "n": 10
     },
     "welfare": {
-     "mean": 1228.4,
-     "sd": 118.772,
-     "n": 5
+     "mean": 1214.898,
+     "sd": 122.6,
+     "n": 10
     },
     "minutes": {
-     "mean": 15.074,
-     "sd": 1.629,
-     "n": 5
+     "mean": 14.701,
+     "sd": 1.188,
+     "n": 10
     },
     "spend_applied": {
-     "mean": 9.8,
-     "sd": 0.447,
-     "n": 5
+     "mean": 9.875,
+     "sd": 0.317,
+     "n": 10
     },
     "broken_explicit": 1,
-    "explicit": 448,
-    "flag_code_rule": 6,
-    "promises_any": 453,
+    "explicit": 886,
+    "flag_code_rule": 8,
+    "promises_any": 900,
     "turnovers": 1,
-    "contested": 15,
-    "parse_ok": 500,
-    "replies": 500,
+    "contested": 30,
+    "parse_ok": 1000,
+    "replies": 1000,
     "threats": 0,
     "models_called": [
      "qwen/qwen-plus"
@@ -1282,6 +1303,7 @@
     "code_commits": [
      "0c21637",
      "360103f",
+     "e9b212b",
      "fd84385"
     ]
    }
@@ -1684,46 +1706,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 14.897,
-     "sd": 1.521,
-     "n": 3
+     "mean": 15.4,
+     "sd": 2.025,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 15.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 14.5,
+     "sd": 1.604,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 15.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 15.5,
+     "sd": 2.0,
+     "n": 8
     },
     "welfare": {
-     "mean": 1355.133,
-     "sd": 85.287,
-     "n": 3
+     "mean": 1376.75,
+     "sd": 140.546,
+     "n": 8
     },
     "minutes": {
-     "mean": 36.516,
-     "sd": 0.306,
-     "n": 3
+     "mean": 35.726,
+     "sd": 0.789,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.033,
-     "sd": 0.58,
-     "n": 3
+     "mean": 8.819,
+     "sd": 0.782,
+     "n": 8
     },
-    "broken_explicit": 3,
-    "explicit": 262,
-    "flag_code_rule": 8,
-    "promises_any": 265,
-    "turnovers": 4,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 7,
+    "explicit": 685,
+    "flag_code_rule": 17,
+    "promises_any": 712,
+    "turnovers": 9,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "anthropic/claude-sonnet-4.5"
@@ -1732,53 +1754,54 @@
      "True"
     ],
     "code_commits": [
-     "360103f"
+     "360103f",
+     "3c86362"
     ]
    },
    "gemini": {
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 20.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 19.988,
+     "sd": 0.035,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 5.667,
-     "sd": 2.309,
-     "n": 3
+     "mean": 5.875,
+     "sd": 1.553,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 5.667,
-     "sd": 2.309,
-     "n": 3
+     "mean": 6.125,
+     "sd": 1.553,
+     "n": 8
     },
     "welfare": {
-     "mean": 1622.653,
-     "sd": 34.02,
-     "n": 3
+     "mean": 1633.22,
+     "sd": 25.494,
+     "n": 8
     },
     "minutes": {
-     "mean": 9.66,
-     "sd": 0.027,
-     "n": 3
+     "mean": 10.141,
+     "sd": 0.409,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.066,
-     "sd": 0.85,
-     "n": 3
+     "mean": 8.349,
+     "sd": 0.657,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 63,
-    "flag_code_rule": 12,
-    "promises_any": 273,
-    "turnovers": 6,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 158,
+    "flag_code_rule": 28,
+    "promises_any": 732,
+    "turnovers": 15,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemini-2.5-flash"
@@ -1787,7 +1810,8 @@
      "True"
     ],
     "code_commits": [
-     "360103f"
+     "360103f",
+     "e9b212b"
     ]
    },
    "deepseek": {
@@ -1847,48 +1871,48 @@
    },
    "grok": {
     "coop": {
-     "mean": 95.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 95.625,
+     "sd": 0.744,
+     "n": 8
     },
     "contrib": {
-     "mean": 18.9,
-     "sd": 0.328,
-     "n": 3
+     "mean": 19.016,
+     "sd": 0.237,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 2.667,
-     "sd": 0.577,
-     "n": 3
+     "mean": 2.75,
+     "sd": 1.035,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 3.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 3.375,
+     "sd": 1.506,
+     "n": 8
     },
     "welfare": {
-     "mean": 1504.0,
-     "sd": 39.509,
-     "n": 3
+     "mean": 1498.725,
+     "sd": 31.506,
+     "n": 8
     },
     "minutes": {
-     "mean": 22.909,
-     "sd": 0.548,
-     "n": 3
+     "mean": 23.271,
+     "sd": 0.422,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.9,
-     "sd": 0.65,
-     "n": 3
+     "mean": 6.8,
+     "sd": 0.743,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 21,
-    "flag_code_rule": 4,
-    "promises_any": 151,
-    "turnovers": 5,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 51,
+    "flag_code_rule": 8,
+    "promises_any": 361,
+    "turnovers": 9,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "x-ai/grok-4.3"
@@ -1897,7 +1921,8 @@
      "True"
     ],
     "code_commits": [
-     "360103f"
+     "360103f",
+     "3c86362"
     ]
    },
    "qwen": {
@@ -2016,46 +2041,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 18.99,
-     "sd": 1.749,
-     "n": 3
+     "mean": 18.996,
+     "sd": 1.932,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 7.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 7.625,
+     "sd": 1.598,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 10.0,
-     "sd": 3.0,
-     "n": 3
+     "mean": 9.5,
+     "sd": 2.449,
+     "n": 8
     },
     "welfare": {
-     "mean": 1444.733,
-     "sd": 108.373,
-     "n": 3
+     "mean": 1448.775,
+     "sd": 112.426,
+     "n": 8
     },
     "minutes": {
-     "mean": 35.472,
-     "sd": 0.629,
-     "n": 3
+     "mean": 35.669,
+     "sd": 2.21,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.133,
-     "sd": 0.551,
-     "n": 3
+     "mean": 9.225,
+     "sd": 0.381,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 250,
-    "flag_code_rule": 10,
-    "promises_any": 270,
-    "turnovers": 5,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 667,
+    "flag_code_rule": 24,
+    "promises_any": 726,
+    "turnovers": 13,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "anthropic/claude-sonnet-4.5"
@@ -2064,53 +2089,54 @@
      "True"
     ],
     "code_commits": [
-     "360103f"
+     "360103f",
+     "3c86362"
     ]
    },
    "gemini": {
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 18.183,
-     "sd": 2.587,
-     "n": 3
+     "mean": 19.306,
+     "sd": 1.667,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 5.333,
-     "sd": 1.528,
-     "n": 3
+     "mean": 5.75,
+     "sd": 1.669,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 6.0,
-     "sd": 1.732,
-     "n": 3
+     "mean": 6.25,
+     "sd": 1.669,
+     "n": 8
     },
     "welfare": {
-     "mean": 1274.327,
-     "sd": 248.007,
-     "n": 3
+     "mean": 1369.618,
+     "sd": 155.915,
+     "n": 8
     },
     "minutes": {
-     "mean": 9.484,
-     "sd": 0.158,
-     "n": 3
+     "mean": 10.325,
+     "sd": 0.731,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.233,
-     "sd": 2.458,
-     "n": 3
+     "mean": 6.894,
+     "sd": 1.521,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 136,
-    "flag_code_rule": 9,
-    "promises_any": 257,
-    "turnovers": 8,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 230,
+    "flag_code_rule": 33,
+    "promises_any": 711,
+    "turnovers": 20,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemini-2.5-flash"
@@ -2119,7 +2145,8 @@
      "True"
     ],
     "code_commits": [
-     "360103f"
+     "360103f",
+     "e9b212b"
     ]
    },
    "deepseek": {
@@ -2179,48 +2206,48 @@
    },
    "grok": {
     "coop": {
-     "mean": 95.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 96.25,
+     "sd": 1.282,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.0,
-     "sd": 0.18,
-     "n": 3
+     "mean": 19.197,
+     "sd": 0.283,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 1316.0,
-     "sd": 42.579,
-     "n": 3
+     "mean": 1315.1,
+     "sd": 32.376,
+     "n": 8
     },
     "minutes": {
-     "mean": 23.751,
-     "sd": 0.692,
-     "n": 3
+     "mean": 22.111,
+     "sd": 1.419,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.2,
-     "sd": 0.589,
-     "n": 3
+     "mean": 6.406,
+     "sd": 0.514,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 10,
-    "flag_code_rule": 1,
-    "promises_any": 103,
-    "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 35,
+    "flag_code_rule": 5,
+    "promises_any": 282,
+    "turnovers": 1,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "x-ai/grok-4.3"
@@ -2229,7 +2256,8 @@
      "True"
     ],
     "code_commits": [
-     "360103f"
+     "360103f",
+     "3c86362"
     ]
    },
    "qwen": {
@@ -3097,8 +3125,106 @@
    }
   },
   "chat_only": {
-   "gpt5": null,
-   "deepseek31": null
+   "gpt5": {
+    "coop": {
+     "mean": 93.0,
+     "sd": 1.0,
+     "n": 3
+    },
+    "contrib": {
+     "mean": 18.6,
+     "sd": 0.2,
+     "n": 3
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "deals_keyword": {
+     "mean": 1.0,
+     "sd": 1.732,
+     "n": 3
+    },
+    "welfare": {
+     "mean": 1116.0,
+     "sd": 12.0,
+     "n": 3
+    },
+    "minutes": {
+     "mean": 94.322,
+     "sd": 2.828,
+     "n": 3
+    },
+    "broken_explicit": 21,
+    "explicit": 290,
+    "flag_code_rule": 21,
+    "promises_any": 290,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 300,
+    "replies": 300,
+    "threats": 0,
+    "models_called": [
+     "openai/gpt-5"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "3c86362"
+    ]
+   },
+   "deepseek31": {
+    "coop": {
+     "mean": 100.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "contrib": {
+     "mean": 19.987,
+     "sd": 0.023,
+     "n": 3
+    },
+    "deals_strict": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "deals_keyword": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "n": 3
+    },
+    "welfare": {
+     "mean": 1199.2,
+     "sd": 1.386,
+     "n": 3
+    },
+    "minutes": {
+     "mean": 18.74,
+     "sd": 0.359,
+     "n": 3
+    },
+    "broken_explicit": 0,
+    "explicit": 76,
+    "flag_code_rule": 5,
+    "promises_any": 274,
+    "turnovers": 0,
+    "contested": 0,
+    "parse_ok": 300,
+    "replies": 300,
+    "threats": 0,
+    "models_called": [
+     "deepseek/deepseek-chat-v3.1"
+    ],
+    "sanction_cost": [
+     "True"
+    ],
+    "code_commits": [
+     "3c86362"
+    ]
+   }
   },
   "fixed": {
    "gpt5": {
@@ -3273,46 +3399,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 17.62,
-     "sd": 0.562,
-     "n": 3
+     "mean": 17.898,
+     "sd": 1.427,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 15.667,
-     "sd": 2.517,
-     "n": 3
+     "mean": 14.75,
+     "sd": 2.252,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 17.667,
-     "sd": 4.041,
-     "n": 3
+     "mean": 17.5,
+     "sd": 2.449,
+     "n": 8
     },
     "welfare": {
-     "mean": 1370.533,
-     "sd": 6.294,
-     "n": 3
+     "mean": 1398.85,
+     "sd": 77.532,
+     "n": 8
     },
     "minutes": {
-     "mean": 28.63,
-     "sd": 2.697,
-     "n": 3
+     "mean": 26.94,
+     "sd": 2.235,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 7.833,
-     "sd": 0.751,
-     "n": 3
+     "mean": 8.256,
+     "sd": 0.748,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 171,
-    "flag_code_rule": 27,
-    "promises_any": 227,
-    "turnovers": 1,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 464,
+    "flag_code_rule": 53,
+    "promises_any": 634,
+    "turnovers": 2,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "deepseek/deepseek-chat-v3.1"
@@ -3322,7 +3448,8 @@
     ],
     "code_commits": [
      "17889d6",
-     "36d959d"
+     "36d959d",
+     "e9b212b"
     ]
    }
   },
@@ -3498,46 +3625,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 18.737,
-     "sd": 0.852,
-     "n": 3
+     "mean": 19.44,
+     "sd": 0.74,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 15.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 14.625,
+     "sd": 1.768,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 17.667,
-     "sd": 2.082,
-     "n": 3
+     "mean": 17.5,
+     "sd": 1.512,
+     "n": 8
     },
     "welfare": {
-     "mean": 1524.867,
-     "sd": 71.389,
-     "n": 3
+     "mean": 1586.15,
+     "sd": 65.129,
+     "n": 8
     },
     "minutes": {
-     "mean": 26.969,
-     "sd": 1.063,
-     "n": 3
+     "mean": 27.205,
+     "sd": 1.559,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 7.517,
-     "sd": 0.52,
-     "n": 3
+     "mean": 7.994,
+     "sd": 0.61,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 161,
-    "flag_code_rule": 8,
-    "promises_any": 217,
-    "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "explicit": 374,
+    "flag_code_rule": 27,
+    "promises_any": 655,
+    "turnovers": 1,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "deepseek/deepseek-chat-v3.1"
@@ -3546,7 +3673,8 @@
      "True"
     ],
     "code_commits": [
-     "36d959d"
+     "36d959d",
+     "e9b212b"
     ]
    }
   },
@@ -3610,46 +3738,46 @@
     "coop": {
      "mean": 100.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
-     "mean": 18.57,
-     "sd": 1.776,
-     "n": 3
+     "mean": 19.196,
+     "sd": 1.09,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 14.0,
-     "sd": 1.0,
-     "n": 3
+     "mean": 13.25,
+     "sd": 1.753,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 17.667,
-     "sd": 2.309,
-     "n": 3
+     "mean": 18.125,
+     "sd": 2.167,
+     "n": 8
     },
     "welfare": {
-     "mean": 1351.533,
-     "sd": 132.768,
-     "n": 3
+     "mean": 1389.525,
+     "sd": 79.803,
+     "n": 8
     },
     "minutes": {
-     "mean": 24.686,
-     "sd": 0.424,
-     "n": 3
+     "mean": 26.002,
+     "sd": 1.668,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 7.433,
-     "sd": 0.777,
-     "n": 3
+     "mean": 7.481,
+     "sd": 0.551,
+     "n": 8
     },
     "broken_explicit": 0,
-    "explicit": 171,
-    "flag_code_rule": 6,
-    "promises_any": 232,
+    "explicit": 420,
+    "flag_code_rule": 34,
+    "promises_any": 650,
     "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "deepseek/deepseek-chat-v3.1"
@@ -3658,7 +3786,8 @@
      "True"
     ],
     "code_commits": [
-     "36d959d"
+     "36d959d",
+     "e9b212b"
     ]
    }
   },
@@ -4164,43 +4293,43 @@
   "chat_only": {
    "gpt-oss-120b": {
     "coop": {
-     "mean": 60.333,
-     "sd": 16.197,
-     "n": 3
+     "mean": 54.5,
+     "sd": 12.762,
+     "n": 8
     },
     "contrib": {
-     "mean": 8.53,
-     "sd": 6.339,
-     "n": 3
+     "mean": 6.951,
+     "sd": 3.761,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 0.75,
+     "sd": 1.035,
+     "n": 8
     },
     "welfare": {
-     "mean": 511.8,
-     "sd": 380.326,
-     "n": 3
+     "mean": 417.075,
+     "sd": 225.631,
+     "n": 8
     },
     "minutes": {
-     "mean": 50.5,
-     "sd": 6.279,
-     "n": 3
+     "mean": 57.317,
+     "sd": 7.166,
+     "n": 8
     },
-    "broken_explicit": 67,
-    "explicit": 240,
-    "flag_code_rule": 70,
-    "promises_any": 265,
+    "broken_explicit": 196,
+    "explicit": 651,
+    "flag_code_rule": 211,
+    "promises_any": 687,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "openai/gpt-oss-120b"
@@ -4209,48 +4338,49 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "nemotron-3-super-120b": {
     "coop": {
-     "mean": 81.0,
-     "sd": 20.881,
-     "n": 3
+     "mean": 89.625,
+     "sd": 13.405,
+     "n": 8
     },
     "contrib": {
-     "mean": 9.843,
-     "sd": 3.891,
-     "n": 3
+     "mean": 11.491,
+     "sd": 2.932,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 590.6,
-     "sd": 233.487,
-     "n": 3
+     "mean": 689.475,
+     "sd": 175.949,
+     "n": 8
     },
     "minutes": {
-     "mean": 44.401,
-     "sd": 12.526,
-     "n": 3
+     "mean": 40.922,
+     "sd": 10.622,
+     "n": 8
     },
-    "broken_explicit": 6,
-    "explicit": 51,
-    "flag_code_rule": 9,
-    "promises_any": 55,
+    "broken_explicit": 16,
+    "explicit": 134,
+    "flag_code_rule": 26,
+    "promises_any": 160,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 283,
-    "replies": 300,
+    "parse_ok": 760,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"
@@ -4259,48 +4389,49 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "a3c456c"
     ]
    },
    "ling-3.0-flash": {
     "coop": {
-     "mean": 42.0,
-     "sd": 7.211,
-     "n": 3
+     "mean": 37.375,
+     "sd": 7.963,
+     "n": 8
     },
     "contrib": {
-     "mean": 4.23,
-     "sd": 1.116,
-     "n": 3
+     "mean": 3.445,
+     "sd": 1.191,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 1.0,
-     "sd": 1.0,
-     "n": 3
+     "mean": 0.625,
+     "sd": 0.744,
+     "n": 8
     },
     "welfare": {
-     "mean": 253.8,
-     "sd": 66.95,
-     "n": 3
+     "mean": 206.7,
+     "sd": 71.487,
+     "n": 8
     },
     "minutes": {
-     "mean": 74.086,
-     "sd": 4.393,
-     "n": 3
+     "mean": 80.481,
+     "sd": 6.67,
+     "n": 8
     },
-    "broken_explicit": 97,
-    "explicit": 238,
-    "flag_code_rule": 117,
-    "promises_any": 269,
+    "broken_explicit": 284,
+    "explicit": 643,
+    "flag_code_rule": 332,
+    "promises_any": 721,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 299,
-    "replies": 300,
+    "parse_ok": 797,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "inclusionAI/Ling-3.0-flash-fp4"
@@ -4309,48 +4440,49 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "qwen3.8-27b": {
     "coop": {
-     "mean": 51.0,
-     "sd": 8.718,
-     "n": 3
+     "mean": 53.125,
+     "sd": 5.89,
+     "n": 8
     },
     "contrib": {
-     "mean": 6.353,
-     "sd": 1.893,
-     "n": 3
+     "mean": 6.173,
+     "sd": 1.362,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 0.75,
+     "sd": 1.165,
+     "n": 8
     },
     "welfare": {
-     "mean": 381.2,
-     "sd": 113.565,
-     "n": 3
+     "mean": 370.35,
+     "sd": 81.731,
+     "n": 8
     },
     "minutes": {
-     "mean": 29.492,
-     "sd": 1.154,
-     "n": 3
+     "mean": 33.654,
+     "sd": 3.736,
+     "n": 8
     },
-    "broken_explicit": 55,
-    "explicit": 257,
-    "flag_code_rule": 59,
-    "promises_any": 260,
+    "broken_explicit": 146,
+    "explicit": 644,
+    "flag_code_rule": 167,
+    "promises_any": 669,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "Qwen/Qwen3.8-27B"
@@ -4359,48 +4491,49 @@
      "True"
     ],
     "code_commits": [
-     "350d165"
+     "350d165",
+     "3c86362"
     ]
    },
    "gemma-4-31b": {
     "coop": {
-     "mean": 95.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 95.125,
+     "sd": 0.354,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 19.025,
+     "sd": 0.071,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 1140.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 1141.5,
+     "sd": 4.243,
+     "n": 8
     },
     "minutes": {
-     "mean": 23.144,
-     "sd": 0.978,
-     "n": 3
+     "mean": 25.689,
+     "sd": 5.256,
+     "n": 8
     },
-    "broken_explicit": 13,
-    "explicit": 171,
-    "flag_code_rule": 15,
-    "promises_any": 201,
+    "broken_explicit": 30,
+    "explicit": 435,
+    "flag_code_rule": 38,
+    "promises_any": 523,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemma-4-31B-it"
@@ -4409,6 +4542,7 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "7450a2b"
     ]
    }
@@ -4416,48 +4550,48 @@
   "fixed": {
    "gpt-oss-120b": {
     "coop": {
-     "mean": 84.0,
-     "sd": 4.583,
-     "n": 3
+     "mean": 85.0,
+     "sd": 4.472,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.073,
-     "sd": 2.435,
-     "n": 3
+     "mean": 12.831,
+     "sd": 2.207,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 0.875,
+     "sd": 0.991,
+     "n": 8
     },
     "welfare": {
-     "mean": 816.4,
-     "sd": 104.507,
-     "n": 3
+     "mean": 824.375,
+     "sd": 109.275,
+     "n": 8
     },
     "minutes": {
-     "mean": 61.688,
-     "sd": 2.802,
-     "n": 3
+     "mean": 63.673,
+     "sd": 3.382,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.65,
-     "sd": 0.95,
-     "n": 3
+     "mean": 8.544,
+     "sd": 0.815,
+     "n": 8
     },
-    "broken_explicit": 34,
-    "explicit": 275,
-    "flag_code_rule": 57,
-    "promises_any": 286,
+    "broken_explicit": 90,
+    "explicit": 722,
+    "flag_code_rule": 143,
+    "promises_any": 753,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "openai/gpt-oss-120b"
@@ -4466,53 +4600,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "nemotron-3-super-120b": {
     "coop": {
-     "mean": 94.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 92.75,
+     "sd": 7.025,
+     "n": 8
     },
     "contrib": {
-     "mean": 12.41,
-     "sd": 4.682,
-     "n": 3
+     "mean": 11.681,
+     "sd": 3.685,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 0.125,
+     "sd": 0.354,
+     "n": 8
     },
     "welfare": {
-     "mean": 797.253,
-     "sd": 311.647,
-     "n": 3
+     "mean": 742.702,
+     "sd": 238.744,
+     "n": 8
     },
     "minutes": {
-     "mean": 46.014,
-     "sd": 10.804,
-     "n": 3
+     "mean": 44.14,
+     "sd": 10.819,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 1.783,
-     "sd": 0.807,
-     "n": 3
+     "mean": 1.321,
+     "sd": 0.746,
+     "n": 8
     },
-    "broken_explicit": 1,
-    "explicit": 25,
-    "flag_code_rule": 6,
-    "promises_any": 38,
+    "broken_explicit": 7,
+    "explicit": 121,
+    "flag_code_rule": 19,
+    "promises_any": 147,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 290,
-    "replies": 300,
+    "parse_ok": 767,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"
@@ -4521,53 +4656,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "a3c456c"
     ]
    },
    "ling-3.0-flash": {
     "coop": {
-     "mean": 39.333,
-     "sd": 6.658,
-     "n": 3
+     "mean": 36.625,
+     "sd": 11.006,
+     "n": 8
     },
     "contrib": {
-     "mean": 3.663,
-     "sd": 0.946,
-     "n": 3
+     "mean": 3.493,
+     "sd": 1.237,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 0.375,
+     "sd": 0.744,
+     "n": 8
     },
     "welfare": {
-     "mean": 16.973,
-     "sd": 68.944,
-     "n": 3
+     "mean": -19.243,
+     "sd": 111.145,
+     "n": 8
     },
     "minutes": {
-     "mean": 71.916,
-     "sd": 0.306,
-     "n": 3
+     "mean": 80.115,
+     "sd": 8.25,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 10.092,
-     "sd": 0.689,
-     "n": 3
+     "mean": 8.734,
+     "sd": 1.76,
+     "n": 8
     },
-    "broken_explicit": 108,
-    "explicit": 243,
-    "flag_code_rule": 134,
-    "promises_any": 276,
+    "broken_explicit": 291,
+    "explicit": 630,
+    "flag_code_rule": 372,
+    "promises_any": 713,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 298,
-    "replies": 300,
+    "parse_ok": 797,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "inclusionAI/Ling-3.0-flash-fp4"
@@ -4576,53 +4712,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "qwen3.8-27b": {
     "coop": {
-     "mean": 77.667,
-     "sd": 12.741,
-     "n": 3
+     "mean": 80.0,
+     "sd": 7.69,
+     "n": 8
     },
     "contrib": {
-     "mean": 8.477,
-     "sd": 1.986,
-     "n": 3
+     "mean": 9.307,
+     "sd": 2.063,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 0.375,
+     "sd": 0.518,
+     "n": 8
     },
     "welfare": {
-     "mean": 221.267,
-     "sd": 166.191,
-     "n": 3
+     "mean": 303.95,
+     "sd": 184.111,
+     "n": 8
     },
     "minutes": {
-     "mean": 31.78,
-     "sd": 0.627,
-     "n": 3
+     "mean": 34.342,
+     "sd": 2.561,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.317,
-     "sd": 0.975,
-     "n": 3
+     "mean": 6.069,
+     "sd": 1.243,
+     "n": 8
     },
-    "broken_explicit": 49,
-    "explicit": 246,
-    "flag_code_rule": 54,
-    "promises_any": 248,
+    "broken_explicit": 120,
+    "explicit": 657,
+    "flag_code_rule": 129,
+    "promises_any": 666,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "Qwen/Qwen3.8-27B"
@@ -4631,53 +4768,54 @@
      "True"
     ],
     "code_commits": [
-     "350d165"
+     "350d165",
+     "3c86362"
     ]
    },
    "gemma-4-31b": {
     "coop": {
-     "mean": 97.333,
-     "sd": 1.528,
-     "n": 3
+     "mean": 96.5,
+     "sd": 1.195,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.467,
-     "sd": 0.306,
-     "n": 3
+     "mean": 19.3,
+     "sd": 0.239,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 1450.793,
-     "sd": 37.524,
-     "n": 3
+     "mean": 1433.88,
+     "sd": 25.203,
+     "n": 8
     },
     "minutes": {
-     "mean": 33.174,
-     "sd": 2.573,
-     "n": 3
+     "mean": 35.45,
+     "sd": 3.985,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.136,
-     "sd": 0.133,
-     "n": 3
+     "mean": 8.084,
+     "sd": 0.122,
+     "n": 8
     },
-    "broken_explicit": 4,
-    "explicit": 205,
-    "flag_code_rule": 8,
-    "promises_any": 264,
+    "broken_explicit": 20,
+    "explicit": 518,
+    "flag_code_rule": 27,
+    "promises_any": 674,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemma-4-31B-it"
@@ -4686,6 +4824,7 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "7450a2b"
     ]
    }
@@ -4693,48 +4832,48 @@
   "elected": {
    "gpt-oss-120b": {
     "coop": {
-     "mean": 85.667,
-     "sd": 6.11,
-     "n": 3
+     "mean": 85.25,
+     "sd": 5.312,
+     "n": 8
     },
     "contrib": {
-     "mean": 11.743,
-     "sd": 1.377,
-     "n": 3
+     "mean": 13.164,
+     "sd": 2.621,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 7.333,
-     "sd": 2.082,
-     "n": 3
+     "mean": 8.125,
+     "sd": 2.416,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 16.333,
-     "sd": 2.309,
-     "n": 3
+     "mean": 19.125,
+     "sd": 3.98,
+     "n": 8
     },
     "welfare": {
-     "mean": 789.933,
-     "sd": 101.711,
-     "n": 3
+     "mean": 856.825,
+     "sd": 179.624,
+     "n": 8
     },
     "minutes": {
-     "mean": 52.106,
-     "sd": 34.031,
-     "n": 3
+     "mean": 65.43,
+     "sd": 21.468,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.233,
-     "sd": 0.548,
-     "n": 3
+     "mean": 8.575,
+     "sd": 1.385,
+     "n": 8
     },
-    "broken_explicit": 34,
-    "explicit": 275,
-    "flag_code_rule": 60,
-    "promises_any": 279,
-    "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 91,
+    "explicit": 716,
+    "flag_code_rule": 145,
+    "promises_any": 734,
+    "turnovers": 2,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "openai/gpt-oss-120b"
@@ -4744,53 +4883,54 @@
     ],
     "code_commits": [
      "360103f",
+     "3c86362",
      "cf7a332"
     ]
    },
    "nemotron-3-super-120b": {
     "coop": {
-     "mean": 96.667,
-     "sd": 0.577,
-     "n": 3
+     "mean": 97.0,
+     "sd": 2.33,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.657,
-     "sd": 0.862,
-     "n": 3
+     "mean": 13.183,
+     "sd": 1.309,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 0.667,
-     "sd": 0.577,
-     "n": 3
+     "mean": 0.75,
+     "sd": 0.707,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 16.0,
-     "sd": 1.732,
-     "n": 3
+     "mean": 13.75,
+     "sd": 2.659,
+     "n": 8
     },
     "welfare": {
-     "mean": 870.293,
-     "sd": 55.031,
-     "n": 3
+     "mean": 813.365,
+     "sd": 97.363,
+     "n": 8
     },
     "minutes": {
-     "mean": 46.09,
-     "sd": 14.544,
-     "n": 3
+     "mean": 44.341,
+     "sd": 10.879,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 1.739,
-     "sd": 0.92,
-     "n": 3
+     "mean": 1.173,
+     "sd": 1.032,
+     "n": 8
     },
-    "broken_explicit": 4,
-    "explicit": 88,
-    "flag_code_rule": 6,
-    "promises_any": 94,
-    "turnovers": 1,
-    "contested": 9,
-    "parse_ok": 292,
-    "replies": 300,
+    "broken_explicit": 8,
+    "explicit": 189,
+    "flag_code_rule": 12,
+    "promises_any": 204,
+    "turnovers": 7,
+    "contested": 24,
+    "parse_ok": 780,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"
@@ -4799,54 +4939,55 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "a3c456c"
     ]
    },
    "ling-3.0-flash": {
     "coop": {
-     "mean": 38.333,
-     "sd": 8.083,
-     "n": 3
+     "mean": 36.375,
+     "sd": 12.466,
+     "n": 8
     },
     "contrib": {
-     "mean": 3.493,
-     "sd": 0.515,
-     "n": 3
+     "mean": 3.561,
+     "sd": 1.375,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 0.667,
-     "sd": 0.577,
-     "n": 3
+     "mean": 0.875,
+     "sd": 1.727,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 4.333,
-     "sd": 1.155,
-     "n": 3
+     "mean": 5.125,
+     "sd": 2.588,
+     "n": 8
     },
     "welfare": {
-     "mean": -38.787,
-     "sd": 55.578,
-     "n": 3
+     "mean": 25.903,
+     "sd": 144.636,
+     "n": 8
     },
     "minutes": {
-     "mean": 86.946,
-     "sd": 0.951,
-     "n": 3
+     "mean": 90.27,
+     "sd": 3.462,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.588,
-     "sd": 1.415,
-     "n": 3
+     "mean": 7.915,
+     "sd": 1.751,
+     "n": 8
     },
-    "broken_explicit": 99,
-    "explicit": 234,
-    "flag_code_rule": 131,
-    "promises_any": 267,
-    "turnovers": 1,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
+    "broken_explicit": 289,
+    "explicit": 631,
+    "flag_code_rule": 366,
+    "promises_any": 716,
+    "turnovers": 4,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
+    "threats": 1,
     "models_called": [
      "inclusionAI/Ling-3.0-flash-fp4"
     ],
@@ -4854,53 +4995,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "qwen3.8-27b": {
     "coop": {
-     "mean": 87.333,
-     "sd": 4.933,
-     "n": 3
+     "mean": 86.75,
+     "sd": 3.105,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.193,
-     "sd": 4.816,
-     "n": 3
+     "mean": 13.637,
+     "sd": 3.652,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 9.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 10.125,
+     "sd": 2.357,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 15.333,
-     "sd": 2.517,
-     "n": 3
+     "mean": 16.375,
+     "sd": 2.973,
+     "n": 8
     },
     "welfare": {
-     "mean": 682.933,
-     "sd": 349.128,
-     "n": 3
+     "mean": 701.0,
+     "sd": 250.753,
+     "n": 8
     },
     "minutes": {
-     "mean": 49.098,
-     "sd": 1.49,
-     "n": 3
+     "mean": 51.012,
+     "sd": 2.148,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.783,
-     "sd": 1.402,
-     "n": 3
+     "mean": 6.425,
+     "sd": 0.994,
+     "n": 8
     },
-    "broken_explicit": 30,
-    "explicit": 240,
-    "flag_code_rule": 38,
-    "promises_any": 258,
-    "turnovers": 6,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 70,
+    "explicit": 566,
+    "flag_code_rule": 93,
+    "promises_any": 640,
+    "turnovers": 16,
+    "contested": 24,
+    "parse_ok": 799,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "Qwen/Qwen3.8-27B"
@@ -4909,53 +5051,54 @@
      "True"
     ],
     "code_commits": [
-     "350d165"
+     "350d165",
+     "3c86362"
     ]
    },
    "gemma-4-31b": {
     "coop": {
-     "mean": 95.667,
-     "sd": 0.577,
-     "n": 3
+     "mean": 96.125,
+     "sd": 1.246,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.133,
-     "sd": 0.115,
-     "n": 3
+     "mean": 19.225,
+     "sd": 0.249,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 1420.0,
-     "sd": 6.928,
-     "n": 3
+     "mean": 1430.17,
+     "sd": 28.181,
+     "n": 8
     },
     "minutes": {
-     "mean": 44.076,
-     "sd": 0.607,
-     "n": 3
+     "mean": 46.164,
+     "sd": 2.153,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 8.066,
+     "sd": 0.123,
+     "n": 8
     },
-    "broken_explicit": 13,
-    "explicit": 210,
-    "flag_code_rule": 14,
-    "promises_any": 258,
-    "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 25,
+    "explicit": 555,
+    "flag_code_rule": 31,
+    "promises_any": 675,
+    "turnovers": 1,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemma-4-31B-it"
@@ -4964,6 +5107,7 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "7450a2b"
     ]
    }
@@ -4971,48 +5115,48 @@
   "rotating": {
    "gpt-oss-120b": {
     "coop": {
-     "mean": 86.0,
-     "sd": 6.083,
-     "n": 3
+     "mean": 85.625,
+     "sd": 4.207,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.997,
-     "sd": 1.627,
-     "n": 3
+     "mean": 13.014,
+     "sd": 1.818,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 0.75,
+     "sd": 0.886,
+     "n": 8
     },
     "welfare": {
-     "mean": 915.133,
-     "sd": 100.995,
-     "n": 3
+     "mean": 835.075,
+     "sd": 129.454,
+     "n": 8
     },
     "minutes": {
-     "mean": 52.951,
-     "sd": 15.772,
-     "n": 3
+     "mean": 61.561,
+     "sd": 11.136,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.283,
-     "sd": 1.285,
-     "n": 3
+     "mean": 8.481,
+     "sd": 0.976,
+     "n": 8
     },
-    "broken_explicit": 35,
-    "explicit": 260,
-    "flag_code_rule": 48,
-    "promises_any": 268,
+    "broken_explicit": 99,
+    "explicit": 720,
+    "flag_code_rule": 132,
+    "promises_any": 737,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "openai/gpt-oss-120b"
@@ -5022,53 +5166,54 @@
     ],
     "code_commits": [
      "360103f",
+     "3c86362",
      "cf7a332"
     ]
    },
    "nemotron-3-super-120b": {
     "coop": {
-     "mean": 91.333,
-     "sd": 2.517,
-     "n": 3
+     "mean": 77.5,
+     "sd": 30.975,
+     "n": 8
     },
     "contrib": {
-     "mean": 11.237,
-     "sd": 0.456,
-     "n": 3
+     "mean": 10.207,
+     "sd": 5.127,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 0.5,
+     "sd": 0.535,
+     "n": 8
     },
     "welfare": {
-     "mean": 694.869,
-     "sd": 34.818,
-     "n": 3
+     "mean": 618.949,
+     "sd": 302.477,
+     "n": 8
     },
     "minutes": {
-     "mean": 53.344,
-     "sd": 1.196,
-     "n": 3
+     "mean": 51.553,
+     "sd": 5.819,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 1.833,
-     "sd": 0.305,
-     "n": 3
+     "mean": 1.4,
+     "sd": 0.93,
+     "n": 8
     },
-    "broken_explicit": 4,
-    "explicit": 45,
-    "flag_code_rule": 6,
-    "promises_any": 50,
+    "broken_explicit": 15,
+    "explicit": 105,
+    "flag_code_rule": 29,
+    "promises_any": 135,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 284,
-    "replies": 300,
+    "parse_ok": 750,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"
@@ -5077,54 +5222,55 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "a3c456c"
     ]
    },
    "ling-3.0-flash": {
     "coop": {
-     "mean": 36.0,
-     "sd": 7.937,
-     "n": 3
+     "mean": 40.125,
+     "sd": 7.298,
+     "n": 8
     },
     "contrib": {
-     "mean": 3.64,
-     "sd": 0.835,
-     "n": 3
+     "mean": 4.495,
+     "sd": 1.325,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 1.333,
-     "sd": 1.528,
-     "n": 3
+     "mean": 1.0,
+     "sd": 1.069,
+     "n": 8
     },
     "welfare": {
-     "mean": 36.202,
-     "sd": 114.43,
-     "n": 3
+     "mean": 80.568,
+     "sd": 129.229,
+     "n": 8
     },
     "minutes": {
-     "mean": 75.883,
-     "sd": 10.638,
-     "n": 3
+     "mean": 80.04,
+     "sd": 9.576,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 7.277,
-     "sd": 0.77,
-     "n": 3
+     "mean": 8.011,
+     "sd": 1.015,
+     "n": 8
     },
-    "broken_explicit": 131,
-    "explicit": 238,
-    "flag_code_rule": 147,
-    "promises_any": 266,
+    "broken_explicit": 327,
+    "explicit": 658,
+    "flag_code_rule": 366,
+    "promises_any": 715,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 298,
-    "replies": 300,
-    "threats": 0,
+    "parse_ok": 797,
+    "replies": 800,
+    "threats": 1,
     "models_called": [
      "inclusionAI/Ling-3.0-flash-fp4"
     ],
@@ -5132,53 +5278,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "qwen3.8-27b": {
     "coop": {
-     "mean": 87.667,
-     "sd": 3.786,
-     "n": 3
+     "mean": 84.0,
+     "sd": 7.091,
+     "n": 8
     },
     "contrib": {
-     "mean": 9.567,
-     "sd": 0.882,
-     "n": 3
+     "mean": 10.571,
+     "sd": 2.613,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 0.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 0.75,
+     "sd": 0.463,
+     "n": 8
     },
     "welfare": {
-     "mean": 380.0,
-     "sd": 73.233,
-     "n": 3
+     "mean": 429.525,
+     "sd": 204.319,
+     "n": 8
     },
     "minutes": {
-     "mean": 30.456,
-     "sd": 0.571,
-     "n": 3
+     "mean": 35.124,
+     "sd": 3.931,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.15,
-     "sd": 2.902,
-     "n": 3
+     "mean": 5.775,
+     "sd": 1.772,
+     "n": 8
     },
-    "broken_explicit": 28,
-    "explicit": 228,
-    "flag_code_rule": 34,
-    "promises_any": 237,
+    "broken_explicit": 84,
+    "explicit": 607,
+    "flag_code_rule": 99,
+    "promises_any": 627,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "Qwen/Qwen3.8-27B"
@@ -5187,53 +5334,54 @@
      "True"
     ],
     "code_commits": [
-     "350d165"
+     "350d165",
+     "3c86362"
     ]
    },
    "gemma-4-31b": {
     "coop": {
-     "mean": 96.333,
-     "sd": 1.528,
-     "n": 3
+     "mean": 95.875,
+     "sd": 0.991,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.267,
-     "sd": 0.306,
-     "n": 3
+     "mean": 19.175,
+     "sd": 0.198,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 1426.233,
-     "sd": 16.29,
-     "n": 3
+     "mean": 1411.838,
+     "sd": 17.769,
+     "n": 8
     },
     "minutes": {
-     "mean": 32.553,
-     "sd": 2.097,
-     "n": 3
+     "mean": 35.532,
+     "sd": 4.289,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.155,
-     "sd": 0.139,
-     "n": 3
+     "mean": 7.808,
+     "sd": 0.366,
+     "n": 8
     },
-    "broken_explicit": 8,
-    "explicit": 180,
-    "flag_code_rule": 12,
-    "promises_any": 241,
+    "broken_explicit": 21,
+    "explicit": 489,
+    "flag_code_rule": 32,
+    "promises_any": 639,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemma-4-31B-it"
@@ -5242,6 +5390,7 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "7450a2b"
     ]
    }
@@ -5249,48 +5398,48 @@
   "salary": {
    "gpt-oss-120b": {
     "coop": {
-     "mean": 77.333,
-     "sd": 6.658,
-     "n": 3
+     "mean": 77.75,
+     "sd": 7.382,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.54,
-     "sd": 3.321,
-     "n": 3
+     "mean": 12.099,
+     "sd": 3.614,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 9.0,
-     "sd": 5.292,
-     "n": 3
+     "mean": 10.375,
+     "sd": 3.777,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 18.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 19.625,
+     "sd": 3.021,
+     "n": 8
     },
     "welfare": {
-     "mean": 960.4,
-     "sd": 271.759,
-     "n": 3
+     "mean": 859.925,
+     "sd": 284.212,
+     "n": 8
     },
     "minutes": {
-     "mean": 70.994,
-     "sd": 1.826,
-     "n": 3
+     "mean": 74.953,
+     "sd": 4.421,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 9.2,
-     "sd": 1.516,
-     "n": 3
+     "mean": 9.137,
+     "sd": 0.954,
+     "n": 8
     },
-    "broken_explicit": 55,
-    "explicit": 261,
-    "flag_code_rule": 79,
-    "promises_any": 281,
-    "turnovers": 1,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 125,
+    "explicit": 672,
+    "flag_code_rule": 180,
+    "promises_any": 725,
+    "turnovers": 4,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "openai/gpt-oss-120b"
@@ -5299,53 +5448,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "nemotron-3-super-120b": {
     "coop": {
-     "mean": 92.0,
-     "sd": 4.583,
-     "n": 3
+     "mean": 93.125,
+     "sd": 4.324,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.883,
-     "sd": 2.048,
-     "n": 3
+     "mean": 13.156,
+     "sd": 1.554,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 0.667,
-     "sd": 1.155,
-     "n": 3
+     "mean": 1.375,
+     "sd": 1.302,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 19.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 17.875,
+     "sd": 1.356,
+     "n": 8
     },
     "welfare": {
-     "mean": 982.113,
-     "sd": 152.267,
-     "n": 3
+     "mean": 929.375,
+     "sd": 109.336,
+     "n": 8
     },
     "minutes": {
-     "mean": 55.082,
-     "sd": 6.578,
-     "n": 3
+     "mean": 49.29,
+     "sd": 6.935,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 1.544,
-     "sd": 1.251,
-     "n": 3
+     "mean": 1.231,
+     "sd": 0.818,
+     "n": 8
     },
-    "broken_explicit": 3,
-    "explicit": 72,
-    "flag_code_rule": 3,
-    "promises_any": 74,
-    "turnovers": 1,
-    "contested": 9,
-    "parse_ok": 290,
-    "replies": 300,
+    "broken_explicit": 6,
+    "explicit": 183,
+    "flag_code_rule": 9,
+    "promises_any": 192,
+    "turnovers": 3,
+    "contested": 24,
+    "parse_ok": 774,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"
@@ -5354,54 +5504,55 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "a3c456c"
     ]
    },
    "ling-3.0-flash": {
     "coop": {
-     "mean": 40.0,
-     "sd": 7.55,
-     "n": 3
+     "mean": 43.125,
+     "sd": 6.813,
+     "n": 8
     },
     "contrib": {
-     "mean": 4.143,
-     "sd": 0.44,
-     "n": 3
+     "mean": 4.651,
+     "sd": 0.9,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 0.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 1.25,
+     "sd": 1.282,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 3.333,
-     "sd": 0.577,
-     "n": 3
+     "mean": 4.875,
+     "sd": 1.642,
+     "n": 8
     },
     "welfare": {
-     "mean": 159.3,
-     "sd": 54.371,
-     "n": 3
+     "mean": 232.955,
+     "sd": 79.011,
+     "n": 8
     },
     "minutes": {
-     "mean": 85.072,
-     "sd": 7.005,
-     "n": 3
+     "mean": 81.202,
+     "sd": 29.002,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 5.3,
-     "sd": 0.318,
-     "n": 3
+     "mean": 5.808,
+     "sd": 1.504,
+     "n": 8
     },
-    "broken_explicit": 138,
-    "explicit": 273,
-    "flag_code_rule": 152,
-    "promises_any": 288,
-    "turnovers": 2,
-    "contested": 9,
-    "parse_ok": 299,
-    "replies": 300,
-    "threats": 0,
+    "broken_explicit": 322,
+    "explicit": 694,
+    "flag_code_rule": 366,
+    "promises_any": 740,
+    "turnovers": 5,
+    "contested": 24,
+    "parse_ok": 796,
+    "replies": 800,
+    "threats": 1,
     "models_called": [
      "inclusionAI/Ling-3.0-flash-fp4"
     ],
@@ -5409,54 +5560,55 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "qwen3.8-27b": {
     "coop": {
-     "mean": 79.667,
-     "sd": 4.726,
-     "n": 3
+     "mean": 82.625,
+     "sd": 6.545,
+     "n": 8
     },
     "contrib": {
-     "mean": 11.767,
-     "sd": 3.166,
-     "n": 3
+     "mean": 13.745,
+     "sd": 3.105,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 19.333,
-     "sd": 5.508,
-     "n": 3
+     "mean": 18.375,
+     "sd": 3.701,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 18.333,
-     "sd": 2.517,
-     "n": 3
+     "mean": 19.25,
+     "sd": 1.982,
+     "n": 8
     },
     "welfare": {
-     "mean": 528.667,
-     "sd": 86.726,
-     "n": 3
+     "mean": 732.7,
+     "sd": 221.939,
+     "n": 8
     },
     "minutes": {
-     "mean": 50.172,
-     "sd": 1.036,
-     "n": 3
+     "mean": 52.776,
+     "sd": 2.311,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.467,
-     "sd": 2.314,
-     "n": 3
+     "mean": 6.656,
+     "sd": 1.565,
+     "n": 8
     },
-    "broken_explicit": 33,
-    "explicit": 210,
-    "flag_code_rule": 41,
-    "promises_any": 226,
-    "turnovers": 3,
-    "contested": 9,
-    "parse_ok": 299,
-    "replies": 300,
-    "threats": 2,
+    "broken_explicit": 74,
+    "explicit": 528,
+    "flag_code_rule": 91,
+    "promises_any": 608,
+    "turnovers": 10,
+    "contested": 24,
+    "parse_ok": 799,
+    "replies": 800,
+    "threats": 3,
     "models_called": [
      "Qwen/Qwen3.8-27B"
     ],
@@ -5464,53 +5616,54 @@
      "True"
     ],
     "code_commits": [
-     "350d165"
+     "350d165",
+     "3c86362"
     ]
    },
    "gemma-4-31b": {
     "coop": {
      "mean": 96.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "contrib": {
      "mean": 19.2,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
      "mean": 1524.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "minutes": {
-     "mean": 43.509,
-     "sd": 0.077,
-     "n": 3
+     "mean": 46.11,
+     "sd": 2.716,
+     "n": 8
     },
     "spend_applied": {
      "mean": 8.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
-    "broken_explicit": 7,
-    "explicit": 195,
-    "flag_code_rule": 12,
-    "promises_any": 226,
-    "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 22,
+    "explicit": 527,
+    "flag_code_rule": 31,
+    "promises_any": 606,
+    "turnovers": 3,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemma-4-31B-it"
@@ -5519,6 +5672,7 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "7450a2b"
     ]
    }
@@ -5526,49 +5680,49 @@
   "costly": {
    "gpt-oss-120b": {
     "coop": {
-     "mean": 84.667,
-     "sd": 5.132,
-     "n": 3
+     "mean": 81.75,
+     "sd": 7.086,
+     "n": 8
     },
     "contrib": {
-     "mean": 12.417,
-     "sd": 3.629,
-     "n": 3
+     "mean": 11.826,
+     "sd": 3.61,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 10.333,
-     "sd": 2.517,
-     "n": 3
+     "mean": 9.0,
+     "sd": 3.071,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 13.0,
-     "sd": 3.606,
-     "n": 3
+     "mean": 11.75,
+     "sd": 2.712,
+     "n": 8
     },
     "welfare": {
-     "mean": 761.0,
-     "sd": 277.124,
-     "n": 3
+     "mean": 694.825,
+     "sd": 252.971,
+     "n": 8
     },
     "minutes": {
-     "mean": 70.647,
-     "sd": 1.52,
-     "n": 3
+     "mean": 73.602,
+     "sd": 2.841,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.55,
-     "sd": 0.377,
-     "n": 3
+     "mean": 8.65,
+     "sd": 0.804,
+     "n": 8
     },
-    "broken_explicit": 32,
-    "explicit": 259,
-    "flag_code_rule": 45,
-    "promises_any": 266,
-    "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
-    "threats": 0,
+    "broken_explicit": 106,
+    "explicit": 686,
+    "flag_code_rule": 136,
+    "promises_any": 712,
+    "turnovers": 1,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
+    "threats": 1,
     "models_called": [
      "openai/gpt-oss-120b"
     ],
@@ -5576,53 +5730,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "nemotron-3-super-120b": {
     "coop": {
-     "mean": 97.0,
-     "sd": 3.0,
-     "n": 3
+     "mean": 95.625,
+     "sd": 2.669,
+     "n": 8
     },
     "contrib": {
-     "mean": 11.63,
-     "sd": 0.678,
-     "n": 3
+     "mean": 11.825,
+     "sd": 1.297,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 2.0,
-     "sd": 1.0,
-     "n": 3
+     "mean": 2.875,
+     "sd": 1.808,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 17.333,
-     "sd": 2.517,
-     "n": 3
+     "mean": 17.625,
+     "sd": 2.925,
+     "n": 8
     },
     "welfare": {
-     "mean": 640.689,
-     "sd": 34.758,
-     "n": 3
+     "mean": 682.827,
+     "sd": 99.398,
+     "n": 8
     },
     "minutes": {
-     "mean": 42.265,
-     "sd": 12.079,
-     "n": 3
+     "mean": 45.983,
+     "sd": 9.425,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 1.389,
-     "sd": 0.773,
-     "n": 3
+     "mean": 1.627,
+     "sd": 0.956,
+     "n": 8
     },
-    "broken_explicit": 1,
-    "explicit": 57,
-    "flag_code_rule": 1,
-    "promises_any": 62,
-    "turnovers": 2,
-    "contested": 9,
-    "parse_ok": 292,
-    "replies": 300,
+    "broken_explicit": 2,
+    "explicit": 161,
+    "flag_code_rule": 8,
+    "promises_any": 180,
+    "turnovers": 7,
+    "contested": 24,
+    "parse_ok": 775,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4"
@@ -5631,53 +5786,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "a3c456c"
     ]
    },
    "ling-3.0-flash": {
     "coop": {
-     "mean": 28.333,
-     "sd": 3.512,
-     "n": 3
+     "mean": 35.375,
+     "sd": 7.347,
+     "n": 8
     },
     "contrib": {
-     "mean": 2.637,
-     "sd": 0.681,
-     "n": 3
+     "mean": 3.719,
+     "sd": 1.21,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 1.0,
-     "sd": 0.0,
-     "n": 3
+     "mean": 0.875,
+     "sd": 0.354,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 4.333,
-     "sd": 2.309,
-     "n": 3
+     "mean": 3.75,
+     "sd": 1.581,
+     "n": 8
     },
     "welfare": {
-     "mean": -118.4,
-     "sd": 74.727,
-     "n": 3
+     "mean": -56.48,
+     "sd": 150.415,
+     "n": 8
     },
     "minutes": {
-     "mean": 87.459,
-     "sd": 1.575,
-     "n": 3
+     "mean": 95.701,
+     "sd": 7.007,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 7.898,
-     "sd": 1.234,
-     "n": 3
+     "mean": 7.938,
+     "sd": 1.292,
+     "n": 8
     },
-    "broken_explicit": 130,
-    "explicit": 241,
-    "flag_code_rule": 157,
-    "promises_any": 275,
-    "turnovers": 1,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 316,
+    "explicit": 631,
+    "flag_code_rule": 390,
+    "promises_any": 718,
+    "turnovers": 4,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "inclusionAI/Ling-3.0-flash-fp4"
@@ -5686,53 +5842,54 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "cf7a332"
     ]
    },
    "qwen3.8-27b": {
     "coop": {
-     "mean": 89.0,
-     "sd": 1.732,
-     "n": 3
+     "mean": 85.0,
+     "sd": 6.845,
+     "n": 8
     },
     "contrib": {
-     "mean": 13.14,
-     "sd": 0.788,
-     "n": 3
+     "mean": 12.52,
+     "sd": 2.836,
+     "n": 8
     },
     "deals_strict": {
-     "mean": 17.0,
-     "sd": 1.0,
-     "n": 3
+     "mean": 16.25,
+     "sd": 1.488,
+     "n": 8
     },
     "deals_keyword": {
-     "mean": 20.333,
-     "sd": 1.528,
-     "n": 3
+     "mean": 18.5,
+     "sd": 2.619,
+     "n": 8
     },
     "welfare": {
-     "mean": 632.4,
-     "sd": 61.552,
-     "n": 3
+     "mean": 504.95,
+     "sd": 270.848,
+     "n": 8
     },
     "minutes": {
-     "mean": 49.797,
-     "sd": 0.898,
-     "n": 3
+     "mean": 51.834,
+     "sd": 1.831,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 6.35,
-     "sd": 1.711,
-     "n": 3
+     "mean": 6.725,
+     "sd": 1.893,
+     "n": 8
     },
-    "broken_explicit": 24,
-    "explicit": 214,
-    "flag_code_rule": 28,
-    "promises_any": 223,
-    "turnovers": 4,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "broken_explicit": 73,
+    "explicit": 550,
+    "flag_code_rule": 87,
+    "promises_any": 584,
+    "turnovers": 13,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "Qwen/Qwen3.8-27B"
@@ -5741,53 +5898,54 @@
      "True"
     ],
     "code_commits": [
-     "350d165"
+     "350d165",
+     "3c86362"
     ]
    },
    "gemma-4-31b": {
     "coop": {
-     "mean": 97.667,
-     "sd": 1.528,
-     "n": 3
+     "mean": 98.625,
+     "sd": 1.302,
+     "n": 8
     },
     "contrib": {
-     "mean": 19.533,
-     "sd": 0.306,
-     "n": 3
+     "mean": 19.725,
+     "sd": 0.26,
+     "n": 8
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "deals_keyword": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 8
     },
     "welfare": {
-     "mean": 1399.227,
-     "sd": 34.846,
-     "n": 3
+     "mean": 1426.045,
+     "sd": 32.451,
+     "n": 8
     },
     "minutes": {
-     "mean": 43.423,
-     "sd": 0.242,
-     "n": 3
+     "mean": 46.35,
+     "sd": 2.909,
+     "n": 8
     },
     "spend_applied": {
-     "mean": 8.247,
-     "sd": 0.314,
-     "n": 3
+     "mean": 8.213,
+     "sd": 0.222,
+     "n": 8
     },
-    "broken_explicit": 5,
-    "explicit": 230,
-    "flag_code_rule": 7,
-    "promises_any": 252,
+    "broken_explicit": 8,
+    "explicit": 562,
+    "flag_code_rule": 13,
+    "promises_any": 633,
     "turnovers": 0,
-    "contested": 9,
-    "parse_ok": 300,
-    "replies": 300,
+    "contested": 24,
+    "parse_ok": 800,
+    "replies": 800,
     "threats": 0,
     "models_called": [
      "google/gemma-4-31B-it"
@@ -5796,6 +5954,7 @@
      "True"
     ],
     "code_commits": [
+     "3c86362",
      "7450a2b"
     ]
    }
@@ -8472,7 +8631,7 @@
   }
  },
  "meta": {
-  "games_api": 282,
-  "games_open": 210
+  "games_api": 642,
+  "games_open": 767
  }
 }

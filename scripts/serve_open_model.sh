@@ -1,11 +1,12 @@
 #!/bin/bash
-# Serve one open-weight model with vLLM and run its 42 games (14 setups x 3 games).
+# Serve one open-weight model with vLLM and run all of its games in the paper (147 per model).
+# The tag qwen3.8-27b-nvfp4 runs the quantization check (32 games).
 #
 #   bash scripts/serve_open_model.sh <tag> [gpu] [port]
-#   tags: gpt-oss-120b | nemotron-3-super-120b | ling-3.0-flash | qwen3.8-27b | gemma-4-31b
+#   tags: gpt-oss-120b | nemotron-3-super-120b | ling-3.0-flash | qwen3.8-27b | gemma-4-31b | qwen3.8-27b-nvfp4
 #
-# The paper used vLLM 0.30 on one 96 GB GPU with 48 games in parallel. The extra vLLM options
-# below are the ones each model needed on that setup.
+# The paper used vLLM 0.30 on one 96 GB GPU with up to 48 games in parallel. The extra vLLM options
+# below are the ones each model needed on that setup. The runner is resumable: finished games are skipped.
 set -e
 TAG=$1; GPU=${2:-0}; PORT=${3:-8000}
 case "$TAG" in
@@ -14,6 +15,7 @@ case "$TAG" in
   ling-3.0-flash)        HF=inclusionAI/Ling-3.0-flash-fp4;                 EXTRA="" ;;
   qwen3.8-27b)           HF=Qwen/Qwen3.8-27B;                               EXTRA="--max-num-seqs 128" ;;
   gemma-4-31b)           HF=google/gemma-4-31B-it;                          EXTRA="" ;;
+  qwen3.8-27b-nvfp4)     HF=nvidia/Qwen3.8-27B-NVFP4;                       EXTRA="--max-num-seqs 128" ;;
   *) echo "unknown tag: $TAG"; exit 1 ;;
 esac
 cd "$(dirname "$0")/.."
@@ -28,5 +30,13 @@ until curl -sf http://127.0.0.1:$PORT/v1/models > /dev/null; do
   sleep 20
 done
 
-HG_LOCAL_BASE_URL=http://127.0.0.1:$PORT/v1 HG_LOCAL_MODEL=$HF \
-  python hg_jobs.py --track oss --tag $TAG --workers 48 --trials 3 --out results
+export HG_LOCAL_BASE_URL=http://127.0.0.1:$PORT/v1 HG_LOCAL_MODEL=$HF
+J="python hg_jobs.py --track oss --tag $TAG --out results"
+if [ "$TAG" = "qwen3.8-27b-nvfp4" ]; then
+  $J --only batch1_baseline,batch2_comm_full,batch3_mgr_elected,batch8_mgr_salary --trials 8 --workers 32
+  exit 0
+fi
+$J --only batch1,batch2,batch3,batch5,batch8,batch9 --trials 3 --workers 48       # every setup, 3 games
+$J --only batch2_comm_full,batch3_mgr,batch8_mgr --trials 8 --workers 48       # main contrasts, 8 games
+$J --only batch13_mgr_badincumbent,batch13_ballot_random,batch14_mgr_goodincumbent --trials 10 --workers 16
+$J --only batch13_info_aggregate,batch13_mgr_nosanction,batch13_mgr_autoreward,batch14_aggregate_chat,batch14_system_reward,batch14_neutral,batch14_nostrategic --trials 5 --workers 32

@@ -101,6 +101,15 @@ class ExperimentConfig:
     mgr_salary_type: MgrSalaryType = MgrSalaryType.MGR_NO_SALARY
     punish_vis_type: PunishVisType = PunishVisType.PUNISH_TRANSPARENT
 
+    # Mechanism controls (batch 13)
+    # mgr_policy: "llm" (the manager decides sanctions), "auto_reward" (a fixed rule replaces the manager's
+    # sanction decision), "bad_incumbent" (agent_0 starts as elected manager and, while it holds the role,
+    # its sanctions are replaced by a harmful rule)
+    mgr_policy: str = "llm"
+    ballot_random: bool = False   # shuffle the ballot order per voter and break ties at random
+    deal_prompt: str = "deal"     # "neutral": the election message prompt does not ask for a deal to secure a vote
+    strategic_line: bool = True   # False: drop "Be strategic." from the system prompt
+
     def to_dict(self) -> dict:
         """Serialize to a plain dict (for JSON output)."""
         return {
@@ -127,6 +136,10 @@ class ExperimentConfig:
             "identity_type": self.identity_type.value,
             "mgr_salary_type": self.mgr_salary_type.value,
             "punish_vis_type": self.punish_vis_type.value,
+            "mgr_policy": self.mgr_policy,
+            "ballot_random": self.ballot_random,
+            "deal_prompt": self.deal_prompt,
+            "strategic_line": self.strategic_line,
         }
 
     def short_label(self) -> str:

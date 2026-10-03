@@ -63,6 +63,9 @@ SWAP_GROUPS = [
     ("Newer model: Baseline + Manager type", ["batch1_baseline_gpt4o"] + [f"batch3_mgr_{t}_gpt4o" for t in ("fixed", "elected", "rotating")]),
     ("Newer model: Manager pay", [f"batch8_mgr_{s}_gpt4o" for s in ("salary", "costly")]),
     ("Newer model: Punishment visibility", [f"batch9_punish_{v}_gpt4o" for v in ("hidden", "anonymous")]),
+    ("Chat-only control", ["batch2_comm_full_gpt4o"]),
+    ("Mechanism controls", [f"batch13_{t}_gpt4o" for t in ("info_aggregate", "mgr_nosanction", "mgr_autoreward", "mgr_badincumbent", "ballot_random")]),
+    ("Revision controls", [f"batch14_{t}_gpt4o" for t in ("neutral_elected", "neutral_salary", "nostrategic_chat", "nostrategic_elected", "aggregate_chat", "mgr_goodincumbent", "system_reward")]),
 ]
 # OSS track: same-model setups (templates use the gpt4o version; models are replaced by LOCAL)
 OSS_GROUPS = [
@@ -71,6 +74,8 @@ OSS_GROUPS = [
     ("3 Punishment visibility", [f"batch9_punish_{v}_gpt4o" for v in ("hidden", "anonymous")]),
     ("4 Communication", [f"batch2_comm_{c}_gpt4o" for c in ("public", "private", "full")]),
     ("5 Belief", [f"batch5_belief_{b}_gpt4o" for b in ("unknown", "all_human", "mixed")]),
+    ("6 Mechanism controls", [f"batch13_{t}_gpt4o" for t in ("info_aggregate", "mgr_nosanction", "mgr_autoreward", "mgr_badincumbent", "ballot_random")]),
+    ("7 Revision controls", [f"batch14_{t}_gpt4o" for t in ("neutral_elected", "neutral_salary", "nostrategic_chat", "nostrategic_elected", "aggregate_chat", "mgr_goodincumbent", "system_reward")]),
 ]
 
 
@@ -167,10 +172,12 @@ class Runner:
         self.write_status()
         t0 = time.time()
         try:
+            from providers.base import usage_reset, usage_get
+            usage_reset()
             runner = ExperimentRunner(job["cfg"], results_dir=self.out, verbose=False)
             trial = runner.run_single_trial(job["trial"])
             out = {"config": job["cfg"].to_dict(), "trials": [trial], "group": job["group"],
-                   "track": self.a.track, "finished": now()}
+                   "track": self.a.track, "finished": now(), "api_usage": usage_get()}
             tmp = job["path"].with_suffix(".tmp")
             tmp.write_text(json.dumps(out, default=str), encoding="utf-8")
             os.replace(tmp, job["path"])

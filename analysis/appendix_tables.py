@@ -41,7 +41,7 @@ def pval(p):
     return "$<$0.001" if p < 0.001 else f"{p:.3f}"
 
 
-def table(caption, label, cols, header, rows, size="\\scriptsize", sep="3pt", wide=True):
+def table(caption, label, cols, header, rows, size="\\small", sep="3pt", wide=True):
     env = "table*" if wide else "table"
     out = [f"\\begin{{{env}}}[!htbp]", "\\centering", size, f"\\setlength{{\\tabcolsep}}{{{sep}}}",
            f"\\begin{{tabular}}{{@{{}}{cols}@{{}}}}", "\\toprule", header + " \\\\", "\\midrule"]
@@ -53,7 +53,7 @@ def table(caption, label, cols, header, rows, size="\\scriptsize", sep="3pt", wi
 def cell(v):
     if not v:
         return "---"
-    return f"{v['contrib']['mean']:.1f}$\\pm${v['contrib']['sd']:.1f} ({v['coop']['mean']:.0f})"
+    return f"{v['contrib']['mean']:.1f}$\\pm${v['contrib']['sd']:.1f} ({v['coop']['mean']:.0f})$_{{{v['contrib']['n']}}}$"
 
 
 def pct(v):
@@ -67,6 +67,11 @@ def frac(b, n):
 def short_frac(b, n):
     """compact cell for one-column tables: 67/240 (28)"""
     return "---" if not n else f"{b}/{n} ({pct(100 * b / n)})"
+
+
+def pct_n(b, n):
+    """compact cell: 30 (651) = 30% of 651 stated intentions"""
+    return "---" if not n else f"{pct(100 * b / n)} ({n})"
 
 
 def group_row(label, ncols):
@@ -85,18 +90,18 @@ rows.append(group_row("Main API models", 5))
 rows.append("All six & " + " & ".join(f"{tot[s][0]}/{tot[s][1]}" for s in conds))
 rows.append(group_row("Newer API models", 5))
 for m in SAME:
-    rows.append(f"{NAME[m]} & --- & " + " & ".join(
-        f"{I['samegen'][s][m].get('broken_5', 0)}/{I['samegen'][s][m].get('stated', 0)}" for s in conds[1:]))
+    rows.append(f"{NAME[m]} & " + " & ".join(
+        f"{I['samegen'][s][m].get('broken_5', 0)}/{I['samegen'][s][m].get('stated', 0)}" for s in conds))
 rows.append(group_row("Self-hosted models", 5))
 for m in OPEN:
     rows.append(f"{NAME[m]} & " + " & ".join(
-        short_frac(I["open"][s][m].get("broken_5", 0), I["open"][s][m].get("stated", 0)) for s in conds))
+        pct_n(I["open"][s][m].get("broken_5", 0), I["open"][s][m].get("stated", 0)) for s in conds))
 T.append(("hgPromiseTable", table(
-    "Broken / stated intentions, summed over games, with the percentage in parentheses for the self-hosted models. A stated "
+    "Broken stated intentions, summed over games: broken / stated for the API models, and for the self-hosted models the "
+    "percentage broken with the number stated in parentheses. A stated "
     "intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens "
     "less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at "
-    "most 3; per model, first-person commitments and other thresholds are in Table~\\ref{tab:robust}. The newer models have "
-    "no chat-only control.",
+    "most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\\ref{tab:robust}.",
     "tab:promises", "lcccc",
     "& \\textbf{Chat} & \\multicolumn{3}{c}{\\textbf{Manager; sanctions are}} \\\\ \\cmidrule(lr){3-5}\n"
     "\\textbf{Model} & \\textbf{only} & \\textbf{visible} & \\textbf{hidden} & \\textbf{anon.}",
@@ -107,7 +112,7 @@ R = []
 setups = ["baseline", "chat_only", "fixed", "elected", "rotating"]
 R.append(table(
     "Main API models by institution: mean contribution $\\pm$ s.d. over games (cooperation rate, \\%). "
-    "3 games for no chat and chat only, 5 per manager type. Manager setups have full communication.",
+    "Subscript: number of games. Manager setups have full communication.",
     "tab:frontier_full", "l" + "c" * len(setups),
     "\\textbf{Model} & " + " & ".join(f"\\textbf{{{SETNAME[s]}}}" for s in setups),
     [NAME[m] + " & " + " & ".join(cell(d["frontier"][s][m]) for s in setups) for m in FRONT]))
@@ -115,14 +120,14 @@ R.append(table(
 setups = ["elected", "salary", "costly", "hidden", "anonymous"]
 R.append(table(
     "Main API models under manager pay and sanction visibility (elected manager, full communication): mean contribution "
-    "$\\pm$ s.d. (cooperation rate, \\%). 5 games for Elected (the no-salary, transparent control), 3 otherwise.",
+    "$\\pm$ s.d. (cooperation rate, \\%). Elected is the no-salary, transparent control. Subscript: number of games.",
     "tab:frontier_pay", "l" + "c" * len(setups),
     "\\textbf{Model} & " + " & ".join(f"\\textbf{{{SETNAME[s]}}}" for s in setups),
     [NAME[m] + " & " + " & ".join(cell(d["frontier"][s][m]) for s in setups) for m in FRONT]))
 
 setups = ["baseline", "fixed", "elected", "rotating", "salary", "costly", "hidden", "anonymous"]
 R.append(table(
-    "Newer API models (3 games each) next to their predecessors: mean contribution $\\pm$ s.d. (cooperation rate, \\%).",
+    "Newer API models next to their predecessors: mean contribution $\\pm$ s.d. (cooperation rate, \\%); subscript: number of games.",
     "tab:samegen_full", "l" + "c" * 4,
     "\\textbf{Setup} & \\textbf{GPT-5} & \\textbf{DeepSeek V3.1} & \\textbf{GPT-4o} & \\textbf{DeepSeek V3}",
     [SETNAME[s] + " & " + " & ".join(cell(d[g][s][m]) for g, m in
@@ -134,11 +139,11 @@ setups = ["baseline", "public_chat", "private_chat", "chat_only", "fixed", "elec
 
 
 def ocell(v):
-    return "---" if not v else f"{v['coop']['mean']:.0f}$\\pm${v['coop']['sd']:.0f} / {v['contrib']['mean']:.1f}"
+    return "---" if not v else f"{v['coop']['mean']:.0f}$\\pm${v['coop']['sd']:.0f} / {v['contrib']['mean']:.1f}$_{{{v['coop']['n']}}}$"
 
 
 R.append(table(
-    "Self-hosted open-weight models (3 games each): cooperation rate $\\pm$ s.d. (\\%) / mean contribution. \\emph{Chat only} "
+    "Self-hosted open-weight models: cooperation rate $\\pm$ s.d. (\\%) / mean contribution; subscript: number of games. \\emph{Chat only} "
     "is full communication without a manager; all setups below it have full communication and (except where stated) an "
     "elected manager; the belief setups vary what agents are told about the other players (default: all AI).",
     "tab:open_full", "l" + "c" * len(OPEN),
@@ -220,11 +225,11 @@ rows.append("Contested (re-elected) & " + " & ".join(
     f"{y['reelection'][g]['contested']} ({y['reelection'][g]['reelected']})" for g in ("api_main", "newer", "open")))
 R.append(table(
     "Does the incumbent's record in the five rounds before an election predict its re-election? Point-biserial "
-    "correlation $r$ (two-sided $p$) between re-election and each measure, centred within model so that differences between "
+    "correlation $r$ (two-sided $p$) between re-election and each measure, centered within model so that differences between "
     "models do not drive it; elected, salary, costly, hidden and anonymous setups.",
     "tab:reelection", "lccc",
     "\\textbf{Incumbent's record} & \\textbf{Main API} & \\textbf{Newer API} & \\textbf{Self-hosted}", rows,
-    sep="2.5pt", wide=False))
+    sep="2.5pt", wide=True))
 
 A = y["anova"]
 ALBL = {"api_contrib_mgr": "Main API, contribution: chat only + 3 manager types",
@@ -232,10 +237,11 @@ ALBL = {"api_contrib_mgr": "Main API, contribution: chat only + 3 manager types"
         "open_coop_mgr": "Self-hosted, cooperation: chat only + 3 manager types",
         "open_coop_all": "Self-hosted, cooperation: all 9 setups"}
 rows = [f"{ALBL[k]} & {A[k]['n_games']} & " + " & ".join(
-    f"{A[k][f]['partial_eta2']:.2f} ({pval(A[k][f]['p'])})" for f in ("model", "institution", "interaction")) for k in ALBL]
+    f"{A[k][f]['partial_eta2']:.2f} / {A[k][f]['omega2']:.2f} ({pval(A[k][f]['p'])})" for f in ("model", "institution", "interaction")) for k in ALBL]
 R.append(table(
-    "Model versus institution: two-way analysis of variance over games (type II sums of squares); partial $\\eta^2$ with "
-    "$p$ in parentheses. \\emph{All 9 setups}: no chat, chat only, three manager types, salary, costly, hidden, anonymous.",
+    "Model versus institution: two-way analysis of variance over games (type II sums of squares); partial $\\eta^2$ / $\\omega^2$ with "
+    "$p$ in parentheses. Partial $\\eta^2$ values are not shares of one total and depend on the levels chosen; $\\omega^2$ "
+    "is the bias-corrected share of total variance. \\emph{All 9 setups}: no chat, chat only, three manager types, salary, costly, hidden, anonymous.",
     "tab:anova", "lcccc",
     "\\textbf{Data} & \\textbf{Games} & \\textbf{Model} & \\textbf{Institution} & \\textbf{Model $\\times$ institution}", rows))
 
@@ -253,7 +259,8 @@ for m in ("claude", "grok", "qwen", "gpt4o"):
 R.append(table(
     "Cross-Rule (B11): a fixed manager of one family over four workers of another (3 games each). Worker cooperation (\\%), "
     "worker contribution, manager spending per round (punishment / reward), and group welfare. Bottom rows: worker-only "
-    "contribution under a fixed manager of the same family (5 games), the comparison used in the text.",
+    "contribution (managers excluded) under a fixed manager of the same family (5 games for Claude and Grok, 10 for "
+    "Qwen Plus and GPT-4o), the comparison used in the text.",
     "tab:crossrule", "lcccc",
     "\\textbf{Manager$\\to$Workers} & \\textbf{Coop.} & \\textbf{Contrib.} & \\textbf{P / R} & \\textbf{Welfare}", rows,
     sep="2.5pt", wide=False))
@@ -282,7 +289,8 @@ nem = "; ".join(f"{SETNAME[s].lower()} {NV[s]['coop_valid']['mean']:.0f}\\%" for
 PARSE = table(
     "Valid (parseable JSON) contribution replies per model over all its homogeneous setups; an invalid reply counts as a "
     "contribution of 0. Lowest: the setup with the lowest rate. Counting Nemotron's valid replies only, its cooperation is "
-    f"{nem} (against 15\\%, 81\\% and 97\\% when invalid replies count as 0).",
+    f"{nem} (against " + ", ".join(f"{d['open'][s]['nemotron-3-super-120b']['coop']['mean']:.0f}\\%" for s in ("baseline", "chat_only", "elected"))
+    + " when invalid replies count as 0).",
     "tab:parse", "lccc",
     "\\textbf{Model} & \\textbf{Replies} & \\textbf{Valid \\%} & \\textbf{Lowest \\% (setup)}", rows, wide=False)
 
@@ -308,17 +316,28 @@ for idx in fams.values():
     for rank, i in enumerate(order):
         run = max(run, min(1.0, (len(order) - rank) * tests[i]["p"]))
         holm[i] = run
-rows = [f"{NAME[t['model']]} & {METRIC[t['metric']]} & {SETNAME[t['from']]} $\\to$ {SETNAME[t['to']]} & "
-        f"{t['diff']:+.1f} & [{t['ci'][0]:.1f}, {t['ci'][1]:.1f}] & {pval(t['p'])} & {pval(holm[i])}"
-        for i, t in enumerate(tests)]
+def minus(v):
+    return f"{v:.1f}".replace("-", "$-$")
+
+
+def trow(i, t):
+    return (f"{NAME[t['model']]} & {METRIC[t['metric']]} & {SETNAME[t['from']]} $\\to$ {SETNAME[t['to']]} & "
+            f"{'+' if t['diff'] >= 0 else ''}{minus(t['diff'])} & [{minus(t['ci'][0])}, {minus(t['ci'][1])}] & "
+            f"{pval(t['p'])} & {pval(holm[i])}")
+
+
+THEAD = ("\\textbf{Model} & \\textbf{Metric} & \\textbf{Contrast} & \\textbf{Diff.} & \\textbf{95\\% CI} & \\textbf{$p$} & "
+         "\\textbf{Holm $p$}")
+# two tables, so that each fits on a page (AAAI does not allow a smaller font)
 TESTS = table(
-    "Welch's $t$-tests for the contrasts discussed in the text (game = unit; $n$ = 3 or 5 per side). Difference = second "
-    "setup minus first; 95\\% confidence interval; two-sided $p$, and Holm-adjusted $p$ within each family of contrasts "
-    "(same model set, metric and kind of contrast: speech, manager, pay, or promises). Contrasts where both setups have "
-    "zero variance (e.g., GPT-4o's offers, always 0) are omitted.",
-    "tab:tests", "lllcccc",
-    "\\textbf{Model} & \\textbf{Metric} & \\textbf{Contrast} & \\textbf{Diff.} & \\textbf{95\\% CI} & \\textbf{$p$} & "
-    "\\textbf{Holm $p$}", rows, sep="3pt")
+    "Welch's $t$-tests for the secondary contrasts discussed in the text, API models (game = unit; $n$ = 3 to 10 per side). "
+    "Difference = second setup minus first; 95\\% confidence interval; two-sided $p$, and Holm-adjusted $p$ within each "
+    "family of contrasts (same model set, metric and kind of contrast: speech, manager, pay, or promises). Contrasts where "
+    "both setups have zero variance (e.g., GPT-4o's offers, always 0) are omitted. Rows that repeat a primary contrast are corrected here within their own family; the "
+    "text uses the primary correction of Table~\\ref{tab:primary}.",
+    "tab:tests", "lllcccc", THEAD, [trow(i, t) for i, t in enumerate(tests) if t["model"] not in OPEN], sep="3pt") + table(
+    "Welch's $t$-tests for the secondary contrasts discussed in the text, self-hosted models (as in Table~\\ref{tab:tests}).",
+    "tab:tests_oss", "lllcccc", THEAD, [trow(i, t) for i, t in enumerate(tests) if t["model"] in OPEN], sep="3pt")
 
 # ---------------------------------------------------------------- appendix E: robustness of stated intentions
 rows = []
@@ -365,15 +384,15 @@ OV = y["over20"]
 over = sum(v["over_20"] for g in OV.values() for v in g.values())
 msgs = sum(v["messages"] for g in OV.values() for v in g.values())
 OFFERS = table(
-    "What vote-contingent offers contain (elected, salary and costly setups pooled; automatic and not validated against "
-    "human labels). Shares (\\%) of offers that reply to or refuse another offer (Reply), promise the voter a targeted "
+    "What vote-contingent offers contain (elected, salary and costly setups pooled; automatic split; its agreement with hand labels is in "
+    "Table~\\ref{tab:validation}). Shares (\\%) of offers that reply to or refuse another offer (Reply), promise the voter a targeted "
     "private benefit (Targ.), offer reciprocal political support such as ``I'll vote for you next time'' (Recip.), pledge "
     "a public contribution (Pledge), or none of these (Other). Imp.: number of offers naming an amount the rules do not "
     f"allow (a contribution above 20 or a sanction above the budget of 10). Across all {msgs:,} messages, {over} mention "
     "contributing more than 20 tokens.",
     "tab:offers", "lccccccc",
     "\\textbf{Model} & \\textbf{Offers} & \\textbf{Reply} & \\textbf{Targ.} & \\textbf{Recip.} & \\textbf{Pledge} & "
-    "\\textbf{Other} & \\textbf{Imp.}", rows, sep="2.5pt", wide=False)
+    "\\textbf{Other} & \\textbf{Imp.}", rows, sep="2.5pt", wide=True)
 
 print("% Generated by hg-rerun/analysis/appendix_tables.py from paper_numbers.json, extras.json and revision2.json.")
 print("% Do not edit by hand. Defines table macros that the paper places in their sections.\n")

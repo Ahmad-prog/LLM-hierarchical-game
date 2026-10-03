@@ -4,7 +4,7 @@
 \newcommand{\hgPromiseTable}{%
 \begin{table}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
@@ -12,19 +12,19 @@
 \textbf{Model} & \textbf{only} & \textbf{visible} & \textbf{hidden} & \textbf{anon.} \\
 \midrule
 \multicolumn{5}{@{}l}{\emph{Main API models}} \\
-All six & 2/900 & 1/1379 & 2/941 & 0/869 \\
+All six & 2/2865 & 1/2470 & 2/941 & 0/869 \\
 \multicolumn{5}{@{}l}{\emph{Newer API models}} \\
-GPT-5 & --- & 1/235 & 3/205 & 2/213 \\
-DeepSeek V3.1 & --- & 0/171 & 0/135 & 0/120 \\
+GPT-5 & 11/259 & 1/235 & 3/205 & 2/213 \\
+DeepSeek V3.1 & 0/80 & 0/456 & 0/135 & 0/120 \\
 \multicolumn{5}{@{}l}{\emph{Self-hosted models}} \\
-gpt-oss & 67/240 (28) & 34/275 (12) & 27/243 (11) & 43/280 (15) \\
-Nemotron & 6/51 (12) & 4/88 (5) & 0/68 (0) & 2/81 (2) \\
-Ling & 97/238 (41) & 99/234 (42) & 111/238 (47) & 109/260 (42) \\
-Qwen3.8 & 55/257 (21) & 30/240 (13) & 43/217 (20) & 35/213 (16) \\
-Gemma & 13/171 (8) & 13/210 (6) & 10/196 (5) & 9/216 (4) \\
+gpt-oss & 30 (651) & 13 (716) & 11 (243) & 15 (280) \\
+Nemotron & 12 (134) & 4 (189) & 0 (68) & 2 (81) \\
+Ling & 44 (643) & 46 (631) & 47 (238) & 42 (260) \\
+Qwen3.8 & 23 (644) & 12 (566) & 20 (217) & 16 (213) \\
+Gemma & 7 (435) & 5 (555) & 5 (196) & 4 (216) \\
 \bottomrule
 \end{tabular}
-\caption{Broken / stated intentions, summed over games, with the percentage in parentheses for the self-hosted models. A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}. The newer models have no chat-only control.}
+\caption{Broken stated intentions, summed over games: broken / stated for the API models, and for the self-hosted models the percentage broken with the number stated in parentheses. A stated intention is a public message that names a contribution; it is broken when the speaker then gives more than 5 tokens less. One regular expression scores every model. No main API model breaks more than 2 in any condition, and GPT-5 at most 3 with a manager; per model, first-person commitments and other thresholds are in Table~\ref{tab:robust}.}
 \label{tab:promises}
 \end{table}
 }
@@ -32,28 +32,28 @@ Gemma & 13/171 (8) & 13/210 (6) & 10/196 (5) & 9/216 (4) \\
 \newcommand{\hgParseTable}{%
 \begin{table}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 \textbf{Model} & \textbf{Replies} & \textbf{Valid \%} & \textbf{Lowest \% (setup)} \\
 \midrule
-GPT-4o & 3,300 & 100.0 & 100.0 (No chat) \\
-Claude & 3,300 & 100.0 & 100.0 (No chat) \\
-Gemini & 3,300 & 99.8 & 98.3 (Hidden) \\
-DeepSeek V3 & 3,300 & 100.0 & 100.0 (No chat) \\
-Grok & 3,300 & 100.0 & 100.0 (No chat) \\
-Qwen Plus & 3,300 & 100.0 & 100.0 (No chat) \\
-GPT-5 & 2,400 & 100.0 & 100.0 (No chat) \\
-DeepSeek V3.1 & 2,400 & 100.0 & 100.0 (No chat) \\
-gpt-oss & 4,200 & 100.0 & 100.0 (No chat) \\
-Nemotron & 4,200 & 94.8 & 88.3 (No chat) \\
-Ling & 4,200 & 99.8 & 99.3 (Fixed) \\
-Qwen3.8 & 4,200 & 99.9 & 99.7 (Salary) \\
-Gemma & 4,200 & 100.0 & 100.0 (No chat) \\
+GPT-4o & 5,300 & 100.0 & 100.0 (No chat) \\
+Claude & 5,200 & 100.0 & 100.0 (No chat) \\
+Gemini & 6,300 & 99.9 & 98.3 (Hidden) \\
+DeepSeek V3 & 4,700 & 100.0 & 100.0 (No chat) \\
+Grok & 5,200 & 100.0 & 100.0 (No chat) \\
+Qwen Plus & 5,300 & 100.0 & 100.0 (No chat) \\
+GPT-5 & 2,700 & 100.0 & 100.0 (No chat) \\
+DeepSeek V3.1 & 4,200 & 100.0 & 100.0 (No chat) \\
+gpt-oss & 7,200 & 100.0 & 100.0 (No chat) \\
+Nemotron & 7,200 & 95.2 & 88.3 (No chat) \\
+Ling & 7,200 & 99.8 & 99.5 (Salary) \\
+Qwen3.8 & 7,200 & 99.9 & 99.7 (Public only) \\
+Gemma & 7,200 & 100.0 & 100.0 (No chat) \\
 \bottomrule
 \end{tabular}
-\caption{Valid (parseable JSON) contribution replies per model over all its homogeneous setups; an invalid reply counts as a contribution of 0. Lowest: the setup with the lowest rate. Counting Nemotron's valid replies only, its cooperation is no chat 17\%; chat only 86\%; elected 99\% (against 15\%, 81\% and 97\% when invalid replies count as 0).}
+\caption{Valid (parseable JSON) contribution replies per model over all its homogeneous setups; an invalid reply counts as a contribution of 0. Lowest: the setup with the lowest rate. Counting Nemotron's valid replies only, its cooperation is no chat 17\%; chat only 94\%; elected 100\% (against 15\%, 90\%, 97\% when invalid replies count as 0).}
 \label{tab:parse}
 \end{table}
 }
@@ -61,108 +61,122 @@ Gemma & 4,200 & 100.0 & 100.0 (No chat) \\
 \newcommand{\hgTestsTable}{%
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lllcccc@{}}
 \toprule
 \textbf{Model} & \textbf{Metric} & \textbf{Contrast} & \textbf{Diff.} & \textbf{95\% CI} & \textbf{$p$} & \textbf{Holm $p$} \\
 \midrule
-GPT-4o & contribution & No chat $\to$ Chat only & +0.7 & [-2.1, 3.5] & 0.423 & 1.000 \\
-Claude & contribution & No chat $\to$ Chat only & +7.8 & [1.5, 14.1] & 0.027 & 0.133 \\
-Gemini & contribution & No chat $\to$ Chat only & +2.1 & [-5.0, 9.2] & 0.334 & 1.000 \\
-DeepSeek V3 & contribution & No chat $\to$ Chat only & +6.1 & [2.7, 9.5] & 0.016 & 0.098 \\
-Grok & contribution & No chat $\to$ Chat only & +13.5 & [3.8, 23.3] & 0.027 & 0.133 \\
-Qwen Plus & contribution & No chat $\to$ Chat only & +0.7 & [-2.2, 3.5] & 0.423 & 1.000 \\
-GPT-4o & contribution & Chat only $\to$ Fixed & +3.6 & [0.7, 6.6] & 0.024 & 0.415 \\
-GPT-4o & contribution & Chat only $\to$ Elected & +2.6 & [-1.6, 6.9] & 0.176 & 1.000 \\
-GPT-4o & contribution & Chat only $\to$ Rotating & +0.4 & [-1.9, 2.6] & 0.701 & 1.000 \\
-Claude & contribution & Chat only $\to$ Fixed & +1.7 & [-5.7, 9.1] & 0.433 & 1.000 \\
-Claude & contribution & Chat only $\to$ Elected & -2.7 & [-9.2, 3.8] & 0.250 & 1.000 \\
-Claude & contribution & Chat only $\to$ Rotating & +0.7 & [-5.8, 7.0] & 0.751 & 1.000 \\
-Gemini & contribution & Chat only $\to$ Fixed & +1.8 & [-4.3, 7.9] & 0.498 & 1.000 \\
-Gemini & contribution & Chat only $\to$ Elected & +8.0 & [1.0, 15.0] & 0.039 & 0.621 \\
-Gemini & contribution & Chat only $\to$ Rotating & +1.4 & [-4.7, 7.5] & 0.589 & 1.000 \\
-DeepSeek V3 & contribution & Chat only $\to$ Fixed & -1.2 & [-4.4, 2.0] & 0.273 & 1.000 \\
-DeepSeek V3 & contribution & Chat only $\to$ Elected & -0.9 & [-4.1, 2.3] & 0.378 & 1.000 \\
-DeepSeek V3 & contribution & Chat only $\to$ Rotating & -2.3 & [-5.3, 0.8] & 0.118 & 1.000 \\
-Grok & contribution & Chat only $\to$ Fixed & +0.2 & [-0.1, 0.4] & 0.137 & 1.000 \\
-Grok & contribution & Chat only $\to$ Elected & +0.0 & [-0.3, 0.3] & 0.962 & 1.000 \\
-Grok & contribution & Chat only $\to$ Rotating & +0.1 & [-0.2, 0.4] & 0.514 & 1.000 \\
-Qwen Plus & contribution & Chat only $\to$ Fixed & +4.2 & [0.1, 8.2] & 0.047 & 0.699 \\
-Qwen Plus & contribution & Chat only $\to$ Elected & +3.3 & [0.7, 6.0] & 0.022 & 0.394 \\
-Qwen Plus & contribution & Chat only $\to$ Rotating & +1.0 & [-1.5, 3.5] & 0.358 & 1.000 \\
-Claude & offers /100 & Elected $\to$ Salary & +13.9 & [11.2, 16.6] & $<$0.001 & $<$0.001 \\
-Claude & offers /100 & Salary $\to$ Costly & -7.7 & [-10.1, -5.3] & 0.002 & 0.015 \\
-Gemini & offers /100 & Elected $\to$ Salary & +4.1 & [-0.9, 9.0] & 0.077 & 0.308 \\
-Gemini & offers /100 & Salary $\to$ Costly & -0.3 & [-5.0, 4.4] & 0.847 & 1.000 \\
-DeepSeek V3 & offers /100 & Elected $\to$ Salary & +0.3 & [-2.7, 3.4] & 0.766 & 1.000 \\
-DeepSeek V3 & offers /100 & Salary $\to$ Costly & -2.0 & [-5.3, 1.3] & 0.139 & 0.418 \\
-Grok & offers /100 & Elected $\to$ Salary & +2.7 & [1.2, 4.1] & 0.015 & 0.092 \\
-Grok & offers /100 & Salary $\to$ Costly & -2.7 & [-4.1, -1.2] & 0.015 & 0.092 \\
-GPT-5 & offers /100 & Elected $\to$ Salary & +6.3 & [-0.8, 13.4] & 0.066 & 0.199 \\
-GPT-5 & offers /100 & Salary $\to$ Costly & -9.3 & [-16.7, -2.0] & 0.028 & 0.112 \\
-DeepSeek V3.1 & offers /100 & Elected $\to$ Salary & +0.0 & [-5.3, 5.3] & 1.000 & 1.000 \\
-DeepSeek V3.1 & offers /100 & Salary $\to$ Costly & -1.7 & [-4.1, 0.8] & 0.133 & 0.266 \\
-Qwen3.8 & offers /100 & Elected $\to$ Salary & +10.0 & [-3.5, 23.5] & 0.086 & 0.346 \\
-Qwen3.8 & offers /100 & Salary $\to$ Costly & -2.3 & [-15.4, 10.8] & 0.541 & 1.000 \\
-gpt-oss & offers /100 & Elected $\to$ Salary & +1.7 & [-9.7, 13.1] & 0.651 & 1.000 \\
-gpt-oss & offers /100 & Salary $\to$ Costly & +1.3 & [-9.7, 12.4] & 0.721 & 1.000 \\
-gpt-oss & cooperation (pp) & No chat $\to$ Chat only & +53.7 & [17.4, 89.9] & 0.021 & 0.042 \\
-gpt-oss & cooperation (pp) & Chat only $\to$ Fixed & +23.7 & [-13.1, 60.4] & 0.118 & 1.000 \\
-gpt-oss & cooperation (pp) & Chat only $\to$ Elected & +25.3 & [-9.8, 60.5] & 0.100 & 1.000 \\
-gpt-oss & cooperation (pp) & Chat only $\to$ Rotating & +25.7 & [-9.5, 60.9] & 0.097 & 1.000 \\
-gpt-oss & broken \% (pp) & Chat only $\to$ Elected & -15.2 & [-27.8, -2.6] & 0.033 & 0.166 \\
-Nemotron & cooperation (pp) & No chat $\to$ Chat only & +66.0 & [23.1, 109.0] & 0.014 & 0.042 \\
-Nemotron & cooperation (pp) & Chat only $\to$ Fixed & +13.7 & [-38.0, 65.3] & 0.374 & 1.000 \\
-Nemotron & cooperation (pp) & Chat only $\to$ Elected & +15.7 & [-36.1, 67.5] & 0.323 & 1.000 \\
-Nemotron & cooperation (pp) & Chat only $\to$ Rotating & +10.3 & [-40.5, 61.2] & 0.482 & 1.000 \\
-Nemotron & broken \% (pp) & Chat only $\to$ Elected & -5.3 & [-28.5, 17.9] & 0.522 & 1.000 \\
-Ling & cooperation (pp) & No chat $\to$ Chat only & -47.7 & [-67.7, -27.6] & 0.003 & 0.013 \\
-Ling & cooperation (pp) & Chat only $\to$ Fixed & -2.7 & [-18.4, 13.1] & 0.663 & 1.000 \\
-Ling & cooperation (pp) & Chat only $\to$ Elected & -3.7 & [-21.1, 13.8] & 0.590 & 1.000 \\
-Ling & cooperation (pp) & Chat only $\to$ Rotating & -6.0 & [-23.2, 11.2] & 0.388 & 1.000 \\
-Ling & broken \% (pp) & Chat only $\to$ Elected & +2.0 & [-11.9, 15.9] & 0.708 & 1.000 \\
-Qwen3.8 & cooperation (pp) & No chat $\to$ Chat only & +28.3 & [-6.6, 63.2] & 0.082 & 0.082 \\
-Qwen3.8 & cooperation (pp) & Chat only $\to$ Fixed & +26.7 & [0.6, 52.8] & 0.047 & 0.612 \\
-Qwen3.8 & cooperation (pp) & Chat only $\to$ Elected & +36.3 & [18.4, 54.2] & 0.007 & 0.105 \\
-Qwen3.8 & cooperation (pp) & Chat only $\to$ Rotating & +36.7 & [18.2, 55.2] & 0.009 & 0.127 \\
-Qwen3.8 & broken \% (pp) & Chat only $\to$ Elected & -9.7 & [-24.9, 5.6] & 0.152 & 0.607 \\
-Gemma & cooperation (pp) & Chat only $\to$ Fixed & +2.3 & [-1.5, 6.1] & 0.118 & 1.000 \\
-Gemma & cooperation (pp) & Chat only $\to$ Elected & +0.7 & [-0.8, 2.1] & 0.183 & 1.000 \\
-Gemma & cooperation (pp) & Chat only $\to$ Rotating & +1.3 & [-2.5, 5.1] & 0.270 & 1.000 \\
-Gemma & broken \% (pp) & Chat only $\to$ Elected & -1.4 & [-4.2, 1.3] & 0.221 & 0.661 \\
+GPT-4o & contribution & No chat $\to$ Chat only & +4.1 & [1.4, 6.7] & 0.007 & 0.020 \\
+Claude & contribution & No chat $\to$ Chat only & +8.2 & [5.7, 10.8] & $<$0.001 & $<$0.001 \\
+Gemini & contribution & No chat $\to$ Chat only & +2.9 & [0.4, 5.4] & 0.029 & 0.029 \\
+DeepSeek V3 & contribution & No chat $\to$ Chat only & +4.9 & [3.2, 6.7] & $<$0.001 & 0.001 \\
+Grok & contribution & No chat $\to$ Chat only & +14.3 & [10.2, 18.5] & $<$0.001 & 0.001 \\
+Qwen Plus & contribution & No chat $\to$ Chat only & +4.2 & [1.5, 6.8] & 0.007 & 0.020 \\
+GPT-4o & contribution & Chat only $\to$ Fixed & +0.7 & [$-$2.3, 3.8] & 0.615 & 1.000 \\
+GPT-4o & contribution & Chat only $\to$ Elected & $-$0.7 & [$-$3.7, 2.3] & 0.643 & 1.000 \\
+GPT-4o & contribution & Chat only $\to$ Rotating & $-$3.1 & [$-$6.0, $-$0.2] & 0.038 & 0.613 \\
+Claude & contribution & Chat only $\to$ Fixed & +1.4 & [$-$0.9, 3.6] & 0.192 & 1.000 \\
+Claude & contribution & Chat only $\to$ Elected & $-$3.5 & [$-$5.9, $-$1.2] & 0.008 & 0.143 \\
+Claude & contribution & Chat only $\to$ Rotating & +0.3 & [$-$2.2, 2.8] & 0.778 & 1.000 \\
+Gemini & contribution & Chat only $\to$ Fixed & +0.6 & [$-$2.7, 4.0] & 0.699 & 1.000 \\
+Gemini & contribution & Chat only $\to$ Elected & +7.3 & [4.8, 9.8] & $<$0.001 & 0.002 \\
+Gemini & contribution & Chat only $\to$ Rotating & +0.6 & [$-$4.4, 5.6] & 0.794 & 1.000 \\
+DeepSeek V3 & contribution & Chat only $\to$ Fixed & +0.3 & [$-$1.5, 2.0] & 0.733 & 1.000 \\
+DeepSeek V3 & contribution & Chat only $\to$ Elected & +0.3 & [$-$1.4, 2.0] & 0.692 & 1.000 \\
+DeepSeek V3 & contribution & Chat only $\to$ Rotating & $-$1.0 & [$-$3.7, 1.8] & 0.431 & 1.000 \\
+Grok & contribution & Chat only $\to$ Fixed & +0.4 & [$-$0.1, 0.9] & 0.115 & 1.000 \\
+Grok & contribution & Chat only $\to$ Elected & +0.4 & [$-$0.2, 0.9] & 0.140 & 1.000 \\
+Grok & contribution & Chat only $\to$ Rotating & +0.3 & [$-$0.2, 0.9] & 0.211 & 1.000 \\
+Qwen Plus & contribution & Chat only $\to$ Fixed & $-$0.1 & [$-$3.4, 3.1] & 0.926 & 1.000 \\
+Qwen Plus & contribution & Chat only $\to$ Elected & $-$0.4 & [$-$3.4, 2.5] & 0.753 & 1.000 \\
+Qwen Plus & contribution & Chat only $\to$ Rotating & $-$2.5 & [$-$5.5, 0.5] & 0.096 & 1.000 \\
+Claude & offers /100 & Elected $\to$ Salary & +13.1 & [11.3, 14.9] & $<$0.001 & $<$0.001 \\
+Claude & offers /100 & Salary $\to$ Costly & $-$6.9 & [$-$8.6, $-$5.2] & $<$0.001 & $<$0.001 \\
+Gemini & offers /100 & Elected $\to$ Salary & +4.3 & [2.9, 5.6] & $<$0.001 & $<$0.001 \\
+Gemini & offers /100 & Salary $\to$ Costly & $-$0.1 & [$-$1.9, 1.6] & 0.879 & 1.000 \\
+DeepSeek V3 & offers /100 & Elected $\to$ Salary & +0.2 & [$-$3.0, 3.5] & 0.842 & 1.000 \\
+DeepSeek V3 & offers /100 & Salary $\to$ Costly & $-$2.0 & [$-$5.3, 1.3] & 0.139 & 0.418 \\
+Grok & offers /100 & Elected $\to$ Salary & +2.8 & [1.9, 3.6] & $<$0.001 & $<$0.001 \\
+Grok & offers /100 & Salary $\to$ Costly & $-$2.8 & [$-$3.6, $-$1.9] & $<$0.001 & $<$0.001 \\
+GPT-5 & offers /100 & Elected $\to$ Salary & +6.3 & [$-$0.8, 13.4] & 0.066 & 0.199 \\
+GPT-5 & offers /100 & Salary $\to$ Costly & $-$9.3 & [$-$16.7, $-$2.0] & 0.028 & 0.112 \\
+DeepSeek V3.1 & offers /100 & Elected $\to$ Salary & $-$0.1 & [$-$2.3, 2.1] & 0.904 & 0.904 \\
+DeepSeek V3.1 & offers /100 & Salary $\to$ Costly & $-$1.4 & [$-$3.3, 0.5] & 0.141 & 0.281 \\
 \bottomrule
 \end{tabular}
-\caption{Welch's $t$-tests for the contrasts discussed in the text (game = unit; $n$ = 3 or 5 per side). Difference = second setup minus first; 95\% confidence interval; two-sided $p$, and Holm-adjusted $p$ within each family of contrasts (same model set, metric and kind of contrast: speech, manager, pay, or promises). Contrasts where both setups have zero variance (e.g., GPT-4o's offers, always 0) are omitted.}
+\caption{Welch's $t$-tests for the secondary contrasts discussed in the text, API models (game = unit; $n$ = 3 to 10 per side). Difference = second setup minus first; 95\% confidence interval; two-sided $p$, and Holm-adjusted $p$ within each family of contrasts (same model set, metric and kind of contrast: speech, manager, pay, or promises). Contrasts where both setups have zero variance (e.g., GPT-4o's offers, always 0) are omitted. Rows that repeat a primary contrast are corrected here within their own family; the text uses the primary correction of Table~\ref{tab:primary}.}
 \label{tab:tests}
+\end{table*}
+\begin{table*}[!htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lllcccc@{}}
+\toprule
+\textbf{Model} & \textbf{Metric} & \textbf{Contrast} & \textbf{Diff.} & \textbf{95\% CI} & \textbf{$p$} & \textbf{Holm $p$} \\
+\midrule
+Qwen3.8 & offers /100 & Elected $\to$ Salary & +8.2 & [4.9, 11.6] & $<$0.001 & $<$0.001 \\
+Qwen3.8 & offers /100 & Salary $\to$ Costly & $-$2.1 & [$-$5.3, 1.1] & 0.165 & 0.496 \\
+gpt-oss & offers /100 & Elected $\to$ Salary & +2.2 & [$-$1.2, 5.7] & 0.181 & 0.496 \\
+gpt-oss & offers /100 & Salary $\to$ Costly & $-$1.4 & [$-$5.1, 2.3] & 0.438 & 0.496 \\
+gpt-oss & cooperation (pp) & No chat $\to$ Chat only & +47.8 & [35.6, 60.0] & $<$0.001 & $<$0.001 \\
+gpt-oss & cooperation (pp) & Chat only $\to$ Fixed & +30.5 & [19.6, 41.4] & $<$0.001 & 0.001 \\
+gpt-oss & cooperation (pp) & Chat only $\to$ Elected & +30.8 & [19.8, 41.7] & $<$0.001 & 0.001 \\
+gpt-oss & cooperation (pp) & Chat only $\to$ Rotating & +31.1 & [20.3, 42.0] & $<$0.001 & 0.001 \\
+gpt-oss & broken \% (pp) & Chat only $\to$ Elected & $-$17.1 & [$-$21.4, $-$12.9] & $<$0.001 & $<$0.001 \\
+Nemotron & cooperation (pp) & No chat $\to$ Chat only & +74.6 & [44.5, 104.8] & 0.004 & 0.013 \\
+Nemotron & cooperation (pp) & Chat only $\to$ Fixed & +3.1 & [$-$8.7, 15.0] & 0.572 & 1.000 \\
+Nemotron & cooperation (pp) & Chat only $\to$ Elected & +7.4 & [$-$3.9, 18.6] & 0.167 & 1.000 \\
+Nemotron & cooperation (pp) & Chat only $\to$ Rotating & $-$12.1 & [$-$38.9, 14.6] & 0.335 & 1.000 \\
+Nemotron & broken \% (pp) & Chat only $\to$ Elected & $-$7.7 & [$-$16.4, 0.9] & 0.075 & 0.149 \\
+Ling & cooperation (pp) & No chat $\to$ Chat only & $-$52.3 & [$-$72.0, $-$32.6] & 0.003 & 0.013 \\
+Ling & cooperation (pp) & Chat only $\to$ Fixed & $-$0.8 & [$-$11.2, 9.7] & 0.878 & 1.000 \\
+Ling & cooperation (pp) & Chat only $\to$ Elected & $-$1.0 & [$-$12.4, 10.4] & 0.852 & 1.000 \\
+Ling & cooperation (pp) & Chat only $\to$ Rotating & +2.8 & [$-$5.5, 10.9] & 0.483 & 1.000 \\
+Ling & broken \% (pp) & Chat only $\to$ Elected & +2.0 & [$-$7.6, 11.5] & 0.663 & 0.663 \\
+Qwen3.8 & cooperation (pp) & No chat $\to$ Chat only & +30.5 & [$-$9.1, 70.0] & 0.083 & 0.165 \\
+Qwen3.8 & cooperation (pp) & Chat only $\to$ Fixed & +26.9 & [19.5, 34.3] & $<$0.001 & $<$0.001 \\
+Qwen3.8 & cooperation (pp) & Chat only $\to$ Elected & +33.6 & [28.4, 38.8] & $<$0.001 & $<$0.001 \\
+Qwen3.8 & cooperation (pp) & Chat only $\to$ Rotating & +30.9 & [23.9, 37.9] & $<$0.001 & $<$0.001 \\
+Qwen3.8 & broken \% (pp) & Chat only $\to$ Elected & $-$10.8 & [$-$16.0, $-$5.5] & $<$0.001 & 0.003 \\
+Gemma & cooperation (pp) & No chat $\to$ Chat only & +0.1 & [$-$0.2, 0.4] & 0.351 & 0.351 \\
+Gemma & cooperation (pp) & Chat only $\to$ Fixed & +1.4 & [0.4, 2.4] & 0.014 & 0.124 \\
+Gemma & cooperation (pp) & Chat only $\to$ Elected & +1.0 & [$-$0.1, 2.0] & 0.060 & 0.481 \\
+Gemma & cooperation (pp) & Chat only $\to$ Rotating & +0.8 & [$-$0.1, 1.6] & 0.075 & 0.528 \\
+Gemma & broken \% (pp) & Chat only $\to$ Elected & $-$2.4 & [$-$4.6, $-$0.1] & 0.040 & 0.118 \\
+\bottomrule
+\end{tabular}
+\caption{Welch's $t$-tests for the secondary contrasts discussed in the text, self-hosted models (as in Table~\ref{tab:tests}).}
+\label{tab:tests_oss}
 \end{table*}
 }
 
 \newcommand{\hgRobustTable}{%
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lcccccccc@{}}
 \toprule
 & \multicolumn{4}{c}{\textbf{Chat only (no manager)}} & \multicolumn{4}{c}{\textbf{Elected manager}} \\ \cmidrule(lr){2-5} \cmidrule(lr){6-9}
 \textbf{Model} & \textbf{Stating} & \textbf{Broken 3/5/8} & \textbf{1st pers.} & \textbf{broken} & \textbf{Stating} & \textbf{Broken 3/5/8} & \textbf{1st pers.} & \textbf{broken} \\
 \midrule
-GPT-4o & 87\% & 2 / 2 / 2 of 261 & 19 & 0 & 65\% & 0 / 0 / 0 of 317 & 20 & 0 \\
-Claude & 42\% & 1 / 0 / 0 of 125 & 18 & 0 & 76\% & 2 / 0 / 0 of 381 & 81 & 0 \\
-Gemini & 82\% & 0 / 0 / 0 of 244 & 114 & 0 & 24\% & 0 / 0 / 0 of 121 & 68 & 0 \\
-DeepSeek V3 & 44\% & 4 / 0 / 0 of 129 & 33 & 0 & 49\% & 0 / 0 / 0 of 240 & 54 & 0 \\
-Grok & 7\% & 0 / 0 / 0 of 12 & 0 & 0 & 10\% & 0 / 0 / 0 of 22 & 1 & 0 \\
-Qwen Plus & 43\% & 0 / 0 / 0 of 129 & 47 & 0 & 60\% & 1 / 1 / 0 of 298 & 68 & 0 \\
+GPT-4o & 76\% & 2 / 2 / 2 of 755 & 65 & 0 & 63\% & 0 / 0 / 0 of 617 & 41 & 0 \\
+Claude & 42\% & 1 / 0 / 0 of 255 & 31 & 0 & 78\% & 5 / 0 / 0 of 627 & 153 & 0 \\
+Gemini & 78\% & 0 / 0 / 0 of 778 & 427 & 0 & 25\% & 0 / 0 / 0 of 250 & 127 & 0 \\
+DeepSeek V3 & 67\% & 4 / 0 / 0 of 528 & 105 & 0 & 46\% & 0 / 0 / 0 of 359 & 80 & 0 \\
+Grok & 8\% & 0 / 0 / 0 of 26 & 4 & 0 & 10\% & 0 / 0 / 0 of 37 & 2 & 0 \\
+Qwen Plus & 52\% & 0 / 0 / 0 of 523 & 175 & 0 & 58\% & 1 / 1 / 0 of 580 & 156 & 0 \\
 \midrule
-GPT-5 & --- & --- & --- & --- & 79\% & 1 / 1 / 1 of 235 & 1 & 0 \\
-DeepSeek V3.1 & --- & --- & --- & --- & 57\% & 0 / 0 / 0 of 171 & 38 & 0 \\
+GPT-5 & 86\% & 11 / 11 / 11 of 259 & 4 & 0 & 79\% & 1 / 1 / 1 of 235 & 1 & 0 \\
+DeepSeek V3.1 & 27\% & 0 / 0 / 0 of 80 & 25 & 0 & 57\% & 0 / 0 / 0 of 456 & 120 & 0 \\
 \midrule
-gpt-oss & 83\% & 87 / 67 / 44 of 240 & 37 & 4 & 93\% & 43 / 34 / 27 of 275 & 66 & 10 \\
-Nemotron & 66\% & 6 / 6 / 5 of 51 & 19 & 3 & 70\% & 4 / 4 / 4 of 88 & 48 & 2 \\
-Ling & 81\% & 104 / 97 / 86 of 238 & 60 & 29 & 81\% & 107 / 99 / 77 of 234 & 64 & 18 \\
-Qwen3.8 & 86\% & 56 / 55 / 50 of 257 & 140 & 27 & 80\% & 31 / 30 / 30 of 240 & 164 & 21 \\
-Gemma & 57\% & 13 / 13 / 13 of 171 & 82 & 1 & 70\% & 13 / 13 / 13 of 210 & 94 & 13 \\
+gpt-oss & 85\% & 281 / 196 / 150 of 651 & 87 & 18 & 91\% & 113 / 91 / 83 of 716 & 164 & 19 \\
+Nemotron & 56\% & 16 / 16 / 15 of 134 & 47 & 7 & 67\% & 9 / 8 / 8 of 189 & 86 & 3 \\
+Ling & 82\% & 315 / 284 / 240 of 643 & 161 & 81 & 81\% & 312 / 289 / 250 of 631 & 178 & 68 \\
+Qwen3.8 & 80\% & 153 / 146 / 117 of 644 & 327 & 65 & 71\% & 75 / 70 / 67 of 566 & 403 & 53 \\
+Gemma & 54\% & 30 / 30 / 30 of 435 & 239 & 4 & 69\% & 25 / 25 / 25 of 555 & 243 & 14 \\
 \bottomrule
 \end{tabular}
 \caption{Robustness of broken stated intentions (one regular expression for every model). Per condition: share of public messages that state a contribution; broken at thresholds of 3 / 5 / 8 tokens; number of first-person, unconditional commitments (``I will contribute 10'', no ``if'') and how many of them are broken at 5 tokens. Statements that are proposals (``let's each give 10'') or conditional (``10 if you do'') make up the rest.}
@@ -171,150 +185,150 @@ Gemma & 57\% & 13 / 13 / 13 of 171 & 82 & 1 & 70\% & 13 / 13 / 13 of 210 & 94 & 
 }
 
 \newcommand{\hgOffersTable}{%
-\begin{table}[!htbp]
+\begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
 \textbf{Model} & \textbf{Offers} & \textbf{Reply} & \textbf{Targ.} & \textbf{Recip.} & \textbf{Pledge} & \textbf{Other} & \textbf{Imp.} \\
 \midrule
 GPT-4o & 0 & --- & --- & --- & --- & --- & --- \\
-Claude & 76 & 8 & 5 & 17 & 34 & 36 & 8 \\
-Gemini & 41 & 0 & 0 & 0 & 100 & 0 & 0 \\
-DeepSeek V3 & 18 & 0 & 0 & 0 & 100 & 0 & 0 \\
-Grok & 8 & 0 & 0 & 0 & 100 & 0 & 0 \\
+Claude & 188 & 7 & 3 & 20 & 38 & 31 & 14 \\
+Gemini & 109 & 0 & 0 & 0 & 99 & 1 & 0 \\
+DeepSeek V3 & 25 & 0 & 0 & 0 & 100 & 0 & 0 \\
+Grok & 22 & 0 & 0 & 0 & 100 & 0 & 0 \\
 Qwen Plus & 0 & --- & --- & --- & --- & --- & --- \\
 \midrule
 GPT-5 & 124 & 6 & 4 & 44 & 39 & 7 & 4 \\
-DeepSeek V3.1 & 136 & 7 & 2 & 1 & 79 & 11 & 0 \\
+DeepSeek V3.1 & 341 & 6 & 3 & 1 & 79 & 11 & 0 \\
 \midrule
-gpt-oss & 80 & 20 & 19 & 9 & 28 & 25 & 0 \\
-Nemotron & 10 & 10 & 0 & 40 & 50 & 0 & 0 \\
-Ling & 6 & 0 & 17 & 50 & 17 & 17 & 0 \\
-Qwen3.8 & 137 & 15 & 14 & 4 & 34 & 34 & 0 \\
+gpt-oss & 220 & 24 & 15 & 6 & 29 & 25 & 0 \\
+Nemotron & 40 & 18 & 0 & 30 & 52 & 0 & 0 \\
+Ling & 24 & 17 & 8 & 38 & 25 & 12 & 0 \\
+Qwen3.8 & 358 & 13 & 13 & 3 & 35 & 35 & 2 \\
 Gemma & 0 & --- & --- & --- & --- & --- & --- \\
 \bottomrule
 \end{tabular}
-\caption{What vote-contingent offers contain (elected, salary and costly setups pooled; automatic and not validated against human labels). Shares (\%) of offers that reply to or refuse another offer (Reply), promise the voter a targeted private benefit (Targ.), offer reciprocal political support such as ``I'll vote for you next time'' (Recip.), pledge a public contribution (Pledge), or none of these (Other). Imp.: number of offers naming an amount the rules do not allow (a contribution above 20 or a sanction above the budget of 10). Across all 40,538 messages, 46 mention contributing more than 20 tokens.}
+\caption{What vote-contingent offers contain (elected, salary and costly setups pooled; automatic split; its agreement with hand labels is in Table~\ref{tab:validation}). Shares (\%) of offers that reply to or refuse another offer (Reply), promise the voter a targeted private benefit (Targ.), offer reciprocal political support such as ``I'll vote for you next time'' (Recip.), pledge a public contribution (Pledge), or none of these (Other). Imp.: number of offers naming an amount the rules do not allow (a contribution above 20 or a sanction above the budget of 10). Across all 72,099 messages, 94 mention contributing more than 20 tokens.}
 \label{tab:offers}
-\end{table}
+\end{table*}
 }
 
 \newcommand{\hgResultTables}{%
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Model} & \textbf{No chat} & \textbf{Chat only} & \textbf{Fixed} & \textbf{Elected} & \textbf{Rotating} \\
 \midrule
-GPT-4o & 10.0$\pm$0.0 (100) & 10.7$\pm$1.1 (100) & 14.3$\pm$2.3 (100) & 13.3$\pm$3.5 (100) & 11.0$\pm$1.4 (100) \\
-Claude & 10.5$\pm$2.5 (94) & 18.3$\pm$3.0 (100) & 20.0$\pm$0.1 (100) & 15.6$\pm$1.4 (100) & 18.9$\pm$1.5 (100) \\
-Gemini & 9.6$\pm$0.1 (96) & 11.7$\pm$2.9 (100) & 13.4$\pm$4.1 (100) & 19.7$\pm$0.4 (99) & 13.1$\pm$4.0 (100) \\
-DeepSeek V3 & 10.0$\pm$0.0 (100) & 16.1$\pm$1.4 (100) & 14.9$\pm$0.4 (100) & 15.2$\pm$0.4 (100) & 13.8$\pm$2.1 (100) \\
-Grok & 5.5$\pm$3.9 (57) & 19.1$\pm$0.1 (95) & 19.2$\pm$0.2 (96) & 19.1$\pm$0.2 (95) & 19.2$\pm$0.3 (96) \\
-Qwen Plus & 10.0$\pm$0.0 (100) & 10.7$\pm$1.2 (100) & 14.8$\pm$3.3 (100) & 14.0$\pm$1.9 (100) & 11.7$\pm$1.6 (100) \\
+GPT-4o & 10.0$\pm$0.0 (100)$_{6}$ & 14.1$\pm$3.7 (100)$_{10}$ & 14.8$\pm$2.7 (100)$_{10}$ & 13.4$\pm$2.5 (100)$_{10}$ & 11.0$\pm$1.4 (100)$_{5}$ \\
+Claude & 10.4$\pm$1.8 (95)$_{6}$ & 18.6$\pm$2.2 (100)$_{6}$ & 20.0$\pm$0.1 (100)$_{5}$ & 15.1$\pm$1.5 (100)$_{8}$ & 18.9$\pm$1.5 (100)$_{5}$ \\
+Gemini & 9.6$\pm$0.0 (96)$_{6}$ & 12.5$\pm$3.5 (100)$_{10}$ & 13.1$\pm$3.6 (100)$_{10}$ & 19.8$\pm$0.3 (99)$_{10}$ & 13.1$\pm$4.0 (100)$_{5}$ \\
+DeepSeek V3 & 9.9$\pm$0.2 (99)$_{6}$ & 14.8$\pm$2.1 (100)$_{8}$ & 15.1$\pm$0.4 (100)$_{8}$ & 15.1$\pm$0.3 (100)$_{8}$ & 13.8$\pm$2.1 (100)$_{5}$ \\
+Grok & 4.5$\pm$4.0 (47)$_{6}$ & 18.8$\pm$0.5 (94)$_{6}$ & 19.2$\pm$0.2 (96)$_{5}$ & 19.2$\pm$0.3 (96)$_{8}$ & 19.2$\pm$0.3 (96)$_{5}$ \\
+Qwen Plus & 10.0$\pm$0.0 (100)$_{6}$ & 14.2$\pm$3.8 (100)$_{10}$ & 14.0$\pm$3.1 (100)$_{10}$ & 13.7$\pm$2.1 (100)$_{10}$ & 11.7$\pm$1.6 (100)$_{5}$ \\
 \bottomrule
 \end{tabular}
-\caption{Main API models by institution: mean contribution $\pm$ s.d. over games (cooperation rate, \%). 3 games for no chat and chat only, 5 per manager type. Manager setups have full communication.}
+\caption{Main API models by institution: mean contribution $\pm$ s.d. over games (cooperation rate, \%). Subscript: number of games. Manager setups have full communication.}
 \label{tab:frontier_full}
 \end{table*}
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Model} & \textbf{Elected} & \textbf{Salary} & \textbf{Costly} & \textbf{Hidden} & \textbf{Anonymous} \\
 \midrule
-GPT-4o & 13.3$\pm$3.5 (100) & 15.6$\pm$1.0 (100) & 16.6$\pm$2.7 (100) & 14.9$\pm$0.1 (100) & 16.1$\pm$2.0 (100) \\
-Claude & 15.6$\pm$1.4 (100) & 14.9$\pm$1.5 (100) & 19.0$\pm$1.7 (100) & 17.1$\pm$2.6 (100) & 17.6$\pm$2.5 (100) \\
-Gemini & 19.7$\pm$0.4 (99) & 20.0$\pm$0.0 (100) & 18.2$\pm$2.6 (100) & 17.9$\pm$2.9 (97) & 20.0$\pm$0.0 (100) \\
-DeepSeek V3 & 15.2$\pm$0.4 (100) & 15.0$\pm$0.0 (100) & 15.3$\pm$0.5 (100) & 15.1$\pm$0.1 (100) & 14.7$\pm$0.5 (100) \\
-Grok & 19.1$\pm$0.2 (95) & 18.9$\pm$0.3 (95) & 19.0$\pm$0.2 (95) & 19.1$\pm$0.1 (95) & 19.1$\pm$0.1 (95) \\
-Qwen Plus & 14.0$\pm$1.9 (100) & 13.9$\pm$1.2 (100) & 14.7$\pm$0.1 (100) & 14.1$\pm$1.3 (100) & 12.5$\pm$0.9 (100) \\
+GPT-4o & 13.4$\pm$2.5 (100)$_{10}$ & 15.6$\pm$1.0 (100)$_{3}$ & 16.6$\pm$2.7 (100)$_{3}$ & 14.9$\pm$0.1 (100)$_{3}$ & 16.1$\pm$2.0 (100)$_{3}$ \\
+Claude & 15.1$\pm$1.5 (100)$_{8}$ & 15.4$\pm$2.0 (100)$_{8}$ & 19.0$\pm$1.9 (100)$_{8}$ & 17.1$\pm$2.6 (100)$_{3}$ & 17.6$\pm$2.5 (100)$_{3}$ \\
+Gemini & 19.8$\pm$0.3 (99)$_{10}$ & 20.0$\pm$0.0 (100)$_{8}$ & 19.3$\pm$1.7 (100)$_{8}$ & 17.9$\pm$2.9 (97)$_{3}$ & 20.0$\pm$0.0 (100)$_{3}$ \\
+DeepSeek V3 & 15.1$\pm$0.3 (100)$_{8}$ & 15.0$\pm$0.0 (100)$_{3}$ & 15.3$\pm$0.5 (100)$_{3}$ & 15.1$\pm$0.1 (100)$_{3}$ & 14.7$\pm$0.5 (100)$_{3}$ \\
+Grok & 19.2$\pm$0.3 (96)$_{8}$ & 19.0$\pm$0.2 (96)$_{8}$ & 19.2$\pm$0.3 (96)$_{8}$ & 19.1$\pm$0.1 (95)$_{3}$ & 19.1$\pm$0.1 (95)$_{3}$ \\
+Qwen Plus & 13.7$\pm$2.1 (100)$_{10}$ & 13.9$\pm$1.2 (100)$_{3}$ & 14.7$\pm$0.1 (100)$_{3}$ & 14.1$\pm$1.3 (100)$_{3}$ & 12.5$\pm$0.9 (100)$_{3}$ \\
 \bottomrule
 \end{tabular}
-\caption{Main API models under manager pay and sanction visibility (elected manager, full communication): mean contribution $\pm$ s.d. (cooperation rate, \%). 5 games for Elected (the no-salary, transparent control), 3 otherwise.}
+\caption{Main API models under manager pay and sanction visibility (elected manager, full communication): mean contribution $\pm$ s.d. (cooperation rate, \%). Elected is the no-salary, transparent control. Subscript: number of games.}
 \label{tab:frontier_pay}
 \end{table*}
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{Setup} & \textbf{GPT-5} & \textbf{DeepSeek V3.1} & \textbf{GPT-4o} & \textbf{DeepSeek V3} \\
 \midrule
-No chat & 17.9$\pm$0.6 (93) & 14.4$\pm$0.1 (94) & 10.0$\pm$0.0 (100) & 10.0$\pm$0.0 (100) \\
-Fixed & 19.6$\pm$0.7 (99) & 19.5$\pm$0.8 (100) & 14.3$\pm$2.3 (100) & 14.9$\pm$0.4 (100) \\
-Elected & 19.7$\pm$0.3 (98) & 17.6$\pm$0.6 (100) & 13.3$\pm$3.5 (100) & 15.2$\pm$0.4 (100) \\
-Rotating & 19.9$\pm$0.1 (99) & 20.0$\pm$0.1 (100) & 11.0$\pm$1.4 (100) & 13.8$\pm$2.1 (100) \\
-Salary & 19.9$\pm$0.1 (99) & 18.7$\pm$0.9 (100) & 15.6$\pm$1.0 (100) & 15.0$\pm$0.0 (100) \\
-Costly & 19.5$\pm$0.5 (98) & 18.6$\pm$1.8 (100) & 16.6$\pm$2.7 (100) & 15.3$\pm$0.5 (100) \\
-Hidden & 19.5$\pm$0.2 (97) & 18.9$\pm$1.1 (100) & 14.9$\pm$0.1 (100) & 15.1$\pm$0.1 (100) \\
-Anonymous & 19.7$\pm$0.4 (98) & 19.7$\pm$0.3 (100) & 16.1$\pm$2.0 (100) & 14.7$\pm$0.5 (100) \\
+No chat & 17.9$\pm$0.6 (93)$_{3}$ & 14.4$\pm$0.1 (94)$_{3}$ & 10.0$\pm$0.0 (100)$_{6}$ & 9.9$\pm$0.2 (99)$_{6}$ \\
+Fixed & 19.6$\pm$0.7 (99)$_{3}$ & 19.5$\pm$0.8 (100)$_{3}$ & 14.8$\pm$2.7 (100)$_{10}$ & 15.1$\pm$0.4 (100)$_{8}$ \\
+Elected & 19.7$\pm$0.3 (98)$_{3}$ & 17.9$\pm$1.4 (100)$_{8}$ & 13.4$\pm$2.5 (100)$_{10}$ & 15.1$\pm$0.3 (100)$_{8}$ \\
+Rotating & 19.9$\pm$0.1 (99)$_{3}$ & 20.0$\pm$0.1 (100)$_{3}$ & 11.0$\pm$1.4 (100)$_{5}$ & 13.8$\pm$2.1 (100)$_{5}$ \\
+Salary & 19.9$\pm$0.1 (99)$_{3}$ & 19.4$\pm$0.7 (100)$_{8}$ & 15.6$\pm$1.0 (100)$_{3}$ & 15.0$\pm$0.0 (100)$_{3}$ \\
+Costly & 19.5$\pm$0.5 (98)$_{3}$ & 19.2$\pm$1.1 (100)$_{8}$ & 16.6$\pm$2.7 (100)$_{3}$ & 15.3$\pm$0.5 (100)$_{3}$ \\
+Hidden & 19.5$\pm$0.2 (97)$_{3}$ & 18.9$\pm$1.1 (100)$_{3}$ & 14.9$\pm$0.1 (100)$_{3}$ & 15.1$\pm$0.1 (100)$_{3}$ \\
+Anonymous & 19.7$\pm$0.4 (98)$_{3}$ & 19.7$\pm$0.3 (100)$_{3}$ & 16.1$\pm$2.0 (100)$_{3}$ & 14.7$\pm$0.5 (100)$_{3}$ \\
 \bottomrule
 \end{tabular}
-\caption{Newer API models (3 games each) next to their predecessors: mean contribution $\pm$ s.d. (cooperation rate, \%).}
+\caption{Newer API models next to their predecessors: mean contribution $\pm$ s.d. (cooperation rate, \%); subscript: number of games.}
 \label{tab:samegen_full}
 \end{table*}
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Setup} & \textbf{gpt-oss} & \textbf{Nemotron} & \textbf{Ling} & \textbf{Qwen3.8} & \textbf{Gemma} \\
 \midrule
-No chat & 7$\pm$5 / 0.6 & 15$\pm$15 / 1.4 & 90$\pm$10 / 9.7 & 23$\pm$17 / 2.3 & 95$\pm$0 / 19.0 \\
-Public only & 57$\pm$7 / 7.3 & 87$\pm$5 / 12.2 & 65$\pm$6 / 7.8 & 25$\pm$13 / 2.5 & 95$\pm$0 / 19.0 \\
-Private only & 13$\pm$4 / 1.2 & 29$\pm$38 / 2.9 & 90$\pm$4 / 9.9 & 7$\pm$4 / 0.7 & 95$\pm$0 / 19.0 \\
-Chat only & 60$\pm$16 / 8.5 & 81$\pm$21 / 9.8 & 42$\pm$7 / 4.2 & 51$\pm$9 / 6.4 & 95$\pm$0 / 19.0 \\
-Fixed & 84$\pm$5 / 13.1 & 95$\pm$1 / 12.4 & 39$\pm$7 / 3.7 & 78$\pm$13 / 8.5 & 97$\pm$2 / 19.5 \\
-Elected & 86$\pm$6 / 11.7 & 97$\pm$1 / 13.7 & 38$\pm$8 / 3.5 & 87$\pm$5 / 13.2 & 96$\pm$1 / 19.1 \\
-Rotating & 86$\pm$6 / 14.0 & 91$\pm$3 / 11.2 & 36$\pm$8 / 3.6 & 88$\pm$4 / 9.6 & 96$\pm$2 / 19.3 \\
-Salary & 77$\pm$7 / 13.5 & 92$\pm$5 / 13.9 & 40$\pm$8 / 4.1 & 80$\pm$5 / 11.8 & 96$\pm$0 / 19.2 \\
-Costly & 85$\pm$5 / 12.4 & 97$\pm$3 / 11.6 & 28$\pm$4 / 2.6 & 89$\pm$2 / 13.1 & 98$\pm$2 / 19.5 \\
-Hidden & 88$\pm$5 / 14.9 & 95$\pm$2 / 12.1 & 36$\pm$8 / 3.7 & 74$\pm$14 / 8.9 & 96$\pm$1 / 19.1 \\
-Anonymous & 85$\pm$4 / 11.4 & 98$\pm$3 / 13.5 & 40$\pm$4 / 4.2 & 83$\pm$2 / 12.3 & 95$\pm$1 / 19.1 \\
-Belief: unknown & 87$\pm$7 / 10.7 & 93$\pm$4 / 14.7 & 35$\pm$9 / 4.2 & 85$\pm$4 / 11.3 & 96$\pm$0 / 19.2 \\
-Belief: all human & 90$\pm$7 / 12.8 & 88$\pm$5 / 11.1 & 38$\pm$10 / 3.9 & 84$\pm$10 / 15.3 & 95$\pm$1 / 19.1 \\
-Belief: mixed & 79$\pm$6 / 9.7 & 93$\pm$4 / 12.6 & 36$\pm$6 / 3.7 & 90$\pm$6 / 11.8 & 95$\pm$0 / 19.0 \\
+No chat & 7$\pm$5 / 0.6$_{3}$ & 15$\pm$15 / 1.4$_{3}$ & 90$\pm$10 / 9.7$_{3}$ & 23$\pm$17 / 2.3$_{3}$ & 95$\pm$0 / 19.0$_{3}$ \\
+Public only & 57$\pm$7 / 7.3$_{3}$ & 87$\pm$5 / 12.2$_{3}$ & 65$\pm$6 / 7.8$_{3}$ & 25$\pm$13 / 2.5$_{3}$ & 95$\pm$0 / 19.0$_{3}$ \\
+Private only & 13$\pm$4 / 1.2$_{3}$ & 29$\pm$38 / 2.9$_{3}$ & 90$\pm$4 / 9.9$_{3}$ & 7$\pm$4 / 0.7$_{3}$ & 95$\pm$0 / 19.0$_{3}$ \\
+Chat only & 54$\pm$13 / 7.0$_{8}$ & 90$\pm$13 / 11.5$_{8}$ & 37$\pm$8 / 3.4$_{8}$ & 53$\pm$6 / 6.2$_{8}$ & 95$\pm$0 / 19.0$_{8}$ \\
+Fixed & 85$\pm$4 / 12.8$_{8}$ & 93$\pm$7 / 11.7$_{8}$ & 37$\pm$11 / 3.5$_{8}$ & 80$\pm$8 / 9.3$_{8}$ & 96$\pm$1 / 19.3$_{8}$ \\
+Elected & 85$\pm$5 / 13.2$_{8}$ & 97$\pm$2 / 13.2$_{8}$ & 36$\pm$12 / 3.6$_{8}$ & 87$\pm$3 / 13.6$_{8}$ & 96$\pm$1 / 19.2$_{8}$ \\
+Rotating & 86$\pm$4 / 13.0$_{8}$ & 78$\pm$31 / 10.2$_{8}$ & 40$\pm$7 / 4.5$_{8}$ & 84$\pm$7 / 10.6$_{8}$ & 96$\pm$1 / 19.2$_{8}$ \\
+Salary & 78$\pm$7 / 12.1$_{8}$ & 93$\pm$4 / 13.2$_{8}$ & 43$\pm$7 / 4.7$_{8}$ & 83$\pm$7 / 13.7$_{8}$ & 96$\pm$0 / 19.2$_{8}$ \\
+Costly & 82$\pm$7 / 11.8$_{8}$ & 96$\pm$3 / 11.8$_{8}$ & 35$\pm$7 / 3.7$_{8}$ & 85$\pm$7 / 12.5$_{8}$ & 99$\pm$1 / 19.7$_{8}$ \\
+Hidden & 88$\pm$5 / 14.9$_{3}$ & 95$\pm$2 / 12.1$_{3}$ & 36$\pm$8 / 3.7$_{3}$ & 74$\pm$14 / 8.9$_{3}$ & 96$\pm$1 / 19.1$_{3}$ \\
+Anonymous & 85$\pm$4 / 11.4$_{3}$ & 98$\pm$3 / 13.5$_{3}$ & 40$\pm$4 / 4.2$_{3}$ & 83$\pm$2 / 12.3$_{3}$ & 95$\pm$1 / 19.1$_{3}$ \\
+Belief: unknown & 87$\pm$7 / 10.7$_{3}$ & 93$\pm$4 / 14.7$_{3}$ & 35$\pm$9 / 4.2$_{3}$ & 85$\pm$4 / 11.3$_{3}$ & 96$\pm$0 / 19.2$_{3}$ \\
+Belief: all human & 90$\pm$7 / 12.8$_{3}$ & 88$\pm$5 / 11.1$_{3}$ & 38$\pm$10 / 3.9$_{3}$ & 84$\pm$10 / 15.3$_{3}$ & 95$\pm$1 / 19.1$_{3}$ \\
+Belief: mixed & 79$\pm$6 / 9.7$_{3}$ & 93$\pm$4 / 12.6$_{3}$ & 36$\pm$6 / 3.7$_{3}$ & 90$\pm$6 / 11.8$_{3}$ & 95$\pm$0 / 19.0$_{3}$ \\
 \bottomrule
 \end{tabular}
-\caption{Self-hosted open-weight models (3 games each): cooperation rate $\pm$ s.d. (\%) / mean contribution. \emph{Chat only} is full communication without a manager; all setups below it have full communication and (except where stated) an elected manager; the belief setups vary what agents are told about the other players (default: all AI).}
+\caption{Self-hosted open-weight models: cooperation rate $\pm$ s.d. (\%) / mean contribution; subscript: number of games. \emph{Chat only} is full communication without a manager; all setups below it have full communication and (except where stated) an elected manager; the belief setups vary what agents are told about the other players (default: all AI).}
 \label{tab:open_full}
 \end{table*}
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lcccccc@{}}
 \toprule
 & \multicolumn{3}{c}{\textbf{Strict}} & \multicolumn{3}{c}{\textbf{Keyword}} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-7}
 \textbf{Model} & No salary & Salary & Costly & No salary & Salary & Costly \\
 \midrule
-GPT-4o & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0 & 0.7 & 0.0 \\
-Claude & 1.4$\pm$2.2 & 15.3$\pm$0.6 & 7.7$\pm$1.2 & 1.6 & 15.3 & 10.0 \\
-Gemini & 1.6$\pm$1.1 & 5.7$\pm$2.3 & 5.3$\pm$1.5 & 2.6 & 5.7 & 6.0 \\
-DeepSeek V3 & 2.0$\pm$1.2 & 2.3$\pm$1.5 & 0.3$\pm$0.6 & 2.8 & 2.7 & 1.7 \\
-Grok & 0.0$\pm$0.0 & 2.7$\pm$0.6 & 0.0$\pm$0.0 & 0.0 & 3.7 & 0.0 \\
+GPT-4o & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.1 & 0.7 & 0.0 \\
+Claude & 1.4$\pm$1.8 & 14.5$\pm$1.6 & 7.6$\pm$1.6 & 1.6 & 15.5 & 9.5 \\
+Gemini & 1.6$\pm$0.8 & 5.9$\pm$1.6 & 5.8$\pm$1.7 & 2.4 & 6.1 & 6.2 \\
+DeepSeek V3 & 2.1$\pm$1.0 & 2.3$\pm$1.5 & 0.3$\pm$0.6 & 2.6 & 2.7 & 1.7 \\
+Grok & 0.0$\pm$0.0 & 2.8$\pm$1.0 & 0.0$\pm$0.0 & 0.0 & 3.4 & 0.0 \\
 Qwen Plus & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0 & 0.0 & 0.0 \\
 \midrule
 GPT-5 & 12.7$\pm$2.1 & 19.0$\pm$3.5 & 9.7$\pm$1.5 & 23.3 & 26.3 & 16.0 \\
-DeepSeek V3.1 & 15.7$\pm$2.5 & 15.7$\pm$1.2 & 14.0$\pm$1.0 & 17.7 & 17.7 & 17.7 \\
+DeepSeek V3.1 & 14.8$\pm$2.3 & 14.6$\pm$1.8 & 13.2$\pm$1.8 & 17.5 & 17.5 & 18.1 \\
 \midrule
-gpt-oss & 7.3$\pm$2.1 & 9.0$\pm$5.3 & 10.3$\pm$2.5 & 16.3 & 18.0 & 13.0 \\
-Nemotron & 0.7$\pm$0.6 & 0.7$\pm$1.2 & 2.0$\pm$1.0 & 16.0 & 19.3 & 17.3 \\
-Ling & 0.7$\pm$0.6 & 0.3$\pm$0.6 & 1.0$\pm$0.0 & 4.3 & 3.3 & 4.3 \\
-Qwen3.8 & 9.3$\pm$0.6 & 19.3$\pm$5.5 & 17.0$\pm$1.0 & 15.3 & 18.3 & 20.3 \\
+gpt-oss & 8.1$\pm$2.4 & 10.4$\pm$3.8 & 9.0$\pm$3.1 & 19.1 & 19.6 & 11.8 \\
+Nemotron & 0.8$\pm$0.7 & 1.4$\pm$1.3 & 2.9$\pm$1.8 & 13.8 & 17.9 & 17.6 \\
+Ling & 0.9$\pm$1.7 & 1.2$\pm$1.3 & 0.9$\pm$0.4 & 5.1 & 4.9 & 3.8 \\
+Qwen3.8 & 10.1$\pm$2.4 & 18.4$\pm$3.7 & 16.2$\pm$1.5 & 16.4 & 19.2 & 18.5 \\
 Gemma & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0 & 0.0 & 0.0 \\
 \bottomrule
 \end{tabular}
@@ -324,27 +338,27 @@ Gemma & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0$\pm$0.0 & 0.0 & 0.0 & 0.0 \\
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{2pt}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
 \textbf{Model} & \textbf{Fixed} & \textbf{Elected} & \textbf{Rotating} & \textbf{Salary} & \textbf{Costly} & \textbf{Hidden} & \textbf{Anonymous} \\
 \midrule
-GPT-4o & 0.2 / 8.1 (8) & 0.3 / 7.4 (12) & 0.2 / 7.3 (10) & 0.1 / 7.9 (5) & 0.2 / 7.0 (8) & 0.2 / 7.5 (5) & 0.2 / 7.3 (10) \\
-Claude & 0.0 / 9.7 (0) & 0.0 / 9.3 (0) & 0.0 / 9.1 (0) & 0.0 / 9.0 (0) & 0.0 / 9.1 (0) & 0.0 / 8.9 (0) & 0.0 / 9.1 (0) \\
-Gemini & 0.0 / 4.7 (0) & 0.0 / 7.5 (1) & 0.0 / 4.1 (0) & 0.0 / 8.1 (0) & 0.1 / 6.2 (2) & 0.6 / 6.5 (13) & 0.0 / 8.1 (0) \\
+GPT-4o & 0.3 / 8.0 (8) & 0.2 / 7.6 (10) & 0.2 / 7.3 (10) & 0.1 / 7.9 (5) & 0.2 / 7.0 (8) & 0.2 / 7.5 (5) & 0.2 / 7.3 (10) \\
+Claude & 0.0 / 9.7 (0) & 0.0 / 9.0 (0) & 0.0 / 9.1 (0) & 0.0 / 8.8 (0) & 0.0 / 9.2 (0) & 0.0 / 8.9 (0) & 0.0 / 9.1 (0) \\
+Gemini & 0.0 / 5.0 (0) & 0.1 / 8.0 (2) & 0.0 / 4.1 (0) & 0.0 / 8.3 (0) & 0.0 / 6.9 (1) & 0.6 / 6.5 (13) & 0.0 / 8.1 (0) \\
 DeepSeek V3 & 0.0 / 9.7 (1) & 0.0 / 9.2 (0) & 0.1 / 9.1 (4) & 0.0 / 9.5 (0) & 0.0 / 8.6 (0) & 0.0 / 9.6 (0) & 0.0 / 9.9 (0) \\
-Grok & 0.2 / 7.4 (2) & 0.1 / 6.5 (1) & 0.2 / 7.5 (3) & 0.1 / 6.8 (2) & 0.1 / 6.2 (3) & 0.0 / 7.0 (2) & 0.1 / 7.0 (2) \\
+Grok & 0.2 / 7.4 (2) & 0.1 / 6.8 (1) & 0.2 / 7.5 (3) & 0.1 / 6.8 (2) & 0.3 / 6.2 (5) & 0.0 / 7.0 (2) & 0.1 / 7.0 (2) \\
 Qwen Plus & 0.0 / 10.0 (0) & 0.0 / 9.8 (1) & 0.0 / 10.0 (0) & 0.0 / 10.0 (0) & 0.0 / 10.0 (0) & 0.0 / 9.7 (0) & 0.0 / 10.0 (0) \\
 \midrule
 GPT-5 & 0.0 / 2.5 (0) & 0.0 / 2.1 (0) & 0.0 / 2.6 (0) & 0.0 / 4.0 (0) & 0.0 / 2.0 (2) & 0.0 / 2.7 (0) & 0.0 / 2.9 (0) \\
-DeepSeek V3.1 & 0.0 / 9.4 (2) & 0.0 / 7.8 (0) & 0.0 / 9.4 (0) & 0.0 / 7.5 (0) & 0.0 / 7.4 (0) & 0.1 / 8.3 (3) & 0.1 / 8.7 (2) \\
+DeepSeek V3.1 & 0.0 / 9.4 (2) & 0.0 / 8.2 (2) & 0.0 / 9.4 (0) & 0.0 / 8.0 (0) & 0.0 / 7.5 (1) & 0.1 / 8.3 (3) & 0.1 / 8.7 (2) \\
 \midrule
-gpt-oss & 2.6 / 6.1 (55) & 2.0 / 6.4 (47) & 2.1 / 6.9 (43) & 2.7 / 6.8 (48) & 2.2 / 6.3 (47) & 1.6 / 6.0 (30) & 2.7 / 6.7 (57) \\
-Nemotron & 0.2 / 1.6 (5) & 0.2 / 1.6 (5) & 0.4 / 1.4 (10) & 0.1 / 1.4 (3) & 0.4 / 0.9 (7) & 0.1 / 0.6 (3) & 0.0 / 0.2 (0) \\
-Ling & 5.1 / 5.1 (55) & 5.4 / 4.7 (57) & 3.9 / 3.5 (42) & 3.3 / 2.0 (35) & 4.4 / 3.5 (47) & 4.9 / 4.2 (55) & 5.5 / 4.0 (57) \\
-Qwen3.8 & 4.5 / 1.8 (45) & 3.2 / 3.6 (32) & 3.7 / 2.5 (37) & 4.5 / 2.0 (47) & 2.9 / 3.4 (30) & 5.0 / 2.2 (50) & 4.2 / 2.3 (45) \\
-Gemma & 0.4 / 7.8 (5) & 0.4 / 7.6 (5) & 0.5 / 7.7 (5) & 0.4 / 7.6 (5) & 0.4 / 7.9 (5) & 0.4 / 7.6 (5) & 0.4 / 7.6 (5) \\
+gpt-oss & 2.4 / 6.5 (51) & 2.3 / 6.5 (49) & 2.4 / 6.7 (50) & 2.8 / 6.5 (54) & 2.5 / 6.2 (54) & 1.6 / 6.0 (30) & 2.7 / 6.7 (57) \\
+Nemotron & 0.1 / 1.2 (3) & 0.2 / 1.0 (4) & 0.4 / 1.0 (8) & 0.1 / 1.2 (2) & 0.3 / 1.4 (6) & 0.1 / 0.6 (3) & 0.0 / 0.2 (0) \\
+Ling & 4.8 / 3.9 (51) & 4.3 / 4.0 (44) & 4.3 / 3.8 (47) & 3.2 / 2.7 (32) & 4.5 / 3.5 (47) & 4.9 / 4.2 (55) & 5.5 / 4.0 (57) \\
+Qwen3.8 & 4.1 / 1.9 (42) & 3.1 / 3.3 (31) & 3.6 / 2.1 (37) & 3.8 / 2.8 (39) & 3.8 / 2.9 (39) & 5.0 / 2.2 (50) & 4.2 / 2.3 (45) \\
+Gemma & 0.4 / 7.7 (5) & 0.4 / 7.7 (5) & 0.4 / 7.4 (5) & 0.4 / 7.6 (5) & 0.2 / 8.0 (4) & 0.4 / 7.6 (5) & 0.4 / 7.6 (5) \\
 \bottomrule
 \end{tabular}
 \caption{Manager spending per round: punishment / reward tokens (mean over games; each budget is 10 tokens per round), and in parentheses the share of rounds (\%) in which the manager punished anyone.}
@@ -353,20 +367,20 @@ Gemma & 0.4 / 7.8 (5) & 0.4 / 7.6 (5) & 0.5 / 7.7 (5) & 0.4 / 7.6 (5) & 0.4 / 7.
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lccccc@{}}
 \toprule
 \textbf{Model} & \textbf{Fixed} & \textbf{Elected} & \textbf{Rotating} & \textbf{Salary} & \textbf{Costly} \\
 \midrule
-GPT-4o & 1162$\pm$156 (855) & 1071$\pm$222 (797) & 935$\pm$73 (661) & 1343$\pm$70 (937) & 1195$\pm$131 (994) \\
-Claude & 1585$\pm$18 (1197) & 1306$\pm$94 (934) & 1498$\pm$99 (1136) & 1355$\pm$85 (894) & 1445$\pm$108 (1139) \\
-Gemini & 994$\pm$320 (806) & 1479$\pm$50 (1180) & 947$\pm$308 (784) & 1623$\pm$34 (1200) & 1274$\pm$248 (1091) \\
-DeepSeek V3 & 1283$\pm$39 (895) & 1282$\pm$31 (913) & 1184$\pm$162 (830) & 1381$\pm$23 (900) & 1206$\pm$27 (921) \\
-Grok & 1432$\pm$26 (1154) & 1394$\pm$13 (1144) & 1429$\pm$19 (1150) & 1504$\pm$40 (1134) & 1316$\pm$43 (1140) \\
-Qwen Plus & 1289$\pm$197 (890) & 1228$\pm$119 (840) & 1099$\pm$98 (699) & 1334$\pm$72 (834) & 1223$\pm$6 (884) \\
+GPT-4o & 1189$\pm$182 (890) & 1089$\pm$160 (805) & 935$\pm$73 (661) & 1343$\pm$70 (937) & 1195$\pm$131 (994) \\
+Claude & 1585$\pm$18 (1197) & 1264$\pm$112 (903) & 1498$\pm$99 (1136) & 1377$\pm$141 (924) & 1449$\pm$112 (1140) \\
+Gemini & 986$\pm$276 (786) & 1499$\pm$42 (1187) & 947$\pm$308 (784) & 1633$\pm$25 (1199) & 1370$\pm$156 (1158) \\
+DeepSeek V3 & 1291$\pm$33 (906) & 1277$\pm$27 (908) & 1184$\pm$162 (830) & 1381$\pm$23 (900) & 1206$\pm$27 (921) \\
+Grok & 1432$\pm$26 (1154) & 1413$\pm$30 (1153) & 1429$\pm$19 (1150) & 1499$\pm$32 (1141) & 1315$\pm$32 (1152) \\
+Qwen Plus & 1241$\pm$184 (841) & 1215$\pm$123 (824) & 1099$\pm$98 (699) & 1334$\pm$72 (834) & 1223$\pm$6 (884) \\
 GPT-5 & 1277$\pm$39 (1176) & 1263$\pm$24 (1180) & 1296$\pm$17 (1192) & 1453$\pm$28 (1192) & 1189$\pm$51 (1171) \\
-DeepSeek V3.1 & 1545$\pm$72 (1172) & 1371$\pm$6 (1057) & 1575$\pm$17 (1198) & 1525$\pm$71 (1124) & 1352$\pm$133 (1114) \\
+DeepSeek V3.1 & 1545$\pm$72 (1172) & 1399$\pm$78 (1074) & 1575$\pm$17 (1198) & 1586$\pm$65 (1166) & 1390$\pm$80 (1152) \\
 \bottomrule
 \end{tabular}
 \caption{Group welfare over 20 rounds (total payoff minus endowments, including sanctions and salary), mean $\pm$ s.d.; in parentheses the part created by contributions alone ($0.6\sum c$, at most 1,200). The rest is net transfers, which rewards create mechanically (one token spent adds three).}
@@ -375,27 +389,27 @@ DeepSeek V3.1 & 1545$\pm$72 (1172) & 1371$\pm$6 (1057) & 1575$\pm$17 (1198) & 15
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lccccccc@{}}
 \toprule
 \textbf{Model} & \textbf{Turnover} & \textbf{By tie} & \textbf{Winner votes} & \textbf{Majority \%} & \textbf{Tie \%} & \textbf{Self-vote \%} & \textbf{agent\_0 \%} \\
 \midrule
-GPT-4o & 15/51 & 8 & 2.7 & 53 & 28 & 7 & 38 \\
-Claude & 25/51 & 7 & 3.1 & 81 & 15 & 1 & 10 \\
-Gemini & 42/51 & 15 & 2.6 & 52 & 31 & 12 & 44 \\
-DeepSeek V3 & 4/51 & 3 & 3.8 & 82 & 15 & 20 & 6 \\
-Grok & 12/51 & 2 & 3.3 & 87 & 9 & 0 & 10 \\
-Qwen Plus & 5/51 & 0 & 4.0 & 97 & 2 & 11 & 0 \\
+GPT-4o & 18/66 & 10 & 2.7 & 52 & 28 & 6 & 41 \\
+Claude & 45/90 & 12 & 3.1 & 74 & 15 & 1 & 6 \\
+Gemini & 74/96 & 23 & 2.7 & 52 & 31 & 10 & 45 \\
+DeepSeek V3 & 5/60 & 3 & 3.7 & 82 & 14 & 20 & 6 \\
+Grok & 18/90 & 6 & 3.3 & 85 & 12 & 0 & 8 \\
+Qwen Plus & 5/66 & 0 & 4.0 & 97 & 2 & 11 & 0 \\
 \midrule
 GPT-5 & 28/45 & 6 & 2.7 & 58 & 22 & 0 & 22 \\
-DeepSeek V3.1 & 1/45 & 0 & 3.1 & 73 & 8 & 22 & 8 \\
+DeepSeek V3.1 & 3/90 & 1 & 3.0 & 68 & 14 & 22 & 12 \\
 \midrule
-gpt-oss & 2/45 & 0 & 3.2 & 77 & 10 & 0 & 70 \\
-Nemotron & 9/45 & 2 & 3.2 & 72 & 13 & 20 & 5 \\
-Ling & 7/45 & 1 & 3.2 & 75 & 10 & 4 & 32 \\
-Qwen3.8 & 25/45 & 3 & 2.7 & 50 & 17 & 5 & 22 \\
-Gemma & 1/45 & 0 & 3.9 & 98 & 2 & 0 & 97 \\
+gpt-oss & 8/90 & 4 & 3.0 & 70 & 12 & 0 & 64 \\
+Nemotron & 22/90 & 6 & 3.2 & 77 & 13 & 21 & 10 \\
+Ling & 16/90 & 3 & 3.2 & 77 & 8 & 4 & 36 \\
+Qwen3.8 & 51/90 & 13 & 2.6 & 50 & 20 & 5 & 18 \\
+Gemma & 5/90 & 0 & 3.9 & 98 & 1 & 0 & 92 \\
 \midrule
 Mixed groups & 17/54 & 9 & 3.1 & 74 & 21 & 8 & 7 \\
 \bottomrule
@@ -404,47 +418,47 @@ Mixed groups & 17/54 & 9 & 3.1 & 74 & 21 & 8 & 7 \\
 \label{tab:elections}
 \end{table*}
 
-\begin{table}[!htbp]
+\begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lccc@{}}
 \toprule
 \textbf{Incumbent's record} & \textbf{Main API} & \textbf{Newer API} & \textbf{Self-hosted} \\
 \midrule
-Group contribution & -0.00 (0.954) & +0.00 (0.981) & +0.03 (0.669) \\
-Own contribution & +0.00 (0.979) & +0.01 (0.889) & -0.01 (0.931) \\
-Rewards given & +0.01 (0.911) & +0.01 (0.928) & +0.02 (0.740) \\
-Punishments given & +0.02 (0.681) & -0.01 (0.953) & -0.14 (0.030) \\
+Group contribution & +0.02 (0.612) & +0.01 (0.897) & +0.03 (0.590) \\
+Own contribution & +0.03 (0.537) & +0.02 (0.813) & +0.01 (0.864) \\
+Rewards given & +0.02 (0.673) & +0.03 (0.758) & +0.07 (0.138) \\
+Punishments given & -0.01 (0.804) & -0.05 (0.599) & -0.07 (0.124) \\
 \midrule
-Contested (re-elected) & 306 (203) & 90 (61) & 225 (181) \\
+Contested (re-elected) & 468 (303) & 135 (104) & 450 (348) \\
 \bottomrule
 \end{tabular}
-\caption{Does the incumbent's record in the five rounds before an election predict its re-election? Point-biserial correlation $r$ (two-sided $p$) between re-election and each measure, centred within model so that differences between models do not drive it; elected, salary, costly, hidden and anonymous setups.}
+\caption{Does the incumbent's record in the five rounds before an election predict its re-election? Point-biserial correlation $r$ (two-sided $p$) between re-election and each measure, centered within model so that differences between models do not drive it; elected, salary, costly, hidden and anonymous setups.}
 \label{tab:reelection}
-\end{table}
+\end{table*}
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{Data} & \textbf{Games} & \textbf{Model} & \textbf{Institution} & \textbf{Model $\times$ institution} \\
 \midrule
-Main API, contribution: chat only + 3 manager types & 108 & 0.65 ($<$0.001) & 0.16 (0.002) & 0.42 ($<$0.001) \\
-Main API, contribution: all 9 setups & 198 & 0.56 ($<$0.001) & 0.63 ($<$0.001) & 0.56 ($<$0.001) \\
-Self-hosted, cooperation: chat only + 3 manager types & 60 & 0.90 ($<$0.001) & 0.45 ($<$0.001) & 0.48 (0.004) \\
-Self-hosted, cooperation: all 9 setups & 135 & 0.89 ($<$0.001) & 0.76 ($<$0.001) & 0.88 ($<$0.001) \\
+Main API, contribution: chat only + 3 manager types & 182 & 0.44 / 0.32 ($<$0.001) & 0.06 / 0.02 (0.029) & 0.34 / 0.18 ($<$0.001) \\
+Main API, contribution: all 9 setups & 320 & 0.34 / 0.12 ($<$0.001) & 0.60 / 0.35 ($<$0.001) & 0.50 / 0.21 ($<$0.001) \\
+Self-hosted, cooperation: chat only + 3 manager types & 160 & 0.83 / 0.70 ($<$0.001) & 0.26 / 0.05 ($<$0.001) & 0.38 / 0.08 ($<$0.001) \\
+Self-hosted, cooperation: all 9 setups & 285 & 0.85 / 0.55 ($<$0.001) & 0.52 / 0.10 ($<$0.001) & 0.71 / 0.23 ($<$0.001) \\
 \bottomrule
 \end{tabular}
-\caption{Model versus institution: two-way analysis of variance over games (type II sums of squares); partial $\eta^2$ with $p$ in parentheses. \emph{All 9 setups}: no chat, chat only, three manager types, salary, costly, hidden, anonymous.}
+\caption{Model versus institution: two-way analysis of variance over games (type II sums of squares); partial $\eta^2$ / $\omega^2$ with $p$ in parentheses. Partial $\eta^2$ values are not shares of one total and depend on the levels chosen; $\omega^2$ is the bias-corrected share of total variance. \emph{All 9 setups}: no chat, chat only, three manager types, salary, costly, hidden, anonymous.}
 \label{tab:anova}
 \end{table*}
 
 \begin{table}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{2.5pt}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
@@ -459,17 +473,17 @@ Qwen Plus$\to$Claude & 100.0 & 15.3$\pm$1.7 & 0.0 / 9.9 & 1311$\pm$106 \\
 \midrule
 Claude (own family) & --- & 19.9$\pm$0.1 & --- & --- \\
 Grok (own family) & --- & 19.1$\pm$0.1 & --- & --- \\
-Qwen Plus (own family) & --- & 14.8$\pm$3.3 & --- & --- \\
-GPT-4o (own family) & --- & 14.3$\pm$2.3 & --- & --- \\
+Qwen Plus (own family) & --- & 14.0$\pm$3.1 & --- & --- \\
+GPT-4o (own family) & --- & 14.8$\pm$2.7 & --- & --- \\
 \bottomrule
 \end{tabular}
-\caption{Cross-Rule (B11): a fixed manager of one family over four workers of another (3 games each). Worker cooperation (\%), worker contribution, manager spending per round (punishment / reward), and group welfare. Bottom rows: worker-only contribution under a fixed manager of the same family (5 games), the comparison used in the text.}
+\caption{Cross-Rule (B11): a fixed manager of one family over four workers of another (3 games each). Worker cooperation (\%), worker contribution, manager spending per round (punishment / reward), and group welfare. Bottom rows: worker-only contribution (managers excluded) under a fixed manager of the same family (5 games for Claude and Grok, 10 for Qwen Plus and GPT-4o), the comparison used in the text.}
 \label{tab:crossrule}
 \end{table}
 
 \begin{table*}[!htbp]
 \centering
-\scriptsize
+\small
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{@{}lcccl@{}}
 \toprule

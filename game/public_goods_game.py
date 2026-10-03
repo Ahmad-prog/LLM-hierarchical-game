@@ -394,47 +394,43 @@ class PublicGoodsGame:
         if self.info_type == InfoType.INFO_MINIMAL:
             return f"Round {round_num} of {self.num_rounds}. Choose your contribution."
 
-        if self.info_type == InfoType.INFO_PARTIAL:
-            # Aggregate stats from last round only
-            if not self.round_results:
-                return f"Round {round_num} of {self.num_rounds}. No prior round data yet."
-            last = self.round_results[-1]
-            return (
-                f"Round {round_num} of {self.num_rounds}.\n"
-                f"Last round: mean contribution = {last.mean_contribution:.1f}, "
-                f"pool = {last.pool_size:.1f}, each received {last.per_agent_share:.1f}."
-            )
-
-        # INFO_FULL: show each agent's last contribution
         if not self.round_results:
             return f"Round {round_num} of {self.num_rounds}. No prior round data yet."
         last = self.round_results[-1]
-        contrib_lines = "\n".join(
-            f"  {r.agent_id}: contributed {r.contribution:.1f}"
-            for r in last.agent_records
-        )
-        base = (
-            f"Round {round_num} of {self.num_rounds}.\n"
-            f"Last round contributions:\n{contrib_lines}\n"
-            f"Pool total: {last.pool_size:.1f}, each received {last.per_agent_share:.1f}."
-        )
+        if self.info_type == InfoType.INFO_PARTIAL:
+            # Aggregate stats only (who gave what stays hidden); sanctions are still shown below
+            # when they are transparent, so that only the visibility of contributions changes.
+            base = self._build_group_info_no_punish(round_num)
+        else:
+            # INFO_FULL: show each agent's last contribution
+            contrib_lines = "\n".join(
+                f"  {r.agent_id}: contributed {r.contribution:.1f}"
+                for r in last.agent_records
+            )
+            base = (
+                f"Round {round_num} of {self.num_rounds}.\n"
+                f"Last round contributions:\n{contrib_lines}\n"
+                f"Pool total: {last.pool_size:.1f}, each received {last.per_agent_share:.1f}."
+            )
         # PUNISH_TRANSPARENT: manager action info appended to group_info for all
         if (
             self.punish_vis_type == PunishVisType.PUNISH_TRANSPARENT
             and last.manager_action
-            and last.manager_id
+            and (last.manager_id or last.manager_action.get("scripted") == "system_reward")
         ):
             ma = last.manager_action
             punish = {k: v for k, v in (ma.get("punish") or {}).items() if float(v) > 0}
             reward = {k: v for k, v in (ma.get("reward") or {}).items() if float(v) > 0}
             if punish or reward:
-                lines = [f"\nManager ({last.manager_id}) actions last round:"]
+                system = ma.get("scripted") == "system_reward"
+                lines = ["\nAutomatic rule last round:" if system else f"\nManager ({last.manager_id}) actions last round:"]
                 for aid, amt in punish.items():
                     lines.append(f"  Punished {aid}: spent {amt} tokens (target lost {float(amt)*3:.0f})")
                 for aid, amt in reward.items():
-                    lines.append(f"  Rewarded {aid}: spent {amt} tokens (target gained {float(amt)*3:.0f})")
+                    lines.append(f"  Rewarded {aid}: gained {float(amt)*3:.0f}" if system else
+                                 f"  Rewarded {aid}: spent {amt} tokens (target gained {float(amt)*3:.0f})")
                 if last.manager_message:
-                    lines.append(f"  Manager said: \"{last.manager_message}\"")
+                    lines.append(f"  Rule: {last.manager_message}" if system else f"  Manager said: \"{last.manager_message}\"")
                 base += "\n".join(lines)
         return base
 
@@ -449,6 +445,8 @@ class PublicGoodsGame:
             return base
 
         last = self.round_results[-1]
+        if last.manager_action and last.manager_action.get("scripted") == "system_reward":
+            return self._build_group_info(round_num)
         if not last.manager_action or not last.manager_id:
             return base
 

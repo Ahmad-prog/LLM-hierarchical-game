@@ -7,6 +7,7 @@ Manager governance logic:
 """
 
 from __future__ import annotations
+import random
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING
 
@@ -69,10 +70,15 @@ class Manager:
         power_type: MgrPowerType,
         agents: list[Agent],
         election_frequency: int = 5,
+        mgr_policy: str = "llm",
+        ballot_random: bool = False,
     ) -> None:
         self.mgr_type = mgr_type
         self.power_type = power_type
         self.election_frequency = election_frequency
+        self.mgr_policy = mgr_policy
+        self.ballot_random = ballot_random
+        self._rng = random.Random()
         self._agents = agents
         self._agent_ids = [a.agent_id for a in agents]
         self._rotation_index: int = 0
@@ -84,7 +90,15 @@ class Manager:
             self.current_manager_id = self._agent_ids[0]
         elif mgr_type == MgrType.MGR_ROTATING:
             self.current_manager_id = self._agent_ids[0]
-        # ELECTED starts with no manager until first election
+        # ELECTED starts with no manager until first election, except under the bad-incumbent
+        # policy, where agent_0 starts in office and the first election is at round 6
+        elif mgr_type == MgrType.MGR_ELECTED and mgr_policy in ("bad_incumbent", "good_incumbent"):
+            self.current_manager_id = self._agent_ids[0]
+
+        # A manager without sanction powers is told so in its action prompt
+        if power_type == MgrPowerType.MGR_NO_SANCTIONS:
+            for a in agents:
+                a.no_sanctions = True
 
     # ------------------------------------------------------------------
     # Round-level management
@@ -105,6 +119,8 @@ class Manager:
         """Return True if an election should happen at the start of this round."""
         if self.mgr_type != MgrType.MGR_ELECTED:
             return False
+        if round_num == 1 and self.mgr_policy in ("bad_incumbent", "good_incumbent"):
+            return False   # agent_0 is installed; the first vote is at round 6
         return round_num % self.election_frequency == 1 or round_num == 1
 
     # ------------------------------------------------------------------
@@ -192,7 +208,8 @@ class Manager:
         # 3. Private deal-making: each candidate may send one private deal
         for agent in all_agents:
             other_ids = [a.agent_id for a in all_agents if a.agent_id != agent.agent_id]
-            deal_prompt = _build_deal_prompt(agent, round_num, other_ids)
+            deal_prompt = _build_deal_prompt(agent, round_num, other_ids,
+                                             neutral=getattr(self, "deal_prompt", "deal") == "neutral")
             resp = agent.provider.generate(
                 system_prompts[agent.agent_id],
                 deal_prompt,
@@ -229,6 +246,9 @@ class Manager:
                 if m.round_num == round_num
                 and (m.recipients is None or agent.agent_id in m.recipients)
             ]
+            if self.ballot_random:
+                other_ids = other_ids[:]
+                self._rng.shuffle(other_ids)
             vote_prompt = _build_vote_prompt(
                 agent, round_num, speech_summary, other_ids, agent_visible
             )
@@ -242,7 +262,12 @@ class Manager:
                 record.votes[agent.agent_id] = vote
 
         # Tally votes
-        record.winner = _tally_votes(record.votes, self._agent_ids)
+        if self.ballot_random:
+            order = self._agent_ids[:]
+            self._rng.shuffle(order)   # a tie at the top is broken at random
+            record.winner = _tally_votes(record.votes, order)
+        else:
+            record.winner = _tally_votes(record.votes, self._agent_ids)
         self.current_manager_id = record.winner
         self.election_history.append(record)
         return record
@@ -272,6 +297,15 @@ class Manager:
         """
         adjustments: dict[str, float] = {aid: 0.0 for aid in contributions}
 
+        if self.mgr_policy == "system_reward":
+            # no manager: the game itself applies the auto_reward rule, and no player pays for it
+            good = [aid for aid, c in sorted(contributions.items()) if c >= 10]
+            reward = {aid: round(MANAGER_BUDGET_REWARD / len(good), 2) for aid in good} if good else {}
+            for aid, tokens in reward.items():
+                adjustments[aid] += tokens * REWARD_RATIO
+            msg = "Automatic rule (there is no manager): a bonus is split equally among players who contributed at least 10 tokens."
+            return adjustments, msg, {"punish": {}, "reward": reward, "public_message": msg, "scripted": "system_reward"}
+
         if not self.current_manager_id or self.mgr_type == MgrType.MGR_NONE:
             return adjustments, "", {}
 
@@ -281,6 +315,21 @@ class Manager:
 
         can_punish = self.power_type in (MgrPowerType.MGR_PUNISH_ONLY, MgrPowerType.MGR_FULL)
         can_reward = self.power_type in (MgrPowerType.MGR_REWARD_ONLY, MgrPowerType.MGR_FULL)
+
+        scripted = self._scripted_action(manager.agent_id, contributions)
+        if scripted is not None:
+            punish_alloc, reward_alloc, message = scripted
+            spent_punish = spent_reward = 0.0
+            for target_id, tokens in punish_alloc.items():
+                adjustments[target_id] -= tokens * PUNISH_RATIO
+                spent_punish += tokens
+            for target_id, tokens in reward_alloc.items():
+                adjustments[target_id] += tokens * REWARD_RATIO
+                spent_reward += tokens
+            if SANCTION_COST_TO_MANAGER:
+                adjustments[manager.agent_id] = adjustments.get(manager.agent_id, 0.0) - spent_punish - spent_reward
+            return adjustments, message, {"punish": punish_alloc, "reward": reward_alloc,
+                                          "public_message": message, "scripted": self.mgr_policy}
 
         prompt = manager.build_manager_prompt(
             round_num=round_num,
@@ -335,6 +384,32 @@ class Manager:
     # ------------------------------------------------------------------
     # Helpers
     # ------------------------------------------------------------------
+
+    def _scripted_action(self, manager_id: str, contributions: dict[str, float]):
+        """Sanctions fixed by a rule instead of the manager's own decision (mechanism controls).
+
+        auto_reward:    split the 10-token reward budget equally among the other agents who contributed
+                        at least 10 tokens; never punish.
+        good_incumbent: like bad_incumbent, but while agent_0 holds the role it splits the reward budget
+                        among the other agents who contributed at least 10 tokens and never punishes.
+        bad_incumbent:  while agent_0 holds the role, spend 5 punishment tokens on each of the two highest
+                        other contributors and never reward (a harmful manager the group can vote out).
+        Returns (punish_alloc, reward_alloc, public message) or None when the manager decides itself.
+        """
+        others = {aid: c for aid, c in contributions.items() if aid != manager_id}
+        if self.mgr_policy == "auto_reward":
+            good = [aid for aid, c in sorted(others.items()) if c >= 10]
+            reward = {aid: round(MANAGER_BUDGET_REWARD / len(good), 2) for aid in good} if good else {}
+            return {}, reward, "Rule: the reward budget is split equally among players who contributed at least 10 tokens."
+        if self.mgr_policy == "good_incumbent" and manager_id == self._agent_ids[0]:
+            good = [aid for aid, c in sorted(others.items()) if c >= 10]
+            reward = {aid: round(MANAGER_BUDGET_REWARD / len(good), 2) for aid in good} if good else {}
+            return {}, reward, "I have applied this round's sanctions."
+        if self.mgr_policy == "bad_incumbent" and manager_id == self._agent_ids[0]:
+            top = sorted(others.items(), key=lambda kv: (-kv[1], kv[0]))[:2]
+            punish = {aid: MANAGER_BUDGET_PUNISH / 2 for aid, c in top if c > 0}
+            return punish, {}, "I have applied this round's sanctions."
+        return None
 
     @property
     def has_manager(self) -> bool:
@@ -397,7 +472,25 @@ Respond with:
 }}"""
 
 
-def _build_deal_prompt(agent: Agent, round_num: int, other_ids: list[str]) -> str:
+def _build_deal_prompt(agent: Agent, round_num: int, other_ids: list[str], neutral: bool = False) -> str:
+    if neutral:
+        # control for the elicitation: no mention of a deal or of securing a vote
+        return f"""ROUND {round_num} — ELECTION: PRIVATE MESSAGE (optional)
+
+You may send ONE private message to another player before the vote.
+This message will be visible ONLY to the recipient.
+Available recipients: {", ".join(other_ids)}
+
+If you want to send a message, respond with:
+{{
+  "private_note": {{"to": "<agent_id>", "message": "<your message>"}},
+  "public_message": ""
+}}
+
+If you do NOT want to send a message, respond with:
+{{
+  "public_message": ""
+}}"""
     return f"""ROUND {round_num} — ELECTION: PRIVATE DEAL (optional)
 
 You may send ONE private deal message to another player to secure their vote.

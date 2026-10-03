@@ -7,7 +7,7 @@ from .grok_provider import GrokProvider
 from .qwen_provider import QwenProvider
 from .mock_provider import MockProvider
 from .local_provider import LocalProvider
-from .gen2_providers import GPT5Provider, DeepSeek31Provider
+from .gen2_providers import GPT5Provider, DeepSeek31Provider, GPT41Provider, GPT5MinProvider
 from config.enums import ModelType
 
 
@@ -24,6 +24,8 @@ def get_provider(model: ModelType) -> BaseProvider:
         ModelType.LOCAL: LocalProvider,
         ModelType.GPT5: GPT5Provider,
         ModelType.DEEPSEEK31: DeepSeek31Provider,
+        ModelType.GPT41: GPT41Provider,
+        ModelType.GPT5MIN: GPT5MinProvider,
     }
     cls = mapping.get(model)
     if cls is None:
