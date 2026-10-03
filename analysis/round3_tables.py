@@ -33,7 +33,7 @@ def p(x):
 
 def table(macro, caption, label, cols, header, rows, wide=False, sep="3pt"):
     env = "table*" if wide else "table"
-    out = [f"\\newcommand{{\\{macro}}}{{%", f"\\begin{{{env}}}[!htbp]", "\\centering", "\\small",
+    out = [f"\\newcommand{{\\{macro}}}{{%", f"\\begin{{{env}}}[t]", "\\centering", "\\small",
            f"\\setlength{{\\tabcolsep}}{{{sep}}}", f"\\begin{{tabular}}{{@{{}}{cols}@{{}}}}", "\\toprule", header + " \\\\", "\\midrule"]
     out += [x if x.startswith("\\midrule") else x + " \\\\" for x in rows]
     out += ["\\bottomrule", "\\end{tabular}", f"\\caption{{{caption}}}", f"\\label{{{label}}}", f"\\end{{{env}}}", "}", ""]
@@ -209,7 +209,7 @@ T.append(table(
     "election-message opportunities used for a vote-contingent offer (LLM judge) without salary / with salary / costly; "
     "broken stated intentions in chat-only groups.",
     "tab:version", "lcccc",
-    "\\textbf{Model} & \\textbf{Chat} & \\textbf{Elected} & \\textbf{Offers \\%} & \\textbf{Broken}", rows))
+    "\\textbf{Model} & \\textbf{Chat} & \\textbf{Elected} & \\textbf{Offers \\%} & \\textbf{Broken}", rows, wide=True))
 
 # ---------------------------------------------------------------- prompt robustness and quantisation
 G = r["G_no_strategic"]
