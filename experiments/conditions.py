@@ -707,7 +707,7 @@ def generate_batch14_revision() -> list[ExperimentConfig]:
 
 
 def generate_batch15_review() -> list[ExperimentConfig]:
-    """Controls for the third review, one template per model (the runner swaps in other models):
+    """Additional controls, one template per model (the runner swaps in other models):
 
     batch15_mgr_elected_nobudget   elected manager without a budget (authority, elections and messages, no sanctions)
     batch15_mgr_badincumbent_rb    bad incumbent, with a ballot shuffled per voter and ties broken at random

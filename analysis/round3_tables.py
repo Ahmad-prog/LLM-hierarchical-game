@@ -285,7 +285,7 @@ T.append(table(
     "\\textbf{Models} & \\textbf{Re-elected} & \\textbf{Group contr.} & \\textbf{Own contr.} & \\textbf{Rewards} & \\textbf{Punishments}",
     rows, wide=True))
 
-# ---------------------------------------------------------------- third-review controls (batch 15)
+# ---------------------------------------------------------------- additional controls (batch 15)
 V = r.get("V_batch15")
 if V:
     rows = []
@@ -297,13 +297,22 @@ if V:
     for m, x in V["incumbents_random_ballot"].items():
         rows.append(f"{NAME[m]} & " + r"\multicolumn{5}{l}{" + f"{x['bad'][0]}/{x['bad'][1]}" + r" \quad " + f"{x['good'][0]}/{x['good'][1]}" + "}")
     P_ = V.get("incumbents_random_ballot_pooled", {})
+
+    def _w_note():
+        W = r.get("W_incumbent_intervals")
+        if not W:
+            return ""
+        f_, o_, i_ = W["fair_ballot"], W["original_ballot"], W["interaction"]
+        return (f"harmful minus helpful removal {f_['risk_diff_pts']:.0f} points, 95\\% CI ${f_['rd_ci95_pts'][0]:.0f}$ to "
+                f"${f_['rd_ci95_pts'][1]:.0f}$, against {o_['risk_diff_pts']:.0f} (${o_['rd_ci95_pts'][0]:.0f}$ to ${o_['rd_ci95_pts'][1]:.0f}$) "
+                f"with the original ballot; ballot $\\times$ incumbent interaction $p{{=}}{i_['p']:.2f}$")
     T.append(table(
         "hgReviewControlsTable",
-        "Controls for the third review. Top: mean contribution with chat only, a fixed manager, an elected manager without "
+        "Additional controls. Top: mean contribution with chat only, a fixed manager, an elected manager without "
         "a budget (subscript: games), and an elected manager with a budget; permutation $p$ of the no-budget elected manager "
         "against chat only. Bottom: the scripted incumbents of Table~\\ref{tab:accountability} with a ballot shuffled for "
         f"each voter and random tie-breaks (pooled: bad {P_.get('bad', [0, 0])[0]}/{P_.get('bad', [0, 0])[1]}, good "
-        f"{P_.get('good', [0, 0])[0]}/{P_.get('good', [0, 0])[1]}; Cochran--Mantel--Haenszel $p{{=}}{P_.get('cmh_p', 1):.2f}$).",
+        f"{P_.get('good', [0, 0])[0]}/{P_.get('good', [0, 0])[1]}; Cochran--Mantel--Haenszel $p{{=}}{P_.get('cmh_p', 1):.2f}$; " + _w_note() + ").",
         "tab:review_controls", "lccccc",
         "\\textbf{Model} & \\textbf{Chat only} & \\textbf{Fixed} & \\textbf{Elected, no budget} & \\textbf{Elected} & \\textbf{$p$}",
         rows, wide=True))

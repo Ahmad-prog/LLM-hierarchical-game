@@ -1,4 +1,4 @@
-"""Reviewer-driven extras for the revised paper, computed from the result files.
+"""Extra analyses for the paper, computed from the result files.
 
   python analysis/revision_extras.py <results_dir> <out_json>
 

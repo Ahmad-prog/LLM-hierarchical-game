@@ -285,7 +285,7 @@ for grp, models in GROUPS:
 NV = y["nemotron_valid"]
 nem = "; ".join(f"{SETNAME[s].lower()} {NV[s]['coop_valid']['mean']:.0f}\\%" for s in ("baseline", "chat_only", "elected"))
 PARSE = table(
-    "Valid (parseable JSON) contribution replies per model over all its homogeneous setups; an invalid reply counts as a "
+    "Valid (parseable JSON) contribution replies per model over its homogeneous main setups (no chat, communication, manager type, pay, visibility and belief; the controls of Table~\\ref{tab:design} are not included); an invalid reply counts as a "
     "contribution of 0. Lowest: the setup with the lowest rate. Counting Nemotron's valid replies only, its cooperation is "
     f"{nem} (against " + ", ".join(f"{d['open'][s]['nemotron-3-super-120b']['coop']['mean']:.0f}\\%" for s in ("baseline", "chat_only", "elected"))
     + " when invalid replies count as 0).",

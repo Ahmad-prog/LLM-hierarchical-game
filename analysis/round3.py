@@ -699,7 +699,7 @@ for m in ["gemini", "claude", "gpt4o", "qwen", "gpt-oss-120b", "qwen3.8-27b"]:
             "kept_share": round(100 * kept / later, 1) if later else None}
 res["U_campaign_pledges"] = u
 
-# ---------------------------------------------------------------- V. third-review controls (batch 15)
+# ---------------------------------------------------------------- V. additional controls (batch 15)
 v = {"elected_nobudget": {}, "incumbents_random_ballot": {}}
 for m in ["gemini", "gpt-oss-120b", "qwen3.8-27b"]:
     if games(m, "elected_nobudget"):
@@ -721,6 +721,34 @@ if tabs_rb:
     v["incumbents_random_ballot_pooled"] = {"bad": pb, "good": pg, "cmh_odds_ratio": round(float(st_rb.oddsratio_pooled), 2),
                                             "cmh_p": round(float(st_rb.test_null_odds(correction=True).pvalue), 4)}
 res["V_batch15"] = v
+
+# ---------------------------------------------------------------- W. incumbents: intervals and ballot x incumbent interaction
+from scipy.stats import norm as _norm  # noqa: E402
+
+
+def _pooled(d):
+    tabs = [np.array([[kb, nb - kb], [kg, ng - kg]], float) + 0.5 for (kb, nb), (kg, ng) in d.values()]
+    st = StratifiedTable(tabs)
+    num = den = var = 0.0
+    for (kb, nb), (kg, ng) in d.values():                     # stratified risk difference, weights nb*ng/(nb+ng)
+        w, pb, pg = nb * ng / (nb + ng), kb / nb, kg / ng
+        num, den, var = num + w * (pb - pg), den + w, var + w * w * (pb * (1 - pb) / nb + pg * (1 - pg) / ng)
+    rd, se = num / den, var ** 0.5 / den
+    lo, hi = st.oddsratio_pooled_confint()
+    return st, {"odds_ratio": round(float(st.oddsratio_pooled), 2), "or_ci95": [round(float(lo), 2), round(float(hi), 2)],
+                "risk_diff_pts": round(100 * rd, 1), "rd_ci95_pts": [round(100 * (rd - 1.96 * se), 1), round(100 * (rd + 1.96 * se), 1)]}
+
+
+if v["incumbents_random_ballot"]:
+    d_orig = {m: (x["bad_replaced_at_6"], x["good_replaced_at_6"]) for m, x in res["D_accountability"]["per_model"].items()
+              if m in v["incumbents_random_ballot"]}
+    d_fair = {m: (x["bad"], x["good"]) for m, x in v["incumbents_random_ballot"].items()}
+    st_o, w_o = _pooled(d_orig)
+    st_f, w_f = _pooled(d_fair)
+    z = (st_o.logodds_pooled - st_f.logodds_pooled) / np.hypot(st_o.logodds_pooled_se, st_f.logodds_pooled_se)
+    res["W_incumbent_intervals"] = {"original_ballot": w_o, "fair_ballot": w_f,
+                                    "interaction": {"ratio_of_odds_ratios": round(float(np.exp(st_o.logodds_pooled - st_f.logodds_pooled)), 2),
+                                                    "z": round(float(z), 2), "p": round(float(2 * _norm.sf(abs(z))), 3)}}
 
 json.dump(res, open(OUT, "w", encoding="utf-8"), indent=1, default=float)
 print(json.dumps(res, indent=1, default=float))

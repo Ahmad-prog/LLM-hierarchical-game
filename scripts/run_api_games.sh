@@ -44,6 +44,6 @@ for m in gpt41 gpt5min; do
   swap $m --only batch2_comm_full,batch3_mgr_elected,batch8_mgr_salary,batch8_mgr_costly --trials 3 --workers 6
 done
 
-# 6. Controls for the third review (batch 15): elected manager without a budget; incumbents with a shuffled ballot
+# 6. Additional controls (batch 15): elected manager without a budget; incumbents with a shuffled ballot
 swap gemini --only batch15_mgr_elected_nobudget --trials 8 --workers 8
 for m in gpt4o gemini qwen deepseek; do swap $m --only batch15_mgr_badincumbent_rb,batch15_mgr_goodincumbent_rb --trials 5 --workers 10; done
