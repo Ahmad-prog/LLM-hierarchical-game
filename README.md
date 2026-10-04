@@ -1,7 +1,7 @@
 # The Hierarchical Game: code, game logs and annotation
 
 This repository contains the code, all 1,930 game logs, 100 fresh confirmatory games,, and the human annotation behind the paper
-*The Politician, the Liar, and the Obedient Worker: Strategic Behavior of LLM Agents in Hierarchical Games*.
+*Do Institutions Govern LLM Agents? Managers, Elections, and Stated Intentions in a Hierarchical Game*.
 
 The **Hierarchical Game (HG)** is a 5-player, 20-round public goods game. On top of the base game it
 adds:
