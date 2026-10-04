@@ -12392,106 +12392,106 @@
   "incumbents_random_ballot": {
    "gpt4o": {
     "bad": [
-     4,
-     5
+     11,
+     15
     ],
     "good": [
-     3,
-     5
+     7,
+     15
     ]
    },
    "gemini": {
     "bad": [
-     5,
-     5
+     11,
+     15
     ],
     "good": [
-     5,
-     5
+     15,
+     15
     ]
    },
    "qwen": {
     "bad": [
-     2,
-     5
+     5,
+     15
     ],
     "good": [
-     3,
-     5
+     9,
+     15
     ]
    },
    "deepseek": {
     "bad": [
-     3,
-     5
+     9,
+     15
     ],
     "good": [
-     1,
-     5
+     8,
+     15
     ]
    },
    "gpt-oss-120b": {
     "bad": [
-     3,
-     10
+     4,
+     20
     ],
     "good": [
-     4,
-     10
+     6,
+     20
     ]
    },
    "nemotron-3-super-120b": {
     "bad": [
-     6,
-     10
+     11,
+     20
     ],
     "good": [
-     3,
-     10
+     8,
+     20
     ]
    },
    "ling-3.0-flash": {
     "bad": [
-     1,
-     10
+     2,
+     20
     ],
     "good": [
-     3,
-     10
+     6,
+     20
     ]
    },
    "qwen3.8-27b": {
     "bad": [
-     8,
-     10
+     17,
+     20
     ],
     "good": [
-     8,
-     10
+     15,
+     20
     ]
    },
    "gemma-4-31b": {
     "bad": [
      0,
-     10
+     20
     ],
     "good": [
-     0,
-     10
+     1,
+     20
     ]
    }
   },
   "incumbents_random_ballot_pooled": {
    "bad": [
-    32,
-    70
+    70,
+    160
    ],
    "good": [
-    30,
-    70
+    75,
+    160
    ],
-   "cmh_odds_ratio": 1.14,
-   "cmh_p": 0.8563
+   "cmh_odds_ratio": 0.86,
+   "cmh_p": 0.6175
   }
  },
  "W_incumbent_intervals": {
@@ -12508,21 +12508,21 @@
    ]
   },
   "fair_ballot": {
-   "odds_ratio": 1.14,
+   "odds_ratio": 0.86,
    "or_ci95": [
-    0.56,
-    2.34
+    0.53,
+    1.4
    ],
-   "risk_diff_pts": 2.9,
+   "risk_diff_pts": -3.1,
    "rd_ci95_pts": [
-    -10.2,
-    15.9
+    -12.1,
+    5.9
    ]
   },
   "interaction": {
-   "ratio_of_odds_ratios": 2.42,
-   "z": 1.61,
-   "p": 0.108
+   "ratio_of_odds_ratios": 3.23,
+   "z": 2.44,
+   "p": 0.015
   }
  }
 }

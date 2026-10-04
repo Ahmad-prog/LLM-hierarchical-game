@@ -99,6 +99,11 @@ class Manager:
         if power_type == MgrPowerType.MGR_NO_SANCTIONS:
             for a in agents:
                 a.no_sanctions = True
+        # A manager that can only reward is told so (batch 16)
+        if power_type == MgrPowerType.MGR_REWARD_ONLY:
+            for a in agents:
+                a.reward_only = True
+        self.mgr_contribution = None   # set by the runner: the manager's contribution fixed by the experimenter
 
     # ------------------------------------------------------------------
     # Round-level management

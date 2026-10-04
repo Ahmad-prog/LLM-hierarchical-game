@@ -121,7 +121,7 @@ T.append(table(
     "vote'') and a neutral one (``send ONE private message \\dots\\ before the vote''): share (\\%) of election-message "
     "opportunities (5 agents $\\times$ 4 elections) used for an offer, as labeled by an LLM judge applying the human "
     f"codebook (precision {V['precision'] + 1e-9:.2f}, recall {V['recall'] + 1e-9:.2f} against the hand labels; Table~\\ref{{tab:validation}}). "
-    "Elected manager without and with a salary; 8 games per cell under the deal prompt (10 for Gemini without salary), 5 under the neutral prompt.",
+    "Elected manager without and with a salary; 8 games per cell under the deal prompt (10 for Gemini without salary), 5 under the neutral prompt. Under the neutral prompt the judge over-counts offers for every model except Claude (on 120 hand-labeled neutral-prompt messages it finds 60 offers where the annotator finds 14; Appendix~\\ref{sec:robustness}), so those cells are upper bounds.",
     "tab:neutral", "lcccc",
     "& \\multicolumn{2}{c}{\\textbf{Deal prompt}} & \\multicolumn{2}{c}{\\textbf{Neutral prompt}} \\\\ "
     "\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}\n\\textbf{Model} & no salary & salary & no salary & salary", rows))

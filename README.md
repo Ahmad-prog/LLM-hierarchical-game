@@ -1,6 +1,6 @@
 # The Hierarchical Game: code, game logs and annotation
 
-This repository contains the code, all 1,573 game logs, and the human annotation behind the paper
+This repository contains the code, all 1,863 game logs, 100 fresh confirmatory games,, and the human annotation behind the paper
 *The Politician, the Liar, and the Obedient Worker: Strategic Behavior of LLM Agents in Hierarchical Games*.
 
 The **Hierarchical Game (HG)** is a 5-player, 20-round public goods game. On top of the base game it
@@ -32,6 +32,8 @@ cm-super, as in the paper; without LaTeX they are drawn with matplotlib's own fo
 | `paper_data/round2.json`, `round2.txt` | `analysis/round2.py` | Mechanism controls of batch 13 per model |
 | `paper_data/round3.json`, `round3.txt` | `analysis/round3.py` | Primary contrasts (one Holm family, permutation tests), pooled manager model, neutral election prompt, mechanism controls, incumbents and random ballot, aggregate-only visibility, GPT-4.1 / GPT-5 minimal, prompt robustness, quantization, last-round analysis, population-weighted offer recall, clustered re-election, manipulation check, LLM-judge validation |
 | `paper_data/scores_human.json` | `tools/score_manual_labels.py` | Agreement of the fixed rules with the human labels (Table "validation") |
+| `paper_data/round5.md` | `analysis/round5.py` | Fair-ballot equivalence test, batch-16 controls, and the confirmatory batch (`CONFIRMATORY_PLAN.md`) |
+| `paper_data/scores_annotator2.json`, `round6_annotation.json` | `tools/score_manual_labels.py`, `tools/score_round6.py` | The rules against the second annotator, agreement between annotators, and the LLM judge against hand labels of neutral-prompt messages |
 | `paper_data/digest.txt` | `analysis/digest.py` | A readable listing of `paper_numbers.json` |
 | `paper_data/appendix_tables.tex`, `round3_tables.tex` | `analysis/appendix_tables.py`, `analysis/round3_tables.py` | All generated tables, defined as LaTeX macros and placed in the paper as they are |
 | `figures/rr_frontier_contribution.pdf` | `analysis/make_figures.py` | Figure 1: main API models, contribution by institution |
@@ -42,10 +44,10 @@ cm-super, as in the paper; without LaTeX they are drawn with matplotlib's own fo
 ## The game logs (`results/`)
 
 One JSON file per game: `results/<track>/<setup>__t<k>.json`, where `<k>` is the game index.
-- `results/api/` holds 690 games: the six main API models (GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash,
+- `results/api/` holds 820 games: the six main API models (GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash,
   DeepSeek V3, Grok 4.3, Qwen Plus), the newer versions GPT-5 and DeepSeek V3.1, and GPT-4.1 and GPT-5 with
   reasoning effort "minimal".
-- `results/oss/` holds 883 games: 167 to 175 for each of gpt-oss-120B, Nemotron 3 Super 120B, Ling 3.0 flash,
+- `results/oss/` holds 1,043 games: 187 to 225 for each of gpt-oss-120B, Nemotron 3 Super 120B, Ling 3.0 flash,
   Qwen3.8 27B and Gemma 4 31B, and 32 for the 4-bit NVFP4 build of Qwen3.8 (quantization check).
 
 Each file has the following keys:
@@ -83,6 +85,8 @@ Setup names keep the batch numbering:
 | `batch14_nostrategic_{chat,elected}_*` | "Be strategic." removed from the system prompt |
 | `batch15_mgr_elected_nobudget_*` | Elected manager without a budget (authority, elections and messages only) |
 | `batch15_mgr_{bad,good}incumbent_rb_*` | Bad or good incumbent, with a ballot shuffled per voter and ties broken at random |
+| `batch16_mgr_fixed_rewardonly_*` | Fixed manager that can reward but not punish |
+| `batch16_mgr_fixed_contrib{10,20}_*` | Fixed manager whose own contribution the game sets to 10 or 20 tokens |
 
 The suffix is the model: a main API family (`gpt4o`, `claude`, `gemini`, `deepseek`, `grok`, `qwen`), a newer
 model (`gpt5`, `deepseek31`, `gpt41`, `gpt5min`), or a self-hosted tag (`gpt-oss-120b`, `nemotron-3-super-120b`,
@@ -90,9 +94,15 @@ model (`gpt5`, `deepseek31`, `gpt41`, `gpt5min`), or a self-hosted tag (`gpt-oss
 record (`model_name`). The `code_commit` field in `code_settings` refers to the development history of this
 code, which is not part of this repository.
 
+## Confirmatory games (`results_confirm/`)
+
+100 fresh games that re-test six central findings. The hypotheses, outcomes, tests and sample sizes are in
+`CONFIRMATORY_PLAN.md`, which was committed before any of these games ran; none of the games in `results/` enters
+these tests. Their election messages are labeled by the LLM judge in `annotation/confirm_llm_judge.jsonl`.
+
 ## Human annotation (`annotation/`)
 
-One annotator labelled 400 messages drawn with a fixed seed and stratified by model, without seeing the model,
+Two annotators (both authors) labelled the same 400 messages independently, drawn with a fixed seed and stratified by model, without seeing the model,
 the setup, or the rules' output (`tools/build_manual_work.py` draws the sample).
 
 | File | Content |
@@ -103,6 +113,9 @@ the setup, or the rules' output (`tools/build_manual_work.py` draws the sample).
 | `offers_blank_sheet.csv`, `intentions_blank_sheet.csv` | The same sheets as handed to the annotator, before labelling |
 | `offers_key.csv`, `intentions_key.csv` | For each row: model, setup, game file, round, sender, and what the fixed rules said |
 | `scores_human.json` | Precision, recall and kappa of the rules against the human labels |
+| `offers_human_labels_annotator2.csv`, `intentions_human_labels_annotator2.csv` | The same 400 messages labeled independently by a second annotator with the same codebook |
+| `neutral_offers_human_labels.csv`, `neutral_offers_key.csv` | 120 election messages from the neutral-prompt games, hand-labeled to check the LLM judge there; the key gives model, setup and the judge's label |
+| `confirm_llm_judge.jsonl` | LLM-judge labels of the election messages of the confirmatory games |
 | `offers_llm_judge.jsonl` | Labels of an LLM judge (GPT-4.1 mini, temperature 0, `tools/judge_offers.py`) that applies the same codebook to the 200 labelled messages (`human|O###`) and to every election message of the elected, pay, visibility, neutral-prompt and prompt-robustness setups (`<game file>|<round>|<sender>`) |
 
 ## Run new games
@@ -113,8 +126,8 @@ python tests_rerun/test_sanction_cost.py
 python hg_jobs.py --track api --dry-run --out results   # list the jobs
 ```
 
-- **API models** (OpenRouter): `bash scripts/run_api_games.sh` runs all 690 API games of the paper. Our runs
-  cost about US$404. The runner is resumable (finished games are skipped), runs games in parallel
+- **API models** (OpenRouter): `bash scripts/run_api_games.sh` runs all API games of the paper. Our runs
+  cost about US$471. The runner is resumable (finished games are skipped), runs games in parallel
   (`--workers`), and stops starting new games at `--budget-usd`; raising `--trials` adds games to a setup.
 - **Open-weight models** (vLLM, one 96 GB GPU): `bash scripts/serve_open_model.sh <tag> [gpu] [port]` starts
   vLLM and runs all of that model's games (32 for `qwen3.8-27b-nvfp4`).

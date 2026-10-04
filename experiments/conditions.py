@@ -284,6 +284,7 @@ def generate_all_conditions(
         configs.extend(generate_batch13_mechanism())           # 5 per model
         configs.extend(generate_batch14_revision())            # 7 per model
         configs.extend(generate_batch15_review())              # 3 per model
+        configs.extend(generate_batch16_final())               # 3 per model
 
     return configs
 
@@ -741,6 +742,41 @@ def generate_batch15_review() -> list[ExperimentConfig]:
     return configs
 
 
+def generate_batch16_final() -> list[ExperimentConfig]:
+    """Final controls, one template per model (the runner swaps in other models):
+
+    batch16_mgr_fixed_rewardonly   fixed manager that can reward but not punish
+    batch16_mgr_fixed_contrib20    fixed manager whose own contribution is set to 20 by the experimenter
+    batch16_mgr_fixed_contrib10    fixed manager whose own contribution is set to 10 by the experimenter
+    """
+    specs = [
+        ("mgr_fixed_rewardonly", MgrPowerType.MGR_REWARD_ONLY, {}),
+        ("mgr_fixed_contrib20", MgrPowerType.MGR_FULL, dict(mgr_contribution=20.0)),
+        ("mgr_fixed_contrib10", MgrPowerType.MGR_FULL, dict(mgr_contribution=10.0)),
+    ]
+    configs = []
+    for ctype, model in HOMOGENEOUS_MODEL_MAP.items():
+        for tag, power, extra in specs:
+            configs.append(ExperimentConfig(
+                name=f"batch16_{tag}_{model.value}",
+                batch=16,
+                belief=BeliefType.BELIEF_ALL_AI,
+                composition=ctype,
+                comm_type=CommType.COMM_FULL,
+                mgr_type=MgrType.MGR_FIXED,
+                mgr_power=power,
+                info_type=InfoType.INFO_FULL,
+                persona=PersonaType.PERSONA_NONE,
+                temp_type=TempType.TEMP_MEDIUM,
+                hist_type=HistType.HIST_FULL,
+                agent_models=[model] * 5,
+                num_agents=5,
+                election_frequency=5,
+                **extra,
+            ))
+    return configs
+
+
 def generate_batch(batch_num: int, include_reverse_pairs: bool = False) -> list[ExperimentConfig]:
     """Generate configs for a single batch number (1–12)."""
     generators = {
@@ -759,6 +795,7 @@ def generate_batch(batch_num: int, include_reverse_pairs: bool = False) -> list[
         13: generate_batch13_mechanism,
         14: generate_batch14_revision,
         15: generate_batch15_review,
+        16: generate_batch16_final,
     }
     gen = generators.get(batch_num)
     if gen is None:

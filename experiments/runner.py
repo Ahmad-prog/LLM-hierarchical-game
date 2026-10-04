@@ -256,6 +256,7 @@ class ExperimentRunner:
             ballot_random=getattr(self.config, "ballot_random", False),
         )
         m.deal_prompt = getattr(self.config, "deal_prompt", "deal")
+        m.mgr_contribution = getattr(self.config, "mgr_contribution", None)
         return m
 
 

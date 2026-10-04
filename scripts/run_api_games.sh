@@ -1,8 +1,8 @@
 #!/bin/bash
-# All API games of the paper (690 games). Needs OPENROUTER_API_KEY in .env.
+# All API games of the paper (820 games, and 76 fresh confirmatory games). Needs OPENROUTER_API_KEY in .env.
 # The runner is resumable: finished games in results/api are skipped, so it is safe to re-run, and raising
 # --trials adds games to a setup. Each game records its exact OpenRouter cost in its log (`api_usage`).
-# The paper's API runs cost about US$404 in total (GPT-5 about $4.6 per game, Claude about $1.8, most others < $0.8).
+# The paper's API runs cost about US$471 in total (GPT-5 about $4.6 per game, Claude about $1.8, most others < $0.8).
 set -e
 cd "$(dirname "$0")/.."
 B="--budget-usd 450 --out results"
@@ -46,4 +46,14 @@ done
 
 # 6. Additional controls (batch 15): elected manager without a budget; incumbents with a shuffled ballot
 swap gemini --only batch15_mgr_elected_nobudget --trials 8 --workers 8
-for m in gpt4o gemini qwen deepseek; do swap $m --only batch15_mgr_badincumbent_rb,batch15_mgr_goodincumbent_rb --trials 5 --workers 10; done
+for m in gpt4o gemini qwen deepseek; do swap $m --only batch15_mgr_badincumbent_rb,batch15_mgr_goodincumbent_rb --trials 15 --workers 10; done
+
+# 7. Final controls (batch 16): reward-only fixed manager; manager contribution set to 10 or 20 by the game
+swap gemini --only batch16 --trials 10 --workers 10
+swap qwen --only batch16_mgr_fixed_contrib --trials 10 --workers 10
+
+# 8. Confirmatory batch (CONFIRMATORY_PLAN.md): fresh games in results_confirm/
+C="--budget-usd 450 --out results_confirm"
+python hg_jobs.py --track api --swap-model gemini $C --only batch2_comm_full,batch3_mgr_elected,batch14_neutral_elected --trials 12 --workers 12
+python hg_jobs.py --track api --swap-model claude $C --only batch14_neutral_elected,batch14_neutral_salary --trials 10 --workers 10
+python hg_jobs.py --track api --swap-model deepseek31 $C --only batch14_neutral_elected,batch3_mgr_elected --trials 10 --workers 10

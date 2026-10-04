@@ -307,6 +307,11 @@ If you choose not to communicate, respond with: {{"public_message": ""}}"""
                 "\nNOTE: You are the current manager. After all contributions are revealed, you may send "
                 "a public message to the group. You have no budget to punish or reward players.\n"
             )
+        elif is_manager and getattr(self, "reward_only", False):
+            manager_note = (
+                "\nNOTE: You are the current manager. After all contributions are "
+                "revealed, you will also have a chance to reward players (you cannot punish).\n"
+            )
         elif is_manager:
             manager_note = (
                 "\nNOTE: You are the current manager. After all contributions are "
@@ -314,6 +319,10 @@ If you choose not to communicate, respond with: {{"public_message": ""}}"""
             )
         else:
             manager_note = ""
+        fixed = getattr(self, "fixed_contribution", None)
+        if is_manager and fixed is not None:
+            manager_note += (f"NOTE: As manager, your contribution this round is set to {fixed:.0f} tokens by the rules "
+                             "of the game; the amount in your reply is not used.\n")
 
         return f"""ROUND {round_num} — ACTION PHASE
 {manager_note}
@@ -377,6 +386,9 @@ Respond with:
 }}"""
 
         actions_text = "\n  ".join(actions)
+        budget_lines = "\n".join(
+            ([f"  Punishment budget: {mgr_budget_punish:.0f} tokens to spend (each spent token deducts {punish_ratio:.0f} from target)"] if can_punish else [])
+            + ([f"  Reward budget: {mgr_budget_reward:.0f} tokens to spend (each spent token adds {reward_ratio:.0f} to target)"] if can_reward else []))
         cost_note = (
             "Every token you spend on punishment or reward is deducted from your own payoff this round.\n\n"
             if SANCTION_COST_TO_MANAGER else ""
@@ -390,8 +402,7 @@ You are the manager. You have seen all contributions:
 Your own contribution this round is already recorded.
 
 MANAGER BUDGET:
-  Punishment budget: {mgr_budget_punish:.0f} tokens to spend (each spent token deducts {punish_ratio:.0f} from target)
-  Reward budget: {mgr_budget_reward:.0f} tokens to spend (each spent token adds {reward_ratio:.0f} to target)
+{budget_lines}
 
 {cost_note}Choose how to allocate your budgets. You do not need to spend everything.
 

@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / "results"
 ANN = ROOT / "annotation"
-STEPS = 10
+STEPS = 13
 
 
 def run(args, out_file=None):
@@ -62,13 +62,25 @@ def build(data_dir: Path, fig_dir: Path):
     run(["analysis/appendix_tables.py", numbers, extras, data_dir / "revision2.json"], data_dir / "appendix_tables.tex")
     step(9, "paper tables for the controls (LaTeX)       -> round3_tables.tex")
     run(["analysis/round3_tables.py", data_dir / "round3.json"], data_dir / "round3_tables.tex")
-    step(10, "figures (PDF)                              -> figures/")
+    step(10, "fair-ballot equivalence, batch 16, confirmatory batch -> round5.md")
+    run(["analysis/round5.py", RESULTS, ROOT / "results_confirm", ANN / "confirm_llm_judge.jsonl", data_dir / "round5.md"])
+    step(11, "second annotator against the fixed rules   -> scores_annotator2.json")
+    with tempfile.TemporaryDirectory() as tmp:
+        for f in ("offers_key.csv", "intentions_key.csv"):
+            shutil.copy(ANN / f, tmp)
+        run(["tools/score_manual_labels.py", tmp, ANN / "offers_human_labels_annotator2.csv", ANN / "intentions_human_labels_annotator2.csv"])
+        shutil.copy(Path(tmp) / "scores.json", data_dir / "scores_annotator2.json")
+    step(12, "agreement between annotators, LLM judge under the neutral prompt -> round6_annotation.json")
+    run(["tools/score_round6.py", ANN, ANN / "offers_human_labels_annotator2.csv", ANN / "intentions_human_labels_annotator2.csv",
+         data_dir / "scores_annotator2.json", ANN / "neutral_offers_human_labels.csv", ANN / "neutral_offers_key.csv",
+         ANN / "offers_llm_judge.jsonl", data_dir / "round6_annotation.json"])
+    step(13, "figures (PDF)                              -> figures/")
     run(["analysis/make_figures.py", numbers, fig_dir])
 
 
 CHECKED = ["paper_numbers.json", "extras.json", "extras.txt", "revision2.json", "revision2.txt", "round2.json",
            "round2.txt", "round3.json", "round3.txt", "scores_human.json", "digest.txt", "appendix_tables.tex",
-           "round3_tables.tex"]
+           "round3_tables.tex", "round5.md", "scores_annotator2.json", "round6_annotation.json"]
 
 
 def main():

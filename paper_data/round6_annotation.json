@@ -1,0 +1,243 @@
+{
+ "inter_annotator": {
+  "offers_is_offer": {
+   "n": 200,
+   "agreement": 0.995,
+   "kappa": 0.982
+  },
+  "offers_category": {
+   "n": 200,
+   "agreement": 0.995,
+   "kappa": 0.992
+  },
+  "intentions_statement_type": {
+   "n": 200,
+   "agreement": 0.99,
+   "kappa": 0.984
+  },
+  "intentions_commitment_vs_rest": {
+   "n": 200,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  "broken_any_statement": {
+   "n": 200,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  "broken_commitment_strict": {
+   "n": 200,
+   "agreement": 1.0,
+   "kappa": 1.0
+  },
+  "stated_amount_same": {
+   "n": 177,
+   "share": 1.0
+  }
+ },
+ "rules_vs_annotator2": {
+  "offers_rule_vs_human": {
+   "n": 200,
+   "precision": 0.92,
+   "recall": 0.831,
+   "tp": 138,
+   "fp": 12,
+   "fn": 28
+  },
+  "offer_category_rule_vs_human": {
+   "n": 150,
+   "agreement": 0.66,
+   "kappa": 0.376
+  },
+  "offer_category_human_shares": {
+   "pledge": 118,
+   "reciprocal": 25,
+   "targeted": 23
+  },
+  "impossible_rule_vs_human": {
+   "n": 200,
+   "precision": 1.0,
+   "recall": 0.5,
+   "tp": 1,
+   "fp": 0,
+   "fn": 1
+  },
+  "stated_rule_vs_human": {
+   "n": 200,
+   "precision": 0.922,
+   "recall": 0.938,
+   "tp": 166,
+   "fp": 14,
+   "fn": 11
+  },
+  "amount_match": {
+   "n": 166,
+   "same_amount": 160
+  },
+  "first_person_rule_vs_human_commitment": {
+   "n": 180,
+   "precision": 0.895,
+   "recall": 0.543,
+   "tp": 51,
+   "fp": 6,
+   "fn": 43
+  },
+  "broken_rule_vs_human_any_statement": {
+   "n": 180,
+   "precision": 0.878,
+   "recall": 0.988,
+   "tp": 79,
+   "fp": 11,
+   "fn": 1
+  },
+  "broken_rule_vs_human_strict": {
+   "n": 180,
+   "precision": 0.489,
+   "recall": 1.0,
+   "tp": 44,
+   "fp": 46,
+   "fn": 0
+  },
+  "statement_type_human_shares": {
+   "other_round": 13,
+   "commitment": 98,
+   "proposal": 74,
+   "conditional": 5,
+   "none": 10
+  }
+ },
+ "judge_neutral": {
+  "n": 120,
+  "judge_yes": 60,
+  "human_yes": 14,
+  "precision": 0.2,
+  "recall": 0.857,
+  "kappa": 0.167,
+  "population_weighted": {
+   "precision": 0.194,
+   "recall": 0.806
+  },
+  "by_model": {
+   "claude": {
+    "n": 13,
+    "judge_yes": 7,
+    "human_yes": 8,
+    "both_yes": 7
+   },
+   "deepseek31": {
+    "n": 15,
+    "judge_yes": 9,
+    "human_yes": 1,
+    "both_yes": 1
+   },
+   "gemini": {
+    "n": 6,
+    "judge_yes": 0,
+    "human_yes": 0,
+    "both_yes": 0
+   },
+   "gpt-oss-120b": {
+    "n": 33,
+    "judge_yes": 22,
+    "human_yes": 2,
+    "both_yes": 2
+   },
+   "grok": {
+    "n": 1,
+    "judge_yes": 0,
+    "human_yes": 0,
+    "both_yes": 0
+   },
+   "ling-3.0-flash": {
+    "n": 12,
+    "judge_yes": 6,
+    "human_yes": 0,
+    "both_yes": 0
+   },
+   "nemotron-3-super-120b": {
+    "n": 23,
+    "judge_yes": 7,
+    "human_yes": 0,
+    "both_yes": 0
+   },
+   "qwen3.8-27b": {
+    "n": 17,
+    "judge_yes": 9,
+    "human_yes": 3,
+    "both_yes": 2
+   }
+  },
+  "by_model_setup": {
+   "deepseek31|elected": {
+    "n": 5,
+    "judge_yes": 3,
+    "human_yes": 0
+   },
+   "gemini|elected": {
+    "n": 5,
+    "judge_yes": 0,
+    "human_yes": 0
+   },
+   "gpt-oss-120b|elected": {
+    "n": 18,
+    "judge_yes": 11,
+    "human_yes": 2
+   },
+   "grok|elected": {
+    "n": 1,
+    "judge_yes": 0,
+    "human_yes": 0
+   },
+   "ling-3.0-flash|elected": {
+    "n": 5,
+    "judge_yes": 3,
+    "human_yes": 0
+   },
+   "nemotron-3-super-120b|elected": {
+    "n": 11,
+    "judge_yes": 2,
+    "human_yes": 0
+   },
+   "qwen3.8-27b|elected": {
+    "n": 10,
+    "judge_yes": 7,
+    "human_yes": 1
+   },
+   "claude|salary": {
+    "n": 13,
+    "judge_yes": 7,
+    "human_yes": 8
+   },
+   "deepseek31|salary": {
+    "n": 10,
+    "judge_yes": 6,
+    "human_yes": 1
+   },
+   "gemini|salary": {
+    "n": 1,
+    "judge_yes": 0,
+    "human_yes": 0
+   },
+   "gpt-oss-120b|salary": {
+    "n": 15,
+    "judge_yes": 11,
+    "human_yes": 0
+   },
+   "ling-3.0-flash|salary": {
+    "n": 7,
+    "judge_yes": 3,
+    "human_yes": 0
+   },
+   "nemotron-3-super-120b|salary": {
+    "n": 12,
+    "judge_yes": 5,
+    "human_yes": 0
+   },
+   "qwen3.8-27b|salary": {
+    "n": 7,
+    "judge_yes": 2,
+    "human_yes": 2
+   }
+  }
+ }
+}
