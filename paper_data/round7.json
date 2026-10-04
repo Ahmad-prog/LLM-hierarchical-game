@@ -1,0 +1,104 @@
+{
+ "first_election_claude": {
+  "exploratory": {
+   "none": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "salary": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "fresh": {
+   "none": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "salary": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "pooled": {
+   "none_mean": 0.0,
+   "salary_mean": 0.0,
+   "n": [
+    15,
+    15
+   ],
+   "p_one_sided": 1.0,
+   "round1_messages": 10
+  }
+ },
+ "votes_bad_incumbent": {
+  "all": {
+   "punished_against": "213/402",
+   "others_against": "239/512",
+   "games": 210,
+   "mh_odds_ratio": 1.38,
+   "or_ci95": [
+    0.99,
+    1.93
+   ],
+   "p": 0.063
+  },
+  "no_self": {
+   "punished_against": "183/372",
+   "others_against": "205/478",
+   "games": 205,
+   "mh_odds_ratio": 1.25,
+   "or_ci95": [
+    0.88,
+    1.79
+   ],
+   "p": 0.2456
+  }
+ },
+ "votes_good_incumbent": {
+  "all": {
+   "rewarded_against": "390/758",
+   "others_against": "56/156",
+   "games": 29,
+   "mh_odds_ratio": 2.55,
+   "or_ci95": [
+    0.99,
+    6.55
+   ],
+   "p": 0.0805
+  },
+  "no_self": {
+   "rewarded_against": "309/677",
+   "others_against": "54/154",
+   "games": 29,
+   "mh_odds_ratio": 2.52,
+   "or_ci95": [
+    0.97,
+    6.49
+   ],
+   "p": 0.0887
+  }
+ }
+}

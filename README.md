@@ -34,6 +34,7 @@ cm-super, as in the paper; without LaTeX they are drawn with matplotlib's own fo
 | `paper_data/scores_human.json` | `tools/score_manual_labels.py` | Agreement of the fixed rules with the human labels (Table "validation") |
 | `paper_data/round5.md` | `analysis/round5.py` | Fair-ballot equivalence test, batch-16 controls, and the confirmatory batch (`CONFIRMATORY_PLAN.md`) |
 | `paper_data/scores_annotator2.json`, `round6_annotation.json` | `tools/score_manual_labels.py`, `tools/score_round6.py` | The rules against the second annotator, agreement between annotators, and the LLM judge against hand labels of neutral-prompt messages |
+| `paper_data/round7.json` | `analysis/round7.py` | First-election offers under the neutral prompt (Claude), and vote-level accountability of the scripted incumbents |
 | `paper_data/digest.txt` | `analysis/digest.py` | A readable listing of `paper_numbers.json` |
 | `paper_data/appendix_tables.tex`, `round3_tables.tex` | `analysis/appendix_tables.py`, `analysis/round3_tables.py` | All generated tables, defined as LaTeX macros and placed in the paper as they are |
 | `figures/rr_frontier_contribution.pdf` | `analysis/make_figures.py` | Figure 1: main API models, contribution by institution |

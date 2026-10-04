@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / "results"
 ANN = ROOT / "annotation"
-STEPS = 13
+STEPS = 14
 
 
 def run(args, out_file=None):
@@ -73,14 +73,16 @@ def build(data_dir: Path, fig_dir: Path):
     step(12, "agreement between annotators, LLM judge under the neutral prompt -> round6_annotation.json")
     run(["tools/score_round6.py", ANN, ANN / "offers_human_labels_annotator2.csv", ANN / "intentions_human_labels_annotator2.csv",
          data_dir / "scores_annotator2.json", ANN / "neutral_offers_human_labels.csv", ANN / "neutral_offers_key.csv",
-         ANN / "offers_llm_judge.jsonl", data_dir / "round6_annotation.json"])
-    step(13, "figures (PDF)                              -> figures/")
+         ANN / "offers_llm_judge.jsonl", data_dir / "round6_annotation.json", "round7.json"])
+    step(13, "first-election offers, vote-level accountability -> round7.json")
+    run(["analysis/round7.py", RESULTS, ROOT / "results_confirm", ANN / "offers_llm_judge.jsonl", ANN / "confirm_llm_judge.jsonl", data_dir / "round7.json"])
+    step(14, "figures (PDF)                              -> figures/")
     run(["analysis/make_figures.py", numbers, fig_dir])
 
 
 CHECKED = ["paper_numbers.json", "extras.json", "extras.txt", "revision2.json", "revision2.txt", "round2.json",
            "round2.txt", "round3.json", "round3.txt", "scores_human.json", "digest.txt", "appendix_tables.tex",
-           "round3_tables.tex", "round5.md", "scores_annotator2.json", "round6_annotation.json"]
+           "round3_tables.tex", "round5.md", "scores_annotator2.json", "round6_annotation.json", "round7.json"]
 
 
 def main():
