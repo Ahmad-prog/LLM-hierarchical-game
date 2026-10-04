@@ -214,7 +214,7 @@ class Manager:
         for agent in all_agents:
             other_ids = [a.agent_id for a in all_agents if a.agent_id != agent.agent_id]
             deal_prompt = _build_deal_prompt(agent, round_num, other_ids,
-                                             neutral=getattr(self, "deal_prompt", "deal") == "neutral")
+                                             neutral=getattr(self, "deal_prompt", "deal") in ("neutral", "neutral_clean"))
             resp = agent.provider.generate(
                 system_prompts[agent.agent_id],
                 deal_prompt,
@@ -234,7 +234,8 @@ class Manager:
                     comm_log.append(CM(
                         sender=agent.agent_id,
                         recipients=[to],
-                        content=f"[Private deal] {content}",
+                        content=(f"[Private message] {content}" if getattr(self, "deal_prompt", "deal") == "neutral_clean"
+                                 else f"[Private deal] {content}"),
                         round_num=round_num,
                         phase="election_deal",
                     ))
@@ -533,7 +534,8 @@ def _build_vote_prompt(
         if m.phase == "election_deal" and m.recipients and agent.agent_id in m.recipients
     ]
     if private_deals:
-        private_deals_text = "\nPRIVATE DEALS YOU RECEIVED:\n" + "\n".join(
+        clean = all(m.content.startswith("[Private message]") for m in private_deals)
+        private_deals_text = ("\nPRIVATE MESSAGES YOU RECEIVED:\n" if clean else "\nPRIVATE DEALS YOU RECEIVED:\n") + "\n".join(
             f"  From {m.sender}: {m.content}" for m in private_deals
         )
 

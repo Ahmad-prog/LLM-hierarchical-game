@@ -24,7 +24,7 @@ except ImportError:
     pass
 
 MODEL = "openai/gpt-4.1-mini"
-SETUPS = ("batch3_mgr_elected", "batch8_mgr_salary", "batch8_mgr_costly", "batch9_punish_hidden", "batch9_punish_anonymous",
+SETUPS = ("batch17_neutral_clean", "batch3_mgr_elected", "batch8_mgr_salary", "batch8_mgr_costly", "batch9_punish_hidden", "batch9_punish_anonymous",
           "batch14_neutral_elected", "batch14_neutral_salary", "batch14_nostrategic_elected")
 CODEBOOK = """You label private messages that one player in an economic game sent to another player just before an election
 for the role of manager. Apply this codebook exactly.
@@ -48,7 +48,7 @@ impossible: "yes" if the message promises something the rules do not allow: cont
 or rewarding or punishing more than 10 tokens in one round. Otherwise "no".
 
 Answer with JSON only: {"is_offer": "yes"|"no", "category": "reply"|"targeted"|"reciprocal"|"pledge"|"none", "impossible": "yes"|"no"}"""
-PREFIX = re.compile(r"^\s*\[Private deal\]\s*", re.I)
+PREFIX = re.compile(r"^\s*\[Private (?:deal|message)\]\s*", re.I)
 
 ap = argparse.ArgumentParser()
 ap.add_argument("results")

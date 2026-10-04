@@ -42,7 +42,7 @@
    frontier elected   gpt4o: 0/617 u0/549 L0/612 | claude: 0/627 u0/495 L0/693 | gemini: 0/250 u0/244 L0/265 | deepseek: 0/359 u0/357 L0/361 | grok: 0/37 u0/33 L0/50 | qwen: 1/580 u0/394 L1/886
    frontier hidden    gpt4o: 0/189 u0/175 L0/192 | claude: 0/216 u0/183 L0/254 | gemini: 2/139 u2/133 L1/149 | deepseek: 0/192 u0/191 L0/198 | grok: 0/7 u0/7 L0/12 | qwen: 0/198 u0/136 L0/276
    frontier anonymous gpt4o: 0/192 u0/170 L0/191 | claude: 0/231 u0/171 L0/253 | gemini: 0/77 u0/76 L0/82 | deepseek: 0/189 u0/179 L0/189 | grok: 0/3 u0/3 L0/5 | qwen: 0/177 u0/128 L0/263
-   samegen  chat_only gpt5: 11/259 u2/6 L21/290 | deepseek31: 0/80 u0/74 L0/76
+   samegen  chat_only gpt5: 45/850 u6/24 L69/965 | deepseek31: 0/80 u0/74 L0/76
    samegen  elected   gpt5: 1/235 u0/3 L5/298 | deepseek31: 0/456 u0/427 L0/464
    samegen  hidden    gpt5: 3/205 u2/8 L8/290 | deepseek31: 0/135 u0/131 L0/139
    samegen  anonymous gpt5: 2/213 u1/10 L5/300 | deepseek31: 0/120 u0/112 L0/115

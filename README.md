@@ -1,6 +1,6 @@
 # The Hierarchical Game: code, game logs and annotation
 
-This repository contains the code, all 1,863 game logs, 100 fresh confirmatory games,, and the human annotation behind the paper
+This repository contains the code, all 1,930 game logs, 100 fresh confirmatory games,, and the human annotation behind the paper
 *The Politician, the Liar, and the Obedient Worker: Strategic Behavior of LLM Agents in Hierarchical Games*.
 
 The **Hierarchical Game (HG)** is a 5-player, 20-round public goods game. On top of the base game it
@@ -35,6 +35,7 @@ cm-super, as in the paper; without LaTeX they are drawn with matplotlib's own fo
 | `paper_data/round5.md` | `analysis/round5.py` | Fair-ballot equivalence test, batch-16 controls, and the confirmatory batch (`CONFIRMATORY_PLAN.md`) |
 | `paper_data/scores_annotator2.json`, `round6_annotation.json` | `tools/score_manual_labels.py`, `tools/score_round6.py` | The rules against the second annotator, agreement between annotators, and the LLM judge against hand labels of neutral-prompt messages |
 | `paper_data/round7.json` | `analysis/round7.py` | First-election offers under the neutral prompt (Claude), and vote-level accountability of the scripted incumbents |
+| `paper_data/round8.json` | `analysis/round8.py` | Clean-label neutral prompt (Claude), GPT-5 chat-only endgame, placebo worker contribution, fair-ballot manager effects |
 | `paper_data/digest.txt` | `analysis/digest.py` | A readable listing of `paper_numbers.json` |
 | `paper_data/appendix_tables.tex`, `round3_tables.tex` | `analysis/appendix_tables.py`, `analysis/round3_tables.py` | All generated tables, defined as LaTeX macros and placed in the paper as they are |
 | `figures/rr_frontier_contribution.pdf` | `analysis/make_figures.py` | Figure 1: main API models, contribution by institution |
@@ -45,7 +46,7 @@ cm-super, as in the paper; without LaTeX they are drawn with matplotlib's own fo
 ## The game logs (`results/`)
 
 One JSON file per game: `results/<track>/<setup>__t<k>.json`, where `<k>` is the game index.
-- `results/api/` holds 820 games: the six main API models (GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash,
+- `results/api/` holds 887 games: the six main API models (GPT-4o, Claude Sonnet 4.5, Gemini 2.5 Flash,
   DeepSeek V3, Grok 4.3, Qwen Plus), the newer versions GPT-5 and DeepSeek V3.1, and GPT-4.1 and GPT-5 with
   reasoning effort "minimal".
 - `results/oss/` holds 1,043 games: 187 to 225 for each of gpt-oss-120B, Nemotron 3 Super 120B, Ling 3.0 flash,
@@ -88,6 +89,8 @@ Setup names keep the batch numbering:
 | `batch15_mgr_{bad,good}incumbent_rb_*` | Bad or good incumbent, with a ballot shuffled per voter and ties broken at random |
 | `batch16_mgr_fixed_rewardonly_*` | Fixed manager that can reward but not punish |
 | `batch16_mgr_fixed_contrib{10,20}_*` | Fixed manager whose own contribution the game sets to 10 or 20 tokens |
+| `batch17_neutral_clean_{elected,salary}_*` | Neutral election prompt, and messages shown to the recipient as `[Private message]` (no "deal" anywhere) |
+| `batch17_mgr_fixed_peer{10,20}_*` | Placebo: a worker's (`agent_1`'s) contribution set to 10 or 20 tokens |
 
 The suffix is the model: a main API family (`gpt4o`, `claude`, `gemini`, `deepseek`, `grok`, `qwen`), a newer
 model (`gpt5`, `deepseek31`, `gpt41`, `gpt5min`), or a self-hosted tag (`gpt-oss-120b`, `nemotron-3-super-120b`,
@@ -128,7 +131,7 @@ python hg_jobs.py --track api --dry-run --out results   # list the jobs
 ```
 
 - **API models** (OpenRouter): `bash scripts/run_api_games.sh` runs all API games of the paper. Our runs
-  cost about US$471. The runner is resumable (finished games are skipped), runs games in parallel
+  cost about US$545. The runner is resumable (finished games are skipped), runs games in parallel
   (`--workers`), and stops starting new games at `--budget-usd`; raising `--trials` adds games to a setup.
 - **Open-weight models** (vLLM, one 96 GB GPU): `bash scripts/serve_open_model.sh <tag> [gpu] [port]` starts
   vLLM and runs all of that model's games (32 for `qwen3.8-27b-nvfp4`).

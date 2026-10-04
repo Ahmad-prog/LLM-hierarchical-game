@@ -2265,13 +2265,13 @@
   "samegen": {
    "chat_only": {
     "gpt5": {
-     "explicit": 259,
-     "broken": 11,
-     "conditional": 253,
-     "logged_explicit": 290,
-     "logged_broken": 21,
-     "explicit_uncond": 6,
-     "broken_uncond": 2
+     "explicit": 850,
+     "broken": 45,
+     "conditional": 826,
+     "logged_explicit": 965,
+     "logged_broken": 69,
+     "explicit_uncond": 24,
+     "broken_uncond": 6
     },
     "deepseek31": {
      "explicit": 80,

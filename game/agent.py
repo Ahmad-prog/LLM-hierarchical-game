@@ -323,6 +323,10 @@ If you choose not to communicate, respond with: {{"public_message": ""}}"""
         if is_manager and fixed is not None:
             manager_note += (f"NOTE: As manager, your contribution this round is set to {fixed:.0f} tokens by the rules "
                              "of the game; the amount in your reply is not used.\n")
+        peer = getattr(self, "peer_fixed", None)
+        if peer is not None:
+            manager_note += (f"\nNOTE: Your contribution this round is set to {peer:.0f} tokens by the rules "
+                             "of the game; the amount in your reply is not used.\n")
 
         return f"""ROUND {round_num} — ACTION PHASE
 {manager_note}

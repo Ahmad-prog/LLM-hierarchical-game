@@ -3127,43 +3127,43 @@
   "chat_only": {
    "gpt5": {
     "coop": {
-     "mean": 93.0,
-     "sd": 1.0,
-     "n": 3
+     "mean": 92.2,
+     "sd": 1.932,
+     "n": 10
     },
     "contrib": {
-     "mean": 18.6,
-     "sd": 0.2,
-     "n": 3
+     "mean": 18.28,
+     "sd": 0.736,
+     "n": 10
     },
     "deals_strict": {
      "mean": 0.0,
      "sd": 0.0,
-     "n": 3
+     "n": 10
     },
     "deals_keyword": {
      "mean": 1.0,
-     "sd": 1.732,
-     "n": 3
+     "sd": 1.491,
+     "n": 10
     },
     "welfare": {
-     "mean": 1116.0,
-     "sd": 12.0,
-     "n": 3
+     "mean": 1096.8,
+     "sd": 44.163,
+     "n": 10
     },
     "minutes": {
-     "mean": 94.322,
-     "sd": 2.828,
-     "n": 3
+     "mean": 72.827,
+     "sd": 15.115,
+     "n": 10
     },
-    "broken_explicit": 21,
-    "explicit": 290,
-    "flag_code_rule": 21,
-    "promises_any": 290,
+    "broken_explicit": 69,
+    "explicit": 965,
+    "flag_code_rule": 70,
+    "promises_any": 965,
     "turnovers": 0,
     "contested": 0,
-    "parse_ok": 300,
-    "replies": 300,
+    "parse_ok": 1000,
+    "replies": 1000,
     "threats": 0,
     "models_called": [
      "openai/gpt-5"
@@ -3172,7 +3172,8 @@
      "True"
     ],
     "code_commits": [
-     "3c86362"
+     "3c86362",
+     "b816f5e"
     ]
    },
    "deepseek31": {
@@ -8631,7 +8632,7 @@
   }
  },
  "meta": {
-  "games_api": 820,
+  "games_api": 887,
   "games_open": 1043
  }
 }

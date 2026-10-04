@@ -274,12 +274,12 @@
   "samegen": {
    "chat_only": {
     "gpt5": {
-     "messages": 300,
-     "stated": 259,
-     "first_person": 4,
-     "broken_3": 11,
-     "broken_5": 11,
-     "broken_8": 11,
+     "messages": 1000,
+     "stated": 850,
+     "first_person": 16,
+     "broken_3": 45,
+     "broken_5": 45,
+     "broken_8": 45,
      "fp_broken_3": 0,
      "fp_broken_5": 0,
      "fp_broken_8": 0
@@ -877,7 +877,7 @@
   },
   "samegen": {
    "gpt5": {
-    "messages": 3892,
+    "messages": 4784,
     "over_20": 4
    },
    "deepseek31": {

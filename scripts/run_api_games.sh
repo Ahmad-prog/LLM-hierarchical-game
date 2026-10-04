@@ -1,8 +1,8 @@
 #!/bin/bash
-# All API games of the paper (820 games, and 76 fresh confirmatory games). Needs OPENROUTER_API_KEY in .env.
+# All API games of the paper (887 games, and 76 fresh confirmatory games). Needs OPENROUTER_API_KEY in .env.
 # The runner is resumable: finished games in results/api are skipped, so it is safe to re-run, and raising
 # --trials adds games to a setup. Each game records its exact OpenRouter cost in its log (`api_usage`).
-# The paper's API runs cost about US$471 in total (GPT-5 about $4.6 per game, Claude about $1.8, most others < $0.8).
+# The paper's API runs cost about US$545 in total (GPT-5 about $4.6 per game, Claude about $1.8, most others < $0.8).
 set -e
 cd "$(dirname "$0")/.."
 B="--budget-usd 450 --out results"
@@ -57,3 +57,8 @@ C="--budget-usd 450 --out results_confirm"
 python hg_jobs.py --track api --swap-model gemini $C --only batch2_comm_full,batch3_mgr_elected,batch14_neutral_elected --trials 12 --workers 12
 python hg_jobs.py --track api --swap-model claude $C --only batch14_neutral_elected,batch14_neutral_salary --trials 10 --workers 10
 python hg_jobs.py --track api --swap-model deepseek31 $C --only batch14_neutral_elected,batch3_mgr_elected --trials 10 --workers 10
+
+# 9. Last controls (batch 17): clean-label neutral prompt for Claude; placebo worker contribution; GPT-5 chat only to 10 games
+swap claude --only batch17_neutral_clean --trials 10 --workers 10
+for m in gemini qwen; do swap $m --only batch17_mgr_fixed_peer --trials 10 --workers 10; done
+swap gpt5 --only batch2_comm_full --trials 10 --workers 7

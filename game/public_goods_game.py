@@ -210,7 +210,9 @@ class PublicGoodsGame:
         for agent in self.agents:
             is_manager = (agent.agent_id == self.manager.current_manager_id)
             fixed = getattr(self.manager, "mgr_contribution", None)
+            peer = getattr(self.manager, "peer_contribution", None)
             agent.fixed_contribution = fixed if is_manager else None
+            agent.peer_fixed = peer if (peer is not None and not is_manager and agent.agent_id == "agent_1") else None
             visible_msgs = _filter_visible(round_comm, agent.agent_id)
             # Build per-agent group info respecting punishment visibility
             group_info = self._build_group_info_for_agent(round_num, agent.agent_id)
@@ -232,6 +234,8 @@ class PublicGoodsGame:
             contribution = max(0.0, min(float(self.endowment), raw_contribution))
             if is_manager and fixed is not None:
                 contribution = float(fixed)   # batch 16: set by the experimenter
+            if agent.peer_fixed is not None:
+                contribution = float(agent.peer_fixed)   # batch 17: placebo, a worker's contribution
             contributions[agent.agent_id] = contribution
             action_responses[agent.agent_id] = (resp, is_manager)
 

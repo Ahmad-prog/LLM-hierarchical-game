@@ -257,6 +257,7 @@ class ExperimentRunner:
         )
         m.deal_prompt = getattr(self.config, "deal_prompt", "deal")
         m.mgr_contribution = getattr(self.config, "mgr_contribution", None)
+        m.peer_contribution = getattr(self.config, "peer_contribution", None)
         return m
 
 

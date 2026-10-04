@@ -233,6 +233,6 @@
    grok_qwen        n=3 worker coop 100.0±0.0 worker contrib 14.1±1.4 spend 3.1±1.0 welfare 970±128
    qwen_claude      n=3 worker coop 100.0±0.0 worker contrib 15.3±1.7 spend 9.9±0.2 welfare 1311±106
 
-=== META {'games_api': 820, 'games_open': 1043}
+=== META {'games_api': 887, 'games_open': 1043}
 frontier model IDs called: ['anthropic/claude-sonnet-4.5', 'deepseek/deepseek-chat', 'google/gemini-2.5-flash', 'openai/gpt-4o', 'qwen/qwen-plus', 'x-ai/grok-4.3']
 samegen model IDs called: ['deepseek/deepseek-chat-v3.1', 'openai/gpt-5']

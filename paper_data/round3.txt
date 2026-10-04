@@ -22,8 +22,8 @@
      6.74
     ],
     "perm_p": 0.02485,
-    "holm": 0.10608,
-    "holm_perm": 0.35595
+    "holm": 0.09945,
+    "holm_perm": 0.33222
    },
    {
     "model": "gpt4o",
@@ -91,7 +91,7 @@
      -1.19
     ],
     "perm_p": 0.005,
-    "holm": 0.11746,
+    "holm": 0.10907,
     "holm_perm": 0.1
    },
    {
@@ -115,7 +115,7 @@
     ],
     "perm_p": 0.04958,
     "holm": 0.31416,
-    "holm_perm": 0.54538
+    "holm_perm": 0.4958
    },
    {
     "model": "gemini",
@@ -230,7 +230,7 @@
     ],
     "perm_p": 0.08658,
     "holm": 1.0,
-    "holm_perm": 0.8658
+    "holm_perm": 0.77922
    },
    {
     "model": "qwen",
@@ -252,8 +252,8 @@
      6.84
     ],
     "perm_p": 0.02373,
-    "holm": 0.10608,
-    "holm_perm": 0.35595
+    "holm": 0.09945,
+    "holm_perm": 0.33222
    },
    {
     "model": "qwen",
@@ -287,17 +287,17 @@
      "n": 3
     },
     "b": {
-     "mean": 18.6,
-     "sd": 0.2,
-     "n": 3
+     "mean": 18.28,
+     "sd": 0.74,
+     "n": 10
     },
-    "diff": 0.74,
-    "p": 0.16399,
+    "diff": 0.42,
+    "p": 0.38015,
     "ci": [
-     -0.63,
-     2.11
+     -0.77,
+     1.61
     ],
-    "perm_p": 0.2,
+    "perm_p": 0.4965,
     "holm": 1.0,
     "holm_perm": 1.0
    },
@@ -305,24 +305,24 @@
     "model": "gpt5",
     "contrast": "manager",
     "a": {
-     "mean": 18.6,
-     "sd": 0.2,
-     "n": 3
+     "mean": 18.28,
+     "sd": 0.74,
+     "n": 10
     },
     "b": {
      "mean": 19.67,
      "sd": 0.31,
      "n": 3
     },
-    "diff": 1.07,
-    "p": 0.01056,
+    "diff": 1.39,
+    "p": 0.00105,
     "ci": [
-     0.44,
-     1.69
+     0.73,
+     2.05
     ],
-    "perm_p": 0.1,
-    "holm": 0.13728,
-    "holm_perm": 0.9
+    "perm_p": 0.01049,
+    "holm": 0.01995,
+    "holm_perm": 0.17833
    },
    {
     "model": "deepseek31",
@@ -345,7 +345,7 @@
     ],
     "perm_p": 0.1,
     "holm": 0.0,
-    "holm_perm": 0.9
+    "holm_perm": 0.8
    },
    {
     "model": "deepseek31",
@@ -367,8 +367,8 @@
      -0.9
     ],
     "perm_p": 0.0303,
-    "holm": 0.07378,
-    "holm_perm": 0.3939
+    "holm": 0.06944,
+    "holm_perm": 0.3636
    },
    {
     "model": "gpt-oss-120b",
@@ -390,8 +390,8 @@
      9.48
     ],
     "perm_p": 0.01212,
-    "holm": 0.03629,
-    "holm_perm": 0.20604
+    "holm": 0.03438,
+    "holm_perm": 0.19392
    },
    {
     "model": "gpt-oss-120b",
@@ -413,7 +413,7 @@
      9.73
     ],
     "perm_p": 0.00373,
-    "holm": 0.03996,
+    "holm": 0.03774,
     "holm_perm": 0.07833
    },
    {
@@ -529,7 +529,7 @@
     ],
     "perm_p": 0.01818,
     "holm": 0.4868,
-    "holm_perm": 0.29088
+    "holm_perm": 0.2727
    },
    {
     "model": "qwen3.8-27b",
@@ -598,7 +598,7 @@
     ],
     "perm_p": 0.03497,
     "holm": 0.54072,
-    "holm_perm": 0.41964
+    "holm_perm": 0.38467
    }
   ]
  },
@@ -7068,9 +7068,9 @@
   },
   "gpt5": {
    "chat_contrib": {
-    "mean": 18.6,
-    "sd": 0.2,
-    "n": 3
+    "mean": 18.28,
+    "sd": 0.74,
+    "n": 10
    },
    "elected_contrib": {
     "mean": 19.67,
@@ -7112,9 +7112,9 @@
     }
    },
    "broken_chat": {
-    "broken": 11,
-    "stated": 259,
-    "share": 4.2
+    "broken": 45,
+    "stated": 850,
+    "share": 5.3
    }
   },
   "gpt5min": {
@@ -8618,19 +8618,19 @@
   },
   "gpt5": {
    "chat": {
-    "contrib_r1_19": 19.58,
+    "contrib_r1_19": 19.24,
     "contrib_r20": 0.0,
     "broken_r20": {
-     "broken": 6,
-     "stated": 7,
-     "share": 85.7
+     "broken": 22,
+     "stated": 28,
+     "share": 78.6
     },
     "broken_r1_19": {
-     "broken": 5,
-     "stated": 252,
-     "share": 2.0
+     "broken": 23,
+     "stated": 822,
+     "share": 2.8
     },
-    "share_of_broken_in_r20": 54.5
+    "share_of_broken_in_r20": 48.9
    },
    "elected": {
     "contrib_r1_19": 20.0,
@@ -11677,14 +11677,14 @@
   },
   "newer_chat": {
    "none": {
-    "stated": 18,
+    "stated": 47,
     "broken": 0,
     "share": 0.0
    },
    "0": {
-    "stated": 3,
-    "broken": 3,
-    "share": 100.0
+    "stated": 12,
+    "broken": 10,
+    "share": 83.3
    },
    "1-9": {
     "stated": 0,
@@ -11692,14 +11692,14 @@
     "share": null
    },
    "10-14": {
-    "stated": 0,
+    "stated": 15,
     "broken": 0,
-    "share": null
+    "share": 0.0
    },
    "15-20": {
-    "stated": 318,
-    "broken": 8,
-    "share": 2.5
+    "stated": 856,
+    "broken": 35,
+    "share": 4.1
    }
   },
   "newer_elected": {
@@ -11817,7 +11817,7 @@
   },
   "gpt5": {
    "broken": 0,
-   "stated": 4,
+   "stated": 16,
    "share": 0.0
   },
   "deepseek31": {

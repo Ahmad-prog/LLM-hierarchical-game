@@ -1,0 +1,124 @@
+{
+ "clean_claude_all": {
+  "none": 1.0,
+  "salary": 21.0,
+  "n": [
+   10,
+   10
+  ],
+  "p_one_sided": 0.0
+ },
+ "clean_claude_first": {
+  "none": 0.0,
+  "salary": 6.0,
+  "n": [
+   10,
+   10
+  ],
+  "p_one_sided": 0.1052
+ },
+ "gpt5_chat": {
+  "games": 10,
+  "round20_broken": "22/28",
+  "before_broken": "23/822",
+  "round20_mean_contribution": 0.0
+ },
+ "placebo": {
+  "gemini": {
+   "peer10": 14.13,
+   "peer20": 18.69,
+   "peer_diff": 4.55,
+   "p_peer": 0.0002,
+   "mgr_diff": 6.61,
+   "n": [
+    10,
+    10
+   ]
+  },
+  "qwen": {
+   "peer10": 11.68,
+   "peer20": 16.95,
+   "peer_diff": 5.28,
+   "p_peer": 0.0,
+   "mgr_diff": 4.12,
+   "n": [
+    10,
+    10
+   ]
+  }
+ },
+ "fair_ballot_manager": {
+  "gpt4o": {
+   "chat": 14.1,
+   "fair_elected": 13.7,
+   "n": 5,
+   "diff": -0.4,
+   "p": 0.8512,
+   "holm": 1
+  },
+  "gemini": {
+   "chat": 12.5,
+   "fair_elected": 20.0,
+   "n": 5,
+   "diff": 7.5,
+   "p": 0.0021,
+   "holm": 0.0147
+  },
+  "qwen": {
+   "chat": 14.2,
+   "fair_elected": 11.2,
+   "n": 5,
+   "diff": -2.9,
+   "p": 0.13,
+   "holm": 0.4064
+  },
+  "deepseek": {
+   "chat": 14.8,
+   "fair_elected": 15.1,
+   "n": 5,
+   "diff": 0.3,
+   "p": 0.8079,
+   "holm": 1
+  },
+  "gpt-oss-120b": {
+   "chat": 7.0,
+   "fair_elected": 15.6,
+   "n": 10,
+   "diff": 8.7,
+   "p": 0.0001,
+   "holm": 0.0008
+  },
+  "nemotron-3-super-120b": {
+   "chat": 11.5,
+   "fair_elected": 13.4,
+   "n": 10,
+   "diff": 1.9,
+   "p": 0.1016,
+   "holm": 0.4064
+  },
+  "ling-3.0-flash": {
+   "chat": 3.4,
+   "fair_elected": 5.3,
+   "n": 10,
+   "diff": 1.9,
+   "p": 0.0284,
+   "holm": 0.1704
+  },
+  "qwen3.8-27b": {
+   "chat": 6.2,
+   "fair_elected": 12.7,
+   "n": 10,
+   "diff": 6.5,
+   "p": 0.0,
+   "holm": 0
+  },
+  "gemma-4-31b": {
+   "chat": 19.0,
+   "fair_elected": 19.2,
+   "n": 10,
+   "diff": 0.1,
+   "p": 0.0427,
+   "holm": 0.2135
+  }
+ }
+}

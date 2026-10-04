@@ -3,7 +3,7 @@
    frontier elected   gpt4o: 617/980 b0/0/0 fp41 b0 | claude: 627/800 b5/0/0 fp153 b0 | gemini: 250/997 b0/0/0 fp127 b0 | deepseek: 359/787 b0/0/0 fp80 b0 | grok: 37/361 b0/0/0 fp2 b0 | qwen: 580/1000 b1/1/0 fp156 b0
    frontier hidden    gpt4o: 189/282 b0/0/0 fp22 b0 | claude: 216/300 b0/0/0 fp22 b0 | gemini: 139/299 b2/2/2 fp83 b1 | deepseek: 192/299 b0/0/0 fp48 b0 | grok: 7/135 b0/0/0 fp1 b0 | qwen: 198/300 b0/0/0 fp45 b0
    frontier anonymous gpt4o: 192/291 b0/0/0 fp11 b0 | claude: 231/300 b3/0/0 fp26 b0 | gemini: 77/299 b0/0/0 fp33 b0 | deepseek: 189/295 b0/0/0 fp44 b0 | grok: 3/123 b0/0/0 fp0 b0 | qwen: 177/300 b0/0/0 fp53 b0
-   samegen  chat_only gpt5: 259/300 b11/11/11 fp4 b0 | deepseek31: 80/300 b0/0/0 fp25 b0
+   samegen  chat_only gpt5: 850/1000 b45/45/45 fp16 b0 | deepseek31: 80/300 b0/0/0 fp25 b0
    samegen  elected   gpt5: 235/299 b1/1/1 fp1 b0 | deepseek31: 456/799 b0/0/0 fp120 b0
    samegen  hidden    gpt5: 205/300 b3/3/3 fp5 b0 | deepseek31: 135/299 b0/0/0 fp37 b0
    samegen  anonymous gpt5: 213/300 b2/2/2 fp4 b0 | deepseek31: 120/300 b0/0/0 fp38 b0
@@ -23,7 +23,7 @@
    open     salary  gpt-oss-120b: 83 [16,16,6,17,28; imp 0] | nemotron-3-super-120b: 11 [2,0,4,5,0; imp 0] | ling-3.0-flash: 10 [2,1,3,3,1; imp 0] | qwen3.8-27b: 147 [17,19,4,52,55; imp 1] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
    open     costly  gpt-oss-120b: 72 [17,11,5,25,14; imp 0] | nemotron-3-super-120b: 23 [4,0,5,14,0; imp 0] | ling-3.0-flash: 7 [0,1,3,2,1; imp 0] | qwen3.8-27b: 130 [18,18,5,45,44; imp 1] | gemma-4-31b: 0 [0,0,0,0,0; imp 0]
 
-== over-20 contribution mentions {"frontier": {"gpt4o": {"messages": 5846, "over_20": 0}, "claude": {"messages": 5610, "over_20": 33}, "gemini": {"messages": 6583, "over_20": 0}, "deepseek": {"messages": 4836, "over_20": 0}, "grok": {"messages": 2943, "over_20": 1}, "qwen": {"messages": 5208, "over_20": 2}}, "samegen": {"gpt5": {"messages": 3892, "over_20": 4}, "deepseek31": {"messages": 5643, "over_20": 0}}, "open": {"gpt-oss-120b": {"messages": 7717, "over_20": 1}, "nemotron-3-super-120b": {"messages": 3190, "over_20": 0}, "ling-3.0-flash": {"messages": 7279, "over_20": 49}, "qwen3.8-27b": {"messages": 7262, "over_20": 4}, "gemma-4-31b": {"messages": 6090, "over_20": 0}}}
+== over-20 contribution mentions {"frontier": {"gpt4o": {"messages": 5846, "over_20": 0}, "claude": {"messages": 5610, "over_20": 33}, "gemini": {"messages": 6583, "over_20": 0}, "deepseek": {"messages": 4836, "over_20": 0}, "grok": {"messages": 2943, "over_20": 1}, "qwen": {"messages": 5208, "over_20": 2}}, "samegen": {"gpt5": {"messages": 4784, "over_20": 4}, "deepseek31": {"messages": 5643, "over_20": 0}}, "open": {"gpt-oss-120b": {"messages": 7717, "over_20": 1}, "nemotron-3-super-120b": {"messages": 3190, "over_20": 0}, "ling-3.0-flash": {"messages": 7279, "over_20": 49}, "qwen3.8-27b": {"messages": 7262, "over_20": 4}, "gemma-4-31b": {"messages": 6090, "over_20": 0}}}
 
 == C. re-election {
  "api_main": {

@@ -68,6 +68,7 @@ SWAP_GROUPS = [
     ("Revision controls", [f"batch14_{t}_gpt4o" for t in ("neutral_elected", "neutral_salary", "nostrategic_chat", "nostrategic_elected", "aggregate_chat", "mgr_goodincumbent", "system_reward")]),
     ("Review controls", [f"batch15_{t}_gpt4o" for t in ("mgr_elected_nobudget", "mgr_badincumbent_rb", "mgr_goodincumbent_rb")]),
     ("Final controls", [f"batch16_{t}_gpt4o" for t in ("mgr_fixed_rewardonly", "mgr_fixed_contrib20", "mgr_fixed_contrib10")]),
+    ("Last controls", [f"batch17_{t}_gpt4o" for t in ("neutral_clean_elected", "neutral_clean_salary", "mgr_fixed_peer10", "mgr_fixed_peer20")]),
 ]
 # OSS track: same-model setups (templates use the gpt4o version; models are replaced by LOCAL)
 OSS_GROUPS = [

@@ -110,6 +110,7 @@ class ExperimentConfig:
     deal_prompt: str = "deal"     # "neutral": the election message prompt does not ask for a deal to secure a vote
     strategic_line: bool = True   # False: drop "Be strategic." from the system prompt
     mgr_contribution: float | None = None  # batch 16: the manager's own contribution is set by the experimenter
+    peer_contribution: float | None = None  # batch 17: agent_1's (a worker's) contribution is set by the experimenter
 
     def to_dict(self) -> dict:
         """Serialize to a plain dict (for JSON output)."""
@@ -142,6 +143,7 @@ class ExperimentConfig:
             "deal_prompt": self.deal_prompt,
             "strategic_line": self.strategic_line,
             "mgr_contribution": self.mgr_contribution,
+            "peer_contribution": self.peer_contribution,
         }
 
     def short_label(self) -> str:
